@@ -1,0 +1,19 @@
+<section id="resume">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 text-center">
+                <h2 class="section-heading">{{ site.resume.heading }}</h2>
+                <hr class="primary">
+                <p>{{ site.resume.description }}</p>
+                <div class="resume-box">
+                    <a href="{{ site.resume.file_path | relative_url }}" target="_blank" class="btn btn-primary btn-xl wow bounceIn" data-wow-delay=".1s">
+                        <i class="fa-solid fa-file-pdf"></i> {{ site.resume.view_button_text }}
+                    </a>
+                    <a href="{{ site.resume.file_path | relative_url }}" download class="btn btn-outline-secondary btn-xl wow bounceIn" data-wow-delay=".2s">
+                        <i class="fa-solid fa-download"></i> {{ site.resume.download_button_text }}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

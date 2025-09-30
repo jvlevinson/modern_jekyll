@@ -1,0 +1,19 @@
+// =============================================================================
+// Footer Layout
+// =============================================================================
+// Site footer with copyright information
+// Following token-based styling and BEM naming
+// September 2025 best practices
+// =============================================================================
+
+.footer {
+    padding: var(--space-lg) 0;
+    border-top: 1px solid var(--color-border-light);
+
+    .footer-text {
+        margin: 0;
+        font-size: var(--font-size-sm);
+        color: var(--color-text-faded);
+        font-family: var(--font-sans);
+    }
+}

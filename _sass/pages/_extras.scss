@@ -1,0 +1,73 @@
+// =============================================================================
+// Page Extras - Browser Customizations
+// =============================================================================
+// Extracted from monolithic _base.scss
+// Custom selection highlight and tap highlight colors
+// Following September 2025 best practices
+// =============================================================================
+
+// -----------------------------------------------------------------------------
+// Text Selection Styling
+// -----------------------------------------------------------------------------
+// Custom highlight color when user selects text
+// Firefox-specific pseudo-element
+// -----------------------------------------------------------------------------
+::-moz-selection {
+    color: var(--color-light);
+    text-shadow: none;
+    background: var(--color-dark);
+}
+
+// -----------------------------------------------------------------------------
+// Standard selection pseudo-element
+// Supported by Chrome, Safari, Edge
+// -----------------------------------------------------------------------------
+::selection {
+    color: var(--color-light);
+    text-shadow: none;
+    background: var(--color-dark);
+}
+
+// -----------------------------------------------------------------------------
+// Image Selection Override
+// -----------------------------------------------------------------------------
+// Images should not have background color when selected
+// Maintains visual clarity
+// -----------------------------------------------------------------------------
+img::selection {
+    color: var(--color-light);
+    background: transparent;
+}
+
+img::-moz-selection {
+    color: var(--color-light);
+    background: transparent;
+}
+
+// -----------------------------------------------------------------------------
+// Mobile Tap Highlight
+// -----------------------------------------------------------------------------
+// Webkit-specific tap highlight color for touch devices
+// Provides visual feedback on mobile when tapping elements
+// -----------------------------------------------------------------------------
+body {
+    -webkit-tap-highlight-color: var(--color-dark);
+}
+
+// -----------------------------------------------------------------------------
+// Future Page-Specific Styles
+// -----------------------------------------------------------------------------
+// As the site grows, add page-specific styles here:
+//
+// .page-about {
+//     // About page specific styles
+// }
+//
+// .page-portfolio {
+//     // Portfolio page specific styles
+// }
+//
+// .page-404 {
+//     // Error page specific styles
+// }
+// -----------------------------------------------------------------------------

@@ -1,0 +1,66 @@
+// =============================================================================
+// Contact Section Layout
+// =============================================================================
+// Extracted from monolithic _base.scss
+// Contact section with large social icons
+// Following September 2025 best practices
+// =============================================================================
+
+// -----------------------------------------------------------------------------
+// Contact Icon Styles
+// -----------------------------------------------------------------------------
+// Large Font Awesome icons for social links
+// Size: 4em (64px at default font size)
+// Color: Theme dark
+// -----------------------------------------------------------------------------
+#contact .fa {
+    color: var(--color-dark);
+    font-size: 4em;
+}
+
+// -----------------------------------------------------------------------------
+// BEM Component Structure (Future Enhancement)
+// -----------------------------------------------------------------------------
+// When refactoring templates in future iterations, consider migrating to:
+//
+// .contact {
+//     // Contact section container
+// }
+//
+// .contact__heading {
+//     text-align: center;
+//     margin-bottom: var(--space-lg);
+// }
+//
+// .contact__divider {
+//     margin: var(--space-md) auto;
+// }
+//
+// .contact__list {
+//     display: flex;
+//     justify-content: center;
+//     gap: var(--space-lg);
+//     flex-wrap: wrap;
+// }
+//
+// .contact__item {
+//     text-align: center;
+// }
+//
+// .contact__icon {
+//     color: var(--color-dark);
+//     font-size: 4rem;
+//     margin-bottom: var(--space-sm);
+//     @include transition-all;
+//
+//     &:hover {
+//         color: var(--color-primary);
+//         transform: scale(1.1);
+//     }
+// }
+//
+// .contact__link {
+//     display: inline-block;
+//     text-decoration: none;
+// }
+// -----------------------------------------------------------------------------

@@ -1,0 +1,155 @@
+// =============================================================================
+// Mixins - Reusable SCSS Patterns
+// =============================================================================
+// Modern mixins following September 2025 best practices
+// Vendor prefixes removed (handled by autoprefixer in production)
+// =============================================================================
+
+@use 'sass:color';
+
+// -----------------------------------------------------------------------------
+// Transitions
+// -----------------------------------------------------------------------------
+// Apply smooth transitions to elements
+// Modern browsers don't need prefixes for transitions
+// -----------------------------------------------------------------------------
+@mixin transition-all {
+    transition: all var(--transition-normal);
+}
+
+@mixin transition($properties...) {
+    transition: $properties;
+}
+
+// -----------------------------------------------------------------------------
+// Background Cover
+// -----------------------------------------------------------------------------
+// Full-cover background image
+// Modern browsers don't need prefixes for background-size
+// -----------------------------------------------------------------------------
+@mixin background-cover {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+// -----------------------------------------------------------------------------
+// Button Variant
+// -----------------------------------------------------------------------------
+// Generate button styles with different color combinations
+// @param {Color} $color - Text color
+// @param {Color} $background - Background color
+// @param {Color} $border - Border color
+// -----------------------------------------------------------------------------
+@mixin button-variant($color, $background, $border) {
+    color: $color;
+    background-color: $background;
+    border-color: $border;
+    @include transition-all;
+
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+        color: $color;
+        background-color: color.adjust($background, $lightness: -5%);
+        border-color: color.adjust($border, $lightness: -7%);
+    }
+
+    &:active,
+    &.active {
+        background-image: none;
+    }
+
+    &.disabled,
+    &[disabled],
+    &:disabled,
+    fieldset[disabled] & {
+        &,
+        &:hover,
+        &:focus,
+        &.focus,
+        &:active,
+        &.active {
+            background-color: $background;
+            border-color: $border;
+            opacity: 0.65;
+            cursor: not-allowed;
+        }
+    }
+
+    .badge {
+        color: $background;
+        background-color: $color;
+    }
+}
+
+// -----------------------------------------------------------------------------
+// Typography Mixins
+// -----------------------------------------------------------------------------
+// Apply font families from design system
+// -----------------------------------------------------------------------------
+@mixin sans-serif-font {
+    font-family: var(--font-sans);
+}
+
+@mixin serif-font {
+    font-family: var(--font-serif);
+}
+
+// -----------------------------------------------------------------------------
+// Responsive Typography
+// -----------------------------------------------------------------------------
+// Fluid font size that scales with viewport
+// @param {Number} $min-font-size - Minimum font size
+// @param {Number} $max-font-size - Maximum font size
+// -----------------------------------------------------------------------------
+@mixin fluid-type($min-font-size, $max-font-size) {
+    font-size: clamp($min-font-size, 2.5vw, $max-font-size);
+}
+
+// -----------------------------------------------------------------------------
+// Flexbox Helpers
+// -----------------------------------------------------------------------------
+// Quick flexbox centering
+// -----------------------------------------------------------------------------
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+// -----------------------------------------------------------------------------
+// Truncate Text
+// -----------------------------------------------------------------------------
+// Single-line text truncation with ellipsis
+// -----------------------------------------------------------------------------
+@mixin truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+// -----------------------------------------------------------------------------
+// Visually Hidden
+// -----------------------------------------------------------------------------
+// Hide element visually but keep it accessible to screen readers
+// -----------------------------------------------------------------------------
+@mixin visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}

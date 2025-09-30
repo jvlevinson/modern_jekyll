@@ -1,0 +1,355 @@
+{% comment %}
+=============================================================================
+Design Tokens - Dynamic Color Theme Generator
+=============================================================================
+This partial generates CSS custom properties based on user theme selection
+in _config.yml. Colors are resolved from _data/color-palettes.yml.
+
+Architecture:
+1. Read user's theme selection from _config.yml (brand_primary, brand_secondary, neutral, mode)
+2. Resolve color palettes from _data/color-palettes.yml (system file)
+3. Generate CSS custom properties for all color shades
+4. Define semantic tokens for light/dark/auto themes
+
+Separation of Concerns:
+- _config.yml (user-editable) - Brand color selection and theme mode
+- _data/color-palettes.yml (system file) - Color palette definitions
+
+Theme Modes:
+- light: Always light theme
+- dark: Always dark theme
+- auto: Respects user's OS/browser preference (prefers-color-scheme)
+
+Usage: {% include design-tokens.html %} in head.html
+=============================================================================
+{% endcomment %}
+
+{% comment %} Resolve user's selected palettes from system data file {% endcomment %}
+{% assign primary_palette = site.data.color-palettes[site.theme.brand_primary] %}
+{% assign neutral_palette = site.data.color-palettes[site.theme.neutral] %}
+{% if site.theme.brand_secondary %}
+  {% assign secondary_palette = site.data.color-palettes[site.theme.brand_secondary] %}
+{% endif %}
+
+<style>
+  :root {
+    /* =======================================================================
+       Raw Color Palette - Primary Brand Colors
+       ======================================================================= */
+    {% comment %} Primary color shades (50-900) {% endcomment %}
+    --color-primary-50: {{ primary_palette[50] }};
+    --color-primary-100: {{ primary_palette[100] }};
+    --color-primary-200: {{ primary_palette[200] }};
+    --color-primary-300: {{ primary_palette[300] }};
+    --color-primary-400: {{ primary_palette[400] }};
+    --color-primary-500: {{ primary_palette[500] }};
+    --color-primary-600: {{ primary_palette[600] }};
+    --color-primary-700: {{ primary_palette[700] }};
+    --color-primary-800: {{ primary_palette[800] }};
+    --color-primary-900: {{ primary_palette[900] }};
+
+    /* =======================================================================
+       Raw Color Palette - Neutral Colors
+       ======================================================================= */
+    {% comment %} Neutral color shades (50-900) {% endcomment %}
+    --color-neutral-50: {{ neutral_palette[50] }};
+    --color-neutral-100: {{ neutral_palette[100] }};
+    --color-neutral-200: {{ neutral_palette[200] }};
+    --color-neutral-300: {{ neutral_palette[300] }};
+    --color-neutral-400: {{ neutral_palette[400] }};
+    --color-neutral-500: {{ neutral_palette[500] }};
+    --color-neutral-600: {{ neutral_palette[600] }};
+    --color-neutral-700: {{ neutral_palette[700] }};
+    --color-neutral-800: {{ neutral_palette[800] }};
+    --color-neutral-900: {{ neutral_palette[900] }};
+
+    {% if site.theme.brand_secondary %}
+    /* =======================================================================
+       Raw Color Palette - Secondary Brand Colors (Optional)
+       ======================================================================= */
+    {% comment %} Secondary color shades (50-900) {% endcomment %}
+    --color-secondary-50: {{ secondary_palette[50] }};
+    --color-secondary-100: {{ secondary_palette[100] }};
+    --color-secondary-200: {{ secondary_palette[200] }};
+    --color-secondary-300: {{ secondary_palette[300] }};
+    --color-secondary-400: {{ secondary_palette[400] }};
+    --color-secondary-500: {{ secondary_palette[500] }};
+    --color-secondary-600: {{ secondary_palette[600] }};
+    --color-secondary-700: {{ secondary_palette[700] }};
+    --color-secondary-800: {{ secondary_palette[800] }};
+    --color-secondary-900: {{ secondary_palette[900] }};
+    {% endif %}
+
+    /* =======================================================================
+       Semantic Tokens - Light Theme (mode: "light" or default for "auto")
+       ======================================================================= */
+    {% comment %} These tokens provide meaning to colors (what they're used for) {% endcomment %}
+
+    {% if site.theme.mode == "light" or site.theme.mode == "auto" %}
+    /* Brand Colors - Primary */
+    --color-primary: var(--color-primary-500);
+    --color-primary-hover: var(--color-primary-600);
+    --color-primary-active: var(--color-primary-700);
+    --color-primary-light: var(--color-primary-100);
+    --color-primary-dark: var(--color-primary-800);
+
+    {% if site.theme.brand_secondary %}
+    /* Brand Colors - Secondary (Optional Accent) */
+    --color-secondary: var(--color-secondary-500);
+    --color-secondary-hover: var(--color-secondary-600);
+    --color-secondary-active: var(--color-secondary-700);
+    --color-secondary-light: var(--color-secondary-100);
+    --color-secondary-dark: var(--color-secondary-800);
+    {% endif %}
+
+    /* Background Colors */
+    --color-background: #ffffff;
+    --color-surface: #ffffff;
+    --color-surface-alt: var(--color-neutral-50);
+
+    /* Text Colors */
+    --color-text: var(--color-neutral-900);
+    --color-text-secondary: var(--color-neutral-700);
+    --color-text-muted: var(--color-neutral-600);
+    --color-text-disabled: var(--color-neutral-400);
+    --color-text-inverse: #ffffff;
+    --color-text-faded: rgba(255, 255, 255, 0.7);
+
+    /* Border Colors */
+    --color-border: var(--color-neutral-200);
+    --color-border-medium: var(--color-neutral-300);
+    --color-border-strong: var(--color-neutral-400);
+    --color-border-light: rgba(255, 255, 255, 0.3);
+
+    /* Section Background Colors */
+    --bg-primary: var(--color-primary);
+    {% if site.theme.brand_secondary %}
+    --bg-secondary: var(--color-secondary);
+    {% endif %}
+    --bg-dark: var(--color-neutral-900);
+    --bg-light: #ffffff;
+    --bg-surface: var(--color-neutral-50);
+
+    /* Inverted Sections (footer, aside) - always dark in light theme */
+    --bg-inverted: var(--color-neutral-900);
+    --text-inverted: #ffffff;
+
+    /* Navbar with Transparency (glass-morphism effect) */
+    --navbar-bg: rgba(255, 255, 255, 0.1);
+    --navbar-bg-scrolled: rgba(255, 255, 255, 0.95);
+
+    /* Legacy Compatibility Tokens */
+    {% comment %} Keep old variable names for backward compatibility {% endcomment %}
+    --color-dark: var(--color-neutral-900);
+    --color-light: #ffffff;
+    {% endif %}
+  }
+
+  {% comment %}
+  =============================================================================
+  Dark Theme Semantic Tokens (mode: "dark" or via JavaScript toggle)
+  =============================================================================
+  Inverted semantic mappings for dark backgrounds
+  Uses lighter shades of brand colors for better contrast on dark backgrounds
+  Supports both static dark mode and JavaScript theme toggle
+  =============================================================================
+  {% endcomment %}
+
+  {% if site.theme.mode == "dark" %}
+  :root {
+    /* Brand Colors - Primary (lighter shades for dark bg) */
+    --color-primary: var(--color-primary-400);
+    --color-primary-hover: var(--color-primary-300);
+    --color-primary-active: var(--color-primary-200);
+    --color-primary-light: var(--color-primary-100);
+    --color-primary-dark: var(--color-primary-600);
+
+    {% if site.theme.brand_secondary %}
+    /* Brand Colors - Secondary (lighter shades for dark bg) */
+    --color-secondary: var(--color-secondary-400);
+    --color-secondary-hover: var(--color-secondary-300);
+    --color-secondary-active: var(--color-secondary-200);
+    --color-secondary-light: var(--color-secondary-100);
+    --color-secondary-dark: var(--color-secondary-600);
+    {% endif %}
+
+    /* Background Colors (inverted) */
+    --color-background: var(--color-neutral-900);
+    --color-surface: var(--color-neutral-800);
+    --color-surface-alt: var(--color-neutral-700);
+
+    /* Text Colors (inverted) */
+    --color-text: var(--color-neutral-50);
+    --color-text-secondary: var(--color-neutral-200);
+    --color-text-muted: var(--color-neutral-400);
+    --color-text-disabled: var(--color-neutral-600);
+    --color-text-inverse: var(--color-neutral-900);
+    --color-text-faded: rgba(255, 255, 255, 0.7);
+
+    /* Border Colors (adjusted for dark) */
+    --color-border: var(--color-neutral-700);
+    --color-border-medium: var(--color-neutral-600);
+    --color-border-strong: var(--color-neutral-500);
+    --color-border-light: rgba(255, 255, 255, 0.1);
+
+    /* Section Background Colors */
+    --bg-primary: var(--color-primary);
+    {% if site.theme.brand_secondary %}
+    --bg-secondary: var(--color-secondary);
+    {% endif %}
+    --bg-dark: var(--color-neutral-950, #000000);
+    --bg-light: var(--color-neutral-800);
+    --bg-surface: var(--color-neutral-700);
+
+    /* Inverted Sections (footer, aside) - lighter in dark theme for contrast */
+    --bg-inverted: var(--color-neutral-800);
+    --text-inverted: var(--color-neutral-50);
+
+    /* Navbar with Transparency (glass-morphism effect) */
+    --navbar-bg: rgba(15, 23, 42, 0.3);
+    --navbar-bg-scrolled: rgba(15, 23, 42, 0.95);
+
+    /* Legacy Compatibility Tokens */
+    --color-dark: var(--color-neutral-50);
+    --color-light: var(--color-neutral-900);
+  }
+  {% endif %}
+
+  {% comment %}
+  =============================================================================
+  JavaScript Theme Toggle Support
+  =============================================================================
+  When user manually toggles theme via button, [data-theme="dark"] is applied
+  This selector has same specificity as :root, so it properly overrides
+  =============================================================================
+  {% endcomment %}
+
+  [data-theme="dark"] {
+    /* Brand Colors - Primary (lighter shades for dark bg) */
+    --color-primary: var(--color-primary-400);
+    --color-primary-hover: var(--color-primary-300);
+    --color-primary-active: var(--color-primary-200);
+    --color-primary-light: var(--color-primary-100);
+    --color-primary-dark: var(--color-primary-600);
+
+    {% if site.theme.brand_secondary %}
+    /* Brand Colors - Secondary (lighter shades for dark bg) */
+    --color-secondary: var(--color-secondary-400);
+    --color-secondary-hover: var(--color-secondary-300);
+    --color-secondary-active: var(--color-secondary-200);
+    --color-secondary-light: var(--color-secondary-100);
+    --color-secondary-dark: var(--color-secondary-600);
+    {% endif %}
+
+    /* Background Colors (inverted) */
+    --color-background: var(--color-neutral-900);
+    --color-surface: var(--color-neutral-800);
+    --color-surface-alt: var(--color-neutral-700);
+
+    /* Text Colors (inverted) */
+    --color-text: var(--color-neutral-50);
+    --color-text-secondary: var(--color-neutral-200);
+    --color-text-muted: var(--color-neutral-400);
+    --color-text-disabled: var(--color-neutral-600);
+    --color-text-inverse: var(--color-neutral-900);
+    --color-text-faded: rgba(255, 255, 255, 0.7);
+
+    /* Border Colors (adjusted for dark) */
+    --color-border: var(--color-neutral-700);
+    --color-border-medium: var(--color-neutral-600);
+    --color-border-strong: var(--color-neutral-500);
+    --color-border-light: rgba(255, 255, 255, 0.1);
+
+    /* Section Background Colors */
+    --bg-primary: var(--color-primary);
+    {% if site.theme.brand_secondary %}
+    --bg-secondary: var(--color-secondary);
+    {% endif %}
+    --bg-dark: var(--color-neutral-950, #000000);
+    --bg-light: var(--color-neutral-800);
+    --bg-surface: var(--color-neutral-700);
+
+    /* Inverted Sections (footer, aside) - lighter in dark theme for contrast */
+    --bg-inverted: var(--color-neutral-800);
+    --text-inverted: var(--color-neutral-50);
+
+    /* Navbar with Transparency (glass-morphism effect) */
+    --navbar-bg: rgba(15, 23, 42, 0.3);
+    --navbar-bg-scrolled: rgba(15, 23, 42, 0.95);
+
+    /* Legacy Compatibility Tokens */
+    --color-dark: var(--color-neutral-50);
+    --color-light: var(--color-neutral-900);
+  }
+
+  {% comment %}
+  =============================================================================
+  Auto Theme (mode: "auto")
+  =============================================================================
+  Respects user's OS/browser preference via prefers-color-scheme
+  Light theme is default (above), dark overrides applied when OS prefers dark
+  =============================================================================
+  {% endcomment %}
+
+  {% if site.theme.mode == "auto" %}
+  @media (prefers-color-scheme: dark) {
+    :root {
+      /* Brand Colors - Primary (lighter shades for dark bg) */
+      --color-primary: var(--color-primary-400);
+      --color-primary-hover: var(--color-primary-300);
+      --color-primary-active: var(--color-primary-200);
+      --color-primary-light: var(--color-primary-100);
+      --color-primary-dark: var(--color-primary-600);
+
+      {% if site.theme.brand_secondary %}
+      /* Brand Colors - Secondary (lighter shades for dark bg) */
+      --color-secondary: var(--color-secondary-400);
+      --color-secondary-hover: var(--color-secondary-300);
+      --color-secondary-active: var(--color-secondary-200);
+      --color-secondary-light: var(--color-secondary-100);
+      --color-secondary-dark: var(--color-secondary-600);
+      {% endif %}
+
+      /* Background Colors (inverted) */
+      --color-background: var(--color-neutral-900);
+      --color-surface: var(--color-neutral-800);
+      --color-surface-alt: var(--color-neutral-700);
+
+      /* Text Colors (inverted) */
+      --color-text: var(--color-neutral-50);
+      --color-text-secondary: var(--color-neutral-200);
+      --color-text-muted: var(--color-neutral-400);
+      --color-text-disabled: var(--color-neutral-600);
+      --color-text-inverse: var(--color-neutral-900);
+      --color-text-faded: rgba(255, 255, 255, 0.7);
+
+      /* Border Colors (adjusted for dark) */
+      --color-border: var(--color-neutral-700);
+      --color-border-medium: var(--color-neutral-600);
+      --color-border-strong: var(--color-neutral-500);
+      --color-border-light: rgba(255, 255, 255, 0.1);
+
+      /* Section Background Colors */
+      --bg-primary: var(--color-primary);
+      {% if site.theme.brand_secondary %}
+      --bg-secondary: var(--color-secondary);
+      {% endif %}
+      --bg-dark: var(--color-neutral-950, #000000);
+      --bg-light: var(--color-neutral-800);
+      --bg-surface: var(--color-neutral-700);
+
+      /* Inverted Sections (footer, aside) - lighter in dark theme for contrast */
+      --bg-inverted: var(--color-neutral-800);
+      --text-inverted: var(--color-neutral-50);
+
+      /* Navbar with Transparency (glass-morphism effect) */
+      --navbar-bg: rgba(15, 23, 42, 0.3);
+      --navbar-bg-scrolled: rgba(15, 23, 42, 0.95);
+
+      /* Legacy Compatibility Tokens */
+      --color-dark: var(--color-neutral-50);
+      --color-light: var(--color-neutral-900);
+    }
+  }
+  {% endif %}
+</style>

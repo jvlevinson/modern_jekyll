@@ -1,0 +1,57 @@
+// =============================================================================
+// Utilities - Helper Classes
+// =============================================================================
+// Extracted utility classes from monolithic _base.scss
+// Following BEM naming where applicable
+// September 2025 best practices
+// =============================================================================
+
+// -----------------------------------------------------------------------------
+// Background Utilities
+// -----------------------------------------------------------------------------
+.bg-primary {
+    background-color: var(--bg-primary);
+}
+
+.bg-secondary {
+    background-color: var(--bg-secondary);
+}
+
+.bg-dark {
+    background-color: var(--bg-inverted);
+    color: var(--text-inverted);
+}
+
+// -----------------------------------------------------------------------------
+// Text Utilities
+// -----------------------------------------------------------------------------
+.text-faded {
+    color: var(--color-text-faded);
+}
+
+.text-primary {
+    color: var(--color-primary);
+}
+
+// -----------------------------------------------------------------------------
+// Section Utilities
+// -----------------------------------------------------------------------------
+section {
+    padding: var(--space-2xl) 0;
+}
+
+aside {
+    padding: var(--space-xl) 0;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+// -----------------------------------------------------------------------------
+// Grid Utilities (Bootstrap overrides)
+// -----------------------------------------------------------------------------
+.no-gutter > [class*='col-'] {
+    padding-right: 0;
+    padding-left: 0;
+}

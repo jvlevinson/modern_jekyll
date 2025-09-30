@@ -1,0 +1,136 @@
+// =============================================================================
+// Design Tokens Architecture (Week 9 - User-Customizable Theming)
+// =============================================================================
+// Phase 1: Color tokens are now generated dynamically in _includes/design-tokens.html
+// based on user selection in _config.yml
+//
+// Architecture:
+// 1. User selects color palette in _config.yml (orange, blue, green, purple, red)
+// 2. design-tokens.html generates CSS custom properties from palette
+// 3. Components reference semantic tokens (--color-primary, --color-text, etc.)
+// 4. SCSS variables below are ONLY for color functions (color.adjust, etc.)
+//
+// Example _config.yml:
+//   theme:
+//     colors:
+//       primary: "orange"    # User can change to blue, green, etc.
+//       neutral: "slate"
+//
+// Generated CSS custom properties (examples):
+//   --color-primary-50 through --color-primary-900 (10 shades)
+//   --color-neutral-50 through --color-neutral-900 (10 shades)
+//   --color-primary (semantic token = --color-primary-500)
+//   --color-text (semantic token = --color-neutral-900)
+//   --bg-primary (semantic token = --color-primary)
+//
+// See _includes/design-tokens.html for full token list
+// =============================================================================
+
+// =============================================================================
+// CSS Custom Properties - Defined in design-tokens.html (NOT HERE!)
+// =============================================================================
+// IMPORTANT: All color-related CSS custom properties (--color-primary, etc.)
+// are generated dynamically in _includes/design-tokens.html based on user
+// theme selection in _config.yml.
+//
+// DO NOT define color tokens in this file - they will override the dynamic
+// tokens and break the theming system!
+//
+// This file contains ONLY:
+// 1. Non-color CSS custom properties (spacing, typography, shadows, etc.)
+// 2. SCSS variables for color functions (see bottom of file)
+// =============================================================================
+
+:root {
+  // ---------------------------------------------------------------------------
+  // Spacing Scale (8pt Grid System)
+  // ---------------------------------------------------------------------------
+  --space-0: 0;
+  --space-xs: 0.5rem;     // 8px
+  --space-sm: 1rem;       // 16px
+  --space-md: 1.25rem;    // 20px
+  --space-lg: 2rem;       // 32px
+  --space-xl: 3.125rem;   // 50px
+  --space-2xl: 6.25rem;   // 100px
+
+  // ---------------------------------------------------------------------------
+  // Typography
+  // ---------------------------------------------------------------------------
+  --font-sans: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  --font-serif: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
+
+  --font-size-base: 16px;
+  --font-size-sm: 13px;
+  --font-size-md: 14px;
+  --font-size-lg: 18px;
+  --font-size-xl: 22px;
+
+  --line-height-base: 1.5;
+  --line-height-tight: 1.2;
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 600;
+  --font-weight-bold: 700;
+
+  // ---------------------------------------------------------------------------
+  // Transitions
+  // ---------------------------------------------------------------------------
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.35s ease;
+  --transition-slow: 0.5s ease;
+
+  // ---------------------------------------------------------------------------
+  // Shadows (light theme)
+  // ---------------------------------------------------------------------------
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+// Dark theme shadow adjustments (stronger shadows for depth on dark backgrounds)
+[data-theme="dark"] {
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.6);
+
+  // ---------------------------------------------------------------------------
+  // Border Radius
+  // ---------------------------------------------------------------------------
+  --radius-sm: 3px;
+  --radius-md: 5px;
+  --radius-lg: 10px;
+  --radius-pill: 300px;
+
+  // ---------------------------------------------------------------------------
+  // Z-Index Scale
+  // ---------------------------------------------------------------------------
+  --z-base: 1;
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+}
+
+// =============================================================================
+// SCSS Variables for Color Functions
+// =============================================================================
+// These SCSS variables are used ONLY in SCSS color functions (color.adjust, etc.)
+// where CSS custom properties don't work.
+//
+// IMPORTANT: When user changes theme in _config.yml, these fallback values
+// may not match the runtime colors. For most use cases, components should
+// reference CSS custom properties directly (var(--color-primary)).
+//
+// These are synchronized with the default orange palette (500 shade)
+// =============================================================================
+
+$theme-primary: #f97316;    // orange-500 (updated from old #F05F40)
+$theme-dark: #0f172a;       // slate-900 (updated from old #222)
+
+// Extract from CSS custom properties for use in SCSS calculations
+$color-primary: #f97316;    // orange-500
+$color-dark: #0f172a;       // slate-900
+$color-light: #fff;

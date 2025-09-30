@@ -1,0 +1,10 @@
+// =============================================================================
+// Base Index - Modern @forward Pattern
+// =============================================================================
+// Forwards all base partials for centralized importing
+// Following September 2025 Sass module system best practices
+// =============================================================================
+
+@forward 'reset';
+@forward 'typography';
+@forward 'utilities';

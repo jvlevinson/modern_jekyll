@@ -1,0 +1,94 @@
+// =============================================================================
+// Buttons Component
+// =============================================================================
+// Extracted button styles from monolithic _base.scss
+// Following BEM naming convention and September 2025 best practices
+// Bootstrap 5 compatible button variants
+// =============================================================================
+
+@use '../abstracts' as *;
+
+// -----------------------------------------------------------------------------
+// Button Base Styles
+// -----------------------------------------------------------------------------
+// Override Bootstrap button defaults with custom styling
+// -----------------------------------------------------------------------------
+.btn {
+    @include sans-serif-font;
+    border-radius: 300px;
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+    @include transition-all;
+}
+
+// -----------------------------------------------------------------------------
+// Button Variants (Week 9: Migrated to CSS Custom Properties)
+// -----------------------------------------------------------------------------
+// Primary button - white text on primary background
+// Used for main CTAs (hero, call-to-action sections)
+// Now uses semantic tokens from design-tokens.html for user-customizable colors
+// -----------------------------------------------------------------------------
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-text-inverse);
+    border: 2px solid var(--color-primary);
+
+    &:hover,
+    &:focus {
+        // Fallback to SCSS color function for browsers without :has() support
+        background-color: var(--color-primary-hover);
+        border-color: var(--color-primary-hover);
+        color: var(--color-text-inverse);
+    }
+
+    &:active,
+    &.active {
+        background-color: var(--color-primary-active);
+        border-color: var(--color-primary-active);
+        color: var(--color-text-inverse);
+    }
+}
+
+// -----------------------------------------------------------------------------
+// Default/Outline button - dark text on white background
+// Used for secondary actions (e.g., "Learn More" in about section)
+// -----------------------------------------------------------------------------
+.btn-default,
+.btn-outline-secondary {
+    background-color: transparent;
+    color: var(--color-text);
+    border: 2px solid var(--color-text-inverse);
+
+    &:hover,
+    &:focus {
+        background-color: var(--color-text-inverse);
+        border-color: var(--color-text-inverse);
+        color: var(--color-primary);
+    }
+
+    &:active,
+    &.active {
+        background-color: var(--color-text-inverse);
+        border-color: var(--color-text-inverse);
+        color: var(--color-primary-active);
+    }
+}
+
+// -----------------------------------------------------------------------------
+// Button Sizes
+// -----------------------------------------------------------------------------
+// Extra large button size for hero sections
+// -----------------------------------------------------------------------------
+.btn-xl {
+    padding: var(--space-md) var(--space-lg);
+    font-size: var(--font-size-base);
+}
+
+// -----------------------------------------------------------------------------
+// BEM Component Structure (Future Enhancement)
+// -----------------------------------------------------------------------------
+// When refactoring templates in Week 6, consider migrating to:
+// .btn--primary { ... }
+// .btn--secondary { ... }
+// .btn--xl { ... }
+// -----------------------------------------------------------------------------

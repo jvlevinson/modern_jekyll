@@ -1,0 +1,95 @@
+// =============================================================================
+// Theme Toggle Component
+// =============================================================================
+// Single icon button that toggles between light/dark theme
+// Shows sun icon for light theme, moon icon for dark theme
+// Following token-based styling and project conventions
+// September 2025 best practices
+// =============================================================================
+
+.theme-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: var(--space-xs);
+    margin-left: var(--space-sm);
+    font-size: var(--font-size-lg);
+    color: var(--color-text);
+    transition: all var(--transition-fast);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-sm);
+    position: relative;
+    z-index: 10;
+    min-width: 40px;
+    min-height: 40px;
+
+    // Hover effect - matches nav links
+    &:hover {
+        color: var(--color-primary);
+    }
+
+    // Active/pressed state
+    &:active {
+        transform: scale(0.95);
+    }
+
+    // Focus state for accessibility
+    &:focus {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;
+    }
+
+    // Icons
+    .theme-icon-light,
+    .theme-icon-dark {
+        transition: opacity var(--transition-fast);
+        position: absolute;
+    }
+
+    // Light theme: show sun, hide moon
+    .theme-icon-light {
+        opacity: 1;
+    }
+
+    .theme-icon-dark {
+        opacity: 0;
+    }
+}
+
+// Dark theme active state
+[data-theme="dark"] .theme-toggle {
+    // Dark theme: hide sun, show moon
+    .theme-icon-light {
+        opacity: 0;
+    }
+
+    .theme-icon-dark {
+        opacity: 1;
+    }
+}
+
+// Navbar integration
+.navbar-light {
+    .theme-toggle {
+        color: var(--color-text);
+    }
+
+    &.affix .theme-toggle {
+        color: var(--color-text);
+    }
+}
+
+// Responsive adjustments
+@media (min-width: 992px) {
+    .navbar-light {
+        .theme-toggle {
+            color: var(--color-text-faded);
+        }
+
+        &.affix .theme-toggle {
+            color: var(--color-text);
+        }
+    }
+}

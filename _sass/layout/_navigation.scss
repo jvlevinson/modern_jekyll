@@ -1,0 +1,155 @@
+// =============================================================================
+// Navigation Layout (Week 9: Migrated to CSS Custom Properties)
+// =============================================================================
+// Extracted from monolithic _base.scss
+// Bootstrap 5 compatible navbar with scroll behavior
+// Now uses semantic tokens from design-tokens.html for user-customizable colors
+// =============================================================================
+
+@use '../abstracts' as *;
+@use 'sass:color';
+
+// -----------------------------------------------------------------------------
+// Navbar Base Styles
+// -----------------------------------------------------------------------------
+// Light navbar with custom branding and typography
+// Mobile: white background with hamburger menu
+// Desktop: transparent background, becomes solid on scroll (affix)
+// Blur effect for better visibility over page content
+// -----------------------------------------------------------------------------
+.navbar-light {
+    background-color: var(--bg-light);
+    @include sans-serif-font;
+    @include transition-all;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    // Brand logo/text
+    .navbar-brand {
+        color: var(--color-primary);
+        @include sans-serif-font;
+        font-weight: var(--font-weight-bold);
+        text-transform: uppercase;
+
+        &:hover,
+        &:focus {
+            color: var(--color-primary-hover);
+        }
+    }
+
+    // Navigation links
+    .navbar-nav {
+        .nav-link {
+            text-transform: uppercase;
+            font-weight: var(--font-weight-bold);
+            font-size: 0.8125rem; // 13px
+            color: var(--color-text);
+
+            &:hover,
+            &:focus {
+                color: var(--color-primary);
+            }
+        }
+
+        // Active link state
+        .nav-item.active .nav-link {
+            color: var(--color-primary);
+        }
+    }
+}
+
+// -----------------------------------------------------------------------------
+// Desktop Navbar Behavior
+// -----------------------------------------------------------------------------
+// Transparent navbar on page load, solid white on scroll
+// Large screens only (992px and up)
+// Now uses semantic tokens for responsive color changes
+// -----------------------------------------------------------------------------
+@media (min-width: 992px) {
+    .navbar-light {
+        // Initial state - semi-transparent with blur effect and white text
+        background-color: var(--navbar-bg);
+
+        .navbar-brand {
+            color: var(--color-text-faded);
+
+            &:hover,
+            &:focus {
+                color: var(--bg-light);
+            }
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--color-text-faded);
+
+            &:hover,
+            &:focus {
+                color: var(--bg-light);
+            }
+        }
+
+        // Scrolled state - more solid background with dark text and blur
+        // "navbar-shrink" class added via JavaScript on scroll
+        &.navbar-shrink {
+            background-color: var(--navbar-bg-scrolled);
+            box-shadow: var(--shadow-sm);
+
+            .navbar-brand {
+                color: var(--color-primary);
+                font-size: 0.875rem; // 14px - smaller when scrolled
+
+                &:hover,
+                &:focus {
+                    color: var(--color-primary-hover);
+                }
+            }
+
+            .navbar-nav .nav-link {
+                color: var(--color-text);
+
+                &:hover,
+                &:focus {
+                    color: var(--color-primary);
+                }
+            }
+        }
+    }
+}
+
+// -----------------------------------------------------------------------------
+// BEM Component Structure (Future Enhancement)
+// -----------------------------------------------------------------------------
+// When refactoring templates in future iterations, consider migrating to:
+//
+// .nav {
+//     // Main navigation container
+// }
+//
+// .nav--transparent {
+//     // Transparent variant for hero overlay
+// }
+//
+// .nav--solid {
+//     // Solid background variant (scrolled state)
+// }
+//
+// .nav__brand {
+//     // Logo/brand text
+// }
+//
+// .nav__menu {
+//     // Navigation menu list
+// }
+//
+// .nav__item {
+//     // Individual menu item
+// }
+//
+// .nav__link {
+//     // Navigation link
+// }
+//
+// .nav__link--active {
+//     // Active link state
+// }
+// -----------------------------------------------------------------------------

@@ -1,0 +1,12 @@
+// =============================================================================
+// Layout Index - Modern @forward Pattern
+// =============================================================================
+// Forwards all layout partials for centralized importing
+// Following September 2025 Sass module system best practices
+// =============================================================================
+
+@forward 'navigation';
+@forward 'header';
+@forward 'sections';
+@forward 'contact';
+@forward 'footer';

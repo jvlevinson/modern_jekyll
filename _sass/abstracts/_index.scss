@@ -1,0 +1,10 @@
+// =============================================================================
+// Abstracts Index - Modern @forward Pattern
+// =============================================================================
+// Forwards all abstract partials for centralized importing
+// Following September 2025 Sass module system best practices
+// =============================================================================
+
+@forward 'variables';
+@forward 'functions';
+@forward 'mixins';

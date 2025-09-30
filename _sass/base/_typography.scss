@@ -1,0 +1,74 @@
+// =============================================================================
+// Typography - Base Text Styles
+// =============================================================================
+// Extracted from monolithic _base.scss for better modularity
+// September 2025 best practices
+// =============================================================================
+
+@use '../abstracts' as *;
+
+// -----------------------------------------------------------------------------
+// Body Typography
+// -----------------------------------------------------------------------------
+body {
+    @include serif-font;
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    color: var(--color-text);
+}
+
+// -----------------------------------------------------------------------------
+// Headings
+// -----------------------------------------------------------------------------
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @include sans-serif-font;
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+}
+
+// -----------------------------------------------------------------------------
+// Paragraphs
+// -----------------------------------------------------------------------------
+p {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    margin-bottom: var(--space-md);
+}
+
+// -----------------------------------------------------------------------------
+// Links
+// -----------------------------------------------------------------------------
+a {
+    @include transition-all;
+    color: var(--color-primary);
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        color: var(--color-primary-dark);
+    }
+}
+
+// -----------------------------------------------------------------------------
+// Horizontal Rules
+// -----------------------------------------------------------------------------
+hr {
+    border-color: var(--color-primary);
+    border-width: 3px;
+    border-style: solid;
+    max-width: 50px;
+    margin: var(--space-lg) auto;
+
+    &.light {
+        border-color: var(--color-light);
+    }
+
+    &.primary {
+        border-color: var(--color-primary);
+    }
+}

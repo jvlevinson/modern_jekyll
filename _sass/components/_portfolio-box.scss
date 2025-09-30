@@ -1,0 +1,134 @@
+// =============================================================================
+// Portfolio Box Component (Week 9: Migrated to CSS Custom Properties)
+// =============================================================================
+// Extracted from monolithic _base.scss
+// Image gallery component with hover overlay effect
+// Now uses semantic tokens from design-tokens.html for user-customizable colors
+// =============================================================================
+
+@use '../abstracts' as *;
+
+// -----------------------------------------------------------------------------
+// Portfolio Box Container
+// -----------------------------------------------------------------------------
+// Wrapper for portfolio image with hover caption overlay
+// -----------------------------------------------------------------------------
+.portfolio-box {
+    position: relative;
+    display: block;
+    max-width: 650px;
+    margin: 0 auto;
+
+    // Hover effect reveals caption overlay
+    &:hover {
+        .portfolio-box-caption {
+            opacity: 1;
+        }
+    }
+}
+
+// -----------------------------------------------------------------------------
+// Portfolio Caption Overlay
+// -----------------------------------------------------------------------------
+// Full-size overlay with primary color background (90% opacity)
+// Hidden by default, revealed on hover
+// Uses user-selected primary color from _config.yml
+// -----------------------------------------------------------------------------
+.portfolio-box-caption {
+    color: var(--color-text-inverse);
+    opacity: 0;
+    display: block;
+    // Create semi-transparent overlay using color-mix (modern approach)
+    // Fallback: use primary color with rgba for older browsers
+    background: var(--color-primary);
+    background: color-mix(in srgb, var(--color-primary) 90%, transparent);
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    @include transition-all;
+}
+
+// -----------------------------------------------------------------------------
+// Caption Content - Vertically Centered
+// -----------------------------------------------------------------------------
+// Project category and name centered in overlay
+// -----------------------------------------------------------------------------
+.portfolio-box-caption-content {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    .project-category,
+    .project-name {
+        @include sans-serif-font;
+        padding: 0 var(--space-md);
+    }
+
+    .project-category {
+        text-transform: uppercase;
+        font-weight: var(--font-weight-semibold);
+        font-size: 0.875rem; // 14px
+    }
+
+    .project-name {
+        font-size: 1.125rem; // 18px
+    }
+
+    // Larger typography on tablets and up
+    @media (min-width: 768px) {
+        .project-category {
+            font-size: 1rem; // 16px
+        }
+
+        .project-name {
+            font-size: 1.375rem; // 22px
+        }
+    }
+}
+
+// -----------------------------------------------------------------------------
+// BEM Component Structure (Future Enhancement)
+// -----------------------------------------------------------------------------
+// When refactoring templates in Week 6, consider migrating to:
+//
+// .portfolio-box {
+//     // Container styles
+// }
+//
+// .portfolio-box__image {
+//     display: block;
+//     width: 100%;
+//     height: auto;
+// }
+//
+// .portfolio-box__overlay {
+//     // Caption overlay styles
+// }
+//
+// .portfolio-box__content {
+//     // Centered content wrapper
+// }
+//
+// .portfolio-box__category {
+//     // Project category text
+// }
+//
+// .portfolio-box__title {
+//     // Project name/title
+// }
+//
+// Usage in HTML:
+// <a class="portfolio-box" href="...">
+//     <img class="portfolio-box__image" src="..." alt="...">
+//     <div class="portfolio-box__overlay">
+//         <div class="portfolio-box__content">
+//             <div class="portfolio-box__category">Category</div>
+//             <div class="portfolio-box__title">Project Name</div>
+//         </div>
+//     </div>
+// </a>
+// -----------------------------------------------------------------------------

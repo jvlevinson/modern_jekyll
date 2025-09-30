@@ -1,0 +1,49 @@
+---
+---
+
+@charset "utf-8";
+
+// =============================================================================
+// Main Stylesheet - Modular SCSS Architecture (September 2025)
+// =============================================================================
+// This file uses modern Sass module system (@use/@forward) instead of @import
+// Following the 7-1 pattern: abstracts, base, components, layout, pages, vendors
+// All legacy @import dependencies have been migrated to @use
+// =============================================================================
+
+// -----------------------------------------------------------------------------
+// Abstracts - Design Tokens & Utilities
+// -----------------------------------------------------------------------------
+// Variables, functions, and mixins - no CSS output
+// Loaded first as they're used by all other modules
+@use 'abstracts';
+
+// -----------------------------------------------------------------------------
+// Base - Foundation Styles
+// -----------------------------------------------------------------------------
+// Reset, typography, and utility classes
+@use 'base';
+
+// -----------------------------------------------------------------------------
+// Components - Reusable UI Elements
+// -----------------------------------------------------------------------------
+// Buttons, service boxes, portfolio boxes
+@use 'components';
+
+// -----------------------------------------------------------------------------
+// Layout - Page Structure
+// -----------------------------------------------------------------------------
+// Navigation, header, sections, and contact layout
+@use 'layout';
+
+// -----------------------------------------------------------------------------
+// Pages - Page-Specific Styles
+// -----------------------------------------------------------------------------
+// Browser customizations and page-specific overrides
+@use 'pages/extras';
+
+// -----------------------------------------------------------------------------
+// Vendors - Third-Party Overrides
+// -----------------------------------------------------------------------------
+// Bootstrap 5 customizations
+@use 'vendors/bootstrap-overrides';

@@ -1,0 +1,45 @@
+// =============================================================================
+// Bootstrap 5 Overrides
+// =============================================================================
+// Custom overrides for Bootstrap 5 framework
+// Following September 2025 best practices
+// =============================================================================
+
+// -----------------------------------------------------------------------------
+// Color Utilities Override
+// -----------------------------------------------------------------------------
+// Override Bootstrap's .text-primary with custom brand color
+// -----------------------------------------------------------------------------
+.text-primary {
+    color: var(--color-primary) !important;
+}
+
+// -----------------------------------------------------------------------------
+// Grid Utilities Override
+// -----------------------------------------------------------------------------
+// Remove gutters from specific grid layouts
+// Used in portfolio and other full-bleed sections
+// -----------------------------------------------------------------------------
+.no-gutter > [class*='col-'] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+// -----------------------------------------------------------------------------
+// Future Bootstrap Overrides
+// -----------------------------------------------------------------------------
+// As the design evolves, add Bootstrap overrides here:
+//
+// .container {
+//     max-width: 1200px;
+// }
+//
+// .btn {
+//     border-radius: var(--border-radius-full);
+// }
+//
+// .card {
+//     border: none;
+//     box-shadow: var(--shadow-md);
+// }
+// -----------------------------------------------------------------------------

@@ -1,0 +1,51 @@
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ site.description }}">
+    <meta name="author" content="{{ site.author }}">
+
+    <title>{{ site.title }}</title>
+
+    <!-- Favicon -->
+    {% if site.favicon %}
+    <link rel="icon" type="image/svg+xml" href="{{ site.favicon | relative_url }}">
+    <link rel="alternate icon" type="image/svg+xml" href="{{ site.favicon | relative_url }}">
+    {% endif %}
+
+    <!-- Theme Initialization (Prevent FOUC) -->
+    <script>
+        // This script runs immediately before any CSS loads to prevent flash of wrong theme
+        (function() {
+            const storedTheme = localStorage.getItem('theme');
+            const theme = storedTheme || 'light';
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+
+    <!-- Bootstrap 5.3.8 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" type="text/css">
+
+    <!-- Custom Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="{{ '/css/animate.min.css' | relative_url }}" type="text/css">
+
+    <!-- Design Tokens - Dynamic Color Theme (from _config.yml) -->
+    {% include design-tokens.html %}
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>

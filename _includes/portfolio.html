@@ -1,0 +1,48 @@
+<section class="no-padding" id="portfolio">
+    {% if site.portfolio_heading %}
+    <div class="container text-center">
+        <h2 class="section-heading">{{ site.portfolio_heading }}</h2>
+        <hr class="primary">
+    </div>
+    {% endif %}
+    <div class="container-fluid">
+        <div class="row no-gutter">
+            {% for item in site.portfolio_items %}
+            <div class="col-lg-4 col-sm-6">
+                <div class="portfolio-box portfolio-flip-container">
+                    <div class="portfolio-flip-inner">
+                        <!-- Front Side (Image) -->
+                        <div class="portfolio-flip-front">
+                            <img src="{{ item.image | relative_url }}" class="img-responsive" alt="">
+                            <div class="portfolio-box-caption">
+                                <div class="portfolio-box-caption-content">
+                                    <div class="project-category text-faded">
+                                        {{ item.category }}
+                                    </div>
+                                    <div class="project-name">
+                                        {{ item.name }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Back Side (Description) -->
+                        <div class="portfolio-flip-back">
+                            <div class="portfolio-flip-back-content">
+                                <div class="project-category text-faded">
+                                    {{ item.category }}
+                                </div>
+                                <div class="project-name">
+                                    {{ item.name }}
+                                </div>
+                                <p class="project-description">
+                                    {{ item.flip_description }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

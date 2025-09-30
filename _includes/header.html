@@ -1,0 +1,10 @@
+<header {% if site.hero.background_image %}style="background-image: url('{{ site.hero.background_image | relative_url }}');"{% endif %}>
+    <div class="header-content">
+        <div class="header-content-inner">
+            <h1>{{ site.hero.heading }}</h1>
+            <hr>
+            <p>{{ site.hero.description }}</p>
+            <a href="{{ site.hero.button_link }}" class="btn btn-primary btn-xl page-scroll">{{ site.hero.button_text }}</a>
+        </div>
+    </div>
+</header>

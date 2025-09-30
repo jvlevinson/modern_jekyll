@@ -1,0 +1,55 @@
+// =============================================================================
+// Service Box Component
+// =============================================================================
+// Extracted from monolithic _base.scss
+// Component for services section featuring icon + heading + description
+// Following BEM naming convention and September 2025 best practices
+// =============================================================================
+
+// -----------------------------------------------------------------------------
+// Service Box Container
+// -----------------------------------------------------------------------------
+// Contains icon, title, and description for each service
+// Responsive spacing adjusts based on viewport
+// -----------------------------------------------------------------------------
+.service-box {
+    max-width: 400px;
+    margin: var(--space-xl) auto 0;
+
+    // Desktop layout - reduced top margin for better spacing
+    @media (min-width: 992px) {
+        margin: var(--space-md) auto 0;
+    }
+
+    // Remove bottom margin from last paragraph
+    p {
+        margin-bottom: 0;
+    }
+}
+
+// -----------------------------------------------------------------------------
+// BEM Component Structure (Future Enhancement)
+// -----------------------------------------------------------------------------
+// When refactoring templates in Week 6, consider migrating to:
+//
+// .service-box {
+//     // Container styles
+// }
+//
+// .service-box__icon {
+//     font-size: 4rem;
+//     color: var(--color-primary);
+//     margin-bottom: var(--space-md);
+// }
+//
+// .service-box__title {
+//     @include sans-serif-font;
+//     font-weight: var(--font-weight-bold);
+//     margin-bottom: var(--space-sm);
+// }
+//
+// .service-box__description {
+//     color: var(--color-text-faded);
+//     line-height: var(--line-height-base);
+// }
+// -----------------------------------------------------------------------------

@@ -1,0 +1,120 @@
+# Site settings
+title: William M. Orr - Professional Portfolio
+email: wotech4@live.com
+description: 'Portfolio of William M. Orr - Director of IT | IT Manager | IT Field Ops Manager'
+author: William M. Orr
+baseurl: "" # Project site subpath
+url: "https://williammorr.com" # the base hostname & protocol for your site
+favicon: img/favicon.svg # Path to favicon file
+
+twitter_username: wmorr
+github_username: williammorr
+linkedin_username: williammorr
+
+# Navigation
+brand_name: William M. Orr
+
+# Theme Configuration
+theme:
+  brand_primary: "blue"      # Main brand color - Choose: orange, blue, green, purple, red
+  brand_secondary: "green"   # Optional accent color - Choose: orange, blue, green, purple, red, or null
+  neutral: "slate"           # Text/backgrounds - Choose: slate, gray
+  mode: "light"              # Theme mode - Choose: light, dark, auto (auto respects OS preference)
+
+
+# Hero/Header Section
+hero:
+  heading: IT Leadership Portfolio
+  description: Skilled IT leader with 12+ years of experience driving enterprise IT strategy, field operations, acquisitions, and infrastructure standardization across the U.S., Canada, and Puerto Rico. Proven success in delivering secure, scalable solutions that reduce costs and improve efficiency.
+  button_text: View My Work
+  button_link: "#portfolio"
+  background_image: img/header.jpg
+
+# Call to Action Section
+cta:
+  heading: Driving IT Transformation & Operational Excellence
+  description: From capital construction and large-scale acquisitions to Cisco network standardization and VoIP migrations, I deliver innovative IT strategies that align with business growth and reduce costs. Explore my portfolio to see how I’ve led organizations through complex transitions.
+  button_text: Learn More
+  button_link: "#services"
+
+# Services Section
+services:
+  heading: Core Competencies
+  list:
+    - icon: fa-diamond
+      title: IT Strategy & Leadership
+      description: Over a decade of experience aligning IT strategy with sustainable business growth, managing multimillion-dollar budgets, and directing cross-functional teams.
+      delay: 0
+    - icon: fa-paper-plane
+      title: Network & VoIP Standardization
+      description: Led U.S., Canada, and Puerto Rico infrastructure conversions to Cisco-based systems and SIP VoIP, delivering $10M in telecom savings.
+      delay: .1s
+    - icon: fa-newspaper
+      title: Capital Construction & Acquisitions
+      description: Managed 2,500+ IT standardization projects, 100+ acquisitions, and enterprise construction initiatives including cost analysis, supplier negotiations, and ISP provisioning.
+      delay: .2s
+    - icon: fa-heart
+      title: Team Development
+      description: Built and mentored high-performing IT teams, ensuring on-time delivery, process improvements, and standardized support for thousands of locations.
+      delay: .3s
+
+# Portfolio Section
+portfolio_heading: My Work
+portfolio_items:
+  - image: img/portfolio/1.jpg
+    category: Enterprise IT
+    name: SCI – Senior IT Manager / Interim Director
+    link: "#"
+    flip_description: Led enterprise IT strategy for a Fortune 500 company, managing multimillion-dollar budgets, infrastructure modernization, and cross-functional teams across multiple locations.
+  - image: img/portfolio/2.jpg
+    category: IT Field Ops
+    name: SCI – IT Manager & Field Ops Manager
+    link: "#"
+    flip_description: Directed field operations for 2,500+ locations, overseeing on-site IT support, standardization projects, and ensuring operational excellence across the organization.
+  - image: img/portfolio/3.jpg
+    category: Infrastructure Projects
+    name: 2,500+ Network & VoIP Standardization Projects
+    link: "#"
+    flip_description: Managed comprehensive network infrastructure conversions to Cisco-based systems and SIP VoIP deployments across U.S., Canada, and Puerto Rico operations.
+  - image: img/portfolio/4.jpg
+    category: Mergers & Acquisitions
+    name: Integration of 100+ Acquisitions
+    link: "#"
+    flip_description: Led IT integration for 100+ corporate acquisitions, ensuring seamless technology transitions, system consolidations, and minimal business disruption during mergers.
+  - image: img/portfolio/5.jpg
+    category: Vendor & ISP Negotiations
+    name: Telecom & ISP Contracting with $10M Savings
+    link: "#"
+    flip_description: Negotiated enterprise telecom contracts and ISP agreements, delivering $10M in cost savings while improving service quality and expanding network capabilities.
+  - image: img/portfolio/6.jpg
+    category: Field Services Leadership
+    name: Meriplex – Field Services Manager & Project Manager
+    link: "#"
+    flip_description: Managed MSP field services team delivering enterprise IT support, project implementations, and technical consulting for clients across multiple industries.
+
+# Resume Section
+resume:
+  heading: Resume & Credentials
+  description: Download my complete resume to learn more about my professional experience, technical expertise, and leadership accomplishments in IT strategy, infrastructure transformation, and enterprise operations.
+  file_path: /public/files/wmorr_director-resume-v2.1.0.pdf
+  view_button_text: View Resume
+  download_button_text: Download Resume
+
+# Aside Section
+aside:
+  heading: Explore My Full Portfolio & References
+  button_text: More Coming Soon!
+  button_link: "https://williammorr.com"
+
+# Contact Section
+contact:
+  heading: Let's Get In Touch!
+  description: Interested in IT leadership, infrastructure transformation, or strategic consulting? Reach out by email or phone, or connect via my website. I'll get back to you as soon as possible.
+
+# Footer Section
+footer:
+  copyright: William M. Orr
+  year: 2025
+
+# Build settings
+markdown: kramdown

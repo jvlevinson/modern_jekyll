@@ -1,0 +1,64 @@
+// =============================================================================
+// Sections Layout
+// =============================================================================
+// Extracted from monolithic _base.scss
+// General section styling and call-to-action section
+// Following September 2025 best practices
+// =============================================================================
+
+// -----------------------------------------------------------------------------
+// Section Heading
+// -----------------------------------------------------------------------------
+// Common heading style used across all sections
+// -----------------------------------------------------------------------------
+.section-heading {
+    margin-top: 0;
+}
+
+// -----------------------------------------------------------------------------
+// Call to Action Section
+// -----------------------------------------------------------------------------
+// Special section layout for CTA content
+// -----------------------------------------------------------------------------
+.call-to-action {
+    h2 {
+        margin: 0 auto var(--space-md);
+    }
+}
+
+// -----------------------------------------------------------------------------
+// BEM Component Structure (Future Enhancement)
+// -----------------------------------------------------------------------------
+// When refactoring templates in future iterations, consider migrating to:
+//
+// .section {
+//     padding: var(--space-2xl) 0;
+// }
+//
+// .section--no-padding {
+//     padding: 0;
+// }
+//
+// .section__heading {
+//     margin-top: 0;
+//     text-align: center;
+// }
+//
+// .section__subheading {
+//     color: var(--color-text-muted);
+// }
+//
+// .cta {
+//     // Call-to-action section container
+// }
+//
+// .cta__heading {
+//     margin: 0 auto var(--space-md);
+// }
+//
+// .cta__button-group {
+//     display: flex;
+//     gap: var(--space-sm);
+//     justify-content: center;
+// }
+// -----------------------------------------------------------------------------

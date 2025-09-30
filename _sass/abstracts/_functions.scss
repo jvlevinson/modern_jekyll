@@ -1,0 +1,54 @@
+// =============================================================================
+// SCSS Functions - Helper Utilities
+// =============================================================================
+// Custom functions for calculations and conversions
+// Following September 2025 best practices
+// =============================================================================
+
+// -----------------------------------------------------------------------------
+// Rem Conversion
+// -----------------------------------------------------------------------------
+// Convert px to rem based on base font size
+// @param {Number} $px - Pixel value to convert
+// @return {Number} - Rem value
+// -----------------------------------------------------------------------------
+@function rem($px) {
+  @return #{$px / 16}rem;
+}
+
+// -----------------------------------------------------------------------------
+// Spacing Helper
+// -----------------------------------------------------------------------------
+// Get spacing value from design system scale
+// @param {String} $size - Size key (xs, sm, md, lg, xl, 2xl)
+// @return {String} - CSS custom property reference
+// -----------------------------------------------------------------------------
+@function space($size) {
+  @return var(--space-#{$size});
+}
+
+// -----------------------------------------------------------------------------
+// Color Helper
+// -----------------------------------------------------------------------------
+// Get color value from design system
+// @param {String} $name - Color name (primary, dark, light, etc.)
+// @return {String} - CSS custom property reference
+// -----------------------------------------------------------------------------
+@function color($name) {
+  @return var(--color-#{$name});
+}
+
+// -----------------------------------------------------------------------------
+// Strip Units
+// -----------------------------------------------------------------------------
+// Remove units from a number
+// @param {Number} $number - Number with unit
+// @return {Number} - Unitless number
+// -----------------------------------------------------------------------------
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}

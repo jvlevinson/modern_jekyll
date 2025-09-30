@@ -1,0 +1,29 @@
+// =============================================================================
+// Resume Box Component
+// =============================================================================
+// Container for resume download/view buttons
+// Following BEM naming and token-based styling
+// September 2025 best practices
+// =============================================================================
+
+.resume-box {
+    margin-top: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    align-items: center;
+    justify-content: center;
+
+    // Desktop: side-by-side buttons
+    @media (min-width: 768px) {
+        flex-direction: row;
+        gap: var(--space-lg);
+    }
+
+    // Button icon spacing
+    .btn {
+        i {
+            margin-right: var(--space-xs);
+        }
+    }
+}
