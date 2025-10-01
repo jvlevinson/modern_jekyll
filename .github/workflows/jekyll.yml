@@ -2,14 +2,14 @@
 # GitHub Pages Deployment - Jekyll Site
 # =============================================================================
 # Automated build and deployment workflow for Jekyll 4.4+ with modern Sass
-# Uses GitHub Actions to build and deploy on every push to master branch
-# Updated: September 2025 - Latest action versions and best practices
+# Uses GitHub Actions to build and deploy on every push to main branch
+# Updated: October 2025 - Latest action versions and best practices
 # =============================================================================
 
 name: Deploy Jekyll site to GitHub Pages
 
 on:
-  # Trigger on push to master branch
+  # Trigger on push to main branch
   push:
     branches: ["main"]
 

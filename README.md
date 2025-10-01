@@ -199,6 +199,8 @@ The theming system supports three modes:
 
 **Theme Toggle Button:** Users can manually switch themes using the sun/moon icon button in the navigation bar. Their preference is saved in localStorage and persists across sessions.
 
+**Link Styling:** Both light and dark themes use consistent hover behavior - links change color on hover with no underlines, providing a clean, modern user experience across all theme modes.
+
 #### Separation of Concerns
 
 The theming system separates user configuration from system files:
@@ -230,7 +232,7 @@ See `_includes/design-tokens.html` for the full token architecture.
 - ✅ **Phase 2** (Complete): Multi-color support (5 palettes)
 - ✅ **Phase 3** (Complete): Dark theme support with `mode: "light"`, `mode: "dark"`, and `mode: "auto"`
 - ✅ **Phase 4** (Complete): Theme toggle button with localStorage persistence
-- 🔄 **Phase 5** (Future): Custom color overrides for advanced users
+- ✅ **Phase 5** (Complete): Quality Assurance with JSON Schema validation, Playwright visual regression testing, and WCAG 2.1 AA compliance
 
 ### Hero Section
 The landing section with heading, description, and configurable background:
@@ -242,6 +244,11 @@ hero:
   button_link: "#about"              # Anchor link or URL
   background_image: img/header.jpg   # Configurable background image
 ```
+
+**Technical Details:**
+- Full viewport height on desktop (`min-height: 100vh`) for immersive hero experience
+- Responsive mobile layout with auto height
+- Configurable overlay for text contrast in dark mode
 
 ### Call-to-Action Section
 ```yaml
@@ -384,7 +391,7 @@ This project uses the **7-1 Pattern** with modern Sass module system (`@use`/`@f
 - **No deprecation warnings** - Uses `color.adjust()` instead of deprecated `darken()`
 - **CSS Custom Properties** - Runtime theming support for light/dark modes
 - **Modular & maintainable** - Each component in its own file
-- **BEM-ready** - Structured for easy migration to BEM naming
+- **✅ BEM Architecture** - All components use BEM naming convention (`.btn--primary`, `.service-box__icon`, `.portfolio-box--flippable`)
 - **Bootstrap 5 compatible** - Modern grid and components
 - **User-Customizable Colors** - Choose from 5 color palettes via `_config.yml`
 - **Glassmorphism Effects** - Navbar with backdrop-filter blur
@@ -442,13 +449,97 @@ The site uses **pure vanilla JavaScript** following 2025 best practices:
 
 ---
 
+## Testing & Quality Assurance
+
+This project includes comprehensive QA tools for maintaining code quality and preventing regressions.
+
+### Config Validation
+
+**JSON Schema validation** ensures `_config.yml` is correct before deployment:
+
+```bash
+pnpm run validate:config
+```
+
+Features:
+- Validates all required fields (title, email, theme settings)
+- Checks color palette names (`orange`, `blue`, `green`, `purple`, `red`)
+- Validates theme mode (`light`, `dark`, `auto`)
+- Enforces email format, URL structure
+- Colorful terminal output with helpful error messages
+
+Schema: `_data/config-schema.json` (114 lines, comprehensive validation)
+
+### Visual Regression Testing
+
+**Playwright** tests ensure UI consistency across browsers:
+
+```bash
+pnpm run test:visual           # Run all visual tests
+pnpm run test:visual:update    # Update baseline screenshots
+pnpm run test:visual:ui        # Interactive UI mode
+pnpm run test:visual:report    # View latest report
+```
+
+Tests include:
+- Homepage rendering (light/dark themes)
+- Navigation scroll behavior
+- Portfolio flip animations
+- Button hover states
+- Mobile responsive layouts
+- Theme toggle functionality
+
+Browsers tested: Chrome, Firefox, Safari, Mobile Chrome, Mobile Safari
+
+### Accessibility Testing
+
+**axe-core** ensures WCAG 2.1 AA compliance:
+
+```bash
+pnpm run test:a11y
+```
+
+Checks:
+- ARIA landmarks (`role="banner"`, `role="main"`, `role="navigation"`, `role="contentinfo"`)
+- Color contrast ratios (4.5:1 minimum)
+- Keyboard navigation
+- Screen reader compatibility
+- Semantic HTML structure
+
+### Run All Tests
+
+```bash
+pnpm test
+```
+
+Runs config validation, visual regression tests, and accessibility audit in sequence.
+
+### Pre-Build Validation
+
+The build script automatically validates config before building:
+
+```bash
+pnpm run build  # Runs validate:config first
+```
+
+### Why These Tools?
+
+- **Playwright** - Microsoft-backed, industry standard with huge community
+- **AJV** - Most popular JSON Schema validator (used by major frameworks)
+- **axe-core** - Powers Google Lighthouse accessibility tests
+- **pnpm** - Fast, disk-efficient package manager (2025 best practice)
+
+All tools chosen for open source compatibility, active maintenance, and ease of use.
+
+---
+
 ## Deploying to GitHub Pages
 
 This site supports both **user sites** (`username.github.io`) and **project sites** (`username.github.io/repo-name`).
 
 ### Automated Deployment (Recommended)
 
-The repository includes a **GitHub Actions workflow** (`.github/workflows/jekyll.yml`) that automatically builds and deploys your site on every push to the `master` branch.
+The repository includes a **GitHub Actions workflow** (`.github/workflows/jekyll.yml`) that automatically builds and deploys your site on every push to the `main` branch.
 
 **Setup Steps:**
 
@@ -479,7 +570,7 @@ baseurl: "/Personal-Profile"  # Must match repo name exactly
 ```bash
 git add .
 git commit -m "Deploy site to GitHub Pages"
-git push origin main
+git push origin main  # Push to main branch (triggers GitHub Actions)
 ```
 
 GitHub Actions will automatically:
@@ -573,7 +664,7 @@ See `_includes/design-tokens.html` for the complete token architecture.
 
 **404 Error on GitHub Pages**
 - ✅ **GitHub Pages enabled:** Settings → Pages → Source: "GitHub Actions"
-- ✅ **Branch is correct:** Workflow triggers on `master` branch
+- ✅ **Branch is correct:** Workflow triggers on `main` branch (push to `main` to deploy)
 - ✅ **Workflow file exists:** `.github/workflows/jekyll.yml` is present
 - ✅ **URLs match:** For user site use `baseurl: ""`, for project site use `baseurl: "/repo-name"`
 
@@ -604,14 +695,21 @@ See `_includes/design-tokens.html` for the complete token architecture.
 
 ## Technology Stack
 
+**Core Technologies:**
 - **Jekyll 4.4+** - Static site generator
 - **Bootstrap 5.3.8** - Front-end framework (CDN)
-- **Sass/SCSS** - CSS preprocessor with modern module system
+- **Sass/SCSS** - CSS preprocessor with modern module system (`@use`/`@forward`)
 - **Liquid** - Templating engine
 - **Font Awesome 6.7.2** - Icon library (CDN)
 - **Vanilla JavaScript** - No dependencies (jQuery removed)
 - **WOW.js** - Scroll reveal animations
 - **GitHub Actions** - Automated deployment
+
+**Quality Assurance Tools:**
+- **Playwright 1.40+** - Visual regression testing across 5 browsers
+- **AJV 8.12+** - JSON Schema validation for config files
+- **axe-core 4.8+** - WCAG 2.1 AA accessibility compliance testing
+- **pnpm** - Fast, disk-efficient package manager
 
 ---
 

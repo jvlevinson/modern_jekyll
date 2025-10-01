@@ -54,6 +54,20 @@ a {
     }
 }
 
+// Dark mode link hover states
+// Matches light theme behavior: color change only, no underlines
+[data-theme="dark"] {
+    a {
+        color: var(--color-primary-400);
+
+        &:hover,
+        &:focus {
+            color: var(--color-link-hover);
+            // No underline - matches light theme for consistency
+        }
+    }
+}
+
 // -----------------------------------------------------------------------------
 // Horizontal Rules
 // -----------------------------------------------------------------------------

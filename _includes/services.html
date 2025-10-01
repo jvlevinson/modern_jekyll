@@ -10,11 +10,12 @@
     <div class="container">
         <div class="row">
             {% for service in site.services.list %}
-            <div class="col-lg-3 col-md-6 text-center">
+            <div class="col-lg-3 col-md-6">
                 <div class="service-box">
-                    <i class="fa-solid fa-4x {{ service.icon }} wow bounceIn text-primary" data-wow-delay="{{ service.delay }}"></i>
-                    <h3>{{ service.title }}</h3>
-                    <p class="text-muted">{{ service.description }}</p>
+                    {% assign delay_seconds = forloop.index0 | times: 0.1 %}
+                    <i class="service-box__icon fa-solid {{ service.icon }} wow bounceIn" data-wow-delay="{{ delay_seconds }}s"></i>
+                    <h3 class="service-box__title">{{ service.title }}</h3>
+                    <p class="service-box__description">{{ service.description }}</p>
                 </div>
             </div>
             {% endfor %}

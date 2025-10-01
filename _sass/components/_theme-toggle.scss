@@ -50,11 +50,11 @@
 
     // Light theme: show sun, hide moon
     .theme-icon-light {
-        opacity: 1;
+        opacity: var(--opacity-100);
     }
 
     .theme-icon-dark {
-        opacity: 0;
+        opacity: var(--opacity-0);
     }
 }
 
@@ -62,11 +62,11 @@
 [data-theme="dark"] .theme-toggle {
     // Dark theme: hide sun, show moon
     .theme-icon-light {
-        opacity: 0;
+        opacity: var(--opacity-0);
     }
 
     .theme-icon-dark {
-        opacity: 1;
+        opacity: var(--opacity-100);
     }
 }
 
@@ -86,10 +86,30 @@
     .navbar-light {
         .theme-toggle {
             color: var(--color-text-faded);
+
+            &:hover {
+                color: var(--bg-light);
+            }
         }
 
-        &.affix .theme-toggle {
+        // Scrolled state - FIXED from .affix to .navbar-shrink
+        &.navbar-shrink .theme-toggle {
             color: var(--color-text);
+
+            &:hover {
+                color: var(--color-primary);
+            }
+        }
+    }
+}
+
+// Dark mode scrolled state - match navbar items
+[data-theme="dark"] {
+    .navbar-light.navbar-shrink .theme-toggle {
+        color: var(--color-text);
+
+        &:hover {
+            color: var(--color-primary);
         }
     }
 }

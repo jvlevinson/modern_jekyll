@@ -19,3 +19,15 @@ CLAUDE.md
 # Node modules and OS files
 node_modules/
 .DS_Store
+
+# Playwright
+test-results/
+playwright-report/
+playwright/.cache/
+
+# Accessibility reports
+a11y-report.json
+
+# pnpm
+.pnpm-store/
+pnpm-lock.yaml

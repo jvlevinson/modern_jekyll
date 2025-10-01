@@ -1,35 +1,41 @@
 // =============================================================================
-// Navigation Layout (Week 9: Migrated to CSS Custom Properties)
+// Navigation Layout (BEM Structure)
 // =============================================================================
-// Extracted from monolithic _base.scss
 // Bootstrap 5 compatible navbar with scroll behavior
-// Now uses semantic tokens from design-tokens.html for user-customizable colors
+// Following BEM naming convention and October 2025 best practices
+// Migrated to BEM in Phase 4
 // =============================================================================
 
 @use '../abstracts' as *;
-@use 'sass:color';
 
 // -----------------------------------------------------------------------------
-// Navbar Base Styles
+// Navigation Container
 // -----------------------------------------------------------------------------
-// Light navbar with custom branding and typography
-// Mobile: white background with hamburger menu
-// Desktop: transparent background, becomes solid on scroll (affix)
-// Blur effect for better visibility over page content
+// Fixed position navbar with transparent-to-solid scroll behavior
+// Uses semantic tokens for user-customizable colors
 // -----------------------------------------------------------------------------
-.navbar-light {
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: var(--z-fixed);
     background-color: var(--bg-light);
-    @include sans-serif-font;
-    @include transition-all;
+    font-family: var(--font-sans);
+    transition: all var(--transition-normal);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 
-    // Brand logo/text
-    .navbar-brand {
+    // -----------------------------------------------------------------------------
+    // Navigation Brand (Logo)
+    // -----------------------------------------------------------------------------
+    &__brand {
         color: var(--color-primary);
-        @include sans-serif-font;
+        font-family: var(--font-sans);
         font-weight: var(--font-weight-bold);
         text-transform: uppercase;
+        text-decoration: none;
+        transition: color var(--transition-normal);
 
         &:hover,
         &:focus {
@@ -37,12 +43,77 @@
         }
     }
 
-    // Navigation links
-    .navbar-nav {
-        .nav-link {
-            text-transform: uppercase;
-            font-weight: var(--font-weight-bold);
-            font-size: 0.8125rem; // 13px
+    // -----------------------------------------------------------------------------
+    // Navigation Menu (List Container)
+    // -----------------------------------------------------------------------------
+    &__menu {
+        // Bootstrap handles list styling
+    }
+
+    // -----------------------------------------------------------------------------
+    // Navigation Item (List Item)
+    // -----------------------------------------------------------------------------
+    &__item {
+        // Bootstrap handles item styling
+
+        // Active state
+        &.active .nav__link {
+            color: var(--color-primary);
+        }
+    }
+
+    // -----------------------------------------------------------------------------
+    // Navigation Link
+    // -----------------------------------------------------------------------------
+    &__link {
+        text-transform: uppercase;
+        font-weight: var(--font-weight-bold);
+        font-size: 0.8125rem; // 13px
+        color: var(--color-text);
+        padding: var(--space-xs) var(--space-sm);
+        border-radius: var(--radius-sm);
+        transition: all var(--transition-fast);
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            color: var(--color-primary);
+        }
+
+        // Scroll behavior modifier
+        &--scroll {
+            cursor: pointer;
+        }
+    }
+
+    // -----------------------------------------------------------------------------
+    // Navigation Toggle (Mobile Menu Button)
+    // -----------------------------------------------------------------------------
+    &__toggle {
+        // Bootstrap handles toggle styling
+    }
+
+    // -----------------------------------------------------------------------------
+    // Shrink Modifier (Scrolled State)
+    // -----------------------------------------------------------------------------
+    // Applied via JavaScript when user scrolls down
+    // Changes from transparent to solid background
+    // -----------------------------------------------------------------------------
+    &--shrink {
+        background-color: var(--navbar-bg-scrolled);
+        box-shadow: var(--shadow-sm);
+
+        .nav__brand {
+            color: var(--color-primary);
+            font-size: 1rem; // Keep constant size (Phase 1 fix)
+
+            &:hover,
+            &:focus {
+                color: var(--color-primary-hover);
+            }
+        }
+
+        .nav__link {
             color: var(--color-text);
 
             &:hover,
@@ -50,27 +121,21 @@
                 color: var(--color-primary);
             }
         }
-
-        // Active link state
-        .nav-item.active .nav-link {
-            color: var(--color-primary);
-        }
     }
 }
 
 // -----------------------------------------------------------------------------
-// Desktop Navbar Behavior
+// Desktop Navigation Behavior
 // -----------------------------------------------------------------------------
-// Transparent navbar on page load, solid white on scroll
+// Transparent navbar on page load, solid on scroll
 // Large screens only (992px and up)
-// Now uses semantic tokens for responsive color changes
 // -----------------------------------------------------------------------------
 @media (min-width: 992px) {
-    .navbar-light {
+    .nav {
         // Initial state - semi-transparent with blur effect and white text
         background-color: var(--navbar-bg);
 
-        .navbar-brand {
+        .nav__brand {
             color: var(--color-text-faded);
 
             &:hover,
@@ -79,77 +144,61 @@
             }
         }
 
-        .navbar-nav .nav-link {
+        .nav__link {
             color: var(--color-text-faded);
 
             &:hover,
             &:focus {
                 color: var(--bg-light);
-            }
-        }
-
-        // Scrolled state - more solid background with dark text and blur
-        // "navbar-shrink" class added via JavaScript on scroll
-        &.navbar-shrink {
-            background-color: var(--navbar-bg-scrolled);
-            box-shadow: var(--shadow-sm);
-
-            .navbar-brand {
-                color: var(--color-primary);
-                font-size: 0.875rem; // 14px - smaller when scrolled
-
-                &:hover,
-                &:focus {
-                    color: var(--color-primary-hover);
-                }
-            }
-
-            .navbar-nav .nav-link {
-                color: var(--color-text);
-
-                &:hover,
-                &:focus {
-                    color: var(--color-primary);
-                }
             }
         }
     }
 }
 
 // -----------------------------------------------------------------------------
-// BEM Component Structure (Future Enhancement)
+// Dark Mode Enhanced Hover States
 // -----------------------------------------------------------------------------
-// When refactoring templates in future iterations, consider migrating to:
-//
-// .nav {
-//     // Main navigation container
-// }
-//
-// .nav--transparent {
-//     // Transparent variant for hero overlay
-// }
-//
-// .nav--solid {
-//     // Solid background variant (scrolled state)
-// }
-//
-// .nav__brand {
-//     // Logo/brand text
-// }
-//
-// .nav__menu {
-//     // Navigation menu list
-// }
-//
-// .nav__item {
-//     // Individual menu item
-// }
-//
-// .nav__link {
-//     // Navigation link
-// }
-//
-// .nav__link--active {
-//     // Active link state
-// }
+[data-theme="dark"] {
+    .nav__link {
+        &:hover,
+        &:focus {
+            color: var(--nav-link-hover-color);
+            background: var(--nav-link-hover-bg);
+            text-decoration: none;
+        }
+    }
+}
+
 // -----------------------------------------------------------------------------
+// Backward Compatibility (Temporary)
+// -----------------------------------------------------------------------------
+// Support old Bootstrap class names during migration
+// Remove after all templates updated
+// -----------------------------------------------------------------------------
+.navbar-light {
+    @extend .nav;
+}
+
+.navbar-brand {
+    @extend .nav__brand;
+}
+
+.navbar-nav {
+    @extend .nav__menu;
+}
+
+.nav-item {
+    @extend .nav__item;
+}
+
+.nav-link {
+    @extend .nav__link;
+}
+
+.navbar-shrink {
+    @extend .nav--shrink;
+}
+
+.page-scroll {
+    @extend .nav__link--scroll;
+}

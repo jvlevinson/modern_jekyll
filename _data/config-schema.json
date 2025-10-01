@@ -1,0 +1,316 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Jekyll Site Configuration",
+  "description": "Schema for _config.yml validation",
+  "type": "object",
+  "required": ["title", "email", "theme"],
+  "properties": {
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100,
+      "description": "Site title for SEO and browser tab"
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "Contact email address"
+    },
+    "description": {
+      "type": "string",
+      "minLength": 50,
+      "maxLength": 160,
+      "description": "Meta description for SEO (50-160 chars optimal)"
+    },
+    "author": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Site author name"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Base URL of the site"
+    },
+    "baseurl": {
+      "type": "string",
+      "description": "Project site subpath (empty for root domain)"
+    },
+    "favicon": {
+      "type": "string",
+      "pattern": "^img/.+\\.(svg|png|ico|jpg|jpeg)$",
+      "description": "Path to favicon file"
+    },
+    "brand_name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Brand name shown in navigation"
+    },
+    "theme": {
+      "type": "object",
+      "required": ["brand_primary", "neutral", "mode"],
+      "properties": {
+        "brand_primary": {
+          "type": "string",
+          "enum": ["orange", "blue", "green", "purple", "red"],
+          "description": "Primary brand color palette"
+        },
+        "brand_secondary": {
+          "type": ["string", "null"],
+          "enum": ["orange", "blue", "green", "purple", "red", null],
+          "description": "Optional secondary accent color"
+        },
+        "neutral": {
+          "type": "string",
+          "enum": ["slate", "gray"],
+          "description": "Neutral color palette for text/backgrounds"
+        },
+        "mode": {
+          "type": "string",
+          "enum": ["light", "dark", "auto"],
+          "description": "Default theme mode"
+        }
+      }
+    },
+    "hero": {
+      "type": "object",
+      "required": ["heading", "description", "button_text", "button_link"],
+      "properties": {
+        "heading": {
+          "type": "string",
+          "minLength": 5,
+          "maxLength": 60,
+          "description": "Main hero heading"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 20,
+          "maxLength": 300,
+          "description": "Hero section description"
+        },
+        "button_text": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 30,
+          "description": "Hero button text"
+        },
+        "button_link": {
+          "type": "string",
+          "pattern": "^#[a-z-]+",
+          "description": "Hero button target (anchor link)"
+        },
+        "background_image": {
+          "type": "string",
+          "pattern": "^img/.+\\.(jpg|jpeg|png|webp)$",
+          "description": "Hero background image path"
+        }
+      }
+    },
+    "cta": {
+      "type": "object",
+      "required": ["heading", "description", "button_text", "button_link"],
+      "properties": {
+        "heading": {
+          "type": "string",
+          "minLength": 5,
+          "maxLength": 100,
+          "description": "Call-to-action heading"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 20,
+          "maxLength": 500,
+          "description": "Call-to-action description"
+        },
+        "button_text": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 30,
+          "description": "CTA button text"
+        },
+        "button_link": {
+          "type": "string",
+          "description": "CTA button target"
+        }
+      }
+    },
+    "services": {
+      "type": "object",
+      "required": ["heading", "list"],
+      "properties": {
+        "heading": {
+          "type": "string",
+          "minLength": 5,
+          "maxLength": 50,
+          "description": "Services section heading"
+        },
+        "list": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 8,
+          "items": {
+            "type": "object",
+            "required": ["icon", "title", "description"],
+            "properties": {
+              "icon": {
+                "type": "string",
+                "pattern": "^fa-[a-z-]+$",
+                "description": "Font Awesome icon class"
+              },
+              "title": {
+                "type": "string",
+                "minLength": 3,
+                "maxLength": 50,
+                "description": "Service title"
+              },
+              "description": {
+                "type": "string",
+                "minLength": 20,
+                "maxLength": 200,
+                "description": "Service description"
+              }
+            }
+          }
+        }
+      }
+    },
+    "portfolio_heading": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 50,
+      "description": "Portfolio section heading"
+    },
+    "portfolio_items": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 12,
+      "items": {
+        "type": "object",
+        "required": ["image", "category", "name", "flip_description"],
+        "properties": {
+          "image": {
+            "type": "string",
+            "pattern": "^img/portfolio/.+\\.(jpg|jpeg|png|webp)$",
+            "description": "Portfolio item image path"
+          },
+          "category": {
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 30,
+            "description": "Portfolio item category"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 5,
+            "maxLength": 60,
+            "description": "Portfolio item name"
+          },
+          "link": {
+            "type": "string",
+            "description": "Portfolio item link"
+          },
+          "flip_description": {
+            "type": "string",
+            "minLength": 50,
+            "maxLength": 300,
+            "description": "Portfolio item flip side description"
+          }
+        }
+      }
+    },
+    "resume": {
+      "type": "object",
+      "required": ["heading", "description", "file_path"],
+      "properties": {
+        "heading": {
+          "type": "string",
+          "minLength": 3,
+          "description": "Resume section heading"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 20,
+          "description": "Resume section description"
+        },
+        "file_path": {
+          "type": "string",
+          "pattern": "^/public/files/.+\\.pdf$",
+          "description": "Path to resume PDF file"
+        },
+        "view_button_text": {
+          "type": "string",
+          "default": "View Resume",
+          "description": "View button text"
+        },
+        "download_button_text": {
+          "type": "string",
+          "default": "Download Resume",
+          "description": "Download button text"
+        }
+      }
+    },
+    "aside": {
+      "type": "object",
+      "properties": {
+        "heading": {
+          "type": "string",
+          "description": "Aside section heading"
+        },
+        "button_text": {
+          "type": "string",
+          "description": "Aside button text"
+        },
+        "button_link": {
+          "type": "string",
+          "format": "uri",
+          "description": "Aside button link"
+        }
+      }
+    },
+    "contact": {
+      "type": "object",
+      "required": ["heading", "description"],
+      "properties": {
+        "heading": {
+          "type": "string",
+          "minLength": 3,
+          "description": "Contact section heading"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 20,
+          "description": "Contact section description"
+        }
+      }
+    },
+    "footer": {
+      "type": "object",
+      "required": ["copyright", "year"],
+      "properties": {
+        "copyright": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Copyright holder name"
+        },
+        "year": {
+          "type": "integer",
+          "minimum": 2020,
+          "maximum": 2030,
+          "description": "Copyright year"
+        }
+      }
+    },
+    "twitter_username": {
+      "type": "string",
+      "description": "Twitter/X username"
+    },
+    "github_username": {
+      "type": "string",
+      "description": "GitHub username"
+    },
+    "linkedin_username": {
+      "type": "string",
+      "description": "LinkedIn username"
+    }
+  }
+}

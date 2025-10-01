@@ -19,6 +19,20 @@
 }
 
 // -----------------------------------------------------------------------------
+// Contact Links - Explicit no underlines for clarity
+// -----------------------------------------------------------------------------
+// Note: Global link styles already have no underlines, but being explicit
+// for contact icons to ensure no future style conflicts
+#contact a {
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+}
+
+// -----------------------------------------------------------------------------
 // BEM Component Structure (Future Enhancement)
 // -----------------------------------------------------------------------------
 // When refactoring templates in future iterations, consider migrating to:

@@ -1,9 +1,10 @@
 // =============================================================================
-// Service Box Component
+// Service Box Component (BEM Structure)
 // =============================================================================
 // Extracted from monolithic _base.scss
 // Component for services section featuring icon + heading + description
-// Following BEM naming convention and September 2025 best practices
+// Following BEM naming convention and October 2025 best practices
+// Migrated to BEM in Phase 4
 // =============================================================================
 
 // -----------------------------------------------------------------------------
@@ -15,41 +16,47 @@
 .service-box {
     max-width: 400px;
     margin: var(--space-xl) auto 0;
+    text-align: center;
 
     // Desktop layout - reduced top margin for better spacing
     @media (min-width: 992px) {
         margin: var(--space-md) auto 0;
     }
 
-    // Remove bottom margin from last paragraph
-    p {
+    // -----------------------------------------------------------------------------
+    // Service Box Icon
+    // -----------------------------------------------------------------------------
+    &__icon {
+        display: block;
+        font-size: 4rem;
+        color: var(--color-primary);
+        margin-bottom: var(--space-md);
+        transition: transform var(--transition-normal);
+
+        // Hover effect on parent
+        .service-box:hover & {
+            transform: scale(1.05);
+        }
+    }
+
+    // -----------------------------------------------------------------------------
+    // Service Box Title
+    // -----------------------------------------------------------------------------
+    &__title {
+        font-family: var(--font-sans);
+        font-size: 1.25rem;
+        font-weight: var(--font-weight-bold);
+        color: var(--color-text);
+        margin-bottom: var(--space-sm);
+    }
+
+    // -----------------------------------------------------------------------------
+    // Service Box Description
+    // -----------------------------------------------------------------------------
+    &__description {
+        font-size: var(--font-size-base);
+        color: var(--color-text-muted);
+        line-height: var(--line-height-base);
         margin-bottom: 0;
     }
 }
-
-// -----------------------------------------------------------------------------
-// BEM Component Structure (Future Enhancement)
-// -----------------------------------------------------------------------------
-// When refactoring templates in Week 6, consider migrating to:
-//
-// .service-box {
-//     // Container styles
-// }
-//
-// .service-box__icon {
-//     font-size: 4rem;
-//     color: var(--color-primary);
-//     margin-bottom: var(--space-md);
-// }
-//
-// .service-box__title {
-//     @include sans-serif-font;
-//     font-weight: var(--font-weight-bold);
-//     margin-bottom: var(--space-sm);
-// }
-//
-// .service-box__description {
-//     color: var(--color-text-faded);
-//     line-height: var(--line-height-base);
-// }
-// -----------------------------------------------------------------------------

@@ -110,16 +110,16 @@ figure figcaption,
 @keyframes slideInRight {
     from {
         transform: translateX(100%);
-        opacity: 0;
+        opacity: var(--opacity-0);
     }
     to {
         transform: translateX(0);
-        opacity: 0.9;
+        opacity: var(--opacity-90);
     }
 }
 
 .copy-notification {
-    animation: slideInRight 0.3s ease-out;
+    animation: slideInRight var(--duration-normal) var(--ease-out);
 }
 
 // -----------------------------------------------------------------------------
@@ -168,7 +168,7 @@ a,
         top: 50%;
         transform: translateY(-50%);
         font-size: 0.8em;
-        opacity: 0.5;
+        opacity: var(--opacity-50);
     }
 }
 
@@ -184,9 +184,9 @@ pre {
         font-size: 11px;
         color: var(--color-text-muted, #999);
         background: var(--bg-color, white);
-        padding: 2px 6px;
-        border-radius: 3px;
-        opacity: 0.7;
+        padding: var(--selection-padding-y) var(--selection-padding-x);
+        border-radius: var(--radius-sm);
+        opacity: var(--opacity-70);
         font-family: system-ui, -apple-system, sans-serif;
     }
 }
@@ -197,7 +197,7 @@ pre {
 @media (max-width: 768px) {
     // Larger selection area for mobile
     ::selection {
-        padding: 2px; // This doesn't actually work but shows intent
+        padding: var(--selection-padding-y); // This doesn't actually work but shows intent
     }
 
     // Disable copy notification on small screens to avoid obstruction

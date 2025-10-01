@@ -9,32 +9,32 @@
         <div class="row no-gutter">
             {% for item in site.portfolio_items %}
             <div class="col-lg-4 col-sm-6">
-                <div class="portfolio-box portfolio-flip-container">
-                    <div class="portfolio-flip-inner">
+                <div class="portfolio-box portfolio-box--flippable">
+                    <div class="portfolio-box__inner">
                         <!-- Front Side (Image) -->
-                        <div class="portfolio-flip-front">
-                            <img src="{{ item.image | relative_url }}" class="img-responsive" loading="lazy" alt="{{ item.name | escape }}">
-                            <div class="portfolio-box-caption">
-                                <div class="portfolio-box-caption-content">
-                                    <div class="project-category text-faded">
+                        <div class="portfolio-box__front">
+                            <img src="{{ item.image | relative_url }}" class="portfolio-box__image" loading="lazy" alt="{{ item.name | escape }}">
+                            <div class="portfolio-box__overlay">
+                                <div class="portfolio-box__content">
+                                    <div class="portfolio-box__category">
                                         {{ item.category }}
                                     </div>
-                                    <div class="project-name">
+                                    <div class="portfolio-box__name">
                                         {{ item.name }}
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <!-- Back Side (Description) -->
-                        <div class="portfolio-flip-back">
-                            <div class="portfolio-flip-back-content">
-                                <div class="project-category text-faded">
+                        <div class="portfolio-box__back">
+                            <div class="portfolio-box__content">
+                                <div class="portfolio-box__category">
                                     {{ item.category }}
                                 </div>
-                                <div class="project-name">
+                                <div class="portfolio-box__name">
                                     {{ item.name }}
                                 </div>
-                                <p class="project-description">
+                                <p class="portfolio-box__description">
                                     {{ item.flip_description }}
                                 </p>
                             </div>

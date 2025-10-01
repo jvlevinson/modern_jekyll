@@ -177,7 +177,7 @@ You have two options.
 
 ### Option A (easiest): Use GitHub Pages
 
-1. Commit and push your changes to the `master` branch.
+1. Commit and push your changes to the `main` branch.
 2. In your repository, go to Settings → Pages and choose GitHub Actions as the source.
 3. Wait for the build to finish (see the Actions tab). Your site will be live.
 
@@ -213,20 +213,61 @@ bundle exec jekyll serve
 
 ## Common problems (simple fixes)
 
-- **I pushed changes but nothing updated**: Wait 1–2 minutes, then refresh. Check the Actions tab for build status.
+- **I pushed changes but nothing updated**: Wait 1-2 minutes, then refresh. Check the Actions tab for build status.
 - **Images don’t show**: Make sure the file names match exactly (including upper/lowercase) and the images are inside `img/` or `img/portfolio/`.
 - **Links go to a 404**: For project sites, make sure `baseurl` is set correctly in `_config.yml` (see the main `README.md` under Deploying).
 - **Colors didn’t change**: Double-check spelling of `brand_primary` and choose one of: `blue`, `orange`, `green`, `purple`, `red`.
 - **Dark mode looks wrong**: Try `mode: "auto"` and use the theme toggle button to test.
 
+## For Developers: Quality Assurance Tools (Optional)
+
+This site includes modern testing tools to ensure everything works correctly. You don't need to use these unless you're making code changes (not just updating `_config.yml`).
+
+### What's included
+
+**Config Validator** - Checks if your `_config.yml` has mistakes before you publish
+- Run: `pnpm run validate:config`
+- Example: Catches typos like `brand_primary: "bleu"` (should be "blue")
+
+**Visual Testing** - Takes screenshots and compares them to make sure nothing broke
+- Run: `pnpm run test:visual`
+- Uses Playwright (industry standard, works on Chrome, Firefox, Safari)
+
+**Accessibility Checker** - Makes sure your site works for everyone, including people using screen readers
+- Run: `pnpm run test:a11y`
+- Uses axe-core (the same tool Google Lighthouse uses)
+
+### When to use these
+
+- **Before publishing**: Run `pnpm run validate:config` to catch config errors
+- **After big changes**: Run all tests with `pnpm test`
+- **Never required**: If you only change text/images in `_config.yml`, you can skip this
+
+### Quick start
+
+1. Install pnpm: `npm install -g pnpm` (one-time setup)
+2. Install tools: `pnpm install`
+3. Test everything: `pnpm test`
+4. If tests pass ✅, you're good to publish
+
+### Why these tools?
+
+- **Playwright**: Microsoft-backed, most popular testing tool in 2025, huge community
+- **AJV**: Industry standard for validating configuration files
+- **axe-core**: Powers Google Lighthouse accessibility tests
+
+These are the same tools professional developers use, but we've made them simple for you.
+
 ## Where to get help
 
 - Check the main `README.md` for detailed, technical information.
 - Ask a developer friend to help preview locally if needed.
-- If you’re stuck, describe what you changed and what you expected to see.
+- If you're stuck, describe what you changed and what you expected to see.
 
 ## Change log
 
-- 2025-09-30: Created beginner-friendly ELI5 README (v1.0.0).
+- 2025-10-01 (v1.2.0): Fixed branch references (master → main), updated for latest improvements
+- 2025-10-01 (v1.1.0): Added quality assurance tools section
+- 2025-09-30 (v1.0.0): Created beginner-friendly ELI5 README
 
 
