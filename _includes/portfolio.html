@@ -13,7 +13,7 @@
                     <div class="portfolio-flip-inner">
                         <!-- Front Side (Image) -->
                         <div class="portfolio-flip-front">
-                            <img src="{{ item.image | relative_url }}" class="img-responsive" alt="">
+                            <img src="{{ item.image | relative_url }}" class="img-responsive" loading="lazy" alt="{{ item.name | escape }}">
                             <div class="portfolio-box-caption">
                                 <div class="portfolio-box-caption-content">
                                     <div class="project-category text-faded">

@@ -1,0 +1,207 @@
+// =============================================================================
+// Selection Styling - Accessibility-Friendly Custom Selection
+// =============================================================================
+// Custom selection colors and styles while maintaining full accessibility
+// Enhances visual feedback without preventing text selection
+// September 2025
+// =============================================================================
+
+@use '../abstracts' as *;
+
+// -----------------------------------------------------------------------------
+// Selection Styling
+// -----------------------------------------------------------------------------
+// Custom selection colors that work with both light and dark themes
+::selection {
+    background-color: var(--color-primary-alpha, rgba(240, 95, 64, 0.3));
+    color: var(--text-color, inherit);
+    text-shadow: none;
+}
+
+::-moz-selection {
+    background-color: var(--color-primary-alpha, rgba(240, 95, 64, 0.3));
+    color: var(--text-color, inherit);
+    text-shadow: none;
+}
+
+// -----------------------------------------------------------------------------
+// Theme-Specific Selection
+// -----------------------------------------------------------------------------
+[data-theme="light"] {
+    ::selection {
+        background-color: rgba(240, 95, 64, 0.25);
+        color: #222;
+    }
+
+    ::-moz-selection {
+        background-color: rgba(240, 95, 64, 0.25);
+        color: #222;
+    }
+}
+
+[data-theme="dark"] {
+    ::selection {
+        background-color: rgba(240, 95, 64, 0.4);
+        color: #fff;
+    }
+
+    ::-moz-selection {
+        background-color: rgba(240, 95, 64, 0.4);
+        color: #fff;
+    }
+}
+
+// -----------------------------------------------------------------------------
+// Special Elements Selection
+// -----------------------------------------------------------------------------
+// Code blocks get different selection colors for better readability
+pre ::selection,
+code ::selection {
+    background-color: rgba(100, 150, 200, 0.3);
+    color: inherit;
+}
+
+pre ::-moz-selection,
+code ::-moz-selection {
+    background-color: rgba(100, 150, 200, 0.3);
+    color: inherit;
+}
+
+// -----------------------------------------------------------------------------
+// Image Selection Prevention (Accessibility-Friendly)
+// -----------------------------------------------------------------------------
+// Prevents accidental image selection while keeping alt text accessible
+img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+
+    // But keep pointer events for interaction
+    pointer-events: auto;
+}
+
+// Allow selection in image captions
+figure figcaption,
+.img-caption {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+// -----------------------------------------------------------------------------
+// Copy Notification Styling (for JavaScript feedback)
+// -----------------------------------------------------------------------------
+.copy-notification {
+    // Base styles are inline in JS for reliability
+    // Additional theme-aware styling here
+    &.success {
+        background-color: var(--color-success, #28a745) !important;
+    }
+
+    &.error {
+        background-color: var(--color-error, #dc3545) !important;
+    }
+}
+
+// Animation for copy notification
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 0.9;
+    }
+}
+
+.copy-notification {
+    animation: slideInRight 0.3s ease-out;
+}
+
+// -----------------------------------------------------------------------------
+// Accessibility Enhancements
+// -----------------------------------------------------------------------------
+// Ensure form elements always remain selectable
+input,
+textarea,
+select,
+[contenteditable="true"] {
+    -webkit-user-select: text !important;
+    -moz-user-select: text !important;
+    -ms-user-select: text !important;
+    user-select: text !important;
+}
+
+// Ensure buttons and links remain interactive
+button,
+a,
+[role="button"] {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    // But keep their text content selectable if needed
+    &.selectable {
+        -webkit-user-select: text;
+        -moz-user-select: text;
+        -ms-user-select: text;
+        user-select: text;
+    }
+}
+
+// -----------------------------------------------------------------------------
+// Optional: Visual Indicator for Copyable Content
+// -----------------------------------------------------------------------------
+// Add a subtle indicator for important copyable content
+.copyable {
+    position: relative;
+
+    &:hover::after {
+        content: "📋";
+        position: absolute;
+        right: -20px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 0.8em;
+        opacity: 0.5;
+    }
+}
+
+// For code blocks, show copy hint
+pre {
+    position: relative;
+
+    &:hover::before {
+        content: "Click to select • Copy adds attribution";
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        font-size: 11px;
+        color: var(--color-text-muted, #999);
+        background: var(--bg-color, white);
+        padding: 2px 6px;
+        border-radius: 3px;
+        opacity: 0.7;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+}
+
+// -----------------------------------------------------------------------------
+// Mobile-Specific Selection Adjustments
+// -----------------------------------------------------------------------------
+@media (max-width: 768px) {
+    // Larger selection area for mobile
+    ::selection {
+        padding: 2px; // This doesn't actually work but shows intent
+    }
+
+    // Disable copy notification on small screens to avoid obstruction
+    .copy-notification {
+        display: none;
+    }
+}

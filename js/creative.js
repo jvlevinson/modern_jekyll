@@ -212,6 +212,122 @@
     }
 
     // =============================================================================
+    // Copy Watermark - Accessibility-Friendly Attribution
+    // =============================================================================
+    function initCopyWatermark() {
+        // Configuration - can be customized
+        const config = {
+            minLength: 40, // Minimum text length to add watermark
+            enableWatermark: storage.get('enableCopyWatermark') !== 'false', // Default enabled
+            siteName: document.title || 'William M. Orr - Professional Portfolio',
+            siteUrl: window.location.origin,
+            attributionText: '\n\n---\nSource: {title}\nURL: {url}\n© William M. Orr - williammorr.com'
+        };
+
+        // Only proceed if watermarking is enabled
+        if (!config.enableWatermark) return;
+
+        // Handle copy events
+        document.addEventListener('copy', function(e) {
+            try {
+                // Get selected text
+                const selection = window.getSelection();
+                if (!selection.rangeCount) return;
+
+                const selectedText = selection.toString();
+
+                // Only add watermark for substantial text copies
+                if (selectedText.length < config.minLength) return;
+
+                // Check if copying from input/textarea (don't watermark form fields)
+                const activeElement = document.activeElement;
+                if (activeElement && (activeElement.tagName === 'INPUT' ||
+                    activeElement.tagName === 'TEXTAREA')) {
+                    return;
+                }
+
+                // Check if copying from code blocks (be gentle with code)
+                const range = selection.getRangeAt(0);
+                const container = range.commonAncestorContainer.nodeType === 3
+                    ? range.commonAncestorContainer.parentNode
+                    : range.commonAncestorContainer;
+
+                if (container.closest('pre') || container.closest('code')) {
+                    // For code blocks, use a lighter attribution
+                    const codeAttribution = '\n\n// Source: ' + window.location.href;
+                    e.clipboardData.setData('text/plain', selectedText + codeAttribution);
+                    e.preventDefault();
+                    return;
+                }
+
+                // Build attribution text
+                const attribution = config.attributionText
+                    .replace('{title}', config.siteName)
+                    .replace('{url}', window.location.href);
+
+                // Add watermark to clipboard
+                e.clipboardData.setData('text/plain', selectedText + attribution);
+                e.preventDefault();
+
+                // Optional: Visual feedback (subtle notification)
+                showCopyNotification();
+
+            } catch (error) {
+                // Fail silently to not break copy functionality
+                console.error('Copy watermark error:', error);
+            }
+        });
+
+        // Optional: Visual feedback when text is copied
+        function showCopyNotification() {
+            // Check if notification already exists
+            if (document.querySelector('.copy-notification')) return;
+
+            const notification = document.createElement('div');
+            notification.className = 'copy-notification';
+            notification.textContent = 'Content copied with attribution';
+            notification.style.cssText = `
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                background: var(--color-primary, #333);
+                color: white;
+                padding: 10px 20px;
+                border-radius: 4px;
+                font-size: 14px;
+                z-index: 10000;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                pointer-events: none;
+            `;
+
+            document.body.appendChild(notification);
+
+            // Fade in
+            requestAnimationFrame(() => {
+                notification.style.opacity = '0.9';
+            });
+
+            // Remove after 2 seconds
+            setTimeout(() => {
+                notification.style.opacity = '0';
+                setTimeout(() => notification.remove(), 300);
+            }, 2000);
+        }
+
+        // Optional: Add toggle control to enable/disable watermarking
+        const watermarkToggle = document.getElementById('watermark-toggle');
+        if (watermarkToggle) {
+            watermarkToggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                const isEnabled = storage.get('enableCopyWatermark') !== 'false';
+                storage.set('enableCopyWatermark', isEnabled ? 'false' : 'true');
+                window.location.reload(); // Simple reload to apply changes
+            });
+        }
+    }
+
+    // =============================================================================
     // Initialize All Features on DOM Ready
     // =============================================================================
     function init() {
@@ -223,6 +339,7 @@
         initScrollAnimations();
         initPortfolioFlip();
         initThemeToggle();
+        initCopyWatermark();
     }
 
     // DOM Ready Event

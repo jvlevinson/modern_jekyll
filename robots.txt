@@ -1,0 +1,15 @@
+{%- comment -%}
+Robots is variabilized. We allow indexing only in production builds.
+Set environment with: JEKYLL_ENV=production for deploys.
+{%- endcomment -%}
+{%- if jekyll.environment == "production" -%}
+User-agent: *
+Disallow:
+
+Sitemap: {{ site.url | append: "/sitemap.xml" }}
+{%- else -%}
+User-agent: *
+Disallow: /
+{%- endif -%}
+
+

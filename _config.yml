@@ -117,4 +117,11 @@ footer:
   year: 2025
 
 # Build settings
+timezone: America/Chicago
 markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+exclude:
+  - _tests_/
