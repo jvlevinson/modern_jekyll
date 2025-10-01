@@ -15,3 +15,7 @@ CLAUDE.md
 
 .bak/
 .mocks/
+
+# Node modules and OS files
+node_modules/
+.DS_Store

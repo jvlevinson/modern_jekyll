@@ -44,8 +44,8 @@ gem install bundler
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/williammorr/Personal-Profile.git
-   cd Personal-Profile
+   git clone https://github.com/jvlevinson/modern_jekyll.git
+   cd modern_jekyll
    ```
 
 2. **Install dependencies:**
@@ -63,6 +63,12 @@ gem install bundler
    ```bash
    bundle exec jekyll serve --livereload
    ```
+
+---
+
+## Not a Developer?
+
+Take a look at the [ELI5.README.md](ELI5.README.md) file for a quick overview of the project.
 
 ---
 
@@ -473,7 +479,7 @@ baseurl: "/Personal-Profile"  # Must match repo name exactly
 ```bash
 git add .
 git commit -m "Deploy site to GitHub Pages"
-git push origin master
+git push origin main
 ```
 
 GitHub Actions will automatically:

@@ -15,6 +15,36 @@
 }
 
 // -----------------------------------------------------------------------------
+// Text Muted Override
+// -----------------------------------------------------------------------------
+// Override Bootstrap's .text-muted to use our design tokens
+// This ensures proper contrast in both light and dark themes
+// -----------------------------------------------------------------------------
+.text-muted {
+    color: var(--color-text-muted) !important;
+}
+
+// Special handling for text-muted on colored backgrounds in dark mode
+// Improves readability when text-muted appears on primary/secondary backgrounds
+[data-theme="dark"] {
+    .bg-primary .text-muted,
+    .bg-secondary .text-muted {
+        // Use white with opacity for better contrast on colored backgrounds
+        color: var(--color-text-faded) !important;
+    }
+}
+
+// Also handle auto theme mode with OS dark preference
+@media (prefers-color-scheme: dark) {
+    [data-theme="auto"] {
+        .bg-primary .text-muted,
+        .bg-secondary .text-muted {
+            color: var(--color-text-faded) !important;
+        }
+    }
+}
+
+// -----------------------------------------------------------------------------
 // Grid Utilities Override
 // -----------------------------------------------------------------------------
 // Remove gutters from specific grid layouts
