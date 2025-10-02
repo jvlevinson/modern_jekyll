@@ -6,6 +6,8 @@ A personal portfolio website built with Jekyll 4.4+ using the [Creative Theme](h
 - **Fully tokenized configuration** - All content managed through `_config.yml`
 - **User-customizable theming** - Choose colors and light/dark modes without touching CSS
 - **Theme toggle button** - Manual theme switcher with localStorage persistence
+- **Onboard Dashboard** - Local development UI for viewing configuration (`/onboard/`)
+- **Performance optimized** - Lighthouse 100/100 (desktop), self-hosted fonts, deferred scripts
 - **Modern modular SCSS architecture** - 7-1 pattern with Sass modules (`@use`/`@forward`)
 - **Bootstrap 5.3.8** with responsive design
 - **Vanilla JavaScript** - No jQuery dependencies (2025 best practices)
@@ -14,6 +16,7 @@ A personal portfolio website built with Jekyll 4.4+ using the [Creative Theme](h
 - **Glassmorphism navbar** - Blur effects for modern UI
 - **SVG favicon** - Customizable brand icon
 - **GitHub Pages ready** - Automated deployment
+- **Comprehensive QA** - Config validation, visual regression, accessibility compliance
 
 **🔗 Live Site:** [https://williammorr.com](https://williammorr.com)
 
@@ -233,6 +236,7 @@ See `_includes/design-tokens.html` for the full token architecture.
 - ✅ **Phase 3** (Complete): Dark theme support with `mode: "light"`, `mode: "dark"`, and `mode: "auto"`
 - ✅ **Phase 4** (Complete): Theme toggle button with localStorage persistence
 - ✅ **Phase 5** (Complete): Quality Assurance with JSON Schema validation, Playwright visual regression testing, and WCAG 2.1 AA compliance
+- ✅ **Phase 6** (Complete): Advanced Features - Onboard Dashboard (local config viewer) and Performance Optimization (Lighthouse 100/100 desktop, 89/100 mobile)
 
 ### Hero Section
 The landing section with heading, description, and configurable background:

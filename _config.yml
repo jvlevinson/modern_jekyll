@@ -21,6 +21,17 @@ theme:
   neutral: "slate"           # Text/backgrounds - Choose: slate, gray
   mode: "light"              # Theme mode - Choose: light, dark, auto (auto respects OS preference)
 
+# Onboard Dashboard (Phase 6: Advanced Features)
+# Local development configuration viewer
+# Access at: http://localhost:4000/onboard/
+# Security: Only works on localhost, JavaScript validates hostname
+onboard:
+  enabled: true               # Enable/disable dashboard
+  require_auth: false         # Password protection (future feature)
+  host_whitelist:             # Allowed hosts (security)
+    - localhost
+    - 127.0.0.1
+    - 0.0.0.0
 
 # Hero/Header Section
 hero:

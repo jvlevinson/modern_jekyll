@@ -24,6 +24,7 @@ node_modules/
 test-results/
 playwright-report/
 playwright/.cache/
+_tests_/visual
 
 # Accessibility reports
 a11y-report.json
