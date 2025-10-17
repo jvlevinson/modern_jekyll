@@ -206,6 +206,59 @@
   }
 }
 
+// Icon Picker minimal styles
+.icon-picker {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  overflow: hidden;
+}
+
+.icon-picker__search {
+  padding: 8px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.icon-picker__input {
+  width: 100%;
+  font: inherit;
+  padding: 8px 10px;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 6px;
+}
+
+.icon-picker__list {
+  max-height: 300px;
+  overflow: auto;
+}
+
+.icon-picker__row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 8px 10px;
+  background: transparent;
+  border: 0;
+  text-align: left;
+  cursor: pointer;
+}
+
+.icon-picker__row:hover,
+.icon-picker__row.is-active {
+  background: rgba(0,0,0,0.04);
+}
+
+.icon-picker__row i {
+  width: 20px;
+  text-align: center;
+}
+
+.icon-picker__label {
+  color: #111827;
+}
+
 /**
  * =============================================================================
  * Service Item (Array Item)

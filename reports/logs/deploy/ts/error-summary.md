@@ -1,23 +1,23 @@
 # TypeScript Error Dashboard
 
-- **Total errors:** 4
+- **Total errors:** 2
 - **resourceType issues:** 0
 
 ## Errors per file:
 ```
-      4 onboard/src/controllers/theme-editor.ts
+      2 onboard/src/utils/debug-overlay.ts
 ```
 
 ## 🗂  Error codes by file:
 ```
-onboard/src/controllers/theme-editor.ts
-  TS2339 (4)
+onboard/src/utils/debug-overlay.ts
+  TS2339 (2)
 
 ```
 
 ## 🔢  Top error codes:
 ```
-      4 TS2339
+      2 TS2339
 ```
 
 ## Most common *type-member* issues:
@@ -26,13 +26,13 @@ onboard/src/controllers/theme-editor.ts
 
 ## Most common *property* issues:
 ```
-      2 value
-      2 checked
+      1 rel
+      1 href
 ```
 
 ## 📂  Top files (by error count):
 ```
-      4 onboard/src/controllers/theme-editor.ts
+      2 onboard/src/utils/debug-overlay.ts
 ```
 
 ## Most common *import* issues:

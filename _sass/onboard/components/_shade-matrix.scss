@@ -8,7 +8,7 @@
 .shade-matrix {
   display: flex;
   flex-direction: column;
-  gap: var(--editor-space-sm);
+  gap: var(--space-3);
 
   &__header {
     display: flex;
@@ -17,46 +17,46 @@
   }
 
   &__label {
-    font-weight: var(--editor-font-weight-semibold);
-    font-size: var(--editor-font-size-sm);
+    font-weight: var(--font-semibold);
+    font-size: var(--text-sm);
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: var(--editor-text);
+    color: var(--foreground);
   }
 
   &__grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(48px, 1fr));
-    gap: var(--editor-space-sm);
+    gap: var(--space-3);
   }
 
   &__cell {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--editor-space-xs);
+    gap: var(--space-2);
   }
 
   &__swatch {
     width: 48px;
     height: 48px;
-    border-radius: var(--editor-radius-md);
-    border: 2px solid var(--editor-border);
-    box-shadow: var(--editor-shadow-sm);
-    transition: all var(--editor-transition-fast);
+    border-radius: var(--radius);
+    border: 2px solid var(--border);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--duration-150) var(--ease-in-out);
     cursor: pointer;
 
     &:hover {
       transform: scale(1.1);
-      box-shadow: var(--editor-shadow-md);
+      box-shadow: var(--shadow-md);
       z-index: 1;
     }
   }
 
   &__weight {
-    font-family: var(--editor-font-mono);
-    font-size: var(--editor-font-size-xs);
-    font-weight: var(--editor-font-weight-semibold);
-    color: var(--editor-text-muted);
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    font-weight: var(--font-semibold);
+    color: var(--muted-foreground);
   }
 }

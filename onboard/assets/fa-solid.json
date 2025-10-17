@@ -1,0 +1,5610 @@
+[
+  {
+    "class": "fa-0",
+    "label": "0"
+  },
+  {
+    "class": "fa-1",
+    "label": "1"
+  },
+  {
+    "class": "fa-2",
+    "label": "2"
+  },
+  {
+    "class": "fa-3",
+    "label": "3"
+  },
+  {
+    "class": "fa-4",
+    "label": "4"
+  },
+  {
+    "class": "fa-5",
+    "label": "5"
+  },
+  {
+    "class": "fa-6",
+    "label": "6"
+  },
+  {
+    "class": "fa-7",
+    "label": "7"
+  },
+  {
+    "class": "fa-8",
+    "label": "8"
+  },
+  {
+    "class": "fa-9",
+    "label": "9"
+  },
+  {
+    "class": "fa-a",
+    "label": "a"
+  },
+  {
+    "class": "fa-address-book",
+    "label": "address book"
+  },
+  {
+    "class": "fa-address-card",
+    "label": "address card"
+  },
+  {
+    "class": "fa-align-center",
+    "label": "align center"
+  },
+  {
+    "class": "fa-align-justify",
+    "label": "align justify"
+  },
+  {
+    "class": "fa-align-left",
+    "label": "align left"
+  },
+  {
+    "class": "fa-align-right",
+    "label": "align right"
+  },
+  {
+    "class": "fa-anchor",
+    "label": "anchor"
+  },
+  {
+    "class": "fa-anchor-circle-check",
+    "label": "anchor circle check"
+  },
+  {
+    "class": "fa-anchor-circle-exclamation",
+    "label": "anchor circle exclamation"
+  },
+  {
+    "class": "fa-anchor-circle-xmark",
+    "label": "anchor circle xmark"
+  },
+  {
+    "class": "fa-anchor-lock",
+    "label": "anchor lock"
+  },
+  {
+    "class": "fa-angle-down",
+    "label": "angle down"
+  },
+  {
+    "class": "fa-angle-left",
+    "label": "angle left"
+  },
+  {
+    "class": "fa-angle-right",
+    "label": "angle right"
+  },
+  {
+    "class": "fa-angle-up",
+    "label": "angle up"
+  },
+  {
+    "class": "fa-angles-down",
+    "label": "angles down"
+  },
+  {
+    "class": "fa-angles-left",
+    "label": "angles left"
+  },
+  {
+    "class": "fa-angles-right",
+    "label": "angles right"
+  },
+  {
+    "class": "fa-angles-up",
+    "label": "angles up"
+  },
+  {
+    "class": "fa-ankh",
+    "label": "ankh"
+  },
+  {
+    "class": "fa-apple-whole",
+    "label": "apple whole"
+  },
+  {
+    "class": "fa-archway",
+    "label": "archway"
+  },
+  {
+    "class": "fa-arrow-down",
+    "label": "arrow down"
+  },
+  {
+    "class": "fa-arrow-down-1-9",
+    "label": "arrow down 1 9"
+  },
+  {
+    "class": "fa-arrow-down-9-1",
+    "label": "arrow down 9 1"
+  },
+  {
+    "class": "fa-arrow-down-a-z",
+    "label": "arrow down a z"
+  },
+  {
+    "class": "fa-arrow-down-long",
+    "label": "arrow down long"
+  },
+  {
+    "class": "fa-arrow-down-short-wide",
+    "label": "arrow down short wide"
+  },
+  {
+    "class": "fa-arrow-down-up-across-line",
+    "label": "arrow down up across line"
+  },
+  {
+    "class": "fa-arrow-down-up-lock",
+    "label": "arrow down up lock"
+  },
+  {
+    "class": "fa-arrow-down-wide-short",
+    "label": "arrow down wide short"
+  },
+  {
+    "class": "fa-arrow-down-z-a",
+    "label": "arrow down z a"
+  },
+  {
+    "class": "fa-arrow-left",
+    "label": "arrow left"
+  },
+  {
+    "class": "fa-arrow-left-long",
+    "label": "arrow left long"
+  },
+  {
+    "class": "fa-arrow-pointer",
+    "label": "arrow pointer"
+  },
+  {
+    "class": "fa-arrow-right",
+    "label": "arrow right"
+  },
+  {
+    "class": "fa-arrow-right-arrow-left",
+    "label": "arrow right arrow left"
+  },
+  {
+    "class": "fa-arrow-right-from-bracket",
+    "label": "arrow right from bracket"
+  },
+  {
+    "class": "fa-arrow-right-long",
+    "label": "arrow right long"
+  },
+  {
+    "class": "fa-arrow-right-to-bracket",
+    "label": "arrow right to bracket"
+  },
+  {
+    "class": "fa-arrow-right-to-city",
+    "label": "arrow right to city"
+  },
+  {
+    "class": "fa-arrow-rotate-left",
+    "label": "arrow rotate left"
+  },
+  {
+    "class": "fa-arrow-rotate-right",
+    "label": "arrow rotate right"
+  },
+  {
+    "class": "fa-arrow-trend-down",
+    "label": "arrow trend down"
+  },
+  {
+    "class": "fa-arrow-trend-up",
+    "label": "arrow trend up"
+  },
+  {
+    "class": "fa-arrow-turn-down",
+    "label": "arrow turn down"
+  },
+  {
+    "class": "fa-arrow-turn-up",
+    "label": "arrow turn up"
+  },
+  {
+    "class": "fa-arrow-up",
+    "label": "arrow up"
+  },
+  {
+    "class": "fa-arrow-up-1-9",
+    "label": "arrow up 1 9"
+  },
+  {
+    "class": "fa-arrow-up-9-1",
+    "label": "arrow up 9 1"
+  },
+  {
+    "class": "fa-arrow-up-a-z",
+    "label": "arrow up a z"
+  },
+  {
+    "class": "fa-arrow-up-from-bracket",
+    "label": "arrow up from bracket"
+  },
+  {
+    "class": "fa-arrow-up-from-ground-water",
+    "label": "arrow up from ground water"
+  },
+  {
+    "class": "fa-arrow-up-from-water-pump",
+    "label": "arrow up from water pump"
+  },
+  {
+    "class": "fa-arrow-up-long",
+    "label": "arrow up long"
+  },
+  {
+    "class": "fa-arrow-up-right-dots",
+    "label": "arrow up right dots"
+  },
+  {
+    "class": "fa-arrow-up-right-from-square",
+    "label": "arrow up right from square"
+  },
+  {
+    "class": "fa-arrow-up-short-wide",
+    "label": "arrow up short wide"
+  },
+  {
+    "class": "fa-arrow-up-wide-short",
+    "label": "arrow up wide short"
+  },
+  {
+    "class": "fa-arrow-up-z-a",
+    "label": "arrow up z a"
+  },
+  {
+    "class": "fa-arrows-down-to-line",
+    "label": "arrows down to line"
+  },
+  {
+    "class": "fa-arrows-down-to-people",
+    "label": "arrows down to people"
+  },
+  {
+    "class": "fa-arrows-left-right",
+    "label": "arrows left right"
+  },
+  {
+    "class": "fa-arrows-left-right-to-line",
+    "label": "arrows left right to line"
+  },
+  {
+    "class": "fa-arrows-rotate",
+    "label": "arrows rotate"
+  },
+  {
+    "class": "fa-arrows-spin",
+    "label": "arrows spin"
+  },
+  {
+    "class": "fa-arrows-split-up-and-left",
+    "label": "arrows split up and left"
+  },
+  {
+    "class": "fa-arrows-to-circle",
+    "label": "arrows to circle"
+  },
+  {
+    "class": "fa-arrows-to-dot",
+    "label": "arrows to dot"
+  },
+  {
+    "class": "fa-arrows-to-eye",
+    "label": "arrows to eye"
+  },
+  {
+    "class": "fa-arrows-turn-right",
+    "label": "arrows turn right"
+  },
+  {
+    "class": "fa-arrows-turn-to-dots",
+    "label": "arrows turn to dots"
+  },
+  {
+    "class": "fa-arrows-up-down",
+    "label": "arrows up down"
+  },
+  {
+    "class": "fa-arrows-up-down-left-right",
+    "label": "arrows up down left right"
+  },
+  {
+    "class": "fa-arrows-up-to-line",
+    "label": "arrows up to line"
+  },
+  {
+    "class": "fa-asterisk",
+    "label": "asterisk"
+  },
+  {
+    "class": "fa-at",
+    "label": "at"
+  },
+  {
+    "class": "fa-atom",
+    "label": "atom"
+  },
+  {
+    "class": "fa-audio-description",
+    "label": "audio description"
+  },
+  {
+    "class": "fa-austral-sign",
+    "label": "austral sign"
+  },
+  {
+    "class": "fa-award",
+    "label": "award"
+  },
+  {
+    "class": "fa-b",
+    "label": "b"
+  },
+  {
+    "class": "fa-baby",
+    "label": "baby"
+  },
+  {
+    "class": "fa-baby-carriage",
+    "label": "baby carriage"
+  },
+  {
+    "class": "fa-backward",
+    "label": "backward"
+  },
+  {
+    "class": "fa-backward-fast",
+    "label": "backward fast"
+  },
+  {
+    "class": "fa-backward-step",
+    "label": "backward step"
+  },
+  {
+    "class": "fa-bacon",
+    "label": "bacon"
+  },
+  {
+    "class": "fa-bacteria",
+    "label": "bacteria"
+  },
+  {
+    "class": "fa-bacterium",
+    "label": "bacterium"
+  },
+  {
+    "class": "fa-bag-shopping",
+    "label": "bag shopping"
+  },
+  {
+    "class": "fa-bahai",
+    "label": "bahai"
+  },
+  {
+    "class": "fa-baht-sign",
+    "label": "baht sign"
+  },
+  {
+    "class": "fa-ban",
+    "label": "ban"
+  },
+  {
+    "class": "fa-ban-smoking",
+    "label": "ban smoking"
+  },
+  {
+    "class": "fa-bandage",
+    "label": "bandage"
+  },
+  {
+    "class": "fa-bangladeshi-taka-sign",
+    "label": "bangladeshi taka sign"
+  },
+  {
+    "class": "fa-barcode",
+    "label": "barcode"
+  },
+  {
+    "class": "fa-bars",
+    "label": "bars"
+  },
+  {
+    "class": "fa-bars-progress",
+    "label": "bars progress"
+  },
+  {
+    "class": "fa-bars-staggered",
+    "label": "bars staggered"
+  },
+  {
+    "class": "fa-baseball",
+    "label": "baseball"
+  },
+  {
+    "class": "fa-baseball-bat-ball",
+    "label": "baseball bat ball"
+  },
+  {
+    "class": "fa-basket-shopping",
+    "label": "basket shopping"
+  },
+  {
+    "class": "fa-basketball",
+    "label": "basketball"
+  },
+  {
+    "class": "fa-bath",
+    "label": "bath"
+  },
+  {
+    "class": "fa-battery-empty",
+    "label": "battery empty"
+  },
+  {
+    "class": "fa-battery-full",
+    "label": "battery full"
+  },
+  {
+    "class": "fa-battery-half",
+    "label": "battery half"
+  },
+  {
+    "class": "fa-battery-quarter",
+    "label": "battery quarter"
+  },
+  {
+    "class": "fa-battery-three-quarters",
+    "label": "battery three quarters"
+  },
+  {
+    "class": "fa-bed",
+    "label": "bed"
+  },
+  {
+    "class": "fa-bed-pulse",
+    "label": "bed pulse"
+  },
+  {
+    "class": "fa-beer-mug-empty",
+    "label": "beer mug empty"
+  },
+  {
+    "class": "fa-bell",
+    "label": "bell"
+  },
+  {
+    "class": "fa-bell-concierge",
+    "label": "bell concierge"
+  },
+  {
+    "class": "fa-bell-slash",
+    "label": "bell slash"
+  },
+  {
+    "class": "fa-bezier-curve",
+    "label": "bezier curve"
+  },
+  {
+    "class": "fa-bicycle",
+    "label": "bicycle"
+  },
+  {
+    "class": "fa-binoculars",
+    "label": "binoculars"
+  },
+  {
+    "class": "fa-biohazard",
+    "label": "biohazard"
+  },
+  {
+    "class": "fa-bitcoin-sign",
+    "label": "bitcoin sign"
+  },
+  {
+    "class": "fa-blender",
+    "label": "blender"
+  },
+  {
+    "class": "fa-blender-phone",
+    "label": "blender phone"
+  },
+  {
+    "class": "fa-blog",
+    "label": "blog"
+  },
+  {
+    "class": "fa-bold",
+    "label": "bold"
+  },
+  {
+    "class": "fa-bolt",
+    "label": "bolt"
+  },
+  {
+    "class": "fa-bolt-lightning",
+    "label": "bolt lightning"
+  },
+  {
+    "class": "fa-bomb",
+    "label": "bomb"
+  },
+  {
+    "class": "fa-bone",
+    "label": "bone"
+  },
+  {
+    "class": "fa-bong",
+    "label": "bong"
+  },
+  {
+    "class": "fa-book",
+    "label": "book"
+  },
+  {
+    "class": "fa-book-atlas",
+    "label": "book atlas"
+  },
+  {
+    "class": "fa-book-bible",
+    "label": "book bible"
+  },
+  {
+    "class": "fa-book-bookmark",
+    "label": "book bookmark"
+  },
+  {
+    "class": "fa-book-journal-whills",
+    "label": "book journal whills"
+  },
+  {
+    "class": "fa-book-medical",
+    "label": "book medical"
+  },
+  {
+    "class": "fa-book-open",
+    "label": "book open"
+  },
+  {
+    "class": "fa-book-open-reader",
+    "label": "book open reader"
+  },
+  {
+    "class": "fa-book-quran",
+    "label": "book quran"
+  },
+  {
+    "class": "fa-book-skull",
+    "label": "book skull"
+  },
+  {
+    "class": "fa-book-tanakh",
+    "label": "book tanakh"
+  },
+  {
+    "class": "fa-bookmark",
+    "label": "bookmark"
+  },
+  {
+    "class": "fa-border-all",
+    "label": "border all"
+  },
+  {
+    "class": "fa-border-none",
+    "label": "border none"
+  },
+  {
+    "class": "fa-border-top-left",
+    "label": "border top left"
+  },
+  {
+    "class": "fa-bore-hole",
+    "label": "bore hole"
+  },
+  {
+    "class": "fa-bottle-droplet",
+    "label": "bottle droplet"
+  },
+  {
+    "class": "fa-bottle-water",
+    "label": "bottle water"
+  },
+  {
+    "class": "fa-bowl-food",
+    "label": "bowl food"
+  },
+  {
+    "class": "fa-bowl-rice",
+    "label": "bowl rice"
+  },
+  {
+    "class": "fa-bowling-ball",
+    "label": "bowling ball"
+  },
+  {
+    "class": "fa-box",
+    "label": "box"
+  },
+  {
+    "class": "fa-box-archive",
+    "label": "box archive"
+  },
+  {
+    "class": "fa-box-open",
+    "label": "box open"
+  },
+  {
+    "class": "fa-box-tissue",
+    "label": "box tissue"
+  },
+  {
+    "class": "fa-boxes-packing",
+    "label": "boxes packing"
+  },
+  {
+    "class": "fa-boxes-stacked",
+    "label": "boxes stacked"
+  },
+  {
+    "class": "fa-braille",
+    "label": "braille"
+  },
+  {
+    "class": "fa-brain",
+    "label": "brain"
+  },
+  {
+    "class": "fa-brazilian-real-sign",
+    "label": "brazilian real sign"
+  },
+  {
+    "class": "fa-bread-slice",
+    "label": "bread slice"
+  },
+  {
+    "class": "fa-bridge",
+    "label": "bridge"
+  },
+  {
+    "class": "fa-bridge-circle-check",
+    "label": "bridge circle check"
+  },
+  {
+    "class": "fa-bridge-circle-exclamation",
+    "label": "bridge circle exclamation"
+  },
+  {
+    "class": "fa-bridge-circle-xmark",
+    "label": "bridge circle xmark"
+  },
+  {
+    "class": "fa-bridge-lock",
+    "label": "bridge lock"
+  },
+  {
+    "class": "fa-bridge-water",
+    "label": "bridge water"
+  },
+  {
+    "class": "fa-briefcase",
+    "label": "briefcase"
+  },
+  {
+    "class": "fa-briefcase-medical",
+    "label": "briefcase medical"
+  },
+  {
+    "class": "fa-broom",
+    "label": "broom"
+  },
+  {
+    "class": "fa-broom-ball",
+    "label": "broom ball"
+  },
+  {
+    "class": "fa-brush",
+    "label": "brush"
+  },
+  {
+    "class": "fa-bucket",
+    "label": "bucket"
+  },
+  {
+    "class": "fa-bug",
+    "label": "bug"
+  },
+  {
+    "class": "fa-bug-slash",
+    "label": "bug slash"
+  },
+  {
+    "class": "fa-bugs",
+    "label": "bugs"
+  },
+  {
+    "class": "fa-building",
+    "label": "building"
+  },
+  {
+    "class": "fa-building-circle-arrow-right",
+    "label": "building circle arrow right"
+  },
+  {
+    "class": "fa-building-circle-check",
+    "label": "building circle check"
+  },
+  {
+    "class": "fa-building-circle-exclamation",
+    "label": "building circle exclamation"
+  },
+  {
+    "class": "fa-building-circle-xmark",
+    "label": "building circle xmark"
+  },
+  {
+    "class": "fa-building-columns",
+    "label": "building columns"
+  },
+  {
+    "class": "fa-building-flag",
+    "label": "building flag"
+  },
+  {
+    "class": "fa-building-lock",
+    "label": "building lock"
+  },
+  {
+    "class": "fa-building-ngo",
+    "label": "building ngo"
+  },
+  {
+    "class": "fa-building-shield",
+    "label": "building shield"
+  },
+  {
+    "class": "fa-building-un",
+    "label": "building un"
+  },
+  {
+    "class": "fa-building-user",
+    "label": "building user"
+  },
+  {
+    "class": "fa-building-wheat",
+    "label": "building wheat"
+  },
+  {
+    "class": "fa-bullhorn",
+    "label": "bullhorn"
+  },
+  {
+    "class": "fa-bullseye",
+    "label": "bullseye"
+  },
+  {
+    "class": "fa-burger",
+    "label": "burger"
+  },
+  {
+    "class": "fa-burst",
+    "label": "burst"
+  },
+  {
+    "class": "fa-bus",
+    "label": "bus"
+  },
+  {
+    "class": "fa-bus-simple",
+    "label": "bus simple"
+  },
+  {
+    "class": "fa-business-time",
+    "label": "business time"
+  },
+  {
+    "class": "fa-c",
+    "label": "c"
+  },
+  {
+    "class": "fa-cable-car",
+    "label": "cable car"
+  },
+  {
+    "class": "fa-cake-candles",
+    "label": "cake candles"
+  },
+  {
+    "class": "fa-calculator",
+    "label": "calculator"
+  },
+  {
+    "class": "fa-calendar",
+    "label": "calendar"
+  },
+  {
+    "class": "fa-calendar-check",
+    "label": "calendar check"
+  },
+  {
+    "class": "fa-calendar-day",
+    "label": "calendar day"
+  },
+  {
+    "class": "fa-calendar-days",
+    "label": "calendar days"
+  },
+  {
+    "class": "fa-calendar-minus",
+    "label": "calendar minus"
+  },
+  {
+    "class": "fa-calendar-plus",
+    "label": "calendar plus"
+  },
+  {
+    "class": "fa-calendar-week",
+    "label": "calendar week"
+  },
+  {
+    "class": "fa-calendar-xmark",
+    "label": "calendar xmark"
+  },
+  {
+    "class": "fa-camera",
+    "label": "camera"
+  },
+  {
+    "class": "fa-camera-retro",
+    "label": "camera retro"
+  },
+  {
+    "class": "fa-camera-rotate",
+    "label": "camera rotate"
+  },
+  {
+    "class": "fa-campground",
+    "label": "campground"
+  },
+  {
+    "class": "fa-candy-cane",
+    "label": "candy cane"
+  },
+  {
+    "class": "fa-cannabis",
+    "label": "cannabis"
+  },
+  {
+    "class": "fa-capsules",
+    "label": "capsules"
+  },
+  {
+    "class": "fa-car",
+    "label": "car"
+  },
+  {
+    "class": "fa-car-battery",
+    "label": "car battery"
+  },
+  {
+    "class": "fa-car-burst",
+    "label": "car burst"
+  },
+  {
+    "class": "fa-car-on",
+    "label": "car on"
+  },
+  {
+    "class": "fa-car-rear",
+    "label": "car rear"
+  },
+  {
+    "class": "fa-car-side",
+    "label": "car side"
+  },
+  {
+    "class": "fa-car-tunnel",
+    "label": "car tunnel"
+  },
+  {
+    "class": "fa-caravan",
+    "label": "caravan"
+  },
+  {
+    "class": "fa-caret-down",
+    "label": "caret down"
+  },
+  {
+    "class": "fa-caret-left",
+    "label": "caret left"
+  },
+  {
+    "class": "fa-caret-right",
+    "label": "caret right"
+  },
+  {
+    "class": "fa-caret-up",
+    "label": "caret up"
+  },
+  {
+    "class": "fa-carrot",
+    "label": "carrot"
+  },
+  {
+    "class": "fa-cart-arrow-down",
+    "label": "cart arrow down"
+  },
+  {
+    "class": "fa-cart-flatbed",
+    "label": "cart flatbed"
+  },
+  {
+    "class": "fa-cart-flatbed-suitcase",
+    "label": "cart flatbed suitcase"
+  },
+  {
+    "class": "fa-cart-plus",
+    "label": "cart plus"
+  },
+  {
+    "class": "fa-cart-shopping",
+    "label": "cart shopping"
+  },
+  {
+    "class": "fa-cash-register",
+    "label": "cash register"
+  },
+  {
+    "class": "fa-cat",
+    "label": "cat"
+  },
+  {
+    "class": "fa-cedi-sign",
+    "label": "cedi sign"
+  },
+  {
+    "class": "fa-cent-sign",
+    "label": "cent sign"
+  },
+  {
+    "class": "fa-certificate",
+    "label": "certificate"
+  },
+  {
+    "class": "fa-chair",
+    "label": "chair"
+  },
+  {
+    "class": "fa-chalkboard",
+    "label": "chalkboard"
+  },
+  {
+    "class": "fa-chalkboard-user",
+    "label": "chalkboard user"
+  },
+  {
+    "class": "fa-champagne-glasses",
+    "label": "champagne glasses"
+  },
+  {
+    "class": "fa-charging-station",
+    "label": "charging station"
+  },
+  {
+    "class": "fa-chart-area",
+    "label": "chart area"
+  },
+  {
+    "class": "fa-chart-bar",
+    "label": "chart bar"
+  },
+  {
+    "class": "fa-chart-column",
+    "label": "chart column"
+  },
+  {
+    "class": "fa-chart-diagram",
+    "label": "chart diagram"
+  },
+  {
+    "class": "fa-chart-gantt",
+    "label": "chart gantt"
+  },
+  {
+    "class": "fa-chart-line",
+    "label": "chart line"
+  },
+  {
+    "class": "fa-chart-pie",
+    "label": "chart pie"
+  },
+  {
+    "class": "fa-chart-simple",
+    "label": "chart simple"
+  },
+  {
+    "class": "fa-check",
+    "label": "check"
+  },
+  {
+    "class": "fa-check-double",
+    "label": "check double"
+  },
+  {
+    "class": "fa-check-to-slot",
+    "label": "check to slot"
+  },
+  {
+    "class": "fa-cheese",
+    "label": "cheese"
+  },
+  {
+    "class": "fa-chess",
+    "label": "chess"
+  },
+  {
+    "class": "fa-chess-bishop",
+    "label": "chess bishop"
+  },
+  {
+    "class": "fa-chess-board",
+    "label": "chess board"
+  },
+  {
+    "class": "fa-chess-king",
+    "label": "chess king"
+  },
+  {
+    "class": "fa-chess-knight",
+    "label": "chess knight"
+  },
+  {
+    "class": "fa-chess-pawn",
+    "label": "chess pawn"
+  },
+  {
+    "class": "fa-chess-queen",
+    "label": "chess queen"
+  },
+  {
+    "class": "fa-chess-rook",
+    "label": "chess rook"
+  },
+  {
+    "class": "fa-chevron-down",
+    "label": "chevron down"
+  },
+  {
+    "class": "fa-chevron-left",
+    "label": "chevron left"
+  },
+  {
+    "class": "fa-chevron-right",
+    "label": "chevron right"
+  },
+  {
+    "class": "fa-chevron-up",
+    "label": "chevron up"
+  },
+  {
+    "class": "fa-child",
+    "label": "child"
+  },
+  {
+    "class": "fa-child-combatant",
+    "label": "child combatant"
+  },
+  {
+    "class": "fa-child-dress",
+    "label": "child dress"
+  },
+  {
+    "class": "fa-child-reaching",
+    "label": "child reaching"
+  },
+  {
+    "class": "fa-children",
+    "label": "children"
+  },
+  {
+    "class": "fa-church",
+    "label": "church"
+  },
+  {
+    "class": "fa-circle",
+    "label": "circle"
+  },
+  {
+    "class": "fa-circle-arrow-down",
+    "label": "circle arrow down"
+  },
+  {
+    "class": "fa-circle-arrow-left",
+    "label": "circle arrow left"
+  },
+  {
+    "class": "fa-circle-arrow-right",
+    "label": "circle arrow right"
+  },
+  {
+    "class": "fa-circle-arrow-up",
+    "label": "circle arrow up"
+  },
+  {
+    "class": "fa-circle-check",
+    "label": "circle check"
+  },
+  {
+    "class": "fa-circle-chevron-down",
+    "label": "circle chevron down"
+  },
+  {
+    "class": "fa-circle-chevron-left",
+    "label": "circle chevron left"
+  },
+  {
+    "class": "fa-circle-chevron-right",
+    "label": "circle chevron right"
+  },
+  {
+    "class": "fa-circle-chevron-up",
+    "label": "circle chevron up"
+  },
+  {
+    "class": "fa-circle-dollar-to-slot",
+    "label": "circle dollar to slot"
+  },
+  {
+    "class": "fa-circle-dot",
+    "label": "circle dot"
+  },
+  {
+    "class": "fa-circle-down",
+    "label": "circle down"
+  },
+  {
+    "class": "fa-circle-exclamation",
+    "label": "circle exclamation"
+  },
+  {
+    "class": "fa-circle-h",
+    "label": "circle h"
+  },
+  {
+    "class": "fa-circle-half-stroke",
+    "label": "circle half stroke"
+  },
+  {
+    "class": "fa-circle-info",
+    "label": "circle info"
+  },
+  {
+    "class": "fa-circle-left",
+    "label": "circle left"
+  },
+  {
+    "class": "fa-circle-minus",
+    "label": "circle minus"
+  },
+  {
+    "class": "fa-circle-nodes",
+    "label": "circle nodes"
+  },
+  {
+    "class": "fa-circle-notch",
+    "label": "circle notch"
+  },
+  {
+    "class": "fa-circle-pause",
+    "label": "circle pause"
+  },
+  {
+    "class": "fa-circle-play",
+    "label": "circle play"
+  },
+  {
+    "class": "fa-circle-plus",
+    "label": "circle plus"
+  },
+  {
+    "class": "fa-circle-question",
+    "label": "circle question"
+  },
+  {
+    "class": "fa-circle-radiation",
+    "label": "circle radiation"
+  },
+  {
+    "class": "fa-circle-right",
+    "label": "circle right"
+  },
+  {
+    "class": "fa-circle-stop",
+    "label": "circle stop"
+  },
+  {
+    "class": "fa-circle-up",
+    "label": "circle up"
+  },
+  {
+    "class": "fa-circle-user",
+    "label": "circle user"
+  },
+  {
+    "class": "fa-circle-xmark",
+    "label": "circle xmark"
+  },
+  {
+    "class": "fa-city",
+    "label": "city"
+  },
+  {
+    "class": "fa-clapperboard",
+    "label": "clapperboard"
+  },
+  {
+    "class": "fa-clipboard",
+    "label": "clipboard"
+  },
+  {
+    "class": "fa-clipboard-check",
+    "label": "clipboard check"
+  },
+  {
+    "class": "fa-clipboard-list",
+    "label": "clipboard list"
+  },
+  {
+    "class": "fa-clipboard-question",
+    "label": "clipboard question"
+  },
+  {
+    "class": "fa-clipboard-user",
+    "label": "clipboard user"
+  },
+  {
+    "class": "fa-clock",
+    "label": "clock"
+  },
+  {
+    "class": "fa-clock-rotate-left",
+    "label": "clock rotate left"
+  },
+  {
+    "class": "fa-clone",
+    "label": "clone"
+  },
+  {
+    "class": "fa-closed-captioning",
+    "label": "closed captioning"
+  },
+  {
+    "class": "fa-cloud",
+    "label": "cloud"
+  },
+  {
+    "class": "fa-cloud-arrow-down",
+    "label": "cloud arrow down"
+  },
+  {
+    "class": "fa-cloud-arrow-up",
+    "label": "cloud arrow up"
+  },
+  {
+    "class": "fa-cloud-bolt",
+    "label": "cloud bolt"
+  },
+  {
+    "class": "fa-cloud-meatball",
+    "label": "cloud meatball"
+  },
+  {
+    "class": "fa-cloud-moon",
+    "label": "cloud moon"
+  },
+  {
+    "class": "fa-cloud-moon-rain",
+    "label": "cloud moon rain"
+  },
+  {
+    "class": "fa-cloud-rain",
+    "label": "cloud rain"
+  },
+  {
+    "class": "fa-cloud-showers-heavy",
+    "label": "cloud showers heavy"
+  },
+  {
+    "class": "fa-cloud-showers-water",
+    "label": "cloud showers water"
+  },
+  {
+    "class": "fa-cloud-sun",
+    "label": "cloud sun"
+  },
+  {
+    "class": "fa-cloud-sun-rain",
+    "label": "cloud sun rain"
+  },
+  {
+    "class": "fa-clover",
+    "label": "clover"
+  },
+  {
+    "class": "fa-code",
+    "label": "code"
+  },
+  {
+    "class": "fa-code-branch",
+    "label": "code branch"
+  },
+  {
+    "class": "fa-code-commit",
+    "label": "code commit"
+  },
+  {
+    "class": "fa-code-compare",
+    "label": "code compare"
+  },
+  {
+    "class": "fa-code-fork",
+    "label": "code fork"
+  },
+  {
+    "class": "fa-code-merge",
+    "label": "code merge"
+  },
+  {
+    "class": "fa-code-pull-request",
+    "label": "code pull request"
+  },
+  {
+    "class": "fa-coins",
+    "label": "coins"
+  },
+  {
+    "class": "fa-colon-sign",
+    "label": "colon sign"
+  },
+  {
+    "class": "fa-comment",
+    "label": "comment"
+  },
+  {
+    "class": "fa-comment-dollar",
+    "label": "comment dollar"
+  },
+  {
+    "class": "fa-comment-dots",
+    "label": "comment dots"
+  },
+  {
+    "class": "fa-comment-medical",
+    "label": "comment medical"
+  },
+  {
+    "class": "fa-comment-nodes",
+    "label": "comment nodes"
+  },
+  {
+    "class": "fa-comment-slash",
+    "label": "comment slash"
+  },
+  {
+    "class": "fa-comment-sms",
+    "label": "comment sms"
+  },
+  {
+    "class": "fa-comments",
+    "label": "comments"
+  },
+  {
+    "class": "fa-comments-dollar",
+    "label": "comments dollar"
+  },
+  {
+    "class": "fa-compact-disc",
+    "label": "compact disc"
+  },
+  {
+    "class": "fa-compass",
+    "label": "compass"
+  },
+  {
+    "class": "fa-compass-drafting",
+    "label": "compass drafting"
+  },
+  {
+    "class": "fa-compress",
+    "label": "compress"
+  },
+  {
+    "class": "fa-computer",
+    "label": "computer"
+  },
+  {
+    "class": "fa-computer-mouse",
+    "label": "computer mouse"
+  },
+  {
+    "class": "fa-cookie",
+    "label": "cookie"
+  },
+  {
+    "class": "fa-cookie-bite",
+    "label": "cookie bite"
+  },
+  {
+    "class": "fa-copy",
+    "label": "copy"
+  },
+  {
+    "class": "fa-copyright",
+    "label": "copyright"
+  },
+  {
+    "class": "fa-couch",
+    "label": "couch"
+  },
+  {
+    "class": "fa-cow",
+    "label": "cow"
+  },
+  {
+    "class": "fa-credit-card",
+    "label": "credit card"
+  },
+  {
+    "class": "fa-crop",
+    "label": "crop"
+  },
+  {
+    "class": "fa-crop-simple",
+    "label": "crop simple"
+  },
+  {
+    "class": "fa-cross",
+    "label": "cross"
+  },
+  {
+    "class": "fa-crosshairs",
+    "label": "crosshairs"
+  },
+  {
+    "class": "fa-crow",
+    "label": "crow"
+  },
+  {
+    "class": "fa-crown",
+    "label": "crown"
+  },
+  {
+    "class": "fa-crutch",
+    "label": "crutch"
+  },
+  {
+    "class": "fa-cruzeiro-sign",
+    "label": "cruzeiro sign"
+  },
+  {
+    "class": "fa-cube",
+    "label": "cube"
+  },
+  {
+    "class": "fa-cubes",
+    "label": "cubes"
+  },
+  {
+    "class": "fa-cubes-stacked",
+    "label": "cubes stacked"
+  },
+  {
+    "class": "fa-d",
+    "label": "d"
+  },
+  {
+    "class": "fa-database",
+    "label": "database"
+  },
+  {
+    "class": "fa-delete-left",
+    "label": "delete left"
+  },
+  {
+    "class": "fa-democrat",
+    "label": "democrat"
+  },
+  {
+    "class": "fa-desktop",
+    "label": "desktop"
+  },
+  {
+    "class": "fa-dharmachakra",
+    "label": "dharmachakra"
+  },
+  {
+    "class": "fa-diagram-next",
+    "label": "diagram next"
+  },
+  {
+    "class": "fa-diagram-predecessor",
+    "label": "diagram predecessor"
+  },
+  {
+    "class": "fa-diagram-project",
+    "label": "diagram project"
+  },
+  {
+    "class": "fa-diagram-successor",
+    "label": "diagram successor"
+  },
+  {
+    "class": "fa-diamond",
+    "label": "diamond"
+  },
+  {
+    "class": "fa-diamond-turn-right",
+    "label": "diamond turn right"
+  },
+  {
+    "class": "fa-dice",
+    "label": "dice"
+  },
+  {
+    "class": "fa-dice-d20",
+    "label": "dice d20"
+  },
+  {
+    "class": "fa-dice-d6",
+    "label": "dice d6"
+  },
+  {
+    "class": "fa-dice-five",
+    "label": "dice five"
+  },
+  {
+    "class": "fa-dice-four",
+    "label": "dice four"
+  },
+  {
+    "class": "fa-dice-one",
+    "label": "dice one"
+  },
+  {
+    "class": "fa-dice-six",
+    "label": "dice six"
+  },
+  {
+    "class": "fa-dice-three",
+    "label": "dice three"
+  },
+  {
+    "class": "fa-dice-two",
+    "label": "dice two"
+  },
+  {
+    "class": "fa-disease",
+    "label": "disease"
+  },
+  {
+    "class": "fa-display",
+    "label": "display"
+  },
+  {
+    "class": "fa-divide",
+    "label": "divide"
+  },
+  {
+    "class": "fa-dna",
+    "label": "dna"
+  },
+  {
+    "class": "fa-dog",
+    "label": "dog"
+  },
+  {
+    "class": "fa-dollar-sign",
+    "label": "dollar sign"
+  },
+  {
+    "class": "fa-dolly",
+    "label": "dolly"
+  },
+  {
+    "class": "fa-dong-sign",
+    "label": "dong sign"
+  },
+  {
+    "class": "fa-door-closed",
+    "label": "door closed"
+  },
+  {
+    "class": "fa-door-open",
+    "label": "door open"
+  },
+  {
+    "class": "fa-dove",
+    "label": "dove"
+  },
+  {
+    "class": "fa-down-left-and-up-right-to-center",
+    "label": "down left and up right to center"
+  },
+  {
+    "class": "fa-down-long",
+    "label": "down long"
+  },
+  {
+    "class": "fa-download",
+    "label": "download"
+  },
+  {
+    "class": "fa-dragon",
+    "label": "dragon"
+  },
+  {
+    "class": "fa-draw-polygon",
+    "label": "draw polygon"
+  },
+  {
+    "class": "fa-droplet",
+    "label": "droplet"
+  },
+  {
+    "class": "fa-droplet-slash",
+    "label": "droplet slash"
+  },
+  {
+    "class": "fa-drum",
+    "label": "drum"
+  },
+  {
+    "class": "fa-drum-steelpan",
+    "label": "drum steelpan"
+  },
+  {
+    "class": "fa-drumstick-bite",
+    "label": "drumstick bite"
+  },
+  {
+    "class": "fa-dumbbell",
+    "label": "dumbbell"
+  },
+  {
+    "class": "fa-dumpster",
+    "label": "dumpster"
+  },
+  {
+    "class": "fa-dumpster-fire",
+    "label": "dumpster fire"
+  },
+  {
+    "class": "fa-dungeon",
+    "label": "dungeon"
+  },
+  {
+    "class": "fa-e",
+    "label": "e"
+  },
+  {
+    "class": "fa-ear-deaf",
+    "label": "ear deaf"
+  },
+  {
+    "class": "fa-ear-listen",
+    "label": "ear listen"
+  },
+  {
+    "class": "fa-earth-africa",
+    "label": "earth africa"
+  },
+  {
+    "class": "fa-earth-americas",
+    "label": "earth americas"
+  },
+  {
+    "class": "fa-earth-asia",
+    "label": "earth asia"
+  },
+  {
+    "class": "fa-earth-europe",
+    "label": "earth europe"
+  },
+  {
+    "class": "fa-earth-oceania",
+    "label": "earth oceania"
+  },
+  {
+    "class": "fa-egg",
+    "label": "egg"
+  },
+  {
+    "class": "fa-eject",
+    "label": "eject"
+  },
+  {
+    "class": "fa-elevator",
+    "label": "elevator"
+  },
+  {
+    "class": "fa-ellipsis",
+    "label": "ellipsis"
+  },
+  {
+    "class": "fa-ellipsis-vertical",
+    "label": "ellipsis vertical"
+  },
+  {
+    "class": "fa-envelope",
+    "label": "envelope"
+  },
+  {
+    "class": "fa-envelope-circle-check",
+    "label": "envelope circle check"
+  },
+  {
+    "class": "fa-envelope-open",
+    "label": "envelope open"
+  },
+  {
+    "class": "fa-envelope-open-text",
+    "label": "envelope open text"
+  },
+  {
+    "class": "fa-envelopes-bulk",
+    "label": "envelopes bulk"
+  },
+  {
+    "class": "fa-equals",
+    "label": "equals"
+  },
+  {
+    "class": "fa-eraser",
+    "label": "eraser"
+  },
+  {
+    "class": "fa-ethernet",
+    "label": "ethernet"
+  },
+  {
+    "class": "fa-euro-sign",
+    "label": "euro sign"
+  },
+  {
+    "class": "fa-exclamation",
+    "label": "exclamation"
+  },
+  {
+    "class": "fa-expand",
+    "label": "expand"
+  },
+  {
+    "class": "fa-explosion",
+    "label": "explosion"
+  },
+  {
+    "class": "fa-eye",
+    "label": "eye"
+  },
+  {
+    "class": "fa-eye-dropper",
+    "label": "eye dropper"
+  },
+  {
+    "class": "fa-eye-low-vision",
+    "label": "eye low vision"
+  },
+  {
+    "class": "fa-eye-slash",
+    "label": "eye slash"
+  },
+  {
+    "class": "fa-f",
+    "label": "f"
+  },
+  {
+    "class": "fa-face-angry",
+    "label": "face angry"
+  },
+  {
+    "class": "fa-face-dizzy",
+    "label": "face dizzy"
+  },
+  {
+    "class": "fa-face-flushed",
+    "label": "face flushed"
+  },
+  {
+    "class": "fa-face-frown",
+    "label": "face frown"
+  },
+  {
+    "class": "fa-face-frown-open",
+    "label": "face frown open"
+  },
+  {
+    "class": "fa-face-grimace",
+    "label": "face grimace"
+  },
+  {
+    "class": "fa-face-grin",
+    "label": "face grin"
+  },
+  {
+    "class": "fa-face-grin-beam",
+    "label": "face grin beam"
+  },
+  {
+    "class": "fa-face-grin-beam-sweat",
+    "label": "face grin beam sweat"
+  },
+  {
+    "class": "fa-face-grin-hearts",
+    "label": "face grin hearts"
+  },
+  {
+    "class": "fa-face-grin-squint",
+    "label": "face grin squint"
+  },
+  {
+    "class": "fa-face-grin-squint-tears",
+    "label": "face grin squint tears"
+  },
+  {
+    "class": "fa-face-grin-stars",
+    "label": "face grin stars"
+  },
+  {
+    "class": "fa-face-grin-tears",
+    "label": "face grin tears"
+  },
+  {
+    "class": "fa-face-grin-tongue",
+    "label": "face grin tongue"
+  },
+  {
+    "class": "fa-face-grin-tongue-squint",
+    "label": "face grin tongue squint"
+  },
+  {
+    "class": "fa-face-grin-tongue-wink",
+    "label": "face grin tongue wink"
+  },
+  {
+    "class": "fa-face-grin-wide",
+    "label": "face grin wide"
+  },
+  {
+    "class": "fa-face-grin-wink",
+    "label": "face grin wink"
+  },
+  {
+    "class": "fa-face-kiss",
+    "label": "face kiss"
+  },
+  {
+    "class": "fa-face-kiss-beam",
+    "label": "face kiss beam"
+  },
+  {
+    "class": "fa-face-kiss-wink-heart",
+    "label": "face kiss wink heart"
+  },
+  {
+    "class": "fa-face-laugh",
+    "label": "face laugh"
+  },
+  {
+    "class": "fa-face-laugh-beam",
+    "label": "face laugh beam"
+  },
+  {
+    "class": "fa-face-laugh-squint",
+    "label": "face laugh squint"
+  },
+  {
+    "class": "fa-face-laugh-wink",
+    "label": "face laugh wink"
+  },
+  {
+    "class": "fa-face-meh",
+    "label": "face meh"
+  },
+  {
+    "class": "fa-face-meh-blank",
+    "label": "face meh blank"
+  },
+  {
+    "class": "fa-face-rolling-eyes",
+    "label": "face rolling eyes"
+  },
+  {
+    "class": "fa-face-sad-cry",
+    "label": "face sad cry"
+  },
+  {
+    "class": "fa-face-sad-tear",
+    "label": "face sad tear"
+  },
+  {
+    "class": "fa-face-smile",
+    "label": "face smile"
+  },
+  {
+    "class": "fa-face-smile-beam",
+    "label": "face smile beam"
+  },
+  {
+    "class": "fa-face-smile-wink",
+    "label": "face smile wink"
+  },
+  {
+    "class": "fa-face-surprise",
+    "label": "face surprise"
+  },
+  {
+    "class": "fa-face-tired",
+    "label": "face tired"
+  },
+  {
+    "class": "fa-fan",
+    "label": "fan"
+  },
+  {
+    "class": "fa-faucet",
+    "label": "faucet"
+  },
+  {
+    "class": "fa-faucet-drip",
+    "label": "faucet drip"
+  },
+  {
+    "class": "fa-fax",
+    "label": "fax"
+  },
+  {
+    "class": "fa-feather",
+    "label": "feather"
+  },
+  {
+    "class": "fa-feather-pointed",
+    "label": "feather pointed"
+  },
+  {
+    "class": "fa-ferry",
+    "label": "ferry"
+  },
+  {
+    "class": "fa-file",
+    "label": "file"
+  },
+  {
+    "class": "fa-file-arrow-down",
+    "label": "file arrow down"
+  },
+  {
+    "class": "fa-file-arrow-up",
+    "label": "file arrow up"
+  },
+  {
+    "class": "fa-file-audio",
+    "label": "file audio"
+  },
+  {
+    "class": "fa-file-circle-check",
+    "label": "file circle check"
+  },
+  {
+    "class": "fa-file-circle-exclamation",
+    "label": "file circle exclamation"
+  },
+  {
+    "class": "fa-file-circle-minus",
+    "label": "file circle minus"
+  },
+  {
+    "class": "fa-file-circle-plus",
+    "label": "file circle plus"
+  },
+  {
+    "class": "fa-file-circle-question",
+    "label": "file circle question"
+  },
+  {
+    "class": "fa-file-circle-xmark",
+    "label": "file circle xmark"
+  },
+  {
+    "class": "fa-file-code",
+    "label": "file code"
+  },
+  {
+    "class": "fa-file-contract",
+    "label": "file contract"
+  },
+  {
+    "class": "fa-file-csv",
+    "label": "file csv"
+  },
+  {
+    "class": "fa-file-excel",
+    "label": "file excel"
+  },
+  {
+    "class": "fa-file-export",
+    "label": "file export"
+  },
+  {
+    "class": "fa-file-fragment",
+    "label": "file fragment"
+  },
+  {
+    "class": "fa-file-half-dashed",
+    "label": "file half dashed"
+  },
+  {
+    "class": "fa-file-image",
+    "label": "file image"
+  },
+  {
+    "class": "fa-file-import",
+    "label": "file import"
+  },
+  {
+    "class": "fa-file-invoice",
+    "label": "file invoice"
+  },
+  {
+    "class": "fa-file-invoice-dollar",
+    "label": "file invoice dollar"
+  },
+  {
+    "class": "fa-file-lines",
+    "label": "file lines"
+  },
+  {
+    "class": "fa-file-medical",
+    "label": "file medical"
+  },
+  {
+    "class": "fa-file-pdf",
+    "label": "file pdf"
+  },
+  {
+    "class": "fa-file-pen",
+    "label": "file pen"
+  },
+  {
+    "class": "fa-file-powerpoint",
+    "label": "file powerpoint"
+  },
+  {
+    "class": "fa-file-prescription",
+    "label": "file prescription"
+  },
+  {
+    "class": "fa-file-shield",
+    "label": "file shield"
+  },
+  {
+    "class": "fa-file-signature",
+    "label": "file signature"
+  },
+  {
+    "class": "fa-file-video",
+    "label": "file video"
+  },
+  {
+    "class": "fa-file-waveform",
+    "label": "file waveform"
+  },
+  {
+    "class": "fa-file-word",
+    "label": "file word"
+  },
+  {
+    "class": "fa-file-zipper",
+    "label": "file zipper"
+  },
+  {
+    "class": "fa-fill",
+    "label": "fill"
+  },
+  {
+    "class": "fa-fill-drip",
+    "label": "fill drip"
+  },
+  {
+    "class": "fa-film",
+    "label": "film"
+  },
+  {
+    "class": "fa-filter",
+    "label": "filter"
+  },
+  {
+    "class": "fa-filter-circle-dollar",
+    "label": "filter circle dollar"
+  },
+  {
+    "class": "fa-filter-circle-xmark",
+    "label": "filter circle xmark"
+  },
+  {
+    "class": "fa-fingerprint",
+    "label": "fingerprint"
+  },
+  {
+    "class": "fa-fire",
+    "label": "fire"
+  },
+  {
+    "class": "fa-fire-burner",
+    "label": "fire burner"
+  },
+  {
+    "class": "fa-fire-extinguisher",
+    "label": "fire extinguisher"
+  },
+  {
+    "class": "fa-fire-flame-curved",
+    "label": "fire flame curved"
+  },
+  {
+    "class": "fa-fire-flame-simple",
+    "label": "fire flame simple"
+  },
+  {
+    "class": "fa-fish",
+    "label": "fish"
+  },
+  {
+    "class": "fa-fish-fins",
+    "label": "fish fins"
+  },
+  {
+    "class": "fa-flag",
+    "label": "flag"
+  },
+  {
+    "class": "fa-flag-checkered",
+    "label": "flag checkered"
+  },
+  {
+    "class": "fa-flag-usa",
+    "label": "flag usa"
+  },
+  {
+    "class": "fa-flask",
+    "label": "flask"
+  },
+  {
+    "class": "fa-flask-vial",
+    "label": "flask vial"
+  },
+  {
+    "class": "fa-floppy-disk",
+    "label": "floppy disk"
+  },
+  {
+    "class": "fa-florin-sign",
+    "label": "florin sign"
+  },
+  {
+    "class": "fa-folder",
+    "label": "folder"
+  },
+  {
+    "class": "fa-folder-closed",
+    "label": "folder closed"
+  },
+  {
+    "class": "fa-folder-minus",
+    "label": "folder minus"
+  },
+  {
+    "class": "fa-folder-open",
+    "label": "folder open"
+  },
+  {
+    "class": "fa-folder-plus",
+    "label": "folder plus"
+  },
+  {
+    "class": "fa-folder-tree",
+    "label": "folder tree"
+  },
+  {
+    "class": "fa-font",
+    "label": "font"
+  },
+  {
+    "class": "fa-font-awesome",
+    "label": "font awesome"
+  },
+  {
+    "class": "fa-football",
+    "label": "football"
+  },
+  {
+    "class": "fa-forward",
+    "label": "forward"
+  },
+  {
+    "class": "fa-forward-fast",
+    "label": "forward fast"
+  },
+  {
+    "class": "fa-forward-step",
+    "label": "forward step"
+  },
+  {
+    "class": "fa-franc-sign",
+    "label": "franc sign"
+  },
+  {
+    "class": "fa-frog",
+    "label": "frog"
+  },
+  {
+    "class": "fa-futbol",
+    "label": "futbol"
+  },
+  {
+    "class": "fa-g",
+    "label": "g"
+  },
+  {
+    "class": "fa-gamepad",
+    "label": "gamepad"
+  },
+  {
+    "class": "fa-gas-pump",
+    "label": "gas pump"
+  },
+  {
+    "class": "fa-gauge",
+    "label": "gauge"
+  },
+  {
+    "class": "fa-gauge-high",
+    "label": "gauge high"
+  },
+  {
+    "class": "fa-gauge-simple",
+    "label": "gauge simple"
+  },
+  {
+    "class": "fa-gauge-simple-high",
+    "label": "gauge simple high"
+  },
+  {
+    "class": "fa-gavel",
+    "label": "gavel"
+  },
+  {
+    "class": "fa-gear",
+    "label": "gear"
+  },
+  {
+    "class": "fa-gears",
+    "label": "gears"
+  },
+  {
+    "class": "fa-gem",
+    "label": "gem"
+  },
+  {
+    "class": "fa-genderless",
+    "label": "genderless"
+  },
+  {
+    "class": "fa-ghost",
+    "label": "ghost"
+  },
+  {
+    "class": "fa-gift",
+    "label": "gift"
+  },
+  {
+    "class": "fa-gifts",
+    "label": "gifts"
+  },
+  {
+    "class": "fa-glass-water",
+    "label": "glass water"
+  },
+  {
+    "class": "fa-glass-water-droplet",
+    "label": "glass water droplet"
+  },
+  {
+    "class": "fa-glasses",
+    "label": "glasses"
+  },
+  {
+    "class": "fa-globe",
+    "label": "globe"
+  },
+  {
+    "class": "fa-golf-ball-tee",
+    "label": "golf ball tee"
+  },
+  {
+    "class": "fa-gopuram",
+    "label": "gopuram"
+  },
+  {
+    "class": "fa-graduation-cap",
+    "label": "graduation cap"
+  },
+  {
+    "class": "fa-greater-than",
+    "label": "greater than"
+  },
+  {
+    "class": "fa-greater-than-equal",
+    "label": "greater than equal"
+  },
+  {
+    "class": "fa-grip",
+    "label": "grip"
+  },
+  {
+    "class": "fa-grip-lines",
+    "label": "grip lines"
+  },
+  {
+    "class": "fa-grip-lines-vertical",
+    "label": "grip lines vertical"
+  },
+  {
+    "class": "fa-grip-vertical",
+    "label": "grip vertical"
+  },
+  {
+    "class": "fa-group-arrows-rotate",
+    "label": "group arrows rotate"
+  },
+  {
+    "class": "fa-guarani-sign",
+    "label": "guarani sign"
+  },
+  {
+    "class": "fa-guitar",
+    "label": "guitar"
+  },
+  {
+    "class": "fa-gun",
+    "label": "gun"
+  },
+  {
+    "class": "fa-h",
+    "label": "h"
+  },
+  {
+    "class": "fa-hammer",
+    "label": "hammer"
+  },
+  {
+    "class": "fa-hamsa",
+    "label": "hamsa"
+  },
+  {
+    "class": "fa-hand",
+    "label": "hand"
+  },
+  {
+    "class": "fa-hand-back-fist",
+    "label": "hand back fist"
+  },
+  {
+    "class": "fa-hand-dots",
+    "label": "hand dots"
+  },
+  {
+    "class": "fa-hand-fist",
+    "label": "hand fist"
+  },
+  {
+    "class": "fa-hand-holding",
+    "label": "hand holding"
+  },
+  {
+    "class": "fa-hand-holding-dollar",
+    "label": "hand holding dollar"
+  },
+  {
+    "class": "fa-hand-holding-droplet",
+    "label": "hand holding droplet"
+  },
+  {
+    "class": "fa-hand-holding-hand",
+    "label": "hand holding hand"
+  },
+  {
+    "class": "fa-hand-holding-heart",
+    "label": "hand holding heart"
+  },
+  {
+    "class": "fa-hand-holding-medical",
+    "label": "hand holding medical"
+  },
+  {
+    "class": "fa-hand-lizard",
+    "label": "hand lizard"
+  },
+  {
+    "class": "fa-hand-middle-finger",
+    "label": "hand middle finger"
+  },
+  {
+    "class": "fa-hand-peace",
+    "label": "hand peace"
+  },
+  {
+    "class": "fa-hand-point-down",
+    "label": "hand point down"
+  },
+  {
+    "class": "fa-hand-point-left",
+    "label": "hand point left"
+  },
+  {
+    "class": "fa-hand-point-right",
+    "label": "hand point right"
+  },
+  {
+    "class": "fa-hand-point-up",
+    "label": "hand point up"
+  },
+  {
+    "class": "fa-hand-pointer",
+    "label": "hand pointer"
+  },
+  {
+    "class": "fa-hand-scissors",
+    "label": "hand scissors"
+  },
+  {
+    "class": "fa-hand-sparkles",
+    "label": "hand sparkles"
+  },
+  {
+    "class": "fa-hand-spock",
+    "label": "hand spock"
+  },
+  {
+    "class": "fa-handcuffs",
+    "label": "handcuffs"
+  },
+  {
+    "class": "fa-hands",
+    "label": "hands"
+  },
+  {
+    "class": "fa-hands-asl-interpreting",
+    "label": "hands asl interpreting"
+  },
+  {
+    "class": "fa-hands-bound",
+    "label": "hands bound"
+  },
+  {
+    "class": "fa-hands-bubbles",
+    "label": "hands bubbles"
+  },
+  {
+    "class": "fa-hands-clapping",
+    "label": "hands clapping"
+  },
+  {
+    "class": "fa-hands-holding",
+    "label": "hands holding"
+  },
+  {
+    "class": "fa-hands-holding-child",
+    "label": "hands holding child"
+  },
+  {
+    "class": "fa-hands-holding-circle",
+    "label": "hands holding circle"
+  },
+  {
+    "class": "fa-hands-praying",
+    "label": "hands praying"
+  },
+  {
+    "class": "fa-handshake",
+    "label": "handshake"
+  },
+  {
+    "class": "fa-handshake-angle",
+    "label": "handshake angle"
+  },
+  {
+    "class": "fa-handshake-simple",
+    "label": "handshake simple"
+  },
+  {
+    "class": "fa-handshake-simple-slash",
+    "label": "handshake simple slash"
+  },
+  {
+    "class": "fa-handshake-slash",
+    "label": "handshake slash"
+  },
+  {
+    "class": "fa-hanukiah",
+    "label": "hanukiah"
+  },
+  {
+    "class": "fa-hard-drive",
+    "label": "hard drive"
+  },
+  {
+    "class": "fa-hashtag",
+    "label": "hashtag"
+  },
+  {
+    "class": "fa-hat-cowboy",
+    "label": "hat cowboy"
+  },
+  {
+    "class": "fa-hat-cowboy-side",
+    "label": "hat cowboy side"
+  },
+  {
+    "class": "fa-hat-wizard",
+    "label": "hat wizard"
+  },
+  {
+    "class": "fa-head-side-cough",
+    "label": "head side cough"
+  },
+  {
+    "class": "fa-head-side-cough-slash",
+    "label": "head side cough slash"
+  },
+  {
+    "class": "fa-head-side-mask",
+    "label": "head side mask"
+  },
+  {
+    "class": "fa-head-side-virus",
+    "label": "head side virus"
+  },
+  {
+    "class": "fa-heading",
+    "label": "heading"
+  },
+  {
+    "class": "fa-headphones",
+    "label": "headphones"
+  },
+  {
+    "class": "fa-headphones-simple",
+    "label": "headphones simple"
+  },
+  {
+    "class": "fa-headset",
+    "label": "headset"
+  },
+  {
+    "class": "fa-heart",
+    "label": "heart"
+  },
+  {
+    "class": "fa-heart-circle-bolt",
+    "label": "heart circle bolt"
+  },
+  {
+    "class": "fa-heart-circle-check",
+    "label": "heart circle check"
+  },
+  {
+    "class": "fa-heart-circle-exclamation",
+    "label": "heart circle exclamation"
+  },
+  {
+    "class": "fa-heart-circle-minus",
+    "label": "heart circle minus"
+  },
+  {
+    "class": "fa-heart-circle-plus",
+    "label": "heart circle plus"
+  },
+  {
+    "class": "fa-heart-circle-xmark",
+    "label": "heart circle xmark"
+  },
+  {
+    "class": "fa-heart-crack",
+    "label": "heart crack"
+  },
+  {
+    "class": "fa-heart-pulse",
+    "label": "heart pulse"
+  },
+  {
+    "class": "fa-helicopter",
+    "label": "helicopter"
+  },
+  {
+    "class": "fa-helicopter-symbol",
+    "label": "helicopter symbol"
+  },
+  {
+    "class": "fa-helmet-safety",
+    "label": "helmet safety"
+  },
+  {
+    "class": "fa-helmet-un",
+    "label": "helmet un"
+  },
+  {
+    "class": "fa-hexagon-nodes",
+    "label": "hexagon nodes"
+  },
+  {
+    "class": "fa-hexagon-nodes-bolt",
+    "label": "hexagon nodes bolt"
+  },
+  {
+    "class": "fa-highlighter",
+    "label": "highlighter"
+  },
+  {
+    "class": "fa-hill-avalanche",
+    "label": "hill avalanche"
+  },
+  {
+    "class": "fa-hill-rockslide",
+    "label": "hill rockslide"
+  },
+  {
+    "class": "fa-hippo",
+    "label": "hippo"
+  },
+  {
+    "class": "fa-hockey-puck",
+    "label": "hockey puck"
+  },
+  {
+    "class": "fa-holly-berry",
+    "label": "holly berry"
+  },
+  {
+    "class": "fa-horse",
+    "label": "horse"
+  },
+  {
+    "class": "fa-horse-head",
+    "label": "horse head"
+  },
+  {
+    "class": "fa-hospital",
+    "label": "hospital"
+  },
+  {
+    "class": "fa-hospital-user",
+    "label": "hospital user"
+  },
+  {
+    "class": "fa-hot-tub-person",
+    "label": "hot tub person"
+  },
+  {
+    "class": "fa-hotdog",
+    "label": "hotdog"
+  },
+  {
+    "class": "fa-hotel",
+    "label": "hotel"
+  },
+  {
+    "class": "fa-hourglass",
+    "label": "hourglass"
+  },
+  {
+    "class": "fa-hourglass-end",
+    "label": "hourglass end"
+  },
+  {
+    "class": "fa-hourglass-half",
+    "label": "hourglass half"
+  },
+  {
+    "class": "fa-hourglass-start",
+    "label": "hourglass start"
+  },
+  {
+    "class": "fa-house",
+    "label": "house"
+  },
+  {
+    "class": "fa-house-chimney",
+    "label": "house chimney"
+  },
+  {
+    "class": "fa-house-chimney-crack",
+    "label": "house chimney crack"
+  },
+  {
+    "class": "fa-house-chimney-medical",
+    "label": "house chimney medical"
+  },
+  {
+    "class": "fa-house-chimney-user",
+    "label": "house chimney user"
+  },
+  {
+    "class": "fa-house-chimney-window",
+    "label": "house chimney window"
+  },
+  {
+    "class": "fa-house-circle-check",
+    "label": "house circle check"
+  },
+  {
+    "class": "fa-house-circle-exclamation",
+    "label": "house circle exclamation"
+  },
+  {
+    "class": "fa-house-circle-xmark",
+    "label": "house circle xmark"
+  },
+  {
+    "class": "fa-house-crack",
+    "label": "house crack"
+  },
+  {
+    "class": "fa-house-fire",
+    "label": "house fire"
+  },
+  {
+    "class": "fa-house-flag",
+    "label": "house flag"
+  },
+  {
+    "class": "fa-house-flood-water",
+    "label": "house flood water"
+  },
+  {
+    "class": "fa-house-flood-water-circle-arrow-right",
+    "label": "house flood water circle arrow right"
+  },
+  {
+    "class": "fa-house-laptop",
+    "label": "house laptop"
+  },
+  {
+    "class": "fa-house-lock",
+    "label": "house lock"
+  },
+  {
+    "class": "fa-house-medical",
+    "label": "house medical"
+  },
+  {
+    "class": "fa-house-medical-circle-check",
+    "label": "house medical circle check"
+  },
+  {
+    "class": "fa-house-medical-circle-exclamation",
+    "label": "house medical circle exclamation"
+  },
+  {
+    "class": "fa-house-medical-circle-xmark",
+    "label": "house medical circle xmark"
+  },
+  {
+    "class": "fa-house-medical-flag",
+    "label": "house medical flag"
+  },
+  {
+    "class": "fa-house-signal",
+    "label": "house signal"
+  },
+  {
+    "class": "fa-house-tsunami",
+    "label": "house tsunami"
+  },
+  {
+    "class": "fa-house-user",
+    "label": "house user"
+  },
+  {
+    "class": "fa-hryvnia-sign",
+    "label": "hryvnia sign"
+  },
+  {
+    "class": "fa-hurricane",
+    "label": "hurricane"
+  },
+  {
+    "class": "fa-i",
+    "label": "i"
+  },
+  {
+    "class": "fa-i-cursor",
+    "label": "i cursor"
+  },
+  {
+    "class": "fa-ice-cream",
+    "label": "ice cream"
+  },
+  {
+    "class": "fa-icicles",
+    "label": "icicles"
+  },
+  {
+    "class": "fa-icons",
+    "label": "icons"
+  },
+  {
+    "class": "fa-id-badge",
+    "label": "id badge"
+  },
+  {
+    "class": "fa-id-card",
+    "label": "id card"
+  },
+  {
+    "class": "fa-id-card-clip",
+    "label": "id card clip"
+  },
+  {
+    "class": "fa-igloo",
+    "label": "igloo"
+  },
+  {
+    "class": "fa-image",
+    "label": "image"
+  },
+  {
+    "class": "fa-image-portrait",
+    "label": "image portrait"
+  },
+  {
+    "class": "fa-images",
+    "label": "images"
+  },
+  {
+    "class": "fa-inbox",
+    "label": "inbox"
+  },
+  {
+    "class": "fa-indent",
+    "label": "indent"
+  },
+  {
+    "class": "fa-indian-rupee-sign",
+    "label": "indian rupee sign"
+  },
+  {
+    "class": "fa-industry",
+    "label": "industry"
+  },
+  {
+    "class": "fa-infinity",
+    "label": "infinity"
+  },
+  {
+    "class": "fa-info",
+    "label": "info"
+  },
+  {
+    "class": "fa-italic",
+    "label": "italic"
+  },
+  {
+    "class": "fa-j",
+    "label": "j"
+  },
+  {
+    "class": "fa-jar",
+    "label": "jar"
+  },
+  {
+    "class": "fa-jar-wheat",
+    "label": "jar wheat"
+  },
+  {
+    "class": "fa-jedi",
+    "label": "jedi"
+  },
+  {
+    "class": "fa-jet-fighter",
+    "label": "jet fighter"
+  },
+  {
+    "class": "fa-jet-fighter-up",
+    "label": "jet fighter up"
+  },
+  {
+    "class": "fa-joint",
+    "label": "joint"
+  },
+  {
+    "class": "fa-jug-detergent",
+    "label": "jug detergent"
+  },
+  {
+    "class": "fa-k",
+    "label": "k"
+  },
+  {
+    "class": "fa-kaaba",
+    "label": "kaaba"
+  },
+  {
+    "class": "fa-key",
+    "label": "key"
+  },
+  {
+    "class": "fa-keyboard",
+    "label": "keyboard"
+  },
+  {
+    "class": "fa-khanda",
+    "label": "khanda"
+  },
+  {
+    "class": "fa-kip-sign",
+    "label": "kip sign"
+  },
+  {
+    "class": "fa-kit-medical",
+    "label": "kit medical"
+  },
+  {
+    "class": "fa-kitchen-set",
+    "label": "kitchen set"
+  },
+  {
+    "class": "fa-kiwi-bird",
+    "label": "kiwi bird"
+  },
+  {
+    "class": "fa-l",
+    "label": "l"
+  },
+  {
+    "class": "fa-land-mine-on",
+    "label": "land mine on"
+  },
+  {
+    "class": "fa-landmark",
+    "label": "landmark"
+  },
+  {
+    "class": "fa-landmark-dome",
+    "label": "landmark dome"
+  },
+  {
+    "class": "fa-landmark-flag",
+    "label": "landmark flag"
+  },
+  {
+    "class": "fa-language",
+    "label": "language"
+  },
+  {
+    "class": "fa-laptop",
+    "label": "laptop"
+  },
+  {
+    "class": "fa-laptop-code",
+    "label": "laptop code"
+  },
+  {
+    "class": "fa-laptop-file",
+    "label": "laptop file"
+  },
+  {
+    "class": "fa-laptop-medical",
+    "label": "laptop medical"
+  },
+  {
+    "class": "fa-lari-sign",
+    "label": "lari sign"
+  },
+  {
+    "class": "fa-layer-group",
+    "label": "layer group"
+  },
+  {
+    "class": "fa-leaf",
+    "label": "leaf"
+  },
+  {
+    "class": "fa-left-long",
+    "label": "left long"
+  },
+  {
+    "class": "fa-left-right",
+    "label": "left right"
+  },
+  {
+    "class": "fa-lemon",
+    "label": "lemon"
+  },
+  {
+    "class": "fa-less-than",
+    "label": "less than"
+  },
+  {
+    "class": "fa-less-than-equal",
+    "label": "less than equal"
+  },
+  {
+    "class": "fa-life-ring",
+    "label": "life ring"
+  },
+  {
+    "class": "fa-lightbulb",
+    "label": "lightbulb"
+  },
+  {
+    "class": "fa-lines-leaning",
+    "label": "lines leaning"
+  },
+  {
+    "class": "fa-link",
+    "label": "link"
+  },
+  {
+    "class": "fa-link-slash",
+    "label": "link slash"
+  },
+  {
+    "class": "fa-lira-sign",
+    "label": "lira sign"
+  },
+  {
+    "class": "fa-list",
+    "label": "list"
+  },
+  {
+    "class": "fa-list-check",
+    "label": "list check"
+  },
+  {
+    "class": "fa-list-ol",
+    "label": "list ol"
+  },
+  {
+    "class": "fa-list-ul",
+    "label": "list ul"
+  },
+  {
+    "class": "fa-litecoin-sign",
+    "label": "litecoin sign"
+  },
+  {
+    "class": "fa-location-arrow",
+    "label": "location arrow"
+  },
+  {
+    "class": "fa-location-crosshairs",
+    "label": "location crosshairs"
+  },
+  {
+    "class": "fa-location-dot",
+    "label": "location dot"
+  },
+  {
+    "class": "fa-location-pin",
+    "label": "location pin"
+  },
+  {
+    "class": "fa-location-pin-lock",
+    "label": "location pin lock"
+  },
+  {
+    "class": "fa-lock",
+    "label": "lock"
+  },
+  {
+    "class": "fa-lock-open",
+    "label": "lock open"
+  },
+  {
+    "class": "fa-locust",
+    "label": "locust"
+  },
+  {
+    "class": "fa-lungs",
+    "label": "lungs"
+  },
+  {
+    "class": "fa-lungs-virus",
+    "label": "lungs virus"
+  },
+  {
+    "class": "fa-m",
+    "label": "m"
+  },
+  {
+    "class": "fa-magnet",
+    "label": "magnet"
+  },
+  {
+    "class": "fa-magnifying-glass",
+    "label": "magnifying glass"
+  },
+  {
+    "class": "fa-magnifying-glass-arrow-right",
+    "label": "magnifying glass arrow right"
+  },
+  {
+    "class": "fa-magnifying-glass-chart",
+    "label": "magnifying glass chart"
+  },
+  {
+    "class": "fa-magnifying-glass-dollar",
+    "label": "magnifying glass dollar"
+  },
+  {
+    "class": "fa-magnifying-glass-location",
+    "label": "magnifying glass location"
+  },
+  {
+    "class": "fa-magnifying-glass-minus",
+    "label": "magnifying glass minus"
+  },
+  {
+    "class": "fa-magnifying-glass-plus",
+    "label": "magnifying glass plus"
+  },
+  {
+    "class": "fa-manat-sign",
+    "label": "manat sign"
+  },
+  {
+    "class": "fa-map",
+    "label": "map"
+  },
+  {
+    "class": "fa-map-location",
+    "label": "map location"
+  },
+  {
+    "class": "fa-map-location-dot",
+    "label": "map location dot"
+  },
+  {
+    "class": "fa-map-pin",
+    "label": "map pin"
+  },
+  {
+    "class": "fa-marker",
+    "label": "marker"
+  },
+  {
+    "class": "fa-mars",
+    "label": "mars"
+  },
+  {
+    "class": "fa-mars-and-venus",
+    "label": "mars and venus"
+  },
+  {
+    "class": "fa-mars-and-venus-burst",
+    "label": "mars and venus burst"
+  },
+  {
+    "class": "fa-mars-double",
+    "label": "mars double"
+  },
+  {
+    "class": "fa-mars-stroke",
+    "label": "mars stroke"
+  },
+  {
+    "class": "fa-mars-stroke-right",
+    "label": "mars stroke right"
+  },
+  {
+    "class": "fa-mars-stroke-up",
+    "label": "mars stroke up"
+  },
+  {
+    "class": "fa-martini-glass",
+    "label": "martini glass"
+  },
+  {
+    "class": "fa-martini-glass-citrus",
+    "label": "martini glass citrus"
+  },
+  {
+    "class": "fa-martini-glass-empty",
+    "label": "martini glass empty"
+  },
+  {
+    "class": "fa-mask",
+    "label": "mask"
+  },
+  {
+    "class": "fa-mask-face",
+    "label": "mask face"
+  },
+  {
+    "class": "fa-mask-ventilator",
+    "label": "mask ventilator"
+  },
+  {
+    "class": "fa-masks-theater",
+    "label": "masks theater"
+  },
+  {
+    "class": "fa-mattress-pillow",
+    "label": "mattress pillow"
+  },
+  {
+    "class": "fa-maximize",
+    "label": "maximize"
+  },
+  {
+    "class": "fa-medal",
+    "label": "medal"
+  },
+  {
+    "class": "fa-memory",
+    "label": "memory"
+  },
+  {
+    "class": "fa-menorah",
+    "label": "menorah"
+  },
+  {
+    "class": "fa-mercury",
+    "label": "mercury"
+  },
+  {
+    "class": "fa-message",
+    "label": "message"
+  },
+  {
+    "class": "fa-meteor",
+    "label": "meteor"
+  },
+  {
+    "class": "fa-microchip",
+    "label": "microchip"
+  },
+  {
+    "class": "fa-microphone",
+    "label": "microphone"
+  },
+  {
+    "class": "fa-microphone-lines",
+    "label": "microphone lines"
+  },
+  {
+    "class": "fa-microphone-lines-slash",
+    "label": "microphone lines slash"
+  },
+  {
+    "class": "fa-microphone-slash",
+    "label": "microphone slash"
+  },
+  {
+    "class": "fa-microscope",
+    "label": "microscope"
+  },
+  {
+    "class": "fa-mill-sign",
+    "label": "mill sign"
+  },
+  {
+    "class": "fa-minimize",
+    "label": "minimize"
+  },
+  {
+    "class": "fa-minus",
+    "label": "minus"
+  },
+  {
+    "class": "fa-mitten",
+    "label": "mitten"
+  },
+  {
+    "class": "fa-mobile",
+    "label": "mobile"
+  },
+  {
+    "class": "fa-mobile-button",
+    "label": "mobile button"
+  },
+  {
+    "class": "fa-mobile-retro",
+    "label": "mobile retro"
+  },
+  {
+    "class": "fa-mobile-screen",
+    "label": "mobile screen"
+  },
+  {
+    "class": "fa-mobile-screen-button",
+    "label": "mobile screen button"
+  },
+  {
+    "class": "fa-money-bill",
+    "label": "money bill"
+  },
+  {
+    "class": "fa-money-bill-1",
+    "label": "money bill 1"
+  },
+  {
+    "class": "fa-money-bill-1-wave",
+    "label": "money bill 1 wave"
+  },
+  {
+    "class": "fa-money-bill-transfer",
+    "label": "money bill transfer"
+  },
+  {
+    "class": "fa-money-bill-trend-up",
+    "label": "money bill trend up"
+  },
+  {
+    "class": "fa-money-bill-wave",
+    "label": "money bill wave"
+  },
+  {
+    "class": "fa-money-bill-wheat",
+    "label": "money bill wheat"
+  },
+  {
+    "class": "fa-money-bills",
+    "label": "money bills"
+  },
+  {
+    "class": "fa-money-check",
+    "label": "money check"
+  },
+  {
+    "class": "fa-money-check-dollar",
+    "label": "money check dollar"
+  },
+  {
+    "class": "fa-monument",
+    "label": "monument"
+  },
+  {
+    "class": "fa-moon",
+    "label": "moon"
+  },
+  {
+    "class": "fa-mortar-pestle",
+    "label": "mortar pestle"
+  },
+  {
+    "class": "fa-mosque",
+    "label": "mosque"
+  },
+  {
+    "class": "fa-mosquito",
+    "label": "mosquito"
+  },
+  {
+    "class": "fa-mosquito-net",
+    "label": "mosquito net"
+  },
+  {
+    "class": "fa-motorcycle",
+    "label": "motorcycle"
+  },
+  {
+    "class": "fa-mound",
+    "label": "mound"
+  },
+  {
+    "class": "fa-mountain",
+    "label": "mountain"
+  },
+  {
+    "class": "fa-mountain-city",
+    "label": "mountain city"
+  },
+  {
+    "class": "fa-mountain-sun",
+    "label": "mountain sun"
+  },
+  {
+    "class": "fa-mug-hot",
+    "label": "mug hot"
+  },
+  {
+    "class": "fa-mug-saucer",
+    "label": "mug saucer"
+  },
+  {
+    "class": "fa-music",
+    "label": "music"
+  },
+  {
+    "class": "fa-n",
+    "label": "n"
+  },
+  {
+    "class": "fa-naira-sign",
+    "label": "naira sign"
+  },
+  {
+    "class": "fa-network-wired",
+    "label": "network wired"
+  },
+  {
+    "class": "fa-neuter",
+    "label": "neuter"
+  },
+  {
+    "class": "fa-newspaper",
+    "label": "newspaper"
+  },
+  {
+    "class": "fa-not-equal",
+    "label": "not equal"
+  },
+  {
+    "class": "fa-notdef",
+    "label": "notdef"
+  },
+  {
+    "class": "fa-note-sticky",
+    "label": "note sticky"
+  },
+  {
+    "class": "fa-notes-medical",
+    "label": "notes medical"
+  },
+  {
+    "class": "fa-o",
+    "label": "o"
+  },
+  {
+    "class": "fa-object-group",
+    "label": "object group"
+  },
+  {
+    "class": "fa-object-ungroup",
+    "label": "object ungroup"
+  },
+  {
+    "class": "fa-oil-can",
+    "label": "oil can"
+  },
+  {
+    "class": "fa-oil-well",
+    "label": "oil well"
+  },
+  {
+    "class": "fa-om",
+    "label": "om"
+  },
+  {
+    "class": "fa-otter",
+    "label": "otter"
+  },
+  {
+    "class": "fa-outdent",
+    "label": "outdent"
+  },
+  {
+    "class": "fa-p",
+    "label": "p"
+  },
+  {
+    "class": "fa-pager",
+    "label": "pager"
+  },
+  {
+    "class": "fa-paint-roller",
+    "label": "paint roller"
+  },
+  {
+    "class": "fa-paintbrush",
+    "label": "paintbrush"
+  },
+  {
+    "class": "fa-palette",
+    "label": "palette"
+  },
+  {
+    "class": "fa-pallet",
+    "label": "pallet"
+  },
+  {
+    "class": "fa-panorama",
+    "label": "panorama"
+  },
+  {
+    "class": "fa-paper-plane",
+    "label": "paper plane"
+  },
+  {
+    "class": "fa-paperclip",
+    "label": "paperclip"
+  },
+  {
+    "class": "fa-parachute-box",
+    "label": "parachute box"
+  },
+  {
+    "class": "fa-paragraph",
+    "label": "paragraph"
+  },
+  {
+    "class": "fa-passport",
+    "label": "passport"
+  },
+  {
+    "class": "fa-paste",
+    "label": "paste"
+  },
+  {
+    "class": "fa-pause",
+    "label": "pause"
+  },
+  {
+    "class": "fa-paw",
+    "label": "paw"
+  },
+  {
+    "class": "fa-peace",
+    "label": "peace"
+  },
+  {
+    "class": "fa-pen",
+    "label": "pen"
+  },
+  {
+    "class": "fa-pen-clip",
+    "label": "pen clip"
+  },
+  {
+    "class": "fa-pen-fancy",
+    "label": "pen fancy"
+  },
+  {
+    "class": "fa-pen-nib",
+    "label": "pen nib"
+  },
+  {
+    "class": "fa-pen-ruler",
+    "label": "pen ruler"
+  },
+  {
+    "class": "fa-pen-to-square",
+    "label": "pen to square"
+  },
+  {
+    "class": "fa-pencil",
+    "label": "pencil"
+  },
+  {
+    "class": "fa-people-arrows",
+    "label": "people arrows"
+  },
+  {
+    "class": "fa-people-carry-box",
+    "label": "people carry box"
+  },
+  {
+    "class": "fa-people-group",
+    "label": "people group"
+  },
+  {
+    "class": "fa-people-line",
+    "label": "people line"
+  },
+  {
+    "class": "fa-people-pulling",
+    "label": "people pulling"
+  },
+  {
+    "class": "fa-people-robbery",
+    "label": "people robbery"
+  },
+  {
+    "class": "fa-people-roof",
+    "label": "people roof"
+  },
+  {
+    "class": "fa-pepper-hot",
+    "label": "pepper hot"
+  },
+  {
+    "class": "fa-percent",
+    "label": "percent"
+  },
+  {
+    "class": "fa-person",
+    "label": "person"
+  },
+  {
+    "class": "fa-person-arrow-down-to-line",
+    "label": "person arrow down to line"
+  },
+  {
+    "class": "fa-person-arrow-up-from-line",
+    "label": "person arrow up from line"
+  },
+  {
+    "class": "fa-person-biking",
+    "label": "person biking"
+  },
+  {
+    "class": "fa-person-booth",
+    "label": "person booth"
+  },
+  {
+    "class": "fa-person-breastfeeding",
+    "label": "person breastfeeding"
+  },
+  {
+    "class": "fa-person-burst",
+    "label": "person burst"
+  },
+  {
+    "class": "fa-person-cane",
+    "label": "person cane"
+  },
+  {
+    "class": "fa-person-chalkboard",
+    "label": "person chalkboard"
+  },
+  {
+    "class": "fa-person-circle-check",
+    "label": "person circle check"
+  },
+  {
+    "class": "fa-person-circle-exclamation",
+    "label": "person circle exclamation"
+  },
+  {
+    "class": "fa-person-circle-minus",
+    "label": "person circle minus"
+  },
+  {
+    "class": "fa-person-circle-plus",
+    "label": "person circle plus"
+  },
+  {
+    "class": "fa-person-circle-question",
+    "label": "person circle question"
+  },
+  {
+    "class": "fa-person-circle-xmark",
+    "label": "person circle xmark"
+  },
+  {
+    "class": "fa-person-digging",
+    "label": "person digging"
+  },
+  {
+    "class": "fa-person-dots-from-line",
+    "label": "person dots from line"
+  },
+  {
+    "class": "fa-person-dress",
+    "label": "person dress"
+  },
+  {
+    "class": "fa-person-dress-burst",
+    "label": "person dress burst"
+  },
+  {
+    "class": "fa-person-drowning",
+    "label": "person drowning"
+  },
+  {
+    "class": "fa-person-falling",
+    "label": "person falling"
+  },
+  {
+    "class": "fa-person-falling-burst",
+    "label": "person falling burst"
+  },
+  {
+    "class": "fa-person-half-dress",
+    "label": "person half dress"
+  },
+  {
+    "class": "fa-person-harassing",
+    "label": "person harassing"
+  },
+  {
+    "class": "fa-person-hiking",
+    "label": "person hiking"
+  },
+  {
+    "class": "fa-person-military-pointing",
+    "label": "person military pointing"
+  },
+  {
+    "class": "fa-person-military-rifle",
+    "label": "person military rifle"
+  },
+  {
+    "class": "fa-person-military-to-person",
+    "label": "person military to person"
+  },
+  {
+    "class": "fa-person-praying",
+    "label": "person praying"
+  },
+  {
+    "class": "fa-person-pregnant",
+    "label": "person pregnant"
+  },
+  {
+    "class": "fa-person-rays",
+    "label": "person rays"
+  },
+  {
+    "class": "fa-person-rifle",
+    "label": "person rifle"
+  },
+  {
+    "class": "fa-person-running",
+    "label": "person running"
+  },
+  {
+    "class": "fa-person-shelter",
+    "label": "person shelter"
+  },
+  {
+    "class": "fa-person-skating",
+    "label": "person skating"
+  },
+  {
+    "class": "fa-person-skiing",
+    "label": "person skiing"
+  },
+  {
+    "class": "fa-person-skiing-nordic",
+    "label": "person skiing nordic"
+  },
+  {
+    "class": "fa-person-snowboarding",
+    "label": "person snowboarding"
+  },
+  {
+    "class": "fa-person-swimming",
+    "label": "person swimming"
+  },
+  {
+    "class": "fa-person-through-window",
+    "label": "person through window"
+  },
+  {
+    "class": "fa-person-walking",
+    "label": "person walking"
+  },
+  {
+    "class": "fa-person-walking-arrow-loop-left",
+    "label": "person walking arrow loop left"
+  },
+  {
+    "class": "fa-person-walking-arrow-right",
+    "label": "person walking arrow right"
+  },
+  {
+    "class": "fa-person-walking-dashed-line-arrow-right",
+    "label": "person walking dashed line arrow right"
+  },
+  {
+    "class": "fa-person-walking-luggage",
+    "label": "person walking luggage"
+  },
+  {
+    "class": "fa-person-walking-with-cane",
+    "label": "person walking with cane"
+  },
+  {
+    "class": "fa-peseta-sign",
+    "label": "peseta sign"
+  },
+  {
+    "class": "fa-peso-sign",
+    "label": "peso sign"
+  },
+  {
+    "class": "fa-phone",
+    "label": "phone"
+  },
+  {
+    "class": "fa-phone-flip",
+    "label": "phone flip"
+  },
+  {
+    "class": "fa-phone-slash",
+    "label": "phone slash"
+  },
+  {
+    "class": "fa-phone-volume",
+    "label": "phone volume"
+  },
+  {
+    "class": "fa-photo-film",
+    "label": "photo film"
+  },
+  {
+    "class": "fa-piggy-bank",
+    "label": "piggy bank"
+  },
+  {
+    "class": "fa-pills",
+    "label": "pills"
+  },
+  {
+    "class": "fa-pizza-slice",
+    "label": "pizza slice"
+  },
+  {
+    "class": "fa-place-of-worship",
+    "label": "place of worship"
+  },
+  {
+    "class": "fa-plane",
+    "label": "plane"
+  },
+  {
+    "class": "fa-plane-arrival",
+    "label": "plane arrival"
+  },
+  {
+    "class": "fa-plane-circle-check",
+    "label": "plane circle check"
+  },
+  {
+    "class": "fa-plane-circle-exclamation",
+    "label": "plane circle exclamation"
+  },
+  {
+    "class": "fa-plane-circle-xmark",
+    "label": "plane circle xmark"
+  },
+  {
+    "class": "fa-plane-departure",
+    "label": "plane departure"
+  },
+  {
+    "class": "fa-plane-lock",
+    "label": "plane lock"
+  },
+  {
+    "class": "fa-plane-slash",
+    "label": "plane slash"
+  },
+  {
+    "class": "fa-plane-up",
+    "label": "plane up"
+  },
+  {
+    "class": "fa-plant-wilt",
+    "label": "plant wilt"
+  },
+  {
+    "class": "fa-plate-wheat",
+    "label": "plate wheat"
+  },
+  {
+    "class": "fa-play",
+    "label": "play"
+  },
+  {
+    "class": "fa-plug",
+    "label": "plug"
+  },
+  {
+    "class": "fa-plug-circle-bolt",
+    "label": "plug circle bolt"
+  },
+  {
+    "class": "fa-plug-circle-check",
+    "label": "plug circle check"
+  },
+  {
+    "class": "fa-plug-circle-exclamation",
+    "label": "plug circle exclamation"
+  },
+  {
+    "class": "fa-plug-circle-minus",
+    "label": "plug circle minus"
+  },
+  {
+    "class": "fa-plug-circle-plus",
+    "label": "plug circle plus"
+  },
+  {
+    "class": "fa-plug-circle-xmark",
+    "label": "plug circle xmark"
+  },
+  {
+    "class": "fa-plus",
+    "label": "plus"
+  },
+  {
+    "class": "fa-plus-minus",
+    "label": "plus minus"
+  },
+  {
+    "class": "fa-podcast",
+    "label": "podcast"
+  },
+  {
+    "class": "fa-poo",
+    "label": "poo"
+  },
+  {
+    "class": "fa-poo-storm",
+    "label": "poo storm"
+  },
+  {
+    "class": "fa-poop",
+    "label": "poop"
+  },
+  {
+    "class": "fa-power-off",
+    "label": "power off"
+  },
+  {
+    "class": "fa-prescription",
+    "label": "prescription"
+  },
+  {
+    "class": "fa-prescription-bottle",
+    "label": "prescription bottle"
+  },
+  {
+    "class": "fa-prescription-bottle-medical",
+    "label": "prescription bottle medical"
+  },
+  {
+    "class": "fa-print",
+    "label": "print"
+  },
+  {
+    "class": "fa-pump-medical",
+    "label": "pump medical"
+  },
+  {
+    "class": "fa-pump-soap",
+    "label": "pump soap"
+  },
+  {
+    "class": "fa-puzzle-piece",
+    "label": "puzzle piece"
+  },
+  {
+    "class": "fa-q",
+    "label": "q"
+  },
+  {
+    "class": "fa-qrcode",
+    "label": "qrcode"
+  },
+  {
+    "class": "fa-question",
+    "label": "question"
+  },
+  {
+    "class": "fa-quote-left",
+    "label": "quote left"
+  },
+  {
+    "class": "fa-quote-right",
+    "label": "quote right"
+  },
+  {
+    "class": "fa-r",
+    "label": "r"
+  },
+  {
+    "class": "fa-radiation",
+    "label": "radiation"
+  },
+  {
+    "class": "fa-radio",
+    "label": "radio"
+  },
+  {
+    "class": "fa-rainbow",
+    "label": "rainbow"
+  },
+  {
+    "class": "fa-ranking-star",
+    "label": "ranking star"
+  },
+  {
+    "class": "fa-receipt",
+    "label": "receipt"
+  },
+  {
+    "class": "fa-record-vinyl",
+    "label": "record vinyl"
+  },
+  {
+    "class": "fa-rectangle-ad",
+    "label": "rectangle ad"
+  },
+  {
+    "class": "fa-rectangle-list",
+    "label": "rectangle list"
+  },
+  {
+    "class": "fa-rectangle-xmark",
+    "label": "rectangle xmark"
+  },
+  {
+    "class": "fa-recycle",
+    "label": "recycle"
+  },
+  {
+    "class": "fa-registered",
+    "label": "registered"
+  },
+  {
+    "class": "fa-repeat",
+    "label": "repeat"
+  },
+  {
+    "class": "fa-reply",
+    "label": "reply"
+  },
+  {
+    "class": "fa-reply-all",
+    "label": "reply all"
+  },
+  {
+    "class": "fa-republican",
+    "label": "republican"
+  },
+  {
+    "class": "fa-restroom",
+    "label": "restroom"
+  },
+  {
+    "class": "fa-retweet",
+    "label": "retweet"
+  },
+  {
+    "class": "fa-ribbon",
+    "label": "ribbon"
+  },
+  {
+    "class": "fa-right-from-bracket",
+    "label": "right from bracket"
+  },
+  {
+    "class": "fa-right-left",
+    "label": "right left"
+  },
+  {
+    "class": "fa-right-long",
+    "label": "right long"
+  },
+  {
+    "class": "fa-right-to-bracket",
+    "label": "right to bracket"
+  },
+  {
+    "class": "fa-ring",
+    "label": "ring"
+  },
+  {
+    "class": "fa-road",
+    "label": "road"
+  },
+  {
+    "class": "fa-road-barrier",
+    "label": "road barrier"
+  },
+  {
+    "class": "fa-road-bridge",
+    "label": "road bridge"
+  },
+  {
+    "class": "fa-road-circle-check",
+    "label": "road circle check"
+  },
+  {
+    "class": "fa-road-circle-exclamation",
+    "label": "road circle exclamation"
+  },
+  {
+    "class": "fa-road-circle-xmark",
+    "label": "road circle xmark"
+  },
+  {
+    "class": "fa-road-lock",
+    "label": "road lock"
+  },
+  {
+    "class": "fa-road-spikes",
+    "label": "road spikes"
+  },
+  {
+    "class": "fa-robot",
+    "label": "robot"
+  },
+  {
+    "class": "fa-rocket",
+    "label": "rocket"
+  },
+  {
+    "class": "fa-rotate",
+    "label": "rotate"
+  },
+  {
+    "class": "fa-rotate-left",
+    "label": "rotate left"
+  },
+  {
+    "class": "fa-rotate-right",
+    "label": "rotate right"
+  },
+  {
+    "class": "fa-route",
+    "label": "route"
+  },
+  {
+    "class": "fa-rss",
+    "label": "rss"
+  },
+  {
+    "class": "fa-ruble-sign",
+    "label": "ruble sign"
+  },
+  {
+    "class": "fa-rug",
+    "label": "rug"
+  },
+  {
+    "class": "fa-ruler",
+    "label": "ruler"
+  },
+  {
+    "class": "fa-ruler-combined",
+    "label": "ruler combined"
+  },
+  {
+    "class": "fa-ruler-horizontal",
+    "label": "ruler horizontal"
+  },
+  {
+    "class": "fa-ruler-vertical",
+    "label": "ruler vertical"
+  },
+  {
+    "class": "fa-rupee-sign",
+    "label": "rupee sign"
+  },
+  {
+    "class": "fa-rupiah-sign",
+    "label": "rupiah sign"
+  },
+  {
+    "class": "fa-s",
+    "label": "s"
+  },
+  {
+    "class": "fa-sack-dollar",
+    "label": "sack dollar"
+  },
+  {
+    "class": "fa-sack-xmark",
+    "label": "sack xmark"
+  },
+  {
+    "class": "fa-sailboat",
+    "label": "sailboat"
+  },
+  {
+    "class": "fa-satellite",
+    "label": "satellite"
+  },
+  {
+    "class": "fa-satellite-dish",
+    "label": "satellite dish"
+  },
+  {
+    "class": "fa-scale-balanced",
+    "label": "scale balanced"
+  },
+  {
+    "class": "fa-scale-unbalanced",
+    "label": "scale unbalanced"
+  },
+  {
+    "class": "fa-scale-unbalanced-flip",
+    "label": "scale unbalanced flip"
+  },
+  {
+    "class": "fa-school",
+    "label": "school"
+  },
+  {
+    "class": "fa-school-circle-check",
+    "label": "school circle check"
+  },
+  {
+    "class": "fa-school-circle-exclamation",
+    "label": "school circle exclamation"
+  },
+  {
+    "class": "fa-school-circle-xmark",
+    "label": "school circle xmark"
+  },
+  {
+    "class": "fa-school-flag",
+    "label": "school flag"
+  },
+  {
+    "class": "fa-school-lock",
+    "label": "school lock"
+  },
+  {
+    "class": "fa-scissors",
+    "label": "scissors"
+  },
+  {
+    "class": "fa-screwdriver",
+    "label": "screwdriver"
+  },
+  {
+    "class": "fa-screwdriver-wrench",
+    "label": "screwdriver wrench"
+  },
+  {
+    "class": "fa-scroll",
+    "label": "scroll"
+  },
+  {
+    "class": "fa-scroll-torah",
+    "label": "scroll torah"
+  },
+  {
+    "class": "fa-sd-card",
+    "label": "sd card"
+  },
+  {
+    "class": "fa-section",
+    "label": "section"
+  },
+  {
+    "class": "fa-seedling",
+    "label": "seedling"
+  },
+  {
+    "class": "fa-server",
+    "label": "server"
+  },
+  {
+    "class": "fa-shapes",
+    "label": "shapes"
+  },
+  {
+    "class": "fa-share",
+    "label": "share"
+  },
+  {
+    "class": "fa-share-from-square",
+    "label": "share from square"
+  },
+  {
+    "class": "fa-share-nodes",
+    "label": "share nodes"
+  },
+  {
+    "class": "fa-sheet-plastic",
+    "label": "sheet plastic"
+  },
+  {
+    "class": "fa-shekel-sign",
+    "label": "shekel sign"
+  },
+  {
+    "class": "fa-shield",
+    "label": "shield"
+  },
+  {
+    "class": "fa-shield-cat",
+    "label": "shield cat"
+  },
+  {
+    "class": "fa-shield-dog",
+    "label": "shield dog"
+  },
+  {
+    "class": "fa-shield-halved",
+    "label": "shield halved"
+  },
+  {
+    "class": "fa-shield-heart",
+    "label": "shield heart"
+  },
+  {
+    "class": "fa-shield-virus",
+    "label": "shield virus"
+  },
+  {
+    "class": "fa-ship",
+    "label": "ship"
+  },
+  {
+    "class": "fa-shirt",
+    "label": "shirt"
+  },
+  {
+    "class": "fa-shoe-prints",
+    "label": "shoe prints"
+  },
+  {
+    "class": "fa-shop",
+    "label": "shop"
+  },
+  {
+    "class": "fa-shop-lock",
+    "label": "shop lock"
+  },
+  {
+    "class": "fa-shop-slash",
+    "label": "shop slash"
+  },
+  {
+    "class": "fa-shower",
+    "label": "shower"
+  },
+  {
+    "class": "fa-shrimp",
+    "label": "shrimp"
+  },
+  {
+    "class": "fa-shuffle",
+    "label": "shuffle"
+  },
+  {
+    "class": "fa-shuttle-space",
+    "label": "shuttle space"
+  },
+  {
+    "class": "fa-sign-hanging",
+    "label": "sign hanging"
+  },
+  {
+    "class": "fa-signal",
+    "label": "signal"
+  },
+  {
+    "class": "fa-signature",
+    "label": "signature"
+  },
+  {
+    "class": "fa-signs-post",
+    "label": "signs post"
+  },
+  {
+    "class": "fa-sim-card",
+    "label": "sim card"
+  },
+  {
+    "class": "fa-sink",
+    "label": "sink"
+  },
+  {
+    "class": "fa-sitemap",
+    "label": "sitemap"
+  },
+  {
+    "class": "fa-skull",
+    "label": "skull"
+  },
+  {
+    "class": "fa-skull-crossbones",
+    "label": "skull crossbones"
+  },
+  {
+    "class": "fa-slash",
+    "label": "slash"
+  },
+  {
+    "class": "fa-sleigh",
+    "label": "sleigh"
+  },
+  {
+    "class": "fa-sliders",
+    "label": "sliders"
+  },
+  {
+    "class": "fa-smog",
+    "label": "smog"
+  },
+  {
+    "class": "fa-smoking",
+    "label": "smoking"
+  },
+  {
+    "class": "fa-snowflake",
+    "label": "snowflake"
+  },
+  {
+    "class": "fa-snowman",
+    "label": "snowman"
+  },
+  {
+    "class": "fa-snowplow",
+    "label": "snowplow"
+  },
+  {
+    "class": "fa-soap",
+    "label": "soap"
+  },
+  {
+    "class": "fa-socks",
+    "label": "socks"
+  },
+  {
+    "class": "fa-solar-panel",
+    "label": "solar panel"
+  },
+  {
+    "class": "fa-sort",
+    "label": "sort"
+  },
+  {
+    "class": "fa-sort-down",
+    "label": "sort down"
+  },
+  {
+    "class": "fa-sort-up",
+    "label": "sort up"
+  },
+  {
+    "class": "fa-spa",
+    "label": "spa"
+  },
+  {
+    "class": "fa-spaghetti-monster-flying",
+    "label": "spaghetti monster flying"
+  },
+  {
+    "class": "fa-spell-check",
+    "label": "spell check"
+  },
+  {
+    "class": "fa-spider",
+    "label": "spider"
+  },
+  {
+    "class": "fa-spinner",
+    "label": "spinner"
+  },
+  {
+    "class": "fa-splotch",
+    "label": "splotch"
+  },
+  {
+    "class": "fa-spoon",
+    "label": "spoon"
+  },
+  {
+    "class": "fa-spray-can",
+    "label": "spray can"
+  },
+  {
+    "class": "fa-spray-can-sparkles",
+    "label": "spray can sparkles"
+  },
+  {
+    "class": "fa-square",
+    "label": "square"
+  },
+  {
+    "class": "fa-square-arrow-up-right",
+    "label": "square arrow up right"
+  },
+  {
+    "class": "fa-square-binary",
+    "label": "square binary"
+  },
+  {
+    "class": "fa-square-caret-down",
+    "label": "square caret down"
+  },
+  {
+    "class": "fa-square-caret-left",
+    "label": "square caret left"
+  },
+  {
+    "class": "fa-square-caret-right",
+    "label": "square caret right"
+  },
+  {
+    "class": "fa-square-caret-up",
+    "label": "square caret up"
+  },
+  {
+    "class": "fa-square-check",
+    "label": "square check"
+  },
+  {
+    "class": "fa-square-envelope",
+    "label": "square envelope"
+  },
+  {
+    "class": "fa-square-full",
+    "label": "square full"
+  },
+  {
+    "class": "fa-square-h",
+    "label": "square h"
+  },
+  {
+    "class": "fa-square-minus",
+    "label": "square minus"
+  },
+  {
+    "class": "fa-square-nfi",
+    "label": "square nfi"
+  },
+  {
+    "class": "fa-square-parking",
+    "label": "square parking"
+  },
+  {
+    "class": "fa-square-pen",
+    "label": "square pen"
+  },
+  {
+    "class": "fa-square-person-confined",
+    "label": "square person confined"
+  },
+  {
+    "class": "fa-square-phone",
+    "label": "square phone"
+  },
+  {
+    "class": "fa-square-phone-flip",
+    "label": "square phone flip"
+  },
+  {
+    "class": "fa-square-plus",
+    "label": "square plus"
+  },
+  {
+    "class": "fa-square-poll-horizontal",
+    "label": "square poll horizontal"
+  },
+  {
+    "class": "fa-square-poll-vertical",
+    "label": "square poll vertical"
+  },
+  {
+    "class": "fa-square-root-variable",
+    "label": "square root variable"
+  },
+  {
+    "class": "fa-square-rss",
+    "label": "square rss"
+  },
+  {
+    "class": "fa-square-share-nodes",
+    "label": "square share nodes"
+  },
+  {
+    "class": "fa-square-up-right",
+    "label": "square up right"
+  },
+  {
+    "class": "fa-square-virus",
+    "label": "square virus"
+  },
+  {
+    "class": "fa-square-xmark",
+    "label": "square xmark"
+  },
+  {
+    "class": "fa-staff-snake",
+    "label": "staff snake"
+  },
+  {
+    "class": "fa-stairs",
+    "label": "stairs"
+  },
+  {
+    "class": "fa-stamp",
+    "label": "stamp"
+  },
+  {
+    "class": "fa-stapler",
+    "label": "stapler"
+  },
+  {
+    "class": "fa-star",
+    "label": "star"
+  },
+  {
+    "class": "fa-star-and-crescent",
+    "label": "star and crescent"
+  },
+  {
+    "class": "fa-star-half",
+    "label": "star half"
+  },
+  {
+    "class": "fa-star-half-stroke",
+    "label": "star half stroke"
+  },
+  {
+    "class": "fa-star-of-david",
+    "label": "star of david"
+  },
+  {
+    "class": "fa-star-of-life",
+    "label": "star of life"
+  },
+  {
+    "class": "fa-sterling-sign",
+    "label": "sterling sign"
+  },
+  {
+    "class": "fa-stethoscope",
+    "label": "stethoscope"
+  },
+  {
+    "class": "fa-stop",
+    "label": "stop"
+  },
+  {
+    "class": "fa-stopwatch",
+    "label": "stopwatch"
+  },
+  {
+    "class": "fa-stopwatch-20",
+    "label": "stopwatch 20"
+  },
+  {
+    "class": "fa-store",
+    "label": "store"
+  },
+  {
+    "class": "fa-store-slash",
+    "label": "store slash"
+  },
+  {
+    "class": "fa-street-view",
+    "label": "street view"
+  },
+  {
+    "class": "fa-strikethrough",
+    "label": "strikethrough"
+  },
+  {
+    "class": "fa-stroopwafel",
+    "label": "stroopwafel"
+  },
+  {
+    "class": "fa-subscript",
+    "label": "subscript"
+  },
+  {
+    "class": "fa-suitcase",
+    "label": "suitcase"
+  },
+  {
+    "class": "fa-suitcase-medical",
+    "label": "suitcase medical"
+  },
+  {
+    "class": "fa-suitcase-rolling",
+    "label": "suitcase rolling"
+  },
+  {
+    "class": "fa-sun",
+    "label": "sun"
+  },
+  {
+    "class": "fa-sun-plant-wilt",
+    "label": "sun plant wilt"
+  },
+  {
+    "class": "fa-superscript",
+    "label": "superscript"
+  },
+  {
+    "class": "fa-swatchbook",
+    "label": "swatchbook"
+  },
+  {
+    "class": "fa-synagogue",
+    "label": "synagogue"
+  },
+  {
+    "class": "fa-syringe",
+    "label": "syringe"
+  },
+  {
+    "class": "fa-t",
+    "label": "t"
+  },
+  {
+    "class": "fa-table",
+    "label": "table"
+  },
+  {
+    "class": "fa-table-cells",
+    "label": "table cells"
+  },
+  {
+    "class": "fa-table-cells-column-lock",
+    "label": "table cells column lock"
+  },
+  {
+    "class": "fa-table-cells-large",
+    "label": "table cells large"
+  },
+  {
+    "class": "fa-table-cells-row-lock",
+    "label": "table cells row lock"
+  },
+  {
+    "class": "fa-table-cells-row-unlock",
+    "label": "table cells row unlock"
+  },
+  {
+    "class": "fa-table-columns",
+    "label": "table columns"
+  },
+  {
+    "class": "fa-table-list",
+    "label": "table list"
+  },
+  {
+    "class": "fa-table-tennis-paddle-ball",
+    "label": "table tennis paddle ball"
+  },
+  {
+    "class": "fa-tablet",
+    "label": "tablet"
+  },
+  {
+    "class": "fa-tablet-button",
+    "label": "tablet button"
+  },
+  {
+    "class": "fa-tablet-screen-button",
+    "label": "tablet screen button"
+  },
+  {
+    "class": "fa-tablets",
+    "label": "tablets"
+  },
+  {
+    "class": "fa-tachograph-digital",
+    "label": "tachograph digital"
+  },
+  {
+    "class": "fa-tag",
+    "label": "tag"
+  },
+  {
+    "class": "fa-tags",
+    "label": "tags"
+  },
+  {
+    "class": "fa-tape",
+    "label": "tape"
+  },
+  {
+    "class": "fa-tarp",
+    "label": "tarp"
+  },
+  {
+    "class": "fa-tarp-droplet",
+    "label": "tarp droplet"
+  },
+  {
+    "class": "fa-taxi",
+    "label": "taxi"
+  },
+  {
+    "class": "fa-teeth",
+    "label": "teeth"
+  },
+  {
+    "class": "fa-teeth-open",
+    "label": "teeth open"
+  },
+  {
+    "class": "fa-temperature-arrow-down",
+    "label": "temperature arrow down"
+  },
+  {
+    "class": "fa-temperature-arrow-up",
+    "label": "temperature arrow up"
+  },
+  {
+    "class": "fa-temperature-empty",
+    "label": "temperature empty"
+  },
+  {
+    "class": "fa-temperature-full",
+    "label": "temperature full"
+  },
+  {
+    "class": "fa-temperature-half",
+    "label": "temperature half"
+  },
+  {
+    "class": "fa-temperature-high",
+    "label": "temperature high"
+  },
+  {
+    "class": "fa-temperature-low",
+    "label": "temperature low"
+  },
+  {
+    "class": "fa-temperature-quarter",
+    "label": "temperature quarter"
+  },
+  {
+    "class": "fa-temperature-three-quarters",
+    "label": "temperature three quarters"
+  },
+  {
+    "class": "fa-tenge-sign",
+    "label": "tenge sign"
+  },
+  {
+    "class": "fa-tent",
+    "label": "tent"
+  },
+  {
+    "class": "fa-tent-arrow-down-to-line",
+    "label": "tent arrow down to line"
+  },
+  {
+    "class": "fa-tent-arrow-left-right",
+    "label": "tent arrow left right"
+  },
+  {
+    "class": "fa-tent-arrow-turn-left",
+    "label": "tent arrow turn left"
+  },
+  {
+    "class": "fa-tent-arrows-down",
+    "label": "tent arrows down"
+  },
+  {
+    "class": "fa-tents",
+    "label": "tents"
+  },
+  {
+    "class": "fa-terminal",
+    "label": "terminal"
+  },
+  {
+    "class": "fa-text-height",
+    "label": "text height"
+  },
+  {
+    "class": "fa-text-slash",
+    "label": "text slash"
+  },
+  {
+    "class": "fa-text-width",
+    "label": "text width"
+  },
+  {
+    "class": "fa-thermometer",
+    "label": "thermometer"
+  },
+  {
+    "class": "fa-thumbs-down",
+    "label": "thumbs down"
+  },
+  {
+    "class": "fa-thumbs-up",
+    "label": "thumbs up"
+  },
+  {
+    "class": "fa-thumbtack",
+    "label": "thumbtack"
+  },
+  {
+    "class": "fa-thumbtack-slash",
+    "label": "thumbtack slash"
+  },
+  {
+    "class": "fa-ticket",
+    "label": "ticket"
+  },
+  {
+    "class": "fa-ticket-simple",
+    "label": "ticket simple"
+  },
+  {
+    "class": "fa-timeline",
+    "label": "timeline"
+  },
+  {
+    "class": "fa-toggle-off",
+    "label": "toggle off"
+  },
+  {
+    "class": "fa-toggle-on",
+    "label": "toggle on"
+  },
+  {
+    "class": "fa-toilet",
+    "label": "toilet"
+  },
+  {
+    "class": "fa-toilet-paper",
+    "label": "toilet paper"
+  },
+  {
+    "class": "fa-toilet-paper-slash",
+    "label": "toilet paper slash"
+  },
+  {
+    "class": "fa-toilet-portable",
+    "label": "toilet portable"
+  },
+  {
+    "class": "fa-toilets-portable",
+    "label": "toilets portable"
+  },
+  {
+    "class": "fa-toolbox",
+    "label": "toolbox"
+  },
+  {
+    "class": "fa-tooth",
+    "label": "tooth"
+  },
+  {
+    "class": "fa-torii-gate",
+    "label": "torii gate"
+  },
+  {
+    "class": "fa-tornado",
+    "label": "tornado"
+  },
+  {
+    "class": "fa-tower-broadcast",
+    "label": "tower broadcast"
+  },
+  {
+    "class": "fa-tower-cell",
+    "label": "tower cell"
+  },
+  {
+    "class": "fa-tower-observation",
+    "label": "tower observation"
+  },
+  {
+    "class": "fa-tractor",
+    "label": "tractor"
+  },
+  {
+    "class": "fa-trademark",
+    "label": "trademark"
+  },
+  {
+    "class": "fa-traffic-light",
+    "label": "traffic light"
+  },
+  {
+    "class": "fa-trailer",
+    "label": "trailer"
+  },
+  {
+    "class": "fa-train",
+    "label": "train"
+  },
+  {
+    "class": "fa-train-subway",
+    "label": "train subway"
+  },
+  {
+    "class": "fa-train-tram",
+    "label": "train tram"
+  },
+  {
+    "class": "fa-transgender",
+    "label": "transgender"
+  },
+  {
+    "class": "fa-trash",
+    "label": "trash"
+  },
+  {
+    "class": "fa-trash-arrow-up",
+    "label": "trash arrow up"
+  },
+  {
+    "class": "fa-trash-can",
+    "label": "trash can"
+  },
+  {
+    "class": "fa-trash-can-arrow-up",
+    "label": "trash can arrow up"
+  },
+  {
+    "class": "fa-tree",
+    "label": "tree"
+  },
+  {
+    "class": "fa-tree-city",
+    "label": "tree city"
+  },
+  {
+    "class": "fa-triangle-exclamation",
+    "label": "triangle exclamation"
+  },
+  {
+    "class": "fa-trophy",
+    "label": "trophy"
+  },
+  {
+    "class": "fa-trowel",
+    "label": "trowel"
+  },
+  {
+    "class": "fa-trowel-bricks",
+    "label": "trowel bricks"
+  },
+  {
+    "class": "fa-truck",
+    "label": "truck"
+  },
+  {
+    "class": "fa-truck-arrow-right",
+    "label": "truck arrow right"
+  },
+  {
+    "class": "fa-truck-droplet",
+    "label": "truck droplet"
+  },
+  {
+    "class": "fa-truck-fast",
+    "label": "truck fast"
+  },
+  {
+    "class": "fa-truck-field",
+    "label": "truck field"
+  },
+  {
+    "class": "fa-truck-field-un",
+    "label": "truck field un"
+  },
+  {
+    "class": "fa-truck-front",
+    "label": "truck front"
+  },
+  {
+    "class": "fa-truck-medical",
+    "label": "truck medical"
+  },
+  {
+    "class": "fa-truck-monster",
+    "label": "truck monster"
+  },
+  {
+    "class": "fa-truck-moving",
+    "label": "truck moving"
+  },
+  {
+    "class": "fa-truck-pickup",
+    "label": "truck pickup"
+  },
+  {
+    "class": "fa-truck-plane",
+    "label": "truck plane"
+  },
+  {
+    "class": "fa-truck-ramp-box",
+    "label": "truck ramp box"
+  },
+  {
+    "class": "fa-tty",
+    "label": "tty"
+  },
+  {
+    "class": "fa-turkish-lira-sign",
+    "label": "turkish lira sign"
+  },
+  {
+    "class": "fa-turn-down",
+    "label": "turn down"
+  },
+  {
+    "class": "fa-turn-up",
+    "label": "turn up"
+  },
+  {
+    "class": "fa-tv",
+    "label": "tv"
+  },
+  {
+    "class": "fa-u",
+    "label": "u"
+  },
+  {
+    "class": "fa-umbrella",
+    "label": "umbrella"
+  },
+  {
+    "class": "fa-umbrella-beach",
+    "label": "umbrella beach"
+  },
+  {
+    "class": "fa-underline",
+    "label": "underline"
+  },
+  {
+    "class": "fa-universal-access",
+    "label": "universal access"
+  },
+  {
+    "class": "fa-unlock",
+    "label": "unlock"
+  },
+  {
+    "class": "fa-unlock-keyhole",
+    "label": "unlock keyhole"
+  },
+  {
+    "class": "fa-up-down",
+    "label": "up down"
+  },
+  {
+    "class": "fa-up-down-left-right",
+    "label": "up down left right"
+  },
+  {
+    "class": "fa-up-long",
+    "label": "up long"
+  },
+  {
+    "class": "fa-up-right-and-down-left-from-center",
+    "label": "up right and down left from center"
+  },
+  {
+    "class": "fa-up-right-from-square",
+    "label": "up right from square"
+  },
+  {
+    "class": "fa-upload",
+    "label": "upload"
+  },
+  {
+    "class": "fa-user",
+    "label": "user"
+  },
+  {
+    "class": "fa-user-astronaut",
+    "label": "user astronaut"
+  },
+  {
+    "class": "fa-user-check",
+    "label": "user check"
+  },
+  {
+    "class": "fa-user-clock",
+    "label": "user clock"
+  },
+  {
+    "class": "fa-user-doctor",
+    "label": "user doctor"
+  },
+  {
+    "class": "fa-user-gear",
+    "label": "user gear"
+  },
+  {
+    "class": "fa-user-graduate",
+    "label": "user graduate"
+  },
+  {
+    "class": "fa-user-group",
+    "label": "user group"
+  },
+  {
+    "class": "fa-user-injured",
+    "label": "user injured"
+  },
+  {
+    "class": "fa-user-large",
+    "label": "user large"
+  },
+  {
+    "class": "fa-user-large-slash",
+    "label": "user large slash"
+  },
+  {
+    "class": "fa-user-lock",
+    "label": "user lock"
+  },
+  {
+    "class": "fa-user-minus",
+    "label": "user minus"
+  },
+  {
+    "class": "fa-user-ninja",
+    "label": "user ninja"
+  },
+  {
+    "class": "fa-user-nurse",
+    "label": "user nurse"
+  },
+  {
+    "class": "fa-user-pen",
+    "label": "user pen"
+  },
+  {
+    "class": "fa-user-plus",
+    "label": "user plus"
+  },
+  {
+    "class": "fa-user-secret",
+    "label": "user secret"
+  },
+  {
+    "class": "fa-user-shield",
+    "label": "user shield"
+  },
+  {
+    "class": "fa-user-slash",
+    "label": "user slash"
+  },
+  {
+    "class": "fa-user-tag",
+    "label": "user tag"
+  },
+  {
+    "class": "fa-user-tie",
+    "label": "user tie"
+  },
+  {
+    "class": "fa-user-xmark",
+    "label": "user xmark"
+  },
+  {
+    "class": "fa-users",
+    "label": "users"
+  },
+  {
+    "class": "fa-users-between-lines",
+    "label": "users between lines"
+  },
+  {
+    "class": "fa-users-gear",
+    "label": "users gear"
+  },
+  {
+    "class": "fa-users-line",
+    "label": "users line"
+  },
+  {
+    "class": "fa-users-rays",
+    "label": "users rays"
+  },
+  {
+    "class": "fa-users-rectangle",
+    "label": "users rectangle"
+  },
+  {
+    "class": "fa-users-slash",
+    "label": "users slash"
+  },
+  {
+    "class": "fa-users-viewfinder",
+    "label": "users viewfinder"
+  },
+  {
+    "class": "fa-utensils",
+    "label": "utensils"
+  },
+  {
+    "class": "fa-v",
+    "label": "v"
+  },
+  {
+    "class": "fa-van-shuttle",
+    "label": "van shuttle"
+  },
+  {
+    "class": "fa-vault",
+    "label": "vault"
+  },
+  {
+    "class": "fa-vector-square",
+    "label": "vector square"
+  },
+  {
+    "class": "fa-venus",
+    "label": "venus"
+  },
+  {
+    "class": "fa-venus-double",
+    "label": "venus double"
+  },
+  {
+    "class": "fa-venus-mars",
+    "label": "venus mars"
+  },
+  {
+    "class": "fa-vest",
+    "label": "vest"
+  },
+  {
+    "class": "fa-vest-patches",
+    "label": "vest patches"
+  },
+  {
+    "class": "fa-vial",
+    "label": "vial"
+  },
+  {
+    "class": "fa-vial-circle-check",
+    "label": "vial circle check"
+  },
+  {
+    "class": "fa-vial-virus",
+    "label": "vial virus"
+  },
+  {
+    "class": "fa-vials",
+    "label": "vials"
+  },
+  {
+    "class": "fa-video",
+    "label": "video"
+  },
+  {
+    "class": "fa-video-slash",
+    "label": "video slash"
+  },
+  {
+    "class": "fa-vihara",
+    "label": "vihara"
+  },
+  {
+    "class": "fa-virus",
+    "label": "virus"
+  },
+  {
+    "class": "fa-virus-covid",
+    "label": "virus covid"
+  },
+  {
+    "class": "fa-virus-covid-slash",
+    "label": "virus covid slash"
+  },
+  {
+    "class": "fa-virus-slash",
+    "label": "virus slash"
+  },
+  {
+    "class": "fa-viruses",
+    "label": "viruses"
+  },
+  {
+    "class": "fa-voicemail",
+    "label": "voicemail"
+  },
+  {
+    "class": "fa-volcano",
+    "label": "volcano"
+  },
+  {
+    "class": "fa-volleyball",
+    "label": "volleyball"
+  },
+  {
+    "class": "fa-volume-high",
+    "label": "volume high"
+  },
+  {
+    "class": "fa-volume-low",
+    "label": "volume low"
+  },
+  {
+    "class": "fa-volume-off",
+    "label": "volume off"
+  },
+  {
+    "class": "fa-volume-xmark",
+    "label": "volume xmark"
+  },
+  {
+    "class": "fa-vr-cardboard",
+    "label": "vr cardboard"
+  },
+  {
+    "class": "fa-w",
+    "label": "w"
+  },
+  {
+    "class": "fa-walkie-talkie",
+    "label": "walkie talkie"
+  },
+  {
+    "class": "fa-wallet",
+    "label": "wallet"
+  },
+  {
+    "class": "fa-wand-magic",
+    "label": "wand magic"
+  },
+  {
+    "class": "fa-wand-magic-sparkles",
+    "label": "wand magic sparkles"
+  },
+  {
+    "class": "fa-wand-sparkles",
+    "label": "wand sparkles"
+  },
+  {
+    "class": "fa-warehouse",
+    "label": "warehouse"
+  },
+  {
+    "class": "fa-water",
+    "label": "water"
+  },
+  {
+    "class": "fa-water-ladder",
+    "label": "water ladder"
+  },
+  {
+    "class": "fa-wave-square",
+    "label": "wave square"
+  },
+  {
+    "class": "fa-web-awesome",
+    "label": "web awesome"
+  },
+  {
+    "class": "fa-weight-hanging",
+    "label": "weight hanging"
+  },
+  {
+    "class": "fa-weight-scale",
+    "label": "weight scale"
+  },
+  {
+    "class": "fa-wheat-awn",
+    "label": "wheat awn"
+  },
+  {
+    "class": "fa-wheat-awn-circle-exclamation",
+    "label": "wheat awn circle exclamation"
+  },
+  {
+    "class": "fa-wheelchair",
+    "label": "wheelchair"
+  },
+  {
+    "class": "fa-wheelchair-move",
+    "label": "wheelchair move"
+  },
+  {
+    "class": "fa-whiskey-glass",
+    "label": "whiskey glass"
+  },
+  {
+    "class": "fa-wifi",
+    "label": "wifi"
+  },
+  {
+    "class": "fa-wind",
+    "label": "wind"
+  },
+  {
+    "class": "fa-window-maximize",
+    "label": "window maximize"
+  },
+  {
+    "class": "fa-window-minimize",
+    "label": "window minimize"
+  },
+  {
+    "class": "fa-window-restore",
+    "label": "window restore"
+  },
+  {
+    "class": "fa-wine-bottle",
+    "label": "wine bottle"
+  },
+  {
+    "class": "fa-wine-glass",
+    "label": "wine glass"
+  },
+  {
+    "class": "fa-wine-glass-empty",
+    "label": "wine glass empty"
+  },
+  {
+    "class": "fa-won-sign",
+    "label": "won sign"
+  },
+  {
+    "class": "fa-worm",
+    "label": "worm"
+  },
+  {
+    "class": "fa-wrench",
+    "label": "wrench"
+  },
+  {
+    "class": "fa-x",
+    "label": "x"
+  },
+  {
+    "class": "fa-x-ray",
+    "label": "x ray"
+  },
+  {
+    "class": "fa-xmark",
+    "label": "xmark"
+  },
+  {
+    "class": "fa-xmarks-lines",
+    "label": "xmarks lines"
+  },
+  {
+    "class": "fa-y",
+    "label": "y"
+  },
+  {
+    "class": "fa-yen-sign",
+    "label": "yen sign"
+  },
+  {
+    "class": "fa-yin-yang",
+    "label": "yin yang"
+  },
+  {
+    "class": "fa-z",
+    "label": "z"
+  }
+]

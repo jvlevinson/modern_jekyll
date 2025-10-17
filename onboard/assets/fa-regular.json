@@ -1,0 +1,654 @@
+[
+  {
+    "class": "fa-address-book",
+    "label": "address book"
+  },
+  {
+    "class": "fa-address-card",
+    "label": "address card"
+  },
+  {
+    "class": "fa-bell",
+    "label": "bell"
+  },
+  {
+    "class": "fa-bell-slash",
+    "label": "bell slash"
+  },
+  {
+    "class": "fa-bookmark",
+    "label": "bookmark"
+  },
+  {
+    "class": "fa-building",
+    "label": "building"
+  },
+  {
+    "class": "fa-calendar",
+    "label": "calendar"
+  },
+  {
+    "class": "fa-calendar-check",
+    "label": "calendar check"
+  },
+  {
+    "class": "fa-calendar-days",
+    "label": "calendar days"
+  },
+  {
+    "class": "fa-calendar-minus",
+    "label": "calendar minus"
+  },
+  {
+    "class": "fa-calendar-plus",
+    "label": "calendar plus"
+  },
+  {
+    "class": "fa-calendar-xmark",
+    "label": "calendar xmark"
+  },
+  {
+    "class": "fa-chart-bar",
+    "label": "chart bar"
+  },
+  {
+    "class": "fa-chess-bishop",
+    "label": "chess bishop"
+  },
+  {
+    "class": "fa-chess-king",
+    "label": "chess king"
+  },
+  {
+    "class": "fa-chess-knight",
+    "label": "chess knight"
+  },
+  {
+    "class": "fa-chess-pawn",
+    "label": "chess pawn"
+  },
+  {
+    "class": "fa-chess-queen",
+    "label": "chess queen"
+  },
+  {
+    "class": "fa-chess-rook",
+    "label": "chess rook"
+  },
+  {
+    "class": "fa-circle",
+    "label": "circle"
+  },
+  {
+    "class": "fa-circle-check",
+    "label": "circle check"
+  },
+  {
+    "class": "fa-circle-dot",
+    "label": "circle dot"
+  },
+  {
+    "class": "fa-circle-down",
+    "label": "circle down"
+  },
+  {
+    "class": "fa-circle-left",
+    "label": "circle left"
+  },
+  {
+    "class": "fa-circle-pause",
+    "label": "circle pause"
+  },
+  {
+    "class": "fa-circle-play",
+    "label": "circle play"
+  },
+  {
+    "class": "fa-circle-question",
+    "label": "circle question"
+  },
+  {
+    "class": "fa-circle-right",
+    "label": "circle right"
+  },
+  {
+    "class": "fa-circle-stop",
+    "label": "circle stop"
+  },
+  {
+    "class": "fa-circle-up",
+    "label": "circle up"
+  },
+  {
+    "class": "fa-circle-user",
+    "label": "circle user"
+  },
+  {
+    "class": "fa-circle-xmark",
+    "label": "circle xmark"
+  },
+  {
+    "class": "fa-clipboard",
+    "label": "clipboard"
+  },
+  {
+    "class": "fa-clock",
+    "label": "clock"
+  },
+  {
+    "class": "fa-clone",
+    "label": "clone"
+  },
+  {
+    "class": "fa-closed-captioning",
+    "label": "closed captioning"
+  },
+  {
+    "class": "fa-comment",
+    "label": "comment"
+  },
+  {
+    "class": "fa-comment-dots",
+    "label": "comment dots"
+  },
+  {
+    "class": "fa-comments",
+    "label": "comments"
+  },
+  {
+    "class": "fa-compass",
+    "label": "compass"
+  },
+  {
+    "class": "fa-copy",
+    "label": "copy"
+  },
+  {
+    "class": "fa-copyright",
+    "label": "copyright"
+  },
+  {
+    "class": "fa-credit-card",
+    "label": "credit card"
+  },
+  {
+    "class": "fa-envelope",
+    "label": "envelope"
+  },
+  {
+    "class": "fa-envelope-open",
+    "label": "envelope open"
+  },
+  {
+    "class": "fa-eye",
+    "label": "eye"
+  },
+  {
+    "class": "fa-eye-slash",
+    "label": "eye slash"
+  },
+  {
+    "class": "fa-face-angry",
+    "label": "face angry"
+  },
+  {
+    "class": "fa-face-dizzy",
+    "label": "face dizzy"
+  },
+  {
+    "class": "fa-face-flushed",
+    "label": "face flushed"
+  },
+  {
+    "class": "fa-face-frown",
+    "label": "face frown"
+  },
+  {
+    "class": "fa-face-frown-open",
+    "label": "face frown open"
+  },
+  {
+    "class": "fa-face-grimace",
+    "label": "face grimace"
+  },
+  {
+    "class": "fa-face-grin",
+    "label": "face grin"
+  },
+  {
+    "class": "fa-face-grin-beam",
+    "label": "face grin beam"
+  },
+  {
+    "class": "fa-face-grin-beam-sweat",
+    "label": "face grin beam sweat"
+  },
+  {
+    "class": "fa-face-grin-hearts",
+    "label": "face grin hearts"
+  },
+  {
+    "class": "fa-face-grin-squint",
+    "label": "face grin squint"
+  },
+  {
+    "class": "fa-face-grin-squint-tears",
+    "label": "face grin squint tears"
+  },
+  {
+    "class": "fa-face-grin-stars",
+    "label": "face grin stars"
+  },
+  {
+    "class": "fa-face-grin-tears",
+    "label": "face grin tears"
+  },
+  {
+    "class": "fa-face-grin-tongue",
+    "label": "face grin tongue"
+  },
+  {
+    "class": "fa-face-grin-tongue-squint",
+    "label": "face grin tongue squint"
+  },
+  {
+    "class": "fa-face-grin-tongue-wink",
+    "label": "face grin tongue wink"
+  },
+  {
+    "class": "fa-face-grin-wide",
+    "label": "face grin wide"
+  },
+  {
+    "class": "fa-face-grin-wink",
+    "label": "face grin wink"
+  },
+  {
+    "class": "fa-face-kiss",
+    "label": "face kiss"
+  },
+  {
+    "class": "fa-face-kiss-beam",
+    "label": "face kiss beam"
+  },
+  {
+    "class": "fa-face-kiss-wink-heart",
+    "label": "face kiss wink heart"
+  },
+  {
+    "class": "fa-face-laugh",
+    "label": "face laugh"
+  },
+  {
+    "class": "fa-face-laugh-beam",
+    "label": "face laugh beam"
+  },
+  {
+    "class": "fa-face-laugh-squint",
+    "label": "face laugh squint"
+  },
+  {
+    "class": "fa-face-laugh-wink",
+    "label": "face laugh wink"
+  },
+  {
+    "class": "fa-face-meh",
+    "label": "face meh"
+  },
+  {
+    "class": "fa-face-meh-blank",
+    "label": "face meh blank"
+  },
+  {
+    "class": "fa-face-rolling-eyes",
+    "label": "face rolling eyes"
+  },
+  {
+    "class": "fa-face-sad-cry",
+    "label": "face sad cry"
+  },
+  {
+    "class": "fa-face-sad-tear",
+    "label": "face sad tear"
+  },
+  {
+    "class": "fa-face-smile",
+    "label": "face smile"
+  },
+  {
+    "class": "fa-face-smile-beam",
+    "label": "face smile beam"
+  },
+  {
+    "class": "fa-face-smile-wink",
+    "label": "face smile wink"
+  },
+  {
+    "class": "fa-face-surprise",
+    "label": "face surprise"
+  },
+  {
+    "class": "fa-face-tired",
+    "label": "face tired"
+  },
+  {
+    "class": "fa-file",
+    "label": "file"
+  },
+  {
+    "class": "fa-file-audio",
+    "label": "file audio"
+  },
+  {
+    "class": "fa-file-code",
+    "label": "file code"
+  },
+  {
+    "class": "fa-file-excel",
+    "label": "file excel"
+  },
+  {
+    "class": "fa-file-image",
+    "label": "file image"
+  },
+  {
+    "class": "fa-file-lines",
+    "label": "file lines"
+  },
+  {
+    "class": "fa-file-pdf",
+    "label": "file pdf"
+  },
+  {
+    "class": "fa-file-powerpoint",
+    "label": "file powerpoint"
+  },
+  {
+    "class": "fa-file-video",
+    "label": "file video"
+  },
+  {
+    "class": "fa-file-word",
+    "label": "file word"
+  },
+  {
+    "class": "fa-file-zipper",
+    "label": "file zipper"
+  },
+  {
+    "class": "fa-flag",
+    "label": "flag"
+  },
+  {
+    "class": "fa-floppy-disk",
+    "label": "floppy disk"
+  },
+  {
+    "class": "fa-folder",
+    "label": "folder"
+  },
+  {
+    "class": "fa-folder-closed",
+    "label": "folder closed"
+  },
+  {
+    "class": "fa-folder-open",
+    "label": "folder open"
+  },
+  {
+    "class": "fa-font-awesome",
+    "label": "font awesome"
+  },
+  {
+    "class": "fa-futbol",
+    "label": "futbol"
+  },
+  {
+    "class": "fa-gem",
+    "label": "gem"
+  },
+  {
+    "class": "fa-hand",
+    "label": "hand"
+  },
+  {
+    "class": "fa-hand-back-fist",
+    "label": "hand back fist"
+  },
+  {
+    "class": "fa-hand-lizard",
+    "label": "hand lizard"
+  },
+  {
+    "class": "fa-hand-peace",
+    "label": "hand peace"
+  },
+  {
+    "class": "fa-hand-point-down",
+    "label": "hand point down"
+  },
+  {
+    "class": "fa-hand-point-left",
+    "label": "hand point left"
+  },
+  {
+    "class": "fa-hand-point-right",
+    "label": "hand point right"
+  },
+  {
+    "class": "fa-hand-point-up",
+    "label": "hand point up"
+  },
+  {
+    "class": "fa-hand-pointer",
+    "label": "hand pointer"
+  },
+  {
+    "class": "fa-hand-scissors",
+    "label": "hand scissors"
+  },
+  {
+    "class": "fa-hand-spock",
+    "label": "hand spock"
+  },
+  {
+    "class": "fa-handshake",
+    "label": "handshake"
+  },
+  {
+    "class": "fa-hard-drive",
+    "label": "hard drive"
+  },
+  {
+    "class": "fa-heart",
+    "label": "heart"
+  },
+  {
+    "class": "fa-hospital",
+    "label": "hospital"
+  },
+  {
+    "class": "fa-hourglass",
+    "label": "hourglass"
+  },
+  {
+    "class": "fa-hourglass-half",
+    "label": "hourglass half"
+  },
+  {
+    "class": "fa-id-badge",
+    "label": "id badge"
+  },
+  {
+    "class": "fa-id-card",
+    "label": "id card"
+  },
+  {
+    "class": "fa-image",
+    "label": "image"
+  },
+  {
+    "class": "fa-images",
+    "label": "images"
+  },
+  {
+    "class": "fa-keyboard",
+    "label": "keyboard"
+  },
+  {
+    "class": "fa-lemon",
+    "label": "lemon"
+  },
+  {
+    "class": "fa-life-ring",
+    "label": "life ring"
+  },
+  {
+    "class": "fa-lightbulb",
+    "label": "lightbulb"
+  },
+  {
+    "class": "fa-map",
+    "label": "map"
+  },
+  {
+    "class": "fa-message",
+    "label": "message"
+  },
+  {
+    "class": "fa-money-bill-1",
+    "label": "money bill 1"
+  },
+  {
+    "class": "fa-moon",
+    "label": "moon"
+  },
+  {
+    "class": "fa-newspaper",
+    "label": "newspaper"
+  },
+  {
+    "class": "fa-note-sticky",
+    "label": "note sticky"
+  },
+  {
+    "class": "fa-object-group",
+    "label": "object group"
+  },
+  {
+    "class": "fa-object-ungroup",
+    "label": "object ungroup"
+  },
+  {
+    "class": "fa-paper-plane",
+    "label": "paper plane"
+  },
+  {
+    "class": "fa-paste",
+    "label": "paste"
+  },
+  {
+    "class": "fa-pen-to-square",
+    "label": "pen to square"
+  },
+  {
+    "class": "fa-rectangle-list",
+    "label": "rectangle list"
+  },
+  {
+    "class": "fa-rectangle-xmark",
+    "label": "rectangle xmark"
+  },
+  {
+    "class": "fa-registered",
+    "label": "registered"
+  },
+  {
+    "class": "fa-share-from-square",
+    "label": "share from square"
+  },
+  {
+    "class": "fa-snowflake",
+    "label": "snowflake"
+  },
+  {
+    "class": "fa-square",
+    "label": "square"
+  },
+  {
+    "class": "fa-square-caret-down",
+    "label": "square caret down"
+  },
+  {
+    "class": "fa-square-caret-left",
+    "label": "square caret left"
+  },
+  {
+    "class": "fa-square-caret-right",
+    "label": "square caret right"
+  },
+  {
+    "class": "fa-square-caret-up",
+    "label": "square caret up"
+  },
+  {
+    "class": "fa-square-check",
+    "label": "square check"
+  },
+  {
+    "class": "fa-square-full",
+    "label": "square full"
+  },
+  {
+    "class": "fa-square-minus",
+    "label": "square minus"
+  },
+  {
+    "class": "fa-square-plus",
+    "label": "square plus"
+  },
+  {
+    "class": "fa-star",
+    "label": "star"
+  },
+  {
+    "class": "fa-star-half",
+    "label": "star half"
+  },
+  {
+    "class": "fa-star-half-stroke",
+    "label": "star half stroke"
+  },
+  {
+    "class": "fa-sun",
+    "label": "sun"
+  },
+  {
+    "class": "fa-thumbs-down",
+    "label": "thumbs down"
+  },
+  {
+    "class": "fa-thumbs-up",
+    "label": "thumbs up"
+  },
+  {
+    "class": "fa-trash-can",
+    "label": "trash can"
+  },
+  {
+    "class": "fa-user",
+    "label": "user"
+  },
+  {
+    "class": "fa-window-maximize",
+    "label": "window maximize"
+  },
+  {
+    "class": "fa-window-minimize",
+    "label": "window minimize"
+  },
+  {
+    "class": "fa-window-restore",
+    "label": "window restore"
+  }
+]

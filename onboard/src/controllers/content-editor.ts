@@ -23,6 +23,7 @@ import {
 import { EventName } from '../types/events.types.js';
 import { emit } from '../core/event-bus.js';
 import { initImageUploader } from '../components/image-uploader.js';
+import { attachIconPicker } from '../components/icon-picker.js';
 
 /**
  * Initialize content editor on specified container
@@ -330,6 +331,9 @@ async function initServicesEditor(panelId: string): Promise<() => void> {
           value="${service.icon}"
           required
         />
+        <div>
+          <button type="button" class="btn btn--small" data-action="pick-icon" data-index="${index}">Pick Icon</button>
+        </div>
         <input
           type="text"
           class="content-editor__input"
@@ -374,6 +378,19 @@ async function initServicesEditor(panelId: string): Promise<() => void> {
         if (confirm('Delete this service?')) {
           currentServices.list.splice(index, 1);
           renderServicesForm();
+        }
+      });
+    });
+
+    // Pick icon
+    panel.querySelectorAll('[data-action="pick-icon"]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const index = parseInt((e.currentTarget as HTMLElement).getAttribute('data-index') || '0');
+        const item = panel.querySelector(`.service-item[data-index="${index}"]`);
+        const input = item?.querySelector('[data-field="icon"]') as HTMLInputElement | null;
+        if (input) {
+          attachIconPicker(input, { restrictTo: 'solid' });
+          input.focus();
         }
       });
     });

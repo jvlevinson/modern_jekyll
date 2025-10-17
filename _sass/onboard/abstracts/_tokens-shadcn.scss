@@ -1,87 +1,272 @@
 // =============================================================================
-// shadcn/ui Design Tokens for Onboard Dashboard
+// shadcn/ui Complete Design Token System
 // =============================================================================
-// Modern design tokens following shadcn/ui naming convention
+// Comprehensive design tokens following shadcn/ui and Tailwind CSS conventions
 // Uses OKLCH color space for perceptual uniformity
-// These style the DASHBOARD SHELL (header, nav, sections)
-// Editor components still use --editor-* tokens for fine control
-// Phase 7+: Dual token system
+// Covers: Colors, Spacing, Typography, Shadows, Radius, Transitions, Layout
+// Replaces all legacy --editor-* tokens with shadcn-compatible naming
+// Phase 7+: Complete shadcn tokenization (October 2025)
 // =============================================================================
 
 :root {
-  // ---------------------------------------------------------------------------
-  // shadcn/ui Core Tokens (OKLCH Color Space)
-  // ---------------------------------------------------------------------------
-  // Base colors using foreground/background convention
-  --background: oklch(98% 0 0);              // #f8fafc equivalent
-  --foreground: oklch(9% 0 0);               // #0f172a equivalent
+  // ===========================================================================
+  // 1. Color Tokens (shadcn/ui Core System)
+  // ===========================================================================
+  // Semantic color system with foreground pairs
+  // OKLCH color space for better perceptual uniformity
+  // ===========================================================================
 
-  // Card surfaces (elevated UI elements like dashboard sections)
-  --card: oklch(100% 0 0);                   // Pure white
-  --card-foreground: oklch(9% 0 0);
+  // Base colors (backgrounds and text)
+  --background: oklch(98% 0 0);              // #f8fafc - Main background
+  --foreground: oklch(9% 0 0);               // #0f172a - Main text
+
+  // Card surfaces (elevated UI elements)
+  --card: oklch(100% 0 0);                   // #ffffff - Card background
+  --card-foreground: oklch(9% 0 0);          // Card text
 
   // Popover/dropdown surfaces
-  --popover: oklch(100% 0 0);
-  --popover-foreground: oklch(9% 0 0);
+  --popover: oklch(100% 0 0);                // Popover background
+  --popover-foreground: oklch(9% 0 0);       // Popover text
 
-  // Primary brand color (dashboard UI accent)
-  --primary: oklch(55% 0.25 220);            // Blue
-  --primary-foreground: oklch(98% 0 0);
+  // Primary brand color (interactive elements)
+  --primary: oklch(55% 0.25 220);            // #3b82f6 - Brand blue
+  --primary-foreground: oklch(98% 0 0);      // Text on primary
 
   // Secondary accents
-  --secondary: oklch(96% 0 0);               // Light gray
-  --secondary-foreground: oklch(9% 0 0);
+  --secondary: oklch(96% 0 0);               // Light gray background
+  --secondary-foreground: oklch(9% 0 0);     // Text on secondary
 
   // Muted backgrounds (subtle surfaces)
-  --muted: oklch(96% 0 0);                   // Light gray bg
+  --muted: oklch(96% 0 0);                   // Muted background
   --muted-foreground: oklch(45% 0 0);        // Muted text
 
   // Accent color (highlights, hovers)
-  --accent: oklch(96% 0 0);
-  --accent-foreground: oklch(9% 0 0);
+  --accent: oklch(96% 0 0);                  // Accent background
+  --accent-foreground: oklch(9% 0 0);        // Text on accent
 
   // Destructive/danger states
-  --destructive: oklch(62% 0.25 29);         // Red
-  --destructive-foreground: oklch(98% 0 0);
+  --destructive: oklch(62% 0.25 29);         // #ef4444 - Red
+  --destructive-foreground: oklch(98% 0 0);  // Text on destructive
 
-  // Semantic status colors (extended from shadcn)
-  --success: oklch(70% 0.18 145);            // Green
-  --success-foreground: oklch(98% 0 0);
-  --warning: oklch(75% 0.15 85);             // Orange/Yellow
-  --warning-foreground: oklch(9% 0 0);
-  --info: oklch(65% 0.15 220);               // Blue
-  --info-foreground: oklch(98% 0 0);
+  // Extended semantic colors
+  --success: oklch(70% 0.18 145);            // #22c55e - Green
+  --success-foreground: oklch(98% 0 0);      // Text on success
+
+  --warning: oklch(75% 0.15 85);             // #f59e0b - Orange/Yellow
+  --warning-foreground: oklch(9% 0 0);       // Text on warning (dark)
+
+  --info: oklch(65% 0.15 220);               // #06b6d4 - Cyan
+  --info-foreground: oklch(98% 0 0);         // Text on info
 
   // Border and input styling
-  --border: oklch(89% 0 0);                  // #e2e8f0 equivalent
-  --input: oklch(89% 0 0);
-  --ring: oklch(55% 0.25 220);               // Focus ring (primary)
+  --border: oklch(89% 0 0);                  // #e2e8f0 - Border color
+  --input: oklch(89% 0 0);                   // Input border color
+  --ring: oklch(55% 0.25 220);               // Focus ring color (primary)
 
-  // Border radius (shadcn convention)
-  --radius: 0.5rem;                          // Default border radius
-
-  // ---------------------------------------------------------------------------
-  // Chart Colors (OKLCH)
-  // ---------------------------------------------------------------------------
-  // For data visualization
+  // Chart colors (for data visualization)
   --chart-1: oklch(69% 0.15 258);            // Blue
   --chart-2: oklch(70% 0.14 142);            // Green
   --chart-3: oklch(75% 0.23 85);             // Yellow
   --chart-4: oklch(65% 0.24 28);             // Orange
   --chart-5: oklch(64% 0.19 310);            // Purple
+
+  // ===========================================================================
+  // 2. Spacing Scale (Tailwind Convention)
+  // ===========================================================================
+  // Based on 4px base unit (0.25rem)
+  // Follows Tailwind's spacing scale: space-{number} where number = (px / 4)
+  // Example: 16px = space-4, 32px = space-8
+  // ===========================================================================
+
+  --space-0: 0;              // 0px
+  --space-1: 0.25rem;        // 4px
+  --space-2: 0.5rem;         // 8px   (editor-space-xs)
+  --space-3: 0.75rem;        // 12px  (editor-space-sm)
+  --space-4: 1rem;           // 16px  (editor-space-md)
+  --space-5: 1.25rem;        // 20px
+  --space-6: 1.5rem;         // 24px  (editor-space-lg)
+  --space-8: 2rem;           // 32px  (editor-space-xl)
+  --space-10: 2.5rem;        // 40px
+  --space-12: 3rem;          // 48px  (editor-space-2xl)
+  --space-16: 4rem;          // 64px  (editor-space-3xl)
+  --space-20: 5rem;          // 80px
+  --space-24: 6rem;          // 96px
+
+  // ===========================================================================
+  // 3. Typography Scale (Tailwind Convention)
+  // ===========================================================================
+  // Font families, sizes, weights, and line heights
+  // Follows Tailwind naming: text-{size}, font-{weight}
+  // ===========================================================================
+
+  // Font families
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+               'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+               'Helvetica Neue', sans-serif;
+  --font-mono: 'Monaco', 'Menlo', 'Courier New', monospace;
+
+  // Font sizes (Tailwind scale)
+  --text-xs: 0.75rem;        // 12px  (editor-font-size-xs)
+  --text-sm: 0.875rem;       // 14px  (editor-font-size-sm)
+  --text-base: 1rem;         // 16px  (editor-font-size-md)
+  --text-lg: 1.125rem;       // 18px  (editor-font-size-lg)
+  --text-xl: 1.25rem;        // 20px  (editor-font-size-xl)
+  --text-2xl: 1.5rem;        // 24px  (editor-font-size-2xl)
+  --text-3xl: 1.875rem;      // 30px
+  --text-4xl: 2rem;          // 32px  (editor-font-size-3xl)
+
+  // Font weights (Tailwind naming)
+  --font-normal: 400;        // Regular (editor-font-weight-normal)
+  --font-medium: 500;        // Medium (editor-font-weight-medium)
+  --font-semibold: 600;      // Semibold (editor-font-weight-semibold)
+  --font-bold: 700;          // Bold (editor-font-weight-bold)
+
+  // Line heights
+  --leading-tight: 1.25;     // Tight line height
+  --leading-normal: 1.5;     // Normal line height
+  --leading-relaxed: 1.75;   // Relaxed line height
+
+  // ===========================================================================
+  // 4. Border Radius Scale (shadcn Convention)
+  // ===========================================================================
+  // Expanded from single --radius to full scale
+  // Follows shadcn/Tailwind naming pattern
+  // ===========================================================================
+
+  --radius-sm: 0.25rem;      // 4px   (editor-radius-sm)
+  --radius: 0.375rem;        // 6px   (shadcn default, editor-radius-md)
+  --radius-md: 0.5rem;       // 8px   (editor-radius-lg)
+  --radius-lg: 0.75rem;      // 12px  (editor-radius-xl)
+  --radius-xl: 1rem;         // 16px  (editor-radius-2xl)
+  --radius-2xl: 1.5rem;      // 24px
+  --radius-full: 9999px;     // Pill shape (editor-radius-full)
+
+  // ===========================================================================
+  // 5. Shadow Scale (Tailwind Convention)
+  // ===========================================================================
+  // Elevation system using box-shadow
+  // Follows Tailwind's shadow naming: shadow-{size}
+  // ===========================================================================
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+            0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+               0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+               0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+               0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+  // Focus ring shadow (used with --ring color)
+  --ring-offset-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+  --shadow-focus: var(--ring-offset-shadow);  // Alias for compatibility
+
+  // ===========================================================================
+  // 6. Transition/Animation Tokens
+  // ===========================================================================
+  // Duration and easing functions
+  // Follows Tailwind duration naming
+  // ===========================================================================
+
+  --duration-75: 75ms;       // Ultra fast
+  --duration-100: 100ms;     // Very fast
+  --duration-150: 150ms;     // Fast (editor-transition-fast)
+  --duration-200: 200ms;     // Quick
+  --duration-250: 250ms;     // Normal (editor-transition-normal)
+  --duration-300: 300ms;     // Moderate
+  --duration-350: 350ms;     // Slow (editor-transition-slow)
+  --duration-500: 500ms;     // Very slow
+  --duration-700: 700ms;     // Extra slow
+  --duration-1000: 1000ms;   // 1 second
+
+  // Easing functions (Tailwind convention)
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-linear: linear;
+
+  // ===========================================================================
+  // 7. Z-Index Scale
+  // ===========================================================================
+  // Stacking order for layered UI elements
+  // Follows common z-index scale patterns
+  // ===========================================================================
+
+  --z-base: 1;               // Base layer
+  --z-dropdown: 1000;        // Dropdowns
+  --z-sticky: 1020;          // Sticky elements
+  --z-fixed: 1030;           // Fixed elements
+  --z-modal-backdrop: 1040;  // Modal backdrops
+  --z-modal: 1050;           // Modals
+  --z-popover: 1060;         // Popovers
+  --z-tooltip: 1070;         // Tooltips
+  --z-toast: 1080;           // Toast notifications (editor-z-toast)
+
+  // ===========================================================================
+  // 8. Layout Constraints
+  // ===========================================================================
+  // Maximum widths and container sizes
+  // ===========================================================================
+
+  --container-max-width: 1200px;  // Editor max width (editor-max-width)
+  --container-sm: 640px;          // Small container
+  --container-md: 768px;          // Medium container
+  --container-lg: 1024px;         // Large container
+  --container-xl: 1280px;         // Extra large container
+  --container-2xl: 1536px;        // 2XL container
+
+  // ===========================================================================
+  // 9. Component-Specific Tokens
+  // ===========================================================================
+  // Tokens for specific UI components (sliders, inputs, etc.)
+  // ===========================================================================
+
+  // Slider component
+  --slider-track-height: 8px;
+  --slider-thumb-size: 20px;
+  --slider-thumb-border: 2px solid oklch(100% 0 0);
+  --slider-thumb-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+  // Input controls
+  --input-height: 40px;
+  --input-padding-x: var(--space-4);
+  --input-padding-y: var(--space-3);
+  --input-border-width: 1px;
+
+  // Button controls
+  --button-height: 40px;
+  --button-padding-x: var(--space-6);
+  --button-padding-y: var(--space-3);
+
+  // ===========================================================================
+  // 10. Legacy Compatibility Aliases (Computed Values)
+  // ===========================================================================
+  // Derived values for hover/active states using color-mix
+  // Uses CSS color-mix() for dynamic color variations
+  // ===========================================================================
+
+  // Primary color variations (20% lighter/darker)
+  --primary-hover: color-mix(in oklch, var(--primary), black 10%);
+  --primary-active: color-mix(in oklch, var(--primary), black 20%);
 }
 
 // =============================================================================
-// Dark Mode Overrides
+// Dark Mode Overrides (.dark class)
 // =============================================================================
-// Using .dark class (shadcn convention)
+// Dark theme tokens following shadcn convention
+// Uses .dark class for theme switching
 // =============================================================================
 
 .dark {
-  --background: oklch(9% 0 0);               // Dark background
-  --foreground: oklch(98% 0 0);              // Light text
+  // ---------------------------------------------------------------------------
+  // Color Tokens (Dark Mode)
+  // ---------------------------------------------------------------------------
+  --background: oklch(9% 0 0);               // #0f172a - Dark background
+  --foreground: oklch(98% 0 0);              // #f1f5f9 - Light text
 
-  --card: oklch(12% 0 0);
+  --card: oklch(12% 0 0);                    // #1e293b - Dark card
   --card-foreground: oklch(98% 0 0);
 
   --popover: oklch(12% 0 0);
@@ -90,34 +275,82 @@
   --primary: oklch(55% 0.25 220);            // Keep brand color
   --primary-foreground: oklch(98% 0 0);
 
-  --secondary: oklch(20% 0 0);               // Dark gray
+  --secondary: oklch(20% 0 0);               // #334155 - Dark secondary
   --secondary-foreground: oklch(98% 0 0);
 
   --muted: oklch(20% 0 0);
-  --muted-foreground: oklch(60% 0 0);
+  --muted-foreground: oklch(60% 0 0);        // #94a3b8 - Lighter muted text
 
   --accent: oklch(20% 0 0);
   --accent-foreground: oklch(98% 0 0);
 
-  --destructive: oklch(62% 0.25 29);
+  --destructive: oklch(62% 0.25 29);         // Keep danger color
   --destructive-foreground: oklch(98% 0 0);
 
-  --success: oklch(70% 0.18 145);
+  --success: oklch(70% 0.18 145);            // Keep success color
   --success-foreground: oklch(98% 0 0);
 
-  --warning: oklch(75% 0.15 85);
+  --warning: oklch(75% 0.15 85);             // Keep warning color
   --warning-foreground: oklch(9% 0 0);
 
-  --info: oklch(65% 0.15 220);
+  --info: oklch(65% 0.15 220);               // Keep info color
   --info-foreground: oklch(98% 0 0);
 
-  --border: oklch(20% 0 0);
+  --border: oklch(20% 0 0);                  // #334155 - Dark border
   --input: oklch(20% 0 0);
-  --ring: oklch(55% 0.25 220);
+  --ring: oklch(55% 0.25 220);               // Keep focus ring
 
+  // Chart colors (same in dark mode)
   --chart-1: oklch(69% 0.15 258);
   --chart-2: oklch(70% 0.14 142);
   --chart-3: oklch(75% 0.23 85);
   --chart-4: oklch(65% 0.24 28);
   --chart-5: oklch(64% 0.19 310);
+
+  // ---------------------------------------------------------------------------
+  // Shadow Tokens (Dark Mode)
+  // ---------------------------------------------------------------------------
+  // Lighter shadows for dark backgrounds
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4),
+            0 1px 2px -1px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5),
+               0 2px 4px -2px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.6),
+               0 4px 6px -4px rgba(0, 0, 0, 0.4);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.7),
+               0 8px 10px -6px rgba(0, 0, 0, 0.5);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+
+  // Slider component (dark mode adjustments)
+  --slider-thumb-border: 2px solid oklch(20% 0 0);
+
+  // Computed hover/active states
+  --primary-hover: color-mix(in oklch, var(--primary), white 10%);
+  --primary-active: color-mix(in oklch, var(--primary), white 20%);
 }
+
+// =============================================================================
+// Notes
+// =============================================================================
+//
+// Token Naming Conventions:
+// - Colors: semantic names (--primary, --background, --destructive)
+// - Spacing: numeric scale (--space-4 = 16px, --space-8 = 32px)
+// - Typography: size-{name} (--text-base, --text-lg)
+// - Shadows: --shadow-{size} (--shadow-sm, --shadow-md)
+// - Radius: --radius-{size} (--radius-sm, --radius-lg)
+// - Durations: --duration-{ms} (--duration-150, --duration-250)
+//
+// Browser Support:
+// - OKLCH colors: Chrome 111+, Firefox 113+, Safari 15.4+ (93%+ support)
+// - color-mix(): Chrome 111+, Firefox 113+, Safari 16.2+ (95%+ support)
+// - CSS Variables: Universal support (IE11+ with fallbacks)
+//
+// References:
+// - shadcn/ui: https://ui.shadcn.com/docs/theming
+// - Tailwind CSS: https://tailwindcss.com/docs/customizing-colors
+// - OKLCH: https://oklch.com/
+//
+// =============================================================================

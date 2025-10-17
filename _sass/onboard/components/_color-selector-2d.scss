@@ -14,20 +14,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: var(--editor-space-lg) 0;
+  margin: var(--space-6) 0;
 
   // ---------------------------------------------------------------------------
   // Canvas Element
   // ---------------------------------------------------------------------------
   &__canvas {
     display: block;
-    border-radius: var(--editor-radius-full);
+    border-radius: var(--radius-full);
     cursor: crosshair;
-    box-shadow: var(--editor-shadow-md);
-    transition: box-shadow var(--editor-transition-normal);
+    box-shadow: var(--shadow-md);
+    transition: box-shadow var(--duration-250) var(--ease-in-out);
 
     &:hover {
-      box-shadow: var(--editor-shadow-lg);
+      box-shadow: var(--shadow-lg);
     }
 
     &:active {
@@ -49,7 +49,7 @@
     box-shadow:
       0 0 0 1px rgba(0, 0, 0, 0.2),
       0 2px 4px rgba(0, 0, 0, 0.3);
-    transition: all var(--editor-transition-fast);
+    transition: all var(--duration-150) var(--ease-in-out);
     z-index: 10;
 
     &[hidden] {

@@ -8,7 +8,7 @@
 .color-presets {
   display: flex;
   flex-direction: column;
-  gap: var(--editor-space-sm);
+  gap: var(--space-3);
 
   &__header {
     display: flex;
@@ -17,56 +17,56 @@
   }
 
   &__label {
-    font-weight: var(--editor-font-weight-semibold);
-    font-size: var(--editor-font-size-sm);
+    font-weight: var(--font-semibold);
+    font-size: var(--text-sm);
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: var(--editor-text);
+    color: var(--foreground);
   }
 
   &__groups {
     display: flex;
     flex-direction: column;
-    gap: var(--editor-space-lg);
+    gap: var(--space-6);
   }
 }
 
 .preset-group {
   display: flex;
   flex-direction: column;
-  gap: var(--editor-space-sm);
+  gap: var(--space-3);
 
   &__label {
-    font-weight: var(--editor-font-weight-semibold);
-    font-size: var(--editor-font-size-sm);
-    color: var(--editor-text-muted);
+    font-weight: var(--font-semibold);
+    font-size: var(--text-sm);
+    color: var(--muted-foreground);
   }
 
   &__grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
-    gap: var(--editor-space-sm);
+    gap: var(--space-3);
   }
 }
 
 .preset-cell {
   width: 40px;
   height: 40px;
-  border: 2px solid var(--editor-border);
-  border-radius: var(--editor-radius-md);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
   cursor: pointer;
-  transition: all var(--editor-transition-fast);
+  transition: all var(--duration-150) var(--ease-in-out);
   padding: 0;
   background: transparent;
 
   &:hover {
     transform: scale(1.15);
-    box-shadow: var(--editor-shadow-md);
+    box-shadow: var(--shadow-md);
     z-index: 1;
   }
 
   &:focus {
-    outline: 2px solid var(--editor-primary);
+    outline: 2px solid var(--primary);
     outline-offset: 2px;
   }
 }

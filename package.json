@@ -57,6 +57,7 @@
     "time:updated": "pnpm time:script -f",
     "size": "size-limit",
     "size:why": "size-limit --why",
+    "gen:fa": "node scripts/generate-fa-icons.mjs",
     "build": "pnpm run build:ts && bundle exec jekyll build",
     "serve": "bundle exec jekyll serve --livereload",
     "clean": "bundle exec jekyll clean"
@@ -65,6 +66,9 @@
     "culori": "^4.0.2"
   },
   "devDependencies": {
+    "@fortawesome/free-brands-svg-icons": "^7.1.0",
+    "@fortawesome/free-regular-svg-icons": "^7.1.0",
+    "@fortawesome/free-solid-svg-icons": "^7.1.0",
     "@axe-core/cli": "^4.10.2",
     "@eslint/js": "^9.37.0",
     "@playwright/test": "^1.56.0",

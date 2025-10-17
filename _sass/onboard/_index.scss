@@ -10,8 +10,8 @@
 // Abstracts - Design Tokens
 // -----------------------------------------------------------------------------
 // Must be loaded first as they're used by components
-@forward 'abstracts/tokens-shadcn';  // shadcn/ui tokens for dashboard shell
-@forward 'abstracts/tokens';         // Editor tokens for theme components
+// Complete shadcn/ui token system (October 2025 migration)
+@forward 'abstracts/tokens-shadcn';  // All shadcn/ui tokens (expanded)
 
 // -----------------------------------------------------------------------------
 // Components - Dashboard & Editor UI

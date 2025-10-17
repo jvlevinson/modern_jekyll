@@ -8,7 +8,7 @@
 .color-harmonies {
   display: flex;
   flex-direction: column;
-  gap: var(--editor-space-sm);
+  gap: var(--space-3);
 
   &__header {
     display: flex;
@@ -17,34 +17,34 @@
   }
 
   &__label {
-    font-weight: var(--editor-font-weight-semibold);
-    font-size: var(--editor-font-size-sm);
+    font-weight: var(--font-semibold);
+    font-size: var(--text-sm);
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: var(--editor-text);
+    color: var(--foreground);
   }
 
   &__groups {
     display: flex;
     flex-direction: column;
-    gap: var(--editor-space-lg);
+    gap: var(--space-6);
   }
 }
 
 .harmony-group {
   display: flex;
   flex-direction: column;
-  gap: var(--editor-space-sm);
+  gap: var(--space-3);
 
   &__label {
-    font-weight: var(--editor-font-weight-semibold);
-    font-size: var(--editor-font-size-sm);
-    color: var(--editor-text-muted);
+    font-weight: var(--font-semibold);
+    font-size: var(--text-sm);
+    color: var(--muted-foreground);
   }
 
   &__circles {
     display: flex;
-    gap: var(--editor-space-md);
+    gap: var(--space-4);
     flex-wrap: wrap;
   }
 }
@@ -53,38 +53,38 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--editor-space-xs);
+  gap: var(--space-2);
 
   &__swatch {
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    border: 2px solid var(--editor-border);
-    box-shadow: var(--editor-shadow-sm);
-    transition: all var(--editor-transition-fast);
+    border: 2px solid var(--border);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--duration-150) var(--ease-in-out);
     cursor: pointer;
 
     &:hover {
       transform: scale(1.1);
-      box-shadow: var(--editor-shadow-md);
+      box-shadow: var(--shadow-md);
     }
   }
 
   &__label {
-    font-size: var(--editor-font-size-xs);
-    color: var(--editor-text-muted);
+    font-size: var(--text-xs);
+    color: var(--muted-foreground);
     text-align: center;
   }
 
   &--base {
     .harmony-circle__swatch {
       border-width: 3px;
-      border-color: var(--editor-primary);
+      border-color: var(--primary);
     }
 
     .harmony-circle__label {
-      font-weight: var(--editor-font-weight-bold);
-      color: var(--editor-text);
+      font-weight: var(--font-bold);
+      color: var(--foreground);
     }
   }
 }

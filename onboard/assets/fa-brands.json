@@ -1,0 +1,1982 @@
+[
+  {
+    "class": "fa-42-group",
+    "label": "42 group"
+  },
+  {
+    "class": "fa-500px",
+    "label": "500px"
+  },
+  {
+    "class": "fa-accessible-icon",
+    "label": "accessible icon"
+  },
+  {
+    "class": "fa-accusoft",
+    "label": "accusoft"
+  },
+  {
+    "class": "fa-adn",
+    "label": "adn"
+  },
+  {
+    "class": "fa-adversal",
+    "label": "adversal"
+  },
+  {
+    "class": "fa-affiliatetheme",
+    "label": "affiliatetheme"
+  },
+  {
+    "class": "fa-airbnb",
+    "label": "airbnb"
+  },
+  {
+    "class": "fa-algolia",
+    "label": "algolia"
+  },
+  {
+    "class": "fa-alipay",
+    "label": "alipay"
+  },
+  {
+    "class": "fa-amazon",
+    "label": "amazon"
+  },
+  {
+    "class": "fa-amazon-pay",
+    "label": "amazon pay"
+  },
+  {
+    "class": "fa-amilia",
+    "label": "amilia"
+  },
+  {
+    "class": "fa-android",
+    "label": "android"
+  },
+  {
+    "class": "fa-angellist",
+    "label": "angellist"
+  },
+  {
+    "class": "fa-angrycreative",
+    "label": "angrycreative"
+  },
+  {
+    "class": "fa-angular",
+    "label": "angular"
+  },
+  {
+    "class": "fa-app-store",
+    "label": "app store"
+  },
+  {
+    "class": "fa-app-store-ios",
+    "label": "app store ios"
+  },
+  {
+    "class": "fa-apper",
+    "label": "apper"
+  },
+  {
+    "class": "fa-apple",
+    "label": "apple"
+  },
+  {
+    "class": "fa-apple-pay",
+    "label": "apple pay"
+  },
+  {
+    "class": "fa-artstation",
+    "label": "artstation"
+  },
+  {
+    "class": "fa-asymmetrik",
+    "label": "asymmetrik"
+  },
+  {
+    "class": "fa-atlassian",
+    "label": "atlassian"
+  },
+  {
+    "class": "fa-audible",
+    "label": "audible"
+  },
+  {
+    "class": "fa-autoprefixer",
+    "label": "autoprefixer"
+  },
+  {
+    "class": "fa-avianex",
+    "label": "avianex"
+  },
+  {
+    "class": "fa-aviato",
+    "label": "aviato"
+  },
+  {
+    "class": "fa-aws",
+    "label": "aws"
+  },
+  {
+    "class": "fa-bandcamp",
+    "label": "bandcamp"
+  },
+  {
+    "class": "fa-battle-net",
+    "label": "battle net"
+  },
+  {
+    "class": "fa-behance",
+    "label": "behance"
+  },
+  {
+    "class": "fa-bilibili",
+    "label": "bilibili"
+  },
+  {
+    "class": "fa-bimobject",
+    "label": "bimobject"
+  },
+  {
+    "class": "fa-bitbucket",
+    "label": "bitbucket"
+  },
+  {
+    "class": "fa-bitcoin",
+    "label": "bitcoin"
+  },
+  {
+    "class": "fa-bity",
+    "label": "bity"
+  },
+  {
+    "class": "fa-black-tie",
+    "label": "black tie"
+  },
+  {
+    "class": "fa-blackberry",
+    "label": "blackberry"
+  },
+  {
+    "class": "fa-blogger",
+    "label": "blogger"
+  },
+  {
+    "class": "fa-blogger-b",
+    "label": "blogger b"
+  },
+  {
+    "class": "fa-bluesky",
+    "label": "bluesky"
+  },
+  {
+    "class": "fa-bluetooth",
+    "label": "bluetooth"
+  },
+  {
+    "class": "fa-bluetooth-b",
+    "label": "bluetooth b"
+  },
+  {
+    "class": "fa-bootstrap",
+    "label": "bootstrap"
+  },
+  {
+    "class": "fa-bots",
+    "label": "bots"
+  },
+  {
+    "class": "fa-brave",
+    "label": "brave"
+  },
+  {
+    "class": "fa-brave-reverse",
+    "label": "brave reverse"
+  },
+  {
+    "class": "fa-btc",
+    "label": "btc"
+  },
+  {
+    "class": "fa-buffer",
+    "label": "buffer"
+  },
+  {
+    "class": "fa-buromobelexperte",
+    "label": "buromobelexperte"
+  },
+  {
+    "class": "fa-buy-n-large",
+    "label": "buy n large"
+  },
+  {
+    "class": "fa-buysellads",
+    "label": "buysellads"
+  },
+  {
+    "class": "fa-canadian-maple-leaf",
+    "label": "canadian maple leaf"
+  },
+  {
+    "class": "fa-cc-amazon-pay",
+    "label": "cc amazon pay"
+  },
+  {
+    "class": "fa-cc-amex",
+    "label": "cc amex"
+  },
+  {
+    "class": "fa-cc-apple-pay",
+    "label": "cc apple pay"
+  },
+  {
+    "class": "fa-cc-diners-club",
+    "label": "cc diners club"
+  },
+  {
+    "class": "fa-cc-discover",
+    "label": "cc discover"
+  },
+  {
+    "class": "fa-cc-jcb",
+    "label": "cc jcb"
+  },
+  {
+    "class": "fa-cc-mastercard",
+    "label": "cc mastercard"
+  },
+  {
+    "class": "fa-cc-paypal",
+    "label": "cc paypal"
+  },
+  {
+    "class": "fa-cc-stripe",
+    "label": "cc stripe"
+  },
+  {
+    "class": "fa-cc-visa",
+    "label": "cc visa"
+  },
+  {
+    "class": "fa-centercode",
+    "label": "centercode"
+  },
+  {
+    "class": "fa-centos",
+    "label": "centos"
+  },
+  {
+    "class": "fa-chrome",
+    "label": "chrome"
+  },
+  {
+    "class": "fa-chromecast",
+    "label": "chromecast"
+  },
+  {
+    "class": "fa-cloudflare",
+    "label": "cloudflare"
+  },
+  {
+    "class": "fa-cloudscale",
+    "label": "cloudscale"
+  },
+  {
+    "class": "fa-cloudsmith",
+    "label": "cloudsmith"
+  },
+  {
+    "class": "fa-cloudversify",
+    "label": "cloudversify"
+  },
+  {
+    "class": "fa-cmplid",
+    "label": "cmplid"
+  },
+  {
+    "class": "fa-codepen",
+    "label": "codepen"
+  },
+  {
+    "class": "fa-codiepie",
+    "label": "codiepie"
+  },
+  {
+    "class": "fa-confluence",
+    "label": "confluence"
+  },
+  {
+    "class": "fa-connectdevelop",
+    "label": "connectdevelop"
+  },
+  {
+    "class": "fa-contao",
+    "label": "contao"
+  },
+  {
+    "class": "fa-cotton-bureau",
+    "label": "cotton bureau"
+  },
+  {
+    "class": "fa-cpanel",
+    "label": "cpanel"
+  },
+  {
+    "class": "fa-creative-commons",
+    "label": "creative commons"
+  },
+  {
+    "class": "fa-creative-commons-by",
+    "label": "creative commons by"
+  },
+  {
+    "class": "fa-creative-commons-nc",
+    "label": "creative commons nc"
+  },
+  {
+    "class": "fa-creative-commons-nc-eu",
+    "label": "creative commons nc eu"
+  },
+  {
+    "class": "fa-creative-commons-nc-jp",
+    "label": "creative commons nc jp"
+  },
+  {
+    "class": "fa-creative-commons-nd",
+    "label": "creative commons nd"
+  },
+  {
+    "class": "fa-creative-commons-pd",
+    "label": "creative commons pd"
+  },
+  {
+    "class": "fa-creative-commons-pd-alt",
+    "label": "creative commons pd alt"
+  },
+  {
+    "class": "fa-creative-commons-remix",
+    "label": "creative commons remix"
+  },
+  {
+    "class": "fa-creative-commons-sa",
+    "label": "creative commons sa"
+  },
+  {
+    "class": "fa-creative-commons-sampling",
+    "label": "creative commons sampling"
+  },
+  {
+    "class": "fa-creative-commons-sampling-plus",
+    "label": "creative commons sampling plus"
+  },
+  {
+    "class": "fa-creative-commons-share",
+    "label": "creative commons share"
+  },
+  {
+    "class": "fa-creative-commons-zero",
+    "label": "creative commons zero"
+  },
+  {
+    "class": "fa-critical-role",
+    "label": "critical role"
+  },
+  {
+    "class": "fa-css",
+    "label": "css"
+  },
+  {
+    "class": "fa-css3",
+    "label": "css3"
+  },
+  {
+    "class": "fa-css3-alt",
+    "label": "css3 alt"
+  },
+  {
+    "class": "fa-cuttlefish",
+    "label": "cuttlefish"
+  },
+  {
+    "class": "fa-d-and-d",
+    "label": "d and d"
+  },
+  {
+    "class": "fa-d-and-d-beyond",
+    "label": "d and d beyond"
+  },
+  {
+    "class": "fa-dailymotion",
+    "label": "dailymotion"
+  },
+  {
+    "class": "fa-dart-lang",
+    "label": "dart lang"
+  },
+  {
+    "class": "fa-dashcube",
+    "label": "dashcube"
+  },
+  {
+    "class": "fa-debian",
+    "label": "debian"
+  },
+  {
+    "class": "fa-deezer",
+    "label": "deezer"
+  },
+  {
+    "class": "fa-delicious",
+    "label": "delicious"
+  },
+  {
+    "class": "fa-deploydog",
+    "label": "deploydog"
+  },
+  {
+    "class": "fa-deskpro",
+    "label": "deskpro"
+  },
+  {
+    "class": "fa-dev",
+    "label": "dev"
+  },
+  {
+    "class": "fa-deviantart",
+    "label": "deviantart"
+  },
+  {
+    "class": "fa-dhl",
+    "label": "dhl"
+  },
+  {
+    "class": "fa-diaspora",
+    "label": "diaspora"
+  },
+  {
+    "class": "fa-digg",
+    "label": "digg"
+  },
+  {
+    "class": "fa-digital-ocean",
+    "label": "digital ocean"
+  },
+  {
+    "class": "fa-discord",
+    "label": "discord"
+  },
+  {
+    "class": "fa-discourse",
+    "label": "discourse"
+  },
+  {
+    "class": "fa-dochub",
+    "label": "dochub"
+  },
+  {
+    "class": "fa-docker",
+    "label": "docker"
+  },
+  {
+    "class": "fa-draft2digital",
+    "label": "draft2digital"
+  },
+  {
+    "class": "fa-dribbble",
+    "label": "dribbble"
+  },
+  {
+    "class": "fa-dropbox",
+    "label": "dropbox"
+  },
+  {
+    "class": "fa-drupal",
+    "label": "drupal"
+  },
+  {
+    "class": "fa-dyalog",
+    "label": "dyalog"
+  },
+  {
+    "class": "fa-earlybirds",
+    "label": "earlybirds"
+  },
+  {
+    "class": "fa-ebay",
+    "label": "ebay"
+  },
+  {
+    "class": "fa-edge",
+    "label": "edge"
+  },
+  {
+    "class": "fa-edge-legacy",
+    "label": "edge legacy"
+  },
+  {
+    "class": "fa-elementor",
+    "label": "elementor"
+  },
+  {
+    "class": "fa-ello",
+    "label": "ello"
+  },
+  {
+    "class": "fa-ember",
+    "label": "ember"
+  },
+  {
+    "class": "fa-empire",
+    "label": "empire"
+  },
+  {
+    "class": "fa-envira",
+    "label": "envira"
+  },
+  {
+    "class": "fa-erlang",
+    "label": "erlang"
+  },
+  {
+    "class": "fa-ethereum",
+    "label": "ethereum"
+  },
+  {
+    "class": "fa-etsy",
+    "label": "etsy"
+  },
+  {
+    "class": "fa-evernote",
+    "label": "evernote"
+  },
+  {
+    "class": "fa-expeditedssl",
+    "label": "expeditedssl"
+  },
+  {
+    "class": "fa-facebook",
+    "label": "facebook"
+  },
+  {
+    "class": "fa-facebook-f",
+    "label": "facebook f"
+  },
+  {
+    "class": "fa-facebook-messenger",
+    "label": "facebook messenger"
+  },
+  {
+    "class": "fa-fantasy-flight-games",
+    "label": "fantasy flight games"
+  },
+  {
+    "class": "fa-fedex",
+    "label": "fedex"
+  },
+  {
+    "class": "fa-fedora",
+    "label": "fedora"
+  },
+  {
+    "class": "fa-figma",
+    "label": "figma"
+  },
+  {
+    "class": "fa-files-pinwheel",
+    "label": "files pinwheel"
+  },
+  {
+    "class": "fa-firefox",
+    "label": "firefox"
+  },
+  {
+    "class": "fa-firefox-browser",
+    "label": "firefox browser"
+  },
+  {
+    "class": "fa-first-order",
+    "label": "first order"
+  },
+  {
+    "class": "fa-first-order-alt",
+    "label": "first order alt"
+  },
+  {
+    "class": "fa-firstdraft",
+    "label": "firstdraft"
+  },
+  {
+    "class": "fa-flickr",
+    "label": "flickr"
+  },
+  {
+    "class": "fa-flipboard",
+    "label": "flipboard"
+  },
+  {
+    "class": "fa-flutter",
+    "label": "flutter"
+  },
+  {
+    "class": "fa-fly",
+    "label": "fly"
+  },
+  {
+    "class": "fa-font-awesome",
+    "label": "font awesome"
+  },
+  {
+    "class": "fa-fonticons",
+    "label": "fonticons"
+  },
+  {
+    "class": "fa-fonticons-fi",
+    "label": "fonticons fi"
+  },
+  {
+    "class": "fa-fort-awesome",
+    "label": "fort awesome"
+  },
+  {
+    "class": "fa-fort-awesome-alt",
+    "label": "fort awesome alt"
+  },
+  {
+    "class": "fa-forumbee",
+    "label": "forumbee"
+  },
+  {
+    "class": "fa-foursquare",
+    "label": "foursquare"
+  },
+  {
+    "class": "fa-free-code-camp",
+    "label": "free code camp"
+  },
+  {
+    "class": "fa-freebsd",
+    "label": "freebsd"
+  },
+  {
+    "class": "fa-fulcrum",
+    "label": "fulcrum"
+  },
+  {
+    "class": "fa-galactic-republic",
+    "label": "galactic republic"
+  },
+  {
+    "class": "fa-galactic-senate",
+    "label": "galactic senate"
+  },
+  {
+    "class": "fa-get-pocket",
+    "label": "get pocket"
+  },
+  {
+    "class": "fa-gg",
+    "label": "gg"
+  },
+  {
+    "class": "fa-gg-circle",
+    "label": "gg circle"
+  },
+  {
+    "class": "fa-git",
+    "label": "git"
+  },
+  {
+    "class": "fa-git-alt",
+    "label": "git alt"
+  },
+  {
+    "class": "fa-github",
+    "label": "github"
+  },
+  {
+    "class": "fa-github-alt",
+    "label": "github alt"
+  },
+  {
+    "class": "fa-gitkraken",
+    "label": "gitkraken"
+  },
+  {
+    "class": "fa-gitlab",
+    "label": "gitlab"
+  },
+  {
+    "class": "fa-gitter",
+    "label": "gitter"
+  },
+  {
+    "class": "fa-glide",
+    "label": "glide"
+  },
+  {
+    "class": "fa-glide-g",
+    "label": "glide g"
+  },
+  {
+    "class": "fa-gofore",
+    "label": "gofore"
+  },
+  {
+    "class": "fa-golang",
+    "label": "golang"
+  },
+  {
+    "class": "fa-goodreads",
+    "label": "goodreads"
+  },
+  {
+    "class": "fa-goodreads-g",
+    "label": "goodreads g"
+  },
+  {
+    "class": "fa-google",
+    "label": "google"
+  },
+  {
+    "class": "fa-google-drive",
+    "label": "google drive"
+  },
+  {
+    "class": "fa-google-pay",
+    "label": "google pay"
+  },
+  {
+    "class": "fa-google-play",
+    "label": "google play"
+  },
+  {
+    "class": "fa-google-plus",
+    "label": "google plus"
+  },
+  {
+    "class": "fa-google-plus-g",
+    "label": "google plus g"
+  },
+  {
+    "class": "fa-google-scholar",
+    "label": "google scholar"
+  },
+  {
+    "class": "fa-google-wallet",
+    "label": "google wallet"
+  },
+  {
+    "class": "fa-gratipay",
+    "label": "gratipay"
+  },
+  {
+    "class": "fa-grav",
+    "label": "grav"
+  },
+  {
+    "class": "fa-gripfire",
+    "label": "gripfire"
+  },
+  {
+    "class": "fa-grunt",
+    "label": "grunt"
+  },
+  {
+    "class": "fa-guilded",
+    "label": "guilded"
+  },
+  {
+    "class": "fa-gulp",
+    "label": "gulp"
+  },
+  {
+    "class": "fa-hacker-news",
+    "label": "hacker news"
+  },
+  {
+    "class": "fa-hackerrank",
+    "label": "hackerrank"
+  },
+  {
+    "class": "fa-hashnode",
+    "label": "hashnode"
+  },
+  {
+    "class": "fa-hips",
+    "label": "hips"
+  },
+  {
+    "class": "fa-hire-a-helper",
+    "label": "hire a helper"
+  },
+  {
+    "class": "fa-hive",
+    "label": "hive"
+  },
+  {
+    "class": "fa-hooli",
+    "label": "hooli"
+  },
+  {
+    "class": "fa-hornbill",
+    "label": "hornbill"
+  },
+  {
+    "class": "fa-hotjar",
+    "label": "hotjar"
+  },
+  {
+    "class": "fa-houzz",
+    "label": "houzz"
+  },
+  {
+    "class": "fa-html5",
+    "label": "html5"
+  },
+  {
+    "class": "fa-hubspot",
+    "label": "hubspot"
+  },
+  {
+    "class": "fa-ideal",
+    "label": "ideal"
+  },
+  {
+    "class": "fa-imdb",
+    "label": "imdb"
+  },
+  {
+    "class": "fa-instagram",
+    "label": "instagram"
+  },
+  {
+    "class": "fa-instalod",
+    "label": "instalod"
+  },
+  {
+    "class": "fa-intercom",
+    "label": "intercom"
+  },
+  {
+    "class": "fa-internet-explorer",
+    "label": "internet explorer"
+  },
+  {
+    "class": "fa-invision",
+    "label": "invision"
+  },
+  {
+    "class": "fa-ioxhost",
+    "label": "ioxhost"
+  },
+  {
+    "class": "fa-itch-io",
+    "label": "itch io"
+  },
+  {
+    "class": "fa-itunes",
+    "label": "itunes"
+  },
+  {
+    "class": "fa-itunes-note",
+    "label": "itunes note"
+  },
+  {
+    "class": "fa-java",
+    "label": "java"
+  },
+  {
+    "class": "fa-jedi-order",
+    "label": "jedi order"
+  },
+  {
+    "class": "fa-jenkins",
+    "label": "jenkins"
+  },
+  {
+    "class": "fa-jira",
+    "label": "jira"
+  },
+  {
+    "class": "fa-joget",
+    "label": "joget"
+  },
+  {
+    "class": "fa-joomla",
+    "label": "joomla"
+  },
+  {
+    "class": "fa-js",
+    "label": "js"
+  },
+  {
+    "class": "fa-jsfiddle",
+    "label": "jsfiddle"
+  },
+  {
+    "class": "fa-jxl",
+    "label": "jxl"
+  },
+  {
+    "class": "fa-kaggle",
+    "label": "kaggle"
+  },
+  {
+    "class": "fa-keybase",
+    "label": "keybase"
+  },
+  {
+    "class": "fa-keycdn",
+    "label": "keycdn"
+  },
+  {
+    "class": "fa-kickstarter",
+    "label": "kickstarter"
+  },
+  {
+    "class": "fa-kickstarter-k",
+    "label": "kickstarter k"
+  },
+  {
+    "class": "fa-korvue",
+    "label": "korvue"
+  },
+  {
+    "class": "fa-laravel",
+    "label": "laravel"
+  },
+  {
+    "class": "fa-lastfm",
+    "label": "lastfm"
+  },
+  {
+    "class": "fa-leanpub",
+    "label": "leanpub"
+  },
+  {
+    "class": "fa-less",
+    "label": "less"
+  },
+  {
+    "class": "fa-letterboxd",
+    "label": "letterboxd"
+  },
+  {
+    "class": "fa-line",
+    "label": "line"
+  },
+  {
+    "class": "fa-linkedin",
+    "label": "linkedin"
+  },
+  {
+    "class": "fa-linkedin-in",
+    "label": "linkedin in"
+  },
+  {
+    "class": "fa-linode",
+    "label": "linode"
+  },
+  {
+    "class": "fa-linux",
+    "label": "linux"
+  },
+  {
+    "class": "fa-lyft",
+    "label": "lyft"
+  },
+  {
+    "class": "fa-magento",
+    "label": "magento"
+  },
+  {
+    "class": "fa-mailchimp",
+    "label": "mailchimp"
+  },
+  {
+    "class": "fa-mandalorian",
+    "label": "mandalorian"
+  },
+  {
+    "class": "fa-markdown",
+    "label": "markdown"
+  },
+  {
+    "class": "fa-mastodon",
+    "label": "mastodon"
+  },
+  {
+    "class": "fa-maxcdn",
+    "label": "maxcdn"
+  },
+  {
+    "class": "fa-mdb",
+    "label": "mdb"
+  },
+  {
+    "class": "fa-medapps",
+    "label": "medapps"
+  },
+  {
+    "class": "fa-medium",
+    "label": "medium"
+  },
+  {
+    "class": "fa-medrt",
+    "label": "medrt"
+  },
+  {
+    "class": "fa-meetup",
+    "label": "meetup"
+  },
+  {
+    "class": "fa-megaport",
+    "label": "megaport"
+  },
+  {
+    "class": "fa-mendeley",
+    "label": "mendeley"
+  },
+  {
+    "class": "fa-meta",
+    "label": "meta"
+  },
+  {
+    "class": "fa-microblog",
+    "label": "microblog"
+  },
+  {
+    "class": "fa-microsoft",
+    "label": "microsoft"
+  },
+  {
+    "class": "fa-mintbit",
+    "label": "mintbit"
+  },
+  {
+    "class": "fa-mix",
+    "label": "mix"
+  },
+  {
+    "class": "fa-mixcloud",
+    "label": "mixcloud"
+  },
+  {
+    "class": "fa-mixer",
+    "label": "mixer"
+  },
+  {
+    "class": "fa-mizuni",
+    "label": "mizuni"
+  },
+  {
+    "class": "fa-modx",
+    "label": "modx"
+  },
+  {
+    "class": "fa-monero",
+    "label": "monero"
+  },
+  {
+    "class": "fa-napster",
+    "label": "napster"
+  },
+  {
+    "class": "fa-neos",
+    "label": "neos"
+  },
+  {
+    "class": "fa-nfc-directional",
+    "label": "nfc directional"
+  },
+  {
+    "class": "fa-nfc-symbol",
+    "label": "nfc symbol"
+  },
+  {
+    "class": "fa-nimblr",
+    "label": "nimblr"
+  },
+  {
+    "class": "fa-node",
+    "label": "node"
+  },
+  {
+    "class": "fa-node-js",
+    "label": "node js"
+  },
+  {
+    "class": "fa-npm",
+    "label": "npm"
+  },
+  {
+    "class": "fa-ns8",
+    "label": "ns8"
+  },
+  {
+    "class": "fa-nutritionix",
+    "label": "nutritionix"
+  },
+  {
+    "class": "fa-octopus-deploy",
+    "label": "octopus deploy"
+  },
+  {
+    "class": "fa-odnoklassniki",
+    "label": "odnoklassniki"
+  },
+  {
+    "class": "fa-odysee",
+    "label": "odysee"
+  },
+  {
+    "class": "fa-old-republic",
+    "label": "old republic"
+  },
+  {
+    "class": "fa-opencart",
+    "label": "opencart"
+  },
+  {
+    "class": "fa-openid",
+    "label": "openid"
+  },
+  {
+    "class": "fa-opensuse",
+    "label": "opensuse"
+  },
+  {
+    "class": "fa-opera",
+    "label": "opera"
+  },
+  {
+    "class": "fa-optin-monster",
+    "label": "optin monster"
+  },
+  {
+    "class": "fa-orcid",
+    "label": "orcid"
+  },
+  {
+    "class": "fa-osi",
+    "label": "osi"
+  },
+  {
+    "class": "fa-padlet",
+    "label": "padlet"
+  },
+  {
+    "class": "fa-page4",
+    "label": "page4"
+  },
+  {
+    "class": "fa-pagelines",
+    "label": "pagelines"
+  },
+  {
+    "class": "fa-palfed",
+    "label": "palfed"
+  },
+  {
+    "class": "fa-patreon",
+    "label": "patreon"
+  },
+  {
+    "class": "fa-paypal",
+    "label": "paypal"
+  },
+  {
+    "class": "fa-perbyte",
+    "label": "perbyte"
+  },
+  {
+    "class": "fa-periscope",
+    "label": "periscope"
+  },
+  {
+    "class": "fa-phabricator",
+    "label": "phabricator"
+  },
+  {
+    "class": "fa-phoenix-framework",
+    "label": "phoenix framework"
+  },
+  {
+    "class": "fa-phoenix-squadron",
+    "label": "phoenix squadron"
+  },
+  {
+    "class": "fa-php",
+    "label": "php"
+  },
+  {
+    "class": "fa-pied-piper",
+    "label": "pied piper"
+  },
+  {
+    "class": "fa-pied-piper-alt",
+    "label": "pied piper alt"
+  },
+  {
+    "class": "fa-pied-piper-hat",
+    "label": "pied piper hat"
+  },
+  {
+    "class": "fa-pied-piper-pp",
+    "label": "pied piper pp"
+  },
+  {
+    "class": "fa-pinterest",
+    "label": "pinterest"
+  },
+  {
+    "class": "fa-pinterest-p",
+    "label": "pinterest p"
+  },
+  {
+    "class": "fa-pix",
+    "label": "pix"
+  },
+  {
+    "class": "fa-pixiv",
+    "label": "pixiv"
+  },
+  {
+    "class": "fa-playstation",
+    "label": "playstation"
+  },
+  {
+    "class": "fa-product-hunt",
+    "label": "product hunt"
+  },
+  {
+    "class": "fa-pushed",
+    "label": "pushed"
+  },
+  {
+    "class": "fa-python",
+    "label": "python"
+  },
+  {
+    "class": "fa-qq",
+    "label": "qq"
+  },
+  {
+    "class": "fa-quinscape",
+    "label": "quinscape"
+  },
+  {
+    "class": "fa-quora",
+    "label": "quora"
+  },
+  {
+    "class": "fa-r-project",
+    "label": "r project"
+  },
+  {
+    "class": "fa-raspberry-pi",
+    "label": "raspberry pi"
+  },
+  {
+    "class": "fa-ravelry",
+    "label": "ravelry"
+  },
+  {
+    "class": "fa-react",
+    "label": "react"
+  },
+  {
+    "class": "fa-reacteurope",
+    "label": "reacteurope"
+  },
+  {
+    "class": "fa-readme",
+    "label": "readme"
+  },
+  {
+    "class": "fa-rebel",
+    "label": "rebel"
+  },
+  {
+    "class": "fa-red-river",
+    "label": "red river"
+  },
+  {
+    "class": "fa-reddit",
+    "label": "reddit"
+  },
+  {
+    "class": "fa-reddit-alien",
+    "label": "reddit alien"
+  },
+  {
+    "class": "fa-redhat",
+    "label": "redhat"
+  },
+  {
+    "class": "fa-renren",
+    "label": "renren"
+  },
+  {
+    "class": "fa-replyd",
+    "label": "replyd"
+  },
+  {
+    "class": "fa-researchgate",
+    "label": "researchgate"
+  },
+  {
+    "class": "fa-resolving",
+    "label": "resolving"
+  },
+  {
+    "class": "fa-rev",
+    "label": "rev"
+  },
+  {
+    "class": "fa-rocketchat",
+    "label": "rocketchat"
+  },
+  {
+    "class": "fa-rockrms",
+    "label": "rockrms"
+  },
+  {
+    "class": "fa-rust",
+    "label": "rust"
+  },
+  {
+    "class": "fa-safari",
+    "label": "safari"
+  },
+  {
+    "class": "fa-salesforce",
+    "label": "salesforce"
+  },
+  {
+    "class": "fa-sass",
+    "label": "sass"
+  },
+  {
+    "class": "fa-schlix",
+    "label": "schlix"
+  },
+  {
+    "class": "fa-screenpal",
+    "label": "screenpal"
+  },
+  {
+    "class": "fa-scribd",
+    "label": "scribd"
+  },
+  {
+    "class": "fa-searchengin",
+    "label": "searchengin"
+  },
+  {
+    "class": "fa-sellcast",
+    "label": "sellcast"
+  },
+  {
+    "class": "fa-sellsy",
+    "label": "sellsy"
+  },
+  {
+    "class": "fa-servicestack",
+    "label": "servicestack"
+  },
+  {
+    "class": "fa-shirtsinbulk",
+    "label": "shirtsinbulk"
+  },
+  {
+    "class": "fa-shoelace",
+    "label": "shoelace"
+  },
+  {
+    "class": "fa-shopify",
+    "label": "shopify"
+  },
+  {
+    "class": "fa-shopware",
+    "label": "shopware"
+  },
+  {
+    "class": "fa-signal-messenger",
+    "label": "signal messenger"
+  },
+  {
+    "class": "fa-simplybuilt",
+    "label": "simplybuilt"
+  },
+  {
+    "class": "fa-sistrix",
+    "label": "sistrix"
+  },
+  {
+    "class": "fa-sith",
+    "label": "sith"
+  },
+  {
+    "class": "fa-sitrox",
+    "label": "sitrox"
+  },
+  {
+    "class": "fa-sketch",
+    "label": "sketch"
+  },
+  {
+    "class": "fa-skyatlas",
+    "label": "skyatlas"
+  },
+  {
+    "class": "fa-skype",
+    "label": "skype"
+  },
+  {
+    "class": "fa-slack",
+    "label": "slack"
+  },
+  {
+    "class": "fa-slideshare",
+    "label": "slideshare"
+  },
+  {
+    "class": "fa-snapchat",
+    "label": "snapchat"
+  },
+  {
+    "class": "fa-soundcloud",
+    "label": "soundcloud"
+  },
+  {
+    "class": "fa-sourcetree",
+    "label": "sourcetree"
+  },
+  {
+    "class": "fa-space-awesome",
+    "label": "space awesome"
+  },
+  {
+    "class": "fa-speakap",
+    "label": "speakap"
+  },
+  {
+    "class": "fa-speaker-deck",
+    "label": "speaker deck"
+  },
+  {
+    "class": "fa-spotify",
+    "label": "spotify"
+  },
+  {
+    "class": "fa-square-behance",
+    "label": "square behance"
+  },
+  {
+    "class": "fa-square-bluesky",
+    "label": "square bluesky"
+  },
+  {
+    "class": "fa-square-dribbble",
+    "label": "square dribbble"
+  },
+  {
+    "class": "fa-square-facebook",
+    "label": "square facebook"
+  },
+  {
+    "class": "fa-square-font-awesome",
+    "label": "square font awesome"
+  },
+  {
+    "class": "fa-square-font-awesome-stroke",
+    "label": "square font awesome stroke"
+  },
+  {
+    "class": "fa-square-git",
+    "label": "square git"
+  },
+  {
+    "class": "fa-square-github",
+    "label": "square github"
+  },
+  {
+    "class": "fa-square-gitlab",
+    "label": "square gitlab"
+  },
+  {
+    "class": "fa-square-google-plus",
+    "label": "square google plus"
+  },
+  {
+    "class": "fa-square-hacker-news",
+    "label": "square hacker news"
+  },
+  {
+    "class": "fa-square-instagram",
+    "label": "square instagram"
+  },
+  {
+    "class": "fa-square-js",
+    "label": "square js"
+  },
+  {
+    "class": "fa-square-lastfm",
+    "label": "square lastfm"
+  },
+  {
+    "class": "fa-square-letterboxd",
+    "label": "square letterboxd"
+  },
+  {
+    "class": "fa-square-odnoklassniki",
+    "label": "square odnoklassniki"
+  },
+  {
+    "class": "fa-square-pied-piper",
+    "label": "square pied piper"
+  },
+  {
+    "class": "fa-square-pinterest",
+    "label": "square pinterest"
+  },
+  {
+    "class": "fa-square-reddit",
+    "label": "square reddit"
+  },
+  {
+    "class": "fa-square-snapchat",
+    "label": "square snapchat"
+  },
+  {
+    "class": "fa-square-steam",
+    "label": "square steam"
+  },
+  {
+    "class": "fa-square-threads",
+    "label": "square threads"
+  },
+  {
+    "class": "fa-square-tumblr",
+    "label": "square tumblr"
+  },
+  {
+    "class": "fa-square-twitter",
+    "label": "square twitter"
+  },
+  {
+    "class": "fa-square-upwork",
+    "label": "square upwork"
+  },
+  {
+    "class": "fa-square-viadeo",
+    "label": "square viadeo"
+  },
+  {
+    "class": "fa-square-vimeo",
+    "label": "square vimeo"
+  },
+  {
+    "class": "fa-square-web-awesome",
+    "label": "square web awesome"
+  },
+  {
+    "class": "fa-square-web-awesome-stroke",
+    "label": "square web awesome stroke"
+  },
+  {
+    "class": "fa-square-whatsapp",
+    "label": "square whatsapp"
+  },
+  {
+    "class": "fa-square-x-twitter",
+    "label": "square x twitter"
+  },
+  {
+    "class": "fa-square-xing",
+    "label": "square xing"
+  },
+  {
+    "class": "fa-square-youtube",
+    "label": "square youtube"
+  },
+  {
+    "class": "fa-squarespace",
+    "label": "squarespace"
+  },
+  {
+    "class": "fa-stack-exchange",
+    "label": "stack exchange"
+  },
+  {
+    "class": "fa-stack-overflow",
+    "label": "stack overflow"
+  },
+  {
+    "class": "fa-stackpath",
+    "label": "stackpath"
+  },
+  {
+    "class": "fa-staylinked",
+    "label": "staylinked"
+  },
+  {
+    "class": "fa-steam",
+    "label": "steam"
+  },
+  {
+    "class": "fa-steam-symbol",
+    "label": "steam symbol"
+  },
+  {
+    "class": "fa-sticker-mule",
+    "label": "sticker mule"
+  },
+  {
+    "class": "fa-strava",
+    "label": "strava"
+  },
+  {
+    "class": "fa-stripe",
+    "label": "stripe"
+  },
+  {
+    "class": "fa-stripe-s",
+    "label": "stripe s"
+  },
+  {
+    "class": "fa-stubber",
+    "label": "stubber"
+  },
+  {
+    "class": "fa-studiovinari",
+    "label": "studiovinari"
+  },
+  {
+    "class": "fa-stumbleupon",
+    "label": "stumbleupon"
+  },
+  {
+    "class": "fa-stumbleupon-circle",
+    "label": "stumbleupon circle"
+  },
+  {
+    "class": "fa-superpowers",
+    "label": "superpowers"
+  },
+  {
+    "class": "fa-supple",
+    "label": "supple"
+  },
+  {
+    "class": "fa-suse",
+    "label": "suse"
+  },
+  {
+    "class": "fa-swift",
+    "label": "swift"
+  },
+  {
+    "class": "fa-symfony",
+    "label": "symfony"
+  },
+  {
+    "class": "fa-teamspeak",
+    "label": "teamspeak"
+  },
+  {
+    "class": "fa-telegram",
+    "label": "telegram"
+  },
+  {
+    "class": "fa-tencent-weibo",
+    "label": "tencent weibo"
+  },
+  {
+    "class": "fa-the-red-yeti",
+    "label": "the red yeti"
+  },
+  {
+    "class": "fa-themeco",
+    "label": "themeco"
+  },
+  {
+    "class": "fa-themeisle",
+    "label": "themeisle"
+  },
+  {
+    "class": "fa-think-peaks",
+    "label": "think peaks"
+  },
+  {
+    "class": "fa-threads",
+    "label": "threads"
+  },
+  {
+    "class": "fa-tiktok",
+    "label": "tiktok"
+  },
+  {
+    "class": "fa-trade-federation",
+    "label": "trade federation"
+  },
+  {
+    "class": "fa-trello",
+    "label": "trello"
+  },
+  {
+    "class": "fa-tumblr",
+    "label": "tumblr"
+  },
+  {
+    "class": "fa-twitch",
+    "label": "twitch"
+  },
+  {
+    "class": "fa-twitter",
+    "label": "twitter"
+  },
+  {
+    "class": "fa-typo3",
+    "label": "typo3"
+  },
+  {
+    "class": "fa-uber",
+    "label": "uber"
+  },
+  {
+    "class": "fa-ubuntu",
+    "label": "ubuntu"
+  },
+  {
+    "class": "fa-uikit",
+    "label": "uikit"
+  },
+  {
+    "class": "fa-umbraco",
+    "label": "umbraco"
+  },
+  {
+    "class": "fa-uncharted",
+    "label": "uncharted"
+  },
+  {
+    "class": "fa-uniregistry",
+    "label": "uniregistry"
+  },
+  {
+    "class": "fa-unity",
+    "label": "unity"
+  },
+  {
+    "class": "fa-unsplash",
+    "label": "unsplash"
+  },
+  {
+    "class": "fa-untappd",
+    "label": "untappd"
+  },
+  {
+    "class": "fa-ups",
+    "label": "ups"
+  },
+  {
+    "class": "fa-upwork",
+    "label": "upwork"
+  },
+  {
+    "class": "fa-usb",
+    "label": "usb"
+  },
+  {
+    "class": "fa-usps",
+    "label": "usps"
+  },
+  {
+    "class": "fa-ussunnah",
+    "label": "ussunnah"
+  },
+  {
+    "class": "fa-vaadin",
+    "label": "vaadin"
+  },
+  {
+    "class": "fa-viacoin",
+    "label": "viacoin"
+  },
+  {
+    "class": "fa-viadeo",
+    "label": "viadeo"
+  },
+  {
+    "class": "fa-viber",
+    "label": "viber"
+  },
+  {
+    "class": "fa-vimeo",
+    "label": "vimeo"
+  },
+  {
+    "class": "fa-vimeo-v",
+    "label": "vimeo v"
+  },
+  {
+    "class": "fa-vine",
+    "label": "vine"
+  },
+  {
+    "class": "fa-vk",
+    "label": "vk"
+  },
+  {
+    "class": "fa-vnv",
+    "label": "vnv"
+  },
+  {
+    "class": "fa-vuejs",
+    "label": "vuejs"
+  },
+  {
+    "class": "fa-watchman-monitoring",
+    "label": "watchman monitoring"
+  },
+  {
+    "class": "fa-waze",
+    "label": "waze"
+  },
+  {
+    "class": "fa-web-awesome",
+    "label": "web awesome"
+  },
+  {
+    "class": "fa-webflow",
+    "label": "webflow"
+  },
+  {
+    "class": "fa-weebly",
+    "label": "weebly"
+  },
+  {
+    "class": "fa-weibo",
+    "label": "weibo"
+  },
+  {
+    "class": "fa-weixin",
+    "label": "weixin"
+  },
+  {
+    "class": "fa-whatsapp",
+    "label": "whatsapp"
+  },
+  {
+    "class": "fa-whmcs",
+    "label": "whmcs"
+  },
+  {
+    "class": "fa-wikipedia-w",
+    "label": "wikipedia w"
+  },
+  {
+    "class": "fa-windows",
+    "label": "windows"
+  },
+  {
+    "class": "fa-wirsindhandwerk",
+    "label": "wirsindhandwerk"
+  },
+  {
+    "class": "fa-wix",
+    "label": "wix"
+  },
+  {
+    "class": "fa-wizards-of-the-coast",
+    "label": "wizards of the coast"
+  },
+  {
+    "class": "fa-wodu",
+    "label": "wodu"
+  },
+  {
+    "class": "fa-wolf-pack-battalion",
+    "label": "wolf pack battalion"
+  },
+  {
+    "class": "fa-wordpress",
+    "label": "wordpress"
+  },
+  {
+    "class": "fa-wordpress-simple",
+    "label": "wordpress simple"
+  },
+  {
+    "class": "fa-wpbeginner",
+    "label": "wpbeginner"
+  },
+  {
+    "class": "fa-wpexplorer",
+    "label": "wpexplorer"
+  },
+  {
+    "class": "fa-wpforms",
+    "label": "wpforms"
+  },
+  {
+    "class": "fa-wpressr",
+    "label": "wpressr"
+  },
+  {
+    "class": "fa-x-twitter",
+    "label": "x twitter"
+  },
+  {
+    "class": "fa-xbox",
+    "label": "xbox"
+  },
+  {
+    "class": "fa-xing",
+    "label": "xing"
+  },
+  {
+    "class": "fa-y-combinator",
+    "label": "y combinator"
+  },
+  {
+    "class": "fa-yahoo",
+    "label": "yahoo"
+  },
+  {
+    "class": "fa-yammer",
+    "label": "yammer"
+  },
+  {
+    "class": "fa-yandex",
+    "label": "yandex"
+  },
+  {
+    "class": "fa-yandex-international",
+    "label": "yandex international"
+  },
+  {
+    "class": "fa-yarn",
+    "label": "yarn"
+  },
+  {
+    "class": "fa-yelp",
+    "label": "yelp"
+  },
+  {
+    "class": "fa-yoast",
+    "label": "yoast"
+  },
+  {
+    "class": "fa-youtube",
+    "label": "youtube"
+  },
+  {
+    "class": "fa-zhihu",
+    "label": "zhihu"
+  }
+]

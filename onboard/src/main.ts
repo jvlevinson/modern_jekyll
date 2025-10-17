@@ -11,6 +11,7 @@ import { initThemeEditor } from './controllers/theme-editor.js';
 import { initContentEditor } from './controllers/content-editor.js';
 import { initPreviewManager } from './core/preview-manager.js';
 import { initDashboardNav } from './dashboard-nav.js';
+import { initDebugOverlay } from './utils/debug-overlay.js';
 
 /**
  * Security: Only allow editor on localhost/127.0.0.1
@@ -84,6 +85,9 @@ function autoInit(): void {
 
   // Initialize dashboard navigation (tab switching)
   initDashboardNav();
+
+  // Debug overlay (localhost only)
+  initDebugOverlay();
 
   // Initialize theme editor
   const editorContainer = document.querySelector('[data-theme-editor]');
