@@ -58,7 +58,7 @@ Edit `_config.yml`:
 resume:
   heading: Resume & Credentials
   description: Download my complete resume to learn more about my professional experience...
-  file_path: /public/files/wmorr_director-resume-v2.1.0.pdf
+  file_path: /public/files/jvlevinson_director-resume-v2.1.0.pdf
   view_button_text: View Resume
   download_button_text: Download Resume
 ```
@@ -381,7 +381,7 @@ Checks:
 Use semantic versioning in filename:
 
 ```
-wmorr_director-resume-v2.1.0.pdf
+jvlevinson_director-resume-v2.1.0.pdf
 ```
 
 - **Major**: Complete redesign (v2.0.0 → v3.0.0)

@@ -12,6 +12,7 @@ vendor/
 .claude/
 CLAUDE.md
 .cursor/
+scripts/
 
 .bak/
 .mocks/

@@ -1,0 +1,123 @@
+// =============================================================================
+// shadcn/ui Design Tokens for Onboard Dashboard
+// =============================================================================
+// Modern design tokens following shadcn/ui naming convention
+// Uses OKLCH color space for perceptual uniformity
+// These style the DASHBOARD SHELL (header, nav, sections)
+// Editor components still use --editor-* tokens for fine control
+// Phase 7+: Dual token system
+// =============================================================================
+
+:root {
+  // ---------------------------------------------------------------------------
+  // shadcn/ui Core Tokens (OKLCH Color Space)
+  // ---------------------------------------------------------------------------
+  // Base colors using foreground/background convention
+  --background: oklch(98% 0 0);              // #f8fafc equivalent
+  --foreground: oklch(9% 0 0);               // #0f172a equivalent
+
+  // Card surfaces (elevated UI elements like dashboard sections)
+  --card: oklch(100% 0 0);                   // Pure white
+  --card-foreground: oklch(9% 0 0);
+
+  // Popover/dropdown surfaces
+  --popover: oklch(100% 0 0);
+  --popover-foreground: oklch(9% 0 0);
+
+  // Primary brand color (dashboard UI accent)
+  --primary: oklch(55% 0.25 220);            // Blue
+  --primary-foreground: oklch(98% 0 0);
+
+  // Secondary accents
+  --secondary: oklch(96% 0 0);               // Light gray
+  --secondary-foreground: oklch(9% 0 0);
+
+  // Muted backgrounds (subtle surfaces)
+  --muted: oklch(96% 0 0);                   // Light gray bg
+  --muted-foreground: oklch(45% 0 0);        // Muted text
+
+  // Accent color (highlights, hovers)
+  --accent: oklch(96% 0 0);
+  --accent-foreground: oklch(9% 0 0);
+
+  // Destructive/danger states
+  --destructive: oklch(62% 0.25 29);         // Red
+  --destructive-foreground: oklch(98% 0 0);
+
+  // Semantic status colors (extended from shadcn)
+  --success: oklch(70% 0.18 145);            // Green
+  --success-foreground: oklch(98% 0 0);
+  --warning: oklch(75% 0.15 85);             // Orange/Yellow
+  --warning-foreground: oklch(9% 0 0);
+  --info: oklch(65% 0.15 220);               // Blue
+  --info-foreground: oklch(98% 0 0);
+
+  // Border and input styling
+  --border: oklch(89% 0 0);                  // #e2e8f0 equivalent
+  --input: oklch(89% 0 0);
+  --ring: oklch(55% 0.25 220);               // Focus ring (primary)
+
+  // Border radius (shadcn convention)
+  --radius: 0.5rem;                          // Default border radius
+
+  // ---------------------------------------------------------------------------
+  // Chart Colors (OKLCH)
+  // ---------------------------------------------------------------------------
+  // For data visualization
+  --chart-1: oklch(69% 0.15 258);            // Blue
+  --chart-2: oklch(70% 0.14 142);            // Green
+  --chart-3: oklch(75% 0.23 85);             // Yellow
+  --chart-4: oklch(65% 0.24 28);             // Orange
+  --chart-5: oklch(64% 0.19 310);            // Purple
+}
+
+// =============================================================================
+// Dark Mode Overrides
+// =============================================================================
+// Using .dark class (shadcn convention)
+// =============================================================================
+
+.dark {
+  --background: oklch(9% 0 0);               // Dark background
+  --foreground: oklch(98% 0 0);              // Light text
+
+  --card: oklch(12% 0 0);
+  --card-foreground: oklch(98% 0 0);
+
+  --popover: oklch(12% 0 0);
+  --popover-foreground: oklch(98% 0 0);
+
+  --primary: oklch(55% 0.25 220);            // Keep brand color
+  --primary-foreground: oklch(98% 0 0);
+
+  --secondary: oklch(20% 0 0);               // Dark gray
+  --secondary-foreground: oklch(98% 0 0);
+
+  --muted: oklch(20% 0 0);
+  --muted-foreground: oklch(60% 0 0);
+
+  --accent: oklch(20% 0 0);
+  --accent-foreground: oklch(98% 0 0);
+
+  --destructive: oklch(62% 0.25 29);
+  --destructive-foreground: oklch(98% 0 0);
+
+  --success: oklch(70% 0.18 145);
+  --success-foreground: oklch(98% 0 0);
+
+  --warning: oklch(75% 0.15 85);
+  --warning-foreground: oklch(9% 0 0);
+
+  --info: oklch(65% 0.15 220);
+  --info-foreground: oklch(98% 0 0);
+
+  --border: oklch(20% 0 0);
+  --input: oklch(20% 0 0);
+  --ring: oklch(55% 0.25 220);
+
+  --chart-1: oklch(69% 0.15 258);
+  --chart-2: oklch(70% 0.14 142);
+  --chart-3: oklch(75% 0.23 85);
+  --chart-4: oklch(65% 0.24 28);
+  --chart-5: oklch(64% 0.19 310);
+}

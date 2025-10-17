@@ -1,0 +1,466 @@
+/**
+ * =============================================================================
+ * Content Editor Styles (BEM Architecture)
+ * =============================================================================
+ * Styles for hero, services, and portfolio content editors
+ * Consistent with theme-editor.scss design patterns
+ * =============================================================================
+ */
+
+/**
+ * Content Editor Container
+ */
+.content-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+
+  /**
+   * Header
+   */
+  &__header {
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid var(--editor-border);
+  }
+
+  &__title {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--editor-text);
+  }
+
+  &__description {
+    margin: 0;
+    color: var(--editor-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  /**
+   * Tab Navigation
+   */
+  &__tabs {
+    display: flex;
+    gap: 0.5rem;
+    border-bottom: 2px solid var(--editor-border);
+    padding-bottom: 0;
+  }
+
+  &__tab {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    color: var(--editor-text-muted);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    .tab-icon {
+      font-size: 1.25rem;
+      line-height: 1;
+    }
+
+    &:hover {
+      color: var(--editor-primary);
+      background: var(--editor-bg);
+    }
+
+    &--active {
+      color: var(--editor-primary);
+      border-bottom-color: var(--editor-primary);
+      font-weight: 600;
+    }
+  }
+
+  /**
+   * Panels
+   */
+  &__panels {
+    position: relative;
+    min-height: 400px;
+  }
+
+  &__panel {
+    display: none;
+
+    &--active {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+  }
+
+  /**
+   * Forms
+   */
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  /**
+   * Form Fields
+   */
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__label {
+    font-weight: 600;
+    color: var(--editor-text);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  &__input,
+  &__textarea {
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--editor-border);
+    border-radius: 0.375rem;
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--editor-text);
+    background: var(--editor-bg);
+    transition: border-color 0.2s ease;
+
+    &:focus {
+      outline: none;
+      border-color: var(--editor-primary);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    &::placeholder {
+      color: var(--editor-text-muted);
+    }
+
+    &--small {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.875rem;
+    }
+  }
+
+  &__textarea {
+    resize: vertical;
+    min-height: 100px;
+    line-height: 1.6;
+
+    &--small {
+      min-height: 60px;
+    }
+  }
+
+  /**
+   * Array Editors (Services, Portfolio)
+   */
+  &__array {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: var(--editor-surface);
+    border-radius: 0.5rem;
+  }
+
+  &__array-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+
+    h3 {
+      margin: 0;
+      font-size: 1.125rem;
+      color: var(--editor-text);
+    }
+  }
+
+  &__array-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /**
+   * Action Buttons
+   */
+  &__actions {
+    display: flex;
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid var(--editor-border);
+  }
+}
+
+/**
+ * =============================================================================
+ * Service Item (Array Item)
+ * =============================================================================
+ */
+.service-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--editor-bg);
+  border: 2px solid var(--editor-border);
+  border-radius: 0.5rem;
+  transition: border-color 0.2s ease;
+
+  &:hover {
+    border-color: var(--editor-primary);
+  }
+
+  &__handle {
+    display: flex;
+    align-items: center;
+    cursor: grab;
+    color: var(--editor-text-muted);
+    font-size: 1.25rem;
+    padding: 0.5rem;
+
+    &:active {
+      cursor: grabbing;
+    }
+  }
+
+  &__fields {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    flex: 1;
+  }
+}
+
+/**
+ * =============================================================================
+ * Portfolio Item (Array Item with Image)
+ * =============================================================================
+ */
+.portfolio-item {
+  display: grid;
+  grid-template-columns: 100px 1fr auto;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--editor-bg);
+  border: 2px solid var(--editor-border);
+  border-radius: 0.5rem;
+  transition: border-color 0.2s ease;
+
+  &:hover {
+    border-color: var(--editor-primary);
+  }
+
+  &__preview {
+    display: flex;
+    align-items: flex-start;
+
+    img {
+      width: 100%;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 0.375rem;
+      border: 2px solid var(--editor-border);
+    }
+  }
+
+  &__fields {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    flex: 1;
+  }
+}
+
+/**
+ * =============================================================================
+ * Upload Zone (Inline variant)
+ * =============================================================================
+ */
+.upload-zone {
+  &--inline {
+    margin-top: 0.5rem;
+
+    .upload-zone__droparea {
+      padding: 1rem;
+      min-height: 80px;
+      font-size: 0.875rem;
+    }
+
+    .upload-zone__icon {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
+
+/**
+ * =============================================================================
+ * Buttons (Reused from theme editor)
+ * =============================================================================
+ */
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &--primary {
+    background: var(--editor-primary);
+    color: white;
+
+    &:hover:not(:disabled) {
+      background: var(--editor-primary-hover);
+    }
+  }
+
+  &--secondary {
+    background: var(--editor-border);
+    color: var(--editor-text);
+
+    &:hover:not(:disabled) {
+      background: var(--editor-border-dark);
+    }
+  }
+
+  &--danger {
+    background: #ef4444;
+    color: white;
+
+    &:hover:not(:disabled) {
+      background: #dc2626;
+    }
+  }
+
+  &--success {
+    background: #10b981;
+    color: white;
+
+    &:hover:not(:disabled) {
+      background: #059669;
+    }
+  }
+
+  &--small {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+  }
+
+  &--large {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+}
+
+/**
+ * =============================================================================
+ * Animations
+ * =============================================================================
+ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/**
+ * =============================================================================
+ * Error States
+ * =============================================================================
+ */
+.error {
+  padding: 1rem;
+  background: #fee2e2;
+  border: 2px solid #ef4444;
+  border-radius: 0.5rem;
+  color: #991b1b;
+  font-weight: 600;
+}
+
+/**
+ * =============================================================================
+ * Loading States
+ * =============================================================================
+ */
+.loading {
+  padding: 2rem;
+  text-align: center;
+  color: var(--editor-text-muted);
+  font-style: italic;
+}
+
+/**
+ * =============================================================================
+ * Responsive Design
+ * =============================================================================
+ */
+@media (max-width: 768px) {
+  .content-editor {
+    &__tab {
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+    }
+
+    &__array {
+      padding: 1rem;
+    }
+  }
+
+  .service-item {
+    grid-template-columns: 1fr;
+
+    &__handle {
+      display: none;
+    }
+  }
+
+  .portfolio-item {
+    grid-template-columns: 1fr;
+
+    &__preview {
+      img {
+        width: 100%;
+        height: auto;
+        max-height: 200px;
+      }
+    }
+  }
+
+  .content-editor__actions {
+    flex-direction: column;
+
+    .btn {
+      width: 100%;
+    }
+  }
+}

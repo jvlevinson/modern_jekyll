@@ -1,0 +1,30 @@
+// =============================================================================
+// Onboard Theme Editor - Module Index
+// =============================================================================
+// Central import file for all onboard editor modules
+// Following 7-1 architecture pattern with @forward
+// Phase 7: TypeScript Theme Editor
+// =============================================================================
+
+// -----------------------------------------------------------------------------
+// Abstracts - Design Tokens
+// -----------------------------------------------------------------------------
+// Must be loaded first as they're used by components
+@forward 'abstracts/tokens-shadcn';  // shadcn/ui tokens for dashboard shell
+@forward 'abstracts/tokens';         // Editor tokens for theme components
+
+// -----------------------------------------------------------------------------
+// Components - Dashboard & Editor UI
+// -----------------------------------------------------------------------------
+// Dashboard layout (header, nav, footer, sections)
+@forward 'components/dashboard';
+
+// Theme editor components (modular BEM)
+@forward 'components/theme-editor';
+@forward 'components/color-picker';
+@forward 'components/color-selector-2d';
+@forward 'components/color-card';
+@forward 'components/color-gradient';
+@forward 'components/shade-matrix';
+@forward 'components/color-harmonies';
+@forward 'components/color-presets';

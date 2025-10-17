@@ -1,8 +1,12 @@
-const yaml = require('js-yaml');
-const Ajv = require('ajv');
-const addFormats = require('ajv-formats');
-const fs = require('fs');
-const path = require('path');
+import yaml from 'js-yaml';
+import Ajv from 'ajv';
+import addFormats from 'ajv-formats';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Colors for terminal output
 const colors = {
@@ -67,9 +71,10 @@ try {
 
     log('yellow', '\n💡 Tips:');
     log('cyan', '  • Check _config.yml for typos');
-    log('cyan', '  • Valid colors: orange, blue, green, purple, red');
-    log('cyan', '  • Valid theme modes: light, dark, auto');
-    log('cyan', '  • Valid neutral: slate, gray');
+    log('cyan', '  • Valid theme.brand_primary: OKLCH object {l, c, h}');
+    log('cyan', '  • Valid theme.brand_secondary: OKLCH object or null');
+    log('cyan', '  • Valid theme.mode: light, dark, auto');
+    log('cyan', '  • Valid theme.neutral: slate, gray, zinc, neutral, stone');
     log('cyan', '  • Font Awesome icons must start with "fa-"');
     console.log('');
 
@@ -82,7 +87,16 @@ try {
   logBright('cyan', 'Configuration Summary:');
   log('cyan', `  • Title: ${config.title}`);
   log('cyan', `  • Author: ${config.author}`);
-  log('cyan', `  • Theme: ${config.theme.brand_primary} (primary)${config.theme.brand_secondary ? `, ${config.theme.brand_secondary} (secondary)` : ''}`);
+
+  // Display OKLCH values
+  const primary = config.theme.brand_primary;
+  log('cyan', `  • Theme Primary: oklch(${primary.l}% ${primary.c} ${primary.h})`);
+
+  if (config.theme.brand_secondary) {
+    const secondary = config.theme.brand_secondary;
+    log('cyan', `  • Theme Secondary: oklch(${secondary.l}% ${secondary.c} ${secondary.h})`);
+  }
+
   log('cyan', `  • Mode: ${config.theme.mode}`);
   log('cyan', `  • Neutral: ${config.theme.neutral}`);
   log('cyan', `  • Services: ${config.services.list.length} items`);

@@ -19,7 +19,7 @@ The `github-pages` environment doesn't exist in repository settings.
 ### Solution
 GitHub Pages **automatically creates** this environment when you:
 
-1. Go to repository: `https://github.com/williammorr/Personal-Profile`
+1. Go to repository: `https://github.com/jvlevinson/Personal-Profile`
 2. Click **Settings** → **Pages**
 3. Under **Build and deployment**:
    - **Source:** Select `GitHub Actions` (NOT "Deploy from a branch")
@@ -37,7 +37,7 @@ The `github-pages` environment will be auto-created after the first successful w
 
 ### Symptoms
 - Workflow completes successfully (green checkmarks)
-- Visiting `https://williammorr.github.io/Personal-Profile` shows 404
+- Visiting `https://jvlevinson.github.io/Personal-Profile` shows 404
 
 ### Root Causes & Solutions
 
@@ -45,12 +45,12 @@ The `github-pages` environment will be auto-created after the first successful w
 **Solution:**
 1. Go to **Settings** → **Pages**
 2. Ensure **Source** is set to `GitHub Actions`
-3. You should see: "Your site is live at https://williammorr.github.io/Personal-Profile"
+3. You should see: "Your site is live at https://jvlevinson.github.io/Personal-Profile"
 
 #### B. Wrong Repository Name
 **Solution:**
 - Repository name **must be** `Personal-Profile` (case-sensitive)
-- Check URL: `https://github.com/williammorr/Personal-Profile`
+- Check URL: `https://github.com/jvlevinson/Personal-Profile`
 - Do NOT rename repository
 
 #### C. Baseurl Mismatch
@@ -107,7 +107,7 @@ git push upstream master
 ### Symptoms
 - Site loads but has no styling
 - Browser console shows 404 errors for assets
-- Example: `https://williammorr.github.io/css/main.css` (404)
+- Example: `https://jvlevinson.github.io/css/main.css` (404)
 
 ### Root Cause
 Asset paths missing `/Personal-Profile` prefix.
@@ -231,7 +231,7 @@ Use this checklist to systematically verify your deployment:
 
 ### Configuration Files
 - [ ] `_config.yml` has:
-  - `url: "https://williammorr.github.io"`
+  - `url: "https://jvlevinson.github.io"`
   - `baseurl: "/Personal-Profile"`
 - [ ] `Gemfile` includes `gem 'webrick', '~> 1.8'`
 - [ ] `Gemfile.lock` exists and is committed
@@ -282,7 +282,7 @@ git branch --show-current
 
 # Check remote
 git remote -v
-# Should show: upstream https://github.com/williammorr/Personal-Profile.git
+# Should show: upstream https://github.com/jvlevinson/Personal-Profile.git
 ```
 
 ### 4. Monitor Deployment
@@ -291,7 +291,7 @@ git remote -v
 git push upstream master
 
 # Then immediately:
-# 1. Go to: https://github.com/williammorr/Personal-Profile/actions
+# 1. Go to: https://github.com/jvlevinson/Personal-Profile/actions
 # 2. Click on latest workflow run
 # 3. Watch real-time logs for errors
 ```
@@ -326,13 +326,13 @@ Your deployment is working correctly when:
 
 - [ ] Actions tab shows: ✅ Deploy Jekyll site to GitHub Pages
 - [ ] Settings → Pages shows: "Your site is live at..."
-- [ ] Visiting `https://williammorr.github.io/Personal-Profile` loads site
+- [ ] Visiting `https://jvlevinson.github.io/Personal-Profile` loads site
 - [ ] CSS styling appears correctly
 - [ ] All images load
 - [ ] Navigation works
 - [ ] Browser console has 0 errors
 
-**Expected URL:** https://williammorr.github.io/Personal-Profile
+**Expected URL:** https://jvlevinson.github.io/Personal-Profile
 
 ---
 

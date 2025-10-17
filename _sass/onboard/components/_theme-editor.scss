@@ -1,0 +1,758 @@
+// =============================================================================
+// Theme Editor Component (BEM Structure)
+// =============================================================================
+// Main controller component for the theme editor interface
+// BEM Block: .theme-editor
+// Phase 7: TypeScript Theme Editor
+// =============================================================================
+
+// -----------------------------------------------------------------------------
+// Theme Editor Block
+// -----------------------------------------------------------------------------
+// Root container for entire editor interface
+// -----------------------------------------------------------------------------
+.theme-editor {
+  max-width: var(--editor-max-width);
+  margin: 0 auto;
+  padding: var(--editor-space-2xl) var(--editor-space-xl);
+  font-family: var(--editor-font-sans);
+  color: var(--editor-text);
+
+  // ---------------------------------------------------------------------------
+  // Header Element
+  // ---------------------------------------------------------------------------
+  // Top section with title and status indicators
+  &__header {
+    margin-bottom: var(--editor-space-2xl);
+    padding-bottom: var(--editor-space-xl);
+    border-bottom: 2px solid var(--editor-border);
+  }
+
+  &__title {
+    font-size: var(--editor-font-size-3xl);
+    font-weight: var(--editor-font-weight-bold);
+    color: var(--editor-text);
+    margin-bottom: var(--editor-space-sm);
+  }
+
+  // ---------------------------------------------------------------------------
+  // Status Indicators
+  // ---------------------------------------------------------------------------
+  &__status {
+    display: flex;
+    gap: var(--editor-space-md);
+    align-items: center;
+    margin-top: var(--editor-space-md);
+  }
+
+  &__dirty-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--editor-space-xs);
+    padding: var(--editor-space-xs) var(--editor-space-md);
+    background: var(--editor-warning);
+    color: white;
+    border-radius: var(--editor-radius-full);
+    font-size: var(--editor-font-size-sm);
+    font-weight: var(--editor-font-weight-medium);
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+    &::before {
+      content: '●';
+      font-size: var(--editor-font-size-lg);
+    }
+  }
+
+  &__loading-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--editor-space-xs);
+    padding: var(--editor-space-xs) var(--editor-space-md);
+    background: var(--editor-info);
+    color: white;
+    border-radius: var(--editor-radius-full);
+    font-size: var(--editor-font-size-sm);
+    font-weight: var(--editor-font-weight-medium);
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border: 2px solid white;
+      border-top-color: transparent;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // Content Area
+  // ---------------------------------------------------------------------------
+  // Main content container with sections
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--editor-space-2xl);
+  }
+
+  // ---------------------------------------------------------------------------
+  // Section Element
+  // ---------------------------------------------------------------------------
+  // Logical grouping of related controls
+  &__section {
+    background: var(--editor-surface);
+    border-radius: var(--editor-radius-xl);
+    padding: var(--editor-space-xl);
+    border: 1px solid var(--editor-border);
+    transition: all 0.2s ease;
+
+    // Collapsible variant
+    &--collapsible {
+      .theme-editor__section-content {
+        overflow: hidden;
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+      }
+
+      &.is-collapsed {
+        .theme-editor__section-content {
+          max-height: 0 !important;
+          opacity: 0;
+          padding: 0;
+        }
+      }
+
+      &.is-expanded {
+        .theme-editor__section-content {
+          max-height: 2000px;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__section-title {
+    display: flex;
+    align-items: center;
+    gap: var(--editor-space-sm);
+    font-size: var(--editor-font-size-xl);
+    font-weight: var(--editor-font-weight-semibold);
+    color: var(--editor-text);
+    margin-bottom: var(--editor-space-lg);
+    padding-bottom: var(--editor-space-md);
+    border-bottom: 1px solid var(--editor-border);
+    user-select: none;
+
+    // Collapsible sections have clickable titles
+    [data-section].theme-editor__section--collapsible & {
+      cursor: pointer;
+      padding: var(--editor-space-md);
+      margin: calc(-1 * var(--editor-space-xl)) calc(-1 * var(--editor-space-xl)) var(--editor-space-lg);
+      border-bottom: 2px solid var(--editor-border);
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background: var(--editor-bg);
+      }
+    }
+  }
+
+  &__section-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+
+  &__section-arrow {
+    margin-left: auto;
+    font-size: 0.875rem;
+    transition: transform 0.3s ease;
+    color: var(--editor-text-muted);
+  }
+
+  &__section-content {
+    // Content wrapper for collapsible sections
+  }
+
+  // ---------------------------------------------------------------------------
+  // Colors Grid
+  // ---------------------------------------------------------------------------
+  // Container for color pickers
+  &__colors {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--editor-space-xl);
+
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // Secondary Color Container
+  // ---------------------------------------------------------------------------
+  &__secondary-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--editor-space-md);
+  }
+
+  &__secondary-toggle {
+    display: flex;
+    align-items: center;
+    gap: var(--editor-space-sm);
+    padding: var(--editor-space-md);
+    border-radius: var(--editor-radius-md);
+    background: var(--editor-bg);
+    border: 1px solid var(--editor-border);
+    cursor: pointer;
+    transition: all var(--editor-transition-fast);
+    font-weight: var(--editor-font-weight-medium);
+    color: var(--editor-text);
+
+    &:hover {
+      background: var(--editor-surface);
+      border-color: var(--editor-border-dark);
+    }
+
+    input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+      accent-color: var(--editor-primary);
+      margin: 0;
+
+      &:focus {
+        outline: 2px solid var(--editor-border-focus);
+        outline-offset: 2px;
+      }
+    }
+
+    span {
+      user-select: none;
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // Setting Group (for organized controls)
+  // ---------------------------------------------------------------------------
+  &__setting-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--editor-space-md);
+    margin-bottom: var(--editor-space-lg);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__label {
+    font-size: var(--editor-font-size-sm);
+    font-weight: var(--editor-font-weight-semibold);
+    color: var(--editor-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--editor-space-xs);
+  }
+
+  &__color-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--editor-space-md);
+  }
+
+  // ---------------------------------------------------------------------------
+  // Radio Button Styles
+  // ---------------------------------------------------------------------------
+  &__radio {
+    display: flex;
+    align-items: center;
+    gap: var(--editor-space-sm);
+    font-size: var(--editor-font-size-md);
+    font-weight: var(--editor-font-weight-medium);
+    color: var(--editor-text);
+    cursor: pointer;
+    padding: var(--editor-space-sm) var(--editor-space-md);
+    border-radius: var(--editor-radius-md);
+    border: 1px solid var(--editor-border);
+    background: var(--editor-surface);
+    transition: all var(--editor-transition-fast);
+
+    &:hover {
+      border-color: var(--editor-primary);
+      background: var(--editor-bg);
+    }
+
+    input[type="radio"] {
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+      accent-color: var(--editor-primary);
+      margin: 0;
+
+      &:focus {
+        outline: 2px solid var(--editor-border-focus);
+        outline-offset: 2px;
+      }
+
+      &:checked ~ span {
+        font-weight: var(--editor-font-weight-semibold);
+        color: var(--editor-primary);
+      }
+    }
+
+    span {
+      user-select: none;
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // Mode/Neutral Controls
+  // ---------------------------------------------------------------------------
+  &__mode,
+  &__neutral {
+    display: flex;
+    gap: var(--editor-space-md);
+    flex-wrap: wrap;
+  }
+
+  // ---------------------------------------------------------------------------
+  // Badge Styles
+  // ---------------------------------------------------------------------------
+  &__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--editor-space-xs);
+    padding: var(--editor-space-xs) var(--editor-space-md);
+    border-radius: var(--editor-radius-full);
+    font-size: var(--editor-font-size-sm);
+    font-weight: var(--editor-font-weight-semibold);
+    white-space: nowrap;
+
+    &--warning {
+      background: #f59e0b;
+      color: white;
+    }
+
+    &--success {
+      background: #10b981;
+      color: white;
+    }
+
+    &--info {
+      background: #3b82f6;
+      color: white;
+    }
+
+    &--error {
+      background: #ef4444;
+      color: white;
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // Footer Element
+  // ---------------------------------------------------------------------------
+  // Action buttons (save, reset)
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--editor-space-md);
+    margin-top: var(--editor-space-2xl);
+    padding-top: var(--editor-space-xl);
+    border-top: 2px solid var(--editor-border);
+  }
+
+  // ---------------------------------------------------------------------------
+  // Button Elements
+  // ---------------------------------------------------------------------------
+  &__button {
+    padding: var(--editor-space-sm) var(--editor-space-xl);
+    border-radius: var(--editor-radius-md);
+    font-weight: var(--editor-font-weight-semibold);
+    font-size: var(--editor-font-size-md);
+    cursor: pointer;
+    transition: all var(--editor-transition-fast);
+    border: 2px solid transparent;
+    font-family: var(--editor-font-sans);
+
+    &:focus {
+      outline: none;
+      box-shadow: var(--editor-shadow-focus);
+    }
+
+    &:active:not(:disabled) {
+      transform: translateY(1px);
+    }
+
+    // Primary button (Save)
+    &--primary {
+      background: var(--editor-primary);
+      color: white;
+      border-color: var(--editor-primary);
+
+      &:hover:not(:disabled) {
+        background: var(--editor-primary-hover);
+        border-color: var(--editor-primary-hover);
+        box-shadow: var(--editor-shadow-md);
+      }
+
+      &:active:not(:disabled) {
+        background: var(--editor-primary-active);
+        border-color: var(--editor-primary-active);
+      }
+    }
+
+    // Secondary button (Reset)
+    &--secondary {
+      background: var(--editor-surface);
+      color: var(--editor-text);
+      border-color: var(--editor-border-dark);
+
+      &:hover:not(:disabled) {
+        background: var(--editor-bg);
+        border-color: var(--editor-text-muted);
+      }
+
+      &:active:not(:disabled) {
+        background: var(--editor-border);
+      }
+    }
+
+    // Disabled state
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // Loading State
+  // ---------------------------------------------------------------------------
+  &__loading {
+    text-align: center;
+    padding: var(--editor-space-3xl) var(--editor-space-xl);
+  }
+
+  &__spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid var(--editor-border);
+    border-top-color: var(--editor-primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto var(--editor-space-md);
+  }
+
+  // ---------------------------------------------------------------------------
+  // Error State
+  // ---------------------------------------------------------------------------
+  &__error {
+    text-align: center;
+    padding: var(--editor-space-2xl) var(--editor-space-xl);
+    background: var(--editor-surface);
+    border-radius: var(--editor-radius-xl);
+    border: 1px solid var(--editor-danger);
+  }
+
+  &__error-message {
+    color: var(--editor-danger);
+    font-size: var(--editor-font-size-lg);
+    font-weight: var(--editor-font-weight-medium);
+    margin-bottom: var(--editor-space-lg);
+  }
+
+  // ---------------------------------------------------------------------------
+  // Toast Notifications
+  // ---------------------------------------------------------------------------
+  &__toast {
+    position: fixed;
+    bottom: var(--editor-space-xl);
+    right: var(--editor-space-xl);
+    padding: var(--editor-space-md) var(--editor-space-xl);
+    border-radius: var(--editor-radius-lg);
+    font-weight: var(--editor-font-weight-medium);
+    box-shadow: var(--editor-shadow-xl);
+    z-index: var(--editor-z-toast);
+    animation: slideIn 0.3s ease-out;
+    max-width: 400px;
+
+    &--success {
+      background: var(--editor-success);
+      color: white;
+    }
+
+    &--error {
+      background: var(--editor-danger);
+      color: white;
+    }
+  }
+}
+
+// =============================================================================
+// Animations
+// =============================================================================
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+// =============================================================================
+// Theme Section Component
+// =============================================================================
+// New section structure for modernized UI - minimal boxes
+.theme-section {
+  padding: var(--editor-space-xl) 0;
+  border-bottom: 1px solid var(--editor-border);
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--editor-space-lg);
+  }
+
+  &__title {
+    font-size: var(--editor-font-size-xl);
+    font-weight: var(--editor-font-weight-semibold);
+    color: var(--editor-text);
+    margin: 0;
+  }
+
+  &__icon {
+    margin-right: var(--editor-space-sm);
+  }
+
+  &__arrow {
+    margin-left: var(--editor-space-sm);
+    transition: transform var(--editor-transition-fast);
+  }
+
+  &__content {
+    overflow: hidden;
+    transition: all var(--editor-transition-normal);
+  }
+
+  // Collapsible state
+  &--collapsible {
+    .theme-section__title {
+      cursor: pointer;
+      user-select: none;
+
+      &:hover {
+        color: var(--editor-primary);
+      }
+    }
+
+    &.is-collapsed {
+      .theme-section__content {
+        max-height: 0;
+        opacity: 0;
+        margin-top: 0;
+      }
+
+      .theme-section__arrow {
+        transform: rotate(-90deg);
+      }
+    }
+
+    &.is-expanded {
+      .theme-section__content {
+        max-height: 5000px;
+        opacity: 1;
+        margin-top: var(--editor-space-md);
+      }
+    }
+  }
+
+  // Visualizations section (wider grid)
+  &--visualizations {
+    .visualizations-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--editor-space-xl);
+      margin-top: var(--editor-space-lg);
+    }
+  }
+}
+
+// =============================================================================
+// Toggle Switch Component
+// =============================================================================
+.toggle-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--editor-space-sm);
+  cursor: pointer;
+  user-select: none;
+
+  input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+
+    &:checked + .toggle-switch__slider {
+      background: var(--editor-primary);
+
+      &::before {
+        transform: translateX(20px);
+      }
+    }
+
+    &:focus + .toggle-switch__slider {
+      box-shadow: var(--editor-shadow-focus);
+    }
+  }
+
+  &__slider {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    background: var(--editor-border-dark);
+    border-radius: var(--editor-radius-full);
+    transition: background var(--editor-transition-fast);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 20px;
+      height: 20px;
+      background: white;
+      border-radius: 50%;
+      transition: transform var(--editor-transition-fast);
+      box-shadow: var(--editor-shadow-sm);
+    }
+  }
+
+  &__label {
+    font-size: var(--editor-font-size-sm);
+    font-weight: var(--editor-font-weight-medium);
+    color: var(--editor-text);
+  }
+}
+
+// =============================================================================
+// Theme Settings Component
+// =============================================================================
+.theme-setting-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--editor-space-sm);
+  margin-bottom: var(--editor-space-lg);
+}
+
+.theme-setting__label {
+  font-weight: var(--editor-font-weight-semibold);
+  font-size: var(--editor-font-size-sm);
+  color: var(--editor-text);
+  margin-bottom: var(--editor-space-xs);
+}
+
+.theme-setting__options {
+  display: flex;
+  gap: var(--editor-space-md);
+  flex-wrap: wrap;
+}
+
+.theme-radio {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--editor-space-xs);
+  cursor: pointer;
+  padding: var(--editor-space-sm) var(--editor-space-md);
+  border: 1px solid var(--editor-border);
+  border-radius: var(--editor-radius-md);
+  transition: all var(--editor-transition-fast);
+
+  &:hover {
+    border-color: var(--editor-primary);
+    background: rgba(59, 130, 246, 0.05);
+  }
+
+  input[type="radio"] {
+    cursor: pointer;
+
+    &:checked ~ span {
+      font-weight: var(--editor-font-weight-semibold);
+      color: var(--editor-primary);
+    }
+  }
+
+  span {
+    user-select: none;
+  }
+}
+
+// =============================================================================
+// Color Key Label
+// =============================================================================
+.color-key-label {
+  color: var(--editor-primary);
+  font-weight: var(--editor-font-weight-bold);
+}
+
+// =============================================================================
+// Responsive Design
+// =============================================================================
+@media (max-width: 768px) {
+  .theme-editor {
+    padding: var(--editor-space-xl) var(--editor-space-md);
+
+    &__title {
+      font-size: var(--editor-font-size-2xl);
+    }
+
+    &__footer {
+      flex-direction: column-reverse;
+
+      .theme-editor__button {
+        width: 100%;
+      }
+    }
+
+    &__toast {
+      left: var(--editor-space-md);
+      right: var(--editor-space-md);
+    }
+  }
+
+  .theme-section {
+    &--visualizations {
+      .visualizations-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  .color-cards-container {
+    grid-template-columns: 1fr;
+  }
+}

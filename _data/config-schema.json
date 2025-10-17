@@ -51,18 +51,65 @@
       "required": ["brand_primary", "neutral", "mode"],
       "properties": {
         "brand_primary": {
-          "type": "string",
-          "enum": ["orange", "blue", "green", "purple", "red"],
-          "description": "Primary brand color palette"
+          "type": "object",
+          "required": ["l", "c", "h"],
+          "properties": {
+            "l": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100,
+              "description": "Lightness (0-100%)"
+            },
+            "c": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 0.4,
+              "description": "Chroma (0-0.4 saturation)"
+            },
+            "h": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 360,
+              "description": "Hue angle (0-360 degrees)"
+            }
+          },
+          "description": "Primary brand color in OKLCH format"
         },
         "brand_secondary": {
-          "type": ["string", "null"],
-          "enum": ["orange", "blue", "green", "purple", "red", null],
-          "description": "Optional secondary accent color"
+          "oneOf": [
+            {
+              "type": "object",
+              "required": ["l", "c", "h"],
+              "properties": {
+                "l": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 100,
+                  "description": "Lightness (0-100%)"
+                },
+                "c": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 0.4,
+                  "description": "Chroma (0-0.4 saturation)"
+                },
+                "h": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 360,
+                  "description": "Hue angle (0-360 degrees)"
+                }
+              }
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Optional secondary accent color in OKLCH format"
         },
         "neutral": {
           "type": "string",
-          "enum": ["slate", "gray"],
+          "enum": ["slate", "gray", "zinc", "neutral", "stone"],
           "description": "Neutral color palette for text/backgrounds"
         },
         "mode": {

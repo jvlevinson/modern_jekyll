@@ -1,0 +1,116 @@
+# frozen_string_literal: true
+
+# =============================================================================
+# Onboard API Server - Gemfile
+# =============================================================================
+# Modern Ruby API server for content management
+# Runs on Port 4001 alongside Jekyll (Port 4000)
+# Development-only (localhost enforced via Rack::Attack)
+# =============================================================================
+
+source 'https://rubygems.org'
+
+ruby '>= 3.0.0'
+
+# =============================================================================
+# Core Framework
+# =============================================================================
+
+# Roda - Routing tree web framework (3.2x faster than Sinatra)
+# https://roda.jeremyevans.net/
+gem 'roda', '~> 3.84'
+
+# Rack - Web server interface
+gem 'rack', '~> 3.0'  # Latest version (2025 CVE patches)
+
+# Rackup - Command line for Rack (separate gem in Rack 3.0+)
+gem 'rackup', '~> 2.2'
+
+# Puma - Ruby web server
+gem 'puma', '~> 6.0'
+
+# =============================================================================
+# Security
+# =============================================================================
+
+# Rack::Attack - Throttling & blocking middleware
+# Used for localhost-only enforcement
+gem 'rack-attack', '~> 6.7'
+
+# Rack::Cors - Cross-Origin Resource Sharing
+# Allows CORS from localhost:4000 (Jekyll)
+gem 'rack-cors', '~> 2.0'
+
+# =============================================================================
+# File Upload & Image Processing (Week 3)
+# =============================================================================
+
+# Shrine - Modern file upload toolkit (streaming-first)
+# https://shrinerb.com/
+gem 'shrine', '~> 3.6'
+
+# ruby-vips - libvips bindings (10x faster than ImageMagick)
+# https://www.libvips.org/
+# NOTE: Requires libvips system library (see README.md for installation)
+gem 'ruby-vips', '~> 2.2'  # Uncomment for Week 3
+
+# =============================================================================
+# Validation
+# =============================================================================
+
+# dry-validation - Powerful data validation
+gem 'dry-validation', '~> 1.10'
+
+# dry-schema - Schema definition (used by dry-validation)
+gem 'dry-schema', '~> 1.13'
+
+# =============================================================================
+# Utilities
+# =============================================================================
+
+# YAML - Parse and write _config.yml (use built-in psych)
+# Note: psych is bundled with Ruby, no explicit gem needed
+
+# JSON - API responses
+gem 'multi_json', '~> 1.15'
+
+# =============================================================================
+# Development & Testing
+# =============================================================================
+
+group :development, :test do
+  # Debugging
+  gem 'pry', '~> 0.14'
+
+  # Testing
+  gem 'minitest', '~> 5.25'
+  gem 'minitest-reporters', '~> 1.7'
+  gem 'rack-test', '~> 2.1'
+
+  # Code quality
+  gem 'rubocop', '~> 1.60', require: false
+end
+
+# =============================================================================
+# Notes
+# =============================================================================
+#
+# System Dependencies Required:
+# - libvips (>= 8.5)
+#   macOS:   brew install vips
+#   Linux:   apt-get install libvips libvips-dev
+#
+# - tmux (for Overmind process management)
+#   macOS:   brew install tmux
+#   Linux:   apt-get install tmux
+#
+# Security:
+# - All endpoints protected by Rack::Attack localhost-only safelist
+# - Latest Rack version includes 2025 CVE patches
+# - Input validation via dry-validation
+#
+# Performance:
+# - libvips: 10x faster image processing vs ImageMagick
+# - Roda: 3.2x faster than Sinatra
+# - Shrine: Streaming uploads for memory efficiency
+# =============================================================================

@@ -4,11 +4,11 @@
 
 ### Configuration Files
 - [x] **_config.yml**
-  - `url: "https://williammorr.github.io"`
+  - `url: "https://jvlevinson.github.io"`
   - `baseurl: "/Personal-Profile"` (matches repository name exactly)
-  - `github_username: williammorr`
-  - `title: William M. Orr`
-  - `author: William M. Orr`
+  - `github_username: jvlevinson`
+  - `title: Jordan v. levinson`
+  - `author: Jordan v. levinson`
 
 ### Asset Paths Fixed
 - [x] **CSS files** use `| relative_url` filter
@@ -43,7 +43,7 @@ git push upstream master
 ```
 
 ### Step 2: Enable GitHub Pages (One-Time Setup)
-1. Go to: https://github.com/williammorr/Personal-Profile
+1. Go to: https://github.com/jvlevinson/Personal-Profile
 2. Click: **Settings** → **Pages**
 3. Under "Build and deployment":
    - Source: Select **GitHub Actions**
@@ -55,7 +55,7 @@ git push upstream master
 3. Wait for: ✅ Green checkmark (1-2 minutes)
 
 ### Step 4: Verify Site
-**Live URL:** https://williammorr.github.io/Personal-Profile
+**Live URL:** https://jvlevinson.github.io/Personal-Profile
 
 Check:
 - [ ] Site loads without 404 error
@@ -93,10 +93,10 @@ Check:
 
 | Setting | Value | Status |
 |---------|-------|--------|
-| Repository | `williammorr/Personal-Profile` | ✅ |
-| Live URL | `https://williammorr.github.io/Personal-Profile` | ✅ |
+| Repository | `jvlevinson/Personal-Profile` | ✅ |
+| Live URL | `https://jvlevinson.github.io/Personal-Profile` | ✅ |
 | Base URL | `/Personal-Profile` | ✅ |
-| GitHub Username | `williammorr` | ✅ |
+| GitHub Username | `jvlevinson` | ✅ |
 | Branch | `master` | ✅ |
 | Workflow | `.github/workflows/jekyll.yml` | ✅ |
 | Asset Paths | Use `relative_url` filter | ✅ |

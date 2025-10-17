@@ -1,0 +1,90 @@
+// =============================================================================
+// Color Harmonies Component
+// =============================================================================
+// Displays complementary, triadic, and analogous color relationships
+// Uses tokenized design system
+// =============================================================================
+
+.color-harmonies {
+  display: flex;
+  flex-direction: column;
+  gap: var(--editor-space-sm);
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__label {
+    font-weight: var(--editor-font-weight-semibold);
+    font-size: var(--editor-font-size-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--editor-text);
+  }
+
+  &__groups {
+    display: flex;
+    flex-direction: column;
+    gap: var(--editor-space-lg);
+  }
+}
+
+.harmony-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--editor-space-sm);
+
+  &__label {
+    font-weight: var(--editor-font-weight-semibold);
+    font-size: var(--editor-font-size-sm);
+    color: var(--editor-text-muted);
+  }
+
+  &__circles {
+    display: flex;
+    gap: var(--editor-space-md);
+    flex-wrap: wrap;
+  }
+}
+
+.harmony-circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--editor-space-xs);
+
+  &__swatch {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 2px solid var(--editor-border);
+    box-shadow: var(--editor-shadow-sm);
+    transition: all var(--editor-transition-fast);
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: var(--editor-shadow-md);
+    }
+  }
+
+  &__label {
+    font-size: var(--editor-font-size-xs);
+    color: var(--editor-text-muted);
+    text-align: center;
+  }
+
+  &--base {
+    .harmony-circle__swatch {
+      border-width: 3px;
+      border-color: var(--editor-primary);
+    }
+
+    .harmony-circle__label {
+      font-weight: var(--editor-font-weight-bold);
+      color: var(--editor-text);
+    }
+  }
+}

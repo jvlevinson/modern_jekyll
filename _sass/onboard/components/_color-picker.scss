@@ -1,0 +1,454 @@
+// =============================================================================
+// Color Picker Component (BEM Structure)
+// =============================================================================
+// Interactive OKLCH color picker with live preview
+// BEM Block: .color-picker
+// Phase 7: TypeScript Theme Editor
+// =============================================================================
+
+// -----------------------------------------------------------------------------
+// Color Picker Block
+// -----------------------------------------------------------------------------
+// Main container for color picker interface
+// Includes preview, sliders, info, and palette
+// -----------------------------------------------------------------------------
+.color-picker {
+  background: var(--editor-surface);
+  border: 1px solid var(--editor-border);
+  border-radius: var(--editor-radius-xl);
+  padding: var(--editor-space-xl);
+  margin-bottom: var(--editor-space-xl);
+  transition: all var(--editor-transition-normal);
+
+  &:hover {
+    box-shadow: var(--editor-shadow-md);
+  }
+
+  // ---------------------------------------------------------------------------
+  // Label Element
+  // ---------------------------------------------------------------------------
+  &__label {
+    display: block;
+    font-weight: var(--editor-font-weight-semibold);
+    font-size: var(--editor-font-size-md);
+    color: var(--editor-text);
+    margin-bottom: var(--editor-space-md);
+  }
+
+  // ---------------------------------------------------------------------------
+  // Preview Element
+  // ---------------------------------------------------------------------------
+  // Large color swatch showing current selection
+  &__preview {
+    width: var(--picker-preview-size);
+    height: var(--picker-preview-size);
+    border-radius: var(--editor-radius-lg);
+    border: 2px solid var(--editor-border-dark);
+    box-shadow: var(--editor-shadow-sm);
+    transition: all var(--editor-transition-normal);
+    margin: var(--editor-space-md) 0;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: var(--editor-shadow-md);
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // Visual Selector Container
+  // ---------------------------------------------------------------------------
+  // Contains 2D color wheel selector
+  &__visual {
+    display: flex;
+    justify-content: center;
+    margin: var(--editor-space-xl) 0;
+  }
+
+  // ---------------------------------------------------------------------------
+  // Hex Input Container
+  // ---------------------------------------------------------------------------
+  &__hex {
+    margin: var(--editor-space-lg) 0;
+
+    label {
+      display: block;
+      font-size: var(--editor-font-size-sm);
+      font-weight: var(--editor-font-weight-semibold);
+      color: var(--editor-text);
+      margin-bottom: var(--editor-space-sm);
+    }
+  }
+
+  &__hex-input {
+    display: flex;
+    gap: var(--editor-space-sm);
+    align-items: stretch;
+
+    input[type="text"] {
+      flex: 1;
+      padding: var(--editor-space-sm) var(--editor-space-md);
+      border: 1px solid var(--editor-border);
+      border-radius: var(--editor-radius-md);
+      font-family: var(--editor-font-mono);
+      font-size: var(--editor-font-size-md);
+      color: var(--editor-text);
+      background: var(--editor-surface);
+      transition: all var(--editor-transition-fast);
+
+      &:hover {
+        border-color: var(--editor-border-dark);
+      }
+
+      &:focus {
+        outline: none;
+        border-color: var(--editor-primary);
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+      }
+
+      &.color-picker__hex-input--error {
+        border-color: var(--editor-danger);
+        background: rgba(239, 68, 68, 0.05);
+      }
+
+      &::placeholder {
+        color: var(--editor-text-muted);
+      }
+    }
+  }
+
+  &__hex-copy {
+    padding: var(--editor-space-sm) var(--editor-space-md);
+    border: 1px solid var(--editor-border);
+    border-radius: var(--editor-radius-md);
+    background: var(--editor-surface);
+    color: var(--editor-text);
+    font-size: var(--editor-font-size-md);
+    cursor: pointer;
+    transition: all var(--editor-transition-fast);
+    white-space: nowrap;
+
+    &:hover {
+      background: var(--editor-bg);
+      border-color: var(--editor-border-dark);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+
+    &--copied {
+      background: var(--editor-success);
+      border-color: var(--editor-success);
+      color: white;
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // Controls Container
+  // ---------------------------------------------------------------------------
+  // Container for all slider controls (L/C/H)
+  &__controls {
+    display: flex;
+    flex-direction: column;
+    gap: var(--editor-space-lg);
+    margin: var(--editor-space-lg) 0;
+  }
+
+  // ---------------------------------------------------------------------------
+  // Individual Control Element
+  // ---------------------------------------------------------------------------
+  // Single slider with label and value display
+  &__control {
+    display: flex;
+    flex-direction: column;
+    gap: var(--editor-space-sm);
+
+    label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: var(--editor-font-size-sm);
+      font-weight: var(--editor-font-weight-medium);
+      color: var(--editor-text-muted);
+    }
+
+    span[data-lightness-value],
+    span[data-chroma-value],
+    span[data-hue-value] {
+      font-family: var(--editor-font-mono);
+      font-weight: var(--editor-font-weight-bold);
+      color: var(--editor-text);
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // Slider Input (Range)
+  // ---------------------------------------------------------------------------
+  // Custom styled range inputs
+  &__control input[type="range"] {
+    width: 100%;
+    height: var(--editor-slider-track-height);
+    border-radius: var(--editor-radius-full);
+    background: var(--editor-border);
+    outline: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    transition: background var(--editor-transition-fast);
+
+    &:hover {
+      background: var(--editor-border-dark);
+    }
+
+    &:focus {
+      outline: 2px solid var(--editor-border-focus);
+      outline-offset: 2px;
+    }
+
+    // Webkit (Chrome, Safari, Edge)
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: var(--editor-slider-thumb-size);
+      height: var(--editor-slider-thumb-size);
+      border-radius: 50%;
+      background: var(--editor-primary);
+      cursor: pointer;
+      border: var(--editor-slider-thumb-border);
+      box-shadow: var(--editor-slider-thumb-shadow);
+      transition: all var(--editor-transition-fast);
+
+      &:hover {
+        background: var(--editor-primary-hover);
+        transform: scale(1.1);
+      }
+
+      &:active {
+        background: var(--editor-primary-active);
+        transform: scale(0.95);
+      }
+    }
+
+    // Firefox
+    &::-moz-range-thumb {
+      width: var(--editor-slider-thumb-size);
+      height: var(--editor-slider-thumb-size);
+      border-radius: 50%;
+      background: var(--editor-primary);
+      cursor: pointer;
+      border: var(--editor-slider-thumb-border);
+      box-shadow: var(--editor-slider-thumb-shadow);
+      transition: all var(--editor-transition-fast);
+
+      &:hover {
+        background: var(--editor-primary-hover);
+        transform: scale(1.1);
+      }
+
+      &:active {
+        background: var(--editor-primary-active);
+        transform: scale(0.95);
+      }
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // Info Section
+  // ---------------------------------------------------------------------------
+  // Display CSS value and contrast ratio
+  &__info {
+    margin-top: var(--editor-space-lg);
+    padding-top: var(--editor-space-lg);
+    border-top: 1px solid var(--editor-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--editor-space-md);
+  }
+
+  // ---------------------------------------------------------------------------
+  // CSS Value Display
+  // ---------------------------------------------------------------------------
+  &__css {
+    font-family: var(--editor-font-mono);
+    font-size: var(--editor-font-size-sm);
+    color: var(--editor-text-muted);
+    background: var(--editor-bg);
+    padding: var(--editor-space-xs) var(--editor-space-sm);
+    border-radius: var(--editor-radius-sm);
+    border: 1px solid var(--editor-border);
+  }
+
+  // ---------------------------------------------------------------------------
+  // Contrast Display
+  // ---------------------------------------------------------------------------
+  &__contrast {
+    display: flex;
+    gap: var(--editor-space-sm);
+    align-items: center;
+    font-size: var(--editor-font-size-sm);
+
+    [data-contrast-ratio] {
+      font-family: var(--editor-font-mono);
+      font-weight: var(--editor-font-weight-bold);
+      color: var(--editor-text);
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // WCAG Badge
+  // ---------------------------------------------------------------------------
+  // Shows accessibility compliance level
+  &__wcag-badge {
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--editor-radius-sm);
+    font-size: var(--editor-font-size-xs);
+    font-weight: var(--editor-font-weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    &--aaa {
+      background: var(--editor-wcag-aaa);
+      color: white;
+    }
+
+    &--aa {
+      background: var(--editor-wcag-aa);
+      color: white;
+    }
+
+    &--fail {
+      background: var(--editor-wcag-fail);
+      color: white;
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // Palette Preview Container
+  // ---------------------------------------------------------------------------
+  // Grid display of 10 color shades
+  &__palette {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    gap: var(--editor-space-sm);
+    margin-top: var(--editor-space-lg);
+  }
+
+  // ---------------------------------------------------------------------------
+  // Palette Swatch
+  // ---------------------------------------------------------------------------
+  // Individual shade in palette grid
+  &__palette-swatch {
+    aspect-ratio: 1;
+    border-radius: var(--editor-radius-md);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: var(--editor-space-xs);
+    cursor: pointer;
+    transition: all var(--editor-transition-fast);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid transparent;
+
+    &:hover {
+      transform: scale(1.1);
+      z-index: 10;
+      box-shadow: var(--editor-shadow-lg);
+      border-color: var(--editor-border-dark);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // Palette Shade Label
+  // ---------------------------------------------------------------------------
+  // Shade number (50, 100, etc.)
+  &__palette-shade {
+    font-size: var(--editor-font-size-xs);
+    font-weight: var(--editor-font-weight-bold);
+    color: white;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity var(--editor-transition-fast);
+
+    .color-picker__palette-swatch:hover & {
+      opacity: 1;
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // Loading State Modifier
+  // ---------------------------------------------------------------------------
+  &--loading {
+    opacity: 0.6;
+    pointer-events: none;
+
+    .color-picker__controls {
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 40px;
+        height: 40px;
+        border: 4px solid var(--editor-border);
+        border-top-color: var(--editor-primary);
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // Disabled State Modifier
+  // ---------------------------------------------------------------------------
+  &--disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+// =============================================================================
+// Animations
+// =============================================================================
+@keyframes spin {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+// =============================================================================
+// Responsive Design
+// =============================================================================
+// Mobile optimizations
+@media (max-width: 768px) {
+  .color-picker {
+    padding: var(--editor-space-lg);
+
+    &__palette {
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    &__info {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}
+
+// Tablet adjustments
+@media (min-width: 769px) and (max-width: 1024px) {
+  .color-picker {
+    &__palette {
+      grid-template-columns: repeat(10, 1fr);
+    }
+  }
+}

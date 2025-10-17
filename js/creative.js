@@ -234,9 +234,9 @@
         const config = {
             minLength: 40, // Minimum text length to add watermark
             enableWatermark: storage.get('enableCopyWatermark') !== 'false', // Default enabled
-            siteName: document.title || 'William M. Orr - Professional Portfolio',
+            siteName: document.title || 'Jordan v. levinson - Professional Portfolio',
             siteUrl: window.location.origin,
-            attributionText: '\n\n---\nSource: {title}\nURL: {url}\n© William M. Orr - williammorr.com'
+            attributionText: '\n\n---\nSource: {title}\nURL: {url}\n© Jordan v. levinson - jvlevinson.com'
         };
 
         // Only proceed if watermarking is enabled

@@ -1,0 +1,84 @@
+---
+---
+
+@charset "utf-8";
+
+// =============================================================================
+// Theme Editor Stylesheet
+// =============================================================================
+// Main stylesheet for the Onboard theme editor (Phase 7)
+// Compiles to: onboard/assets/css/editor.css
+// Uses modular SCSS architecture with design tokens
+// =============================================================================
+
+// -----------------------------------------------------------------------------
+// Core Abstracts (From Main Project)
+// -----------------------------------------------------------------------------
+// Import foundational tokens from main site
+// These provide base spacing, typography, animation tokens
+// Only import what's needed to avoid duplication
+// @use '../../sass/abstracts/variables' as main-tokens;
+
+// -----------------------------------------------------------------------------
+// Onboard Editor Modules
+// -----------------------------------------------------------------------------
+// All editor-specific styles (tokens + components)
+@use '../../_sass/onboard';
+
+// Content Editor Styles (Phase 8)
+// Use modern @use syntax with wildcard namespace to include all styles
+@use 'content-editor' as *;
+
+// -----------------------------------------------------------------------------
+// Base Reset & Normalization
+// -----------------------------------------------------------------------------
+// Minimal reset for editor container
+// Ensures consistent rendering across browsers
+* {
+  box-sizing: border-box;
+}
+
+// Override dashboard styles if needed
+#theme-editor-container {
+  // Modern CSS isolation instead of aggressive reset
+  // This creates a new stacking context and formatting context
+  // without breaking inheritance or custom properties
+  isolation: isolate;
+  contain: layout style;
+
+  // Establish new formatting context
+  display: block;
+  position: relative;
+
+  // Keep font & color inheritance from editor tokens
+  font-family: var(--editor-font-sans);
+  color: var(--editor-text);
+  line-height: var(--editor-line-height-normal);
+
+  // Apply editor background
+  background: var(--editor-bg);
+  min-height: 600px;
+  border-radius: var(--editor-radius-xl);
+
+  // Ensure all children inherit properly
+  * {
+    box-sizing: border-box;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Anti-FOUC (Flash of Unstyled Content)
+// -----------------------------------------------------------------------------
+// Hide editor until fully loaded
+[data-theme-editor]:empty {
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::after {
+    content: 'Loading theme editor...';
+    color: var(--editor-text-muted);
+    font-family: var(--editor-font-sans);
+  }
+}

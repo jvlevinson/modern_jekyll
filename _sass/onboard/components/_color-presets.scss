@@ -1,0 +1,72 @@
+// =============================================================================
+// Color Presets Component
+// =============================================================================
+// Quick color selection grid organized by category
+// Uses tokenized design system
+// =============================================================================
+
+.color-presets {
+  display: flex;
+  flex-direction: column;
+  gap: var(--editor-space-sm);
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__label {
+    font-weight: var(--editor-font-weight-semibold);
+    font-size: var(--editor-font-size-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--editor-text);
+  }
+
+  &__groups {
+    display: flex;
+    flex-direction: column;
+    gap: var(--editor-space-lg);
+  }
+}
+
+.preset-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--editor-space-sm);
+
+  &__label {
+    font-weight: var(--editor-font-weight-semibold);
+    font-size: var(--editor-font-size-sm);
+    color: var(--editor-text-muted);
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+    gap: var(--editor-space-sm);
+  }
+}
+
+.preset-cell {
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--editor-border);
+  border-radius: var(--editor-radius-md);
+  cursor: pointer;
+  transition: all var(--editor-transition-fast);
+  padding: 0;
+  background: transparent;
+
+  &:hover {
+    transform: scale(1.15);
+    box-shadow: var(--editor-shadow-md);
+    z-index: 1;
+  }
+
+  &:focus {
+    outline: 2px solid var(--editor-primary);
+    outline-offset: 2px;
+  }
+}

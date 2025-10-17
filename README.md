@@ -18,7 +18,7 @@ A personal portfolio website built with Jekyll 4.4+ using the [Creative Theme](h
 - **GitHub Pages ready** - Automated deployment
 - **Comprehensive QA** - Config validation, visual regression, accessibility compliance
 
-**🔗 Live Site:** [https://williammorr.com](https://williammorr.com)
+**🔗 Live Site:** [https://jvlevinson.com](https://jvlevinson.com)
 
 ---
 
@@ -555,17 +555,17 @@ The repository includes a **GitHub Actions workflow** (`.github/workflows/jekyll
 
 ### Step 2: Configure URLs
 
-**For a user site** (`williammorr.github.io`):
+**For a user site** (`jvlevinson.github.io`):
 ```yaml
 # _config.yml
-url: "https://williammorr.github.io"
+url: "https://jvlevinson.github.io"
 baseurl: ""
 ```
 
-**For a project site** (`williammorr.github.io/Personal-Profile`):
+**For a project site** (`jvlevinson.github.io/Personal-Profile`):
 ```yaml
 # _config.yml
-url: "https://williammorr.github.io"
+url: "https://jvlevinson.github.io"
 baseurl: "/Personal-Profile"  # Must match repo name exactly
 ```
 
@@ -599,7 +599,7 @@ portfolio_items:
   - image: img/portfolio/my-new-project.jpg
     category: Web Development
     name: My Awesome Project
-    link: "https://github.com/williammorr/my-project"
+    link: "https://github.com/jvlevinson/my-project"
     flip_description: Detailed description of the project shown when card is flipped
 ```
 

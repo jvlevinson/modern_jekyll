@@ -2819,7 +2819,7 @@
                 "width": 203,
                 "height": 66
               },
-              "snippet": "<a href=\"/public/files/wmorr_director-resume-v2.1.0.pdf\" target=\"_blank\" class=\"btn btn--primary btn--xl wow bounceIn\" data-wow-delay=\".1s\" style=\"visibility: hidden; animation-delay: 0.1s; animation-name: none;\">",
+              "snippet": "<a href=\"/public/files/jvlevinson_director-resume-v2.1.0.pdf\" target=\"_blank\" class=\"btn btn--primary btn--xl wow bounceIn\" data-wow-delay=\".1s\" style=\"visibility: hidden; animation-delay: 0.1s; animation-name: none;\">",
               "nodeLabel": "div.row > div.col-lg-8 > div.resume-box > a.btn"
             },
             "subItems": {
@@ -2846,7 +2846,7 @@
                 "width": 261,
                 "height": 66
               },
-              "snippet": "<a href=\"/public/files/wmorr_director-resume-v2.1.0.pdf\" download=\"\" class=\"btn btn--outline btn--xl wow bounceIn\" data-wow-delay=\".2s\" style=\"visibility: hidden; animation-delay: 0.2s; animation-name: none;\">",
+              "snippet": "<a href=\"/public/files/jvlevinson_director-resume-v2.1.0.pdf\" download=\"\" class=\"btn btn--outline btn--xl wow bounceIn\" data-wow-delay=\".2s\" style=\"visibility: hidden; animation-delay: 0.2s; animation-name: none;\">",
               "nodeLabel": "div.row > div.col-lg-8 > div.resume-box > a.btn"
             },
             "subItems": {
@@ -2873,7 +2873,7 @@
                 "width": 242,
                 "height": 66
               },
-              "snippet": "<a href=\"https://williammorr.com\" class=\"btn btn--primary btn--xl wow tada\" style=\"visibility: hidden; animation-name: none;\">",
+              "snippet": "<a href=\"https://jvlevinson.com\" class=\"btn btn--primary btn--xl wow tada\" style=\"visibility: hidden; animation-name: none;\">",
               "nodeLabel": "aside.bg-dark > div.container > div.call-to-action > a.btn"
             },
             "subItems": {
@@ -4398,7 +4398,7 @@
                 "height": 24
               },
               "snippet": "<p>",
-              "nodeLabel": "wmorr",
+              "nodeLabel": "jvlevinson",
               "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #3b82f6, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
             }
           },
@@ -4417,7 +4417,7 @@
                 "height": 24
               },
               "snippet": "<p>",
-              "nodeLabel": "williammorr",
+              "nodeLabel": "jvlevinson",
               "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #3b82f6, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
             }
           },
@@ -4436,7 +4436,7 @@
                 "height": 24
               },
               "snippet": "<p>",
-              "nodeLabel": "wotech4@live.com",
+              "nodeLabel": "jvlevinson@outlook.com",
               "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #3b82f6, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
             }
           },
@@ -4455,7 +4455,7 @@
                 "height": 24
               },
               "snippet": "<p>",
-              "nodeLabel": "williammorr",
+              "nodeLabel": "jvlevinson",
               "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #3b82f6, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
             }
           }
@@ -4647,8 +4647,8 @@
                 "width": 166,
                 "height": 47
               },
-              "snippet": "<a href=\"https://linkedin.com/in/williammorr\">",
-              "nodeLabel": "williammorr",
+              "snippet": "<a href=\"https://linkedin.com/in/jvlevinson\">",
+              "nodeLabel": "jvlevinson",
               "explanation": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
             },
             "subItems": {
@@ -4668,8 +4668,8 @@
                       "width": 166,
                       "height": 47
                     },
-                    "snippet": "<a href=\"https://github.com/williammorr\">",
-                    "nodeLabel": "williammorr"
+                    "snippet": "<a href=\"https://github.com/jvlevinson\">",
+                    "nodeLabel": "jvlevinson"
                   }
                 }
               ]

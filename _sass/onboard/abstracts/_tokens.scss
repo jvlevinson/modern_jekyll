@@ -1,0 +1,177 @@
+// =============================================================================
+// Onboard Theme Editor - Design Tokens
+// =============================================================================
+// Editor-specific design tokens following the project's tokenized system
+// Uses CSS custom properties for runtime theming
+// Follows 8pt grid system and modular scale
+// Phase 7: TypeScript Theme Editor
+// =============================================================================
+
+:root {
+  // ---------------------------------------------------------------------------
+  // Editor Color Palette (Interface Colors)
+  // ---------------------------------------------------------------------------
+  // Note: These are for the editor UI itself, NOT the user's theme colors
+  // User theme colors are generated dynamically by TypeScript
+  --editor-primary: #3b82f6;
+  --editor-primary-hover: #2563eb;
+  --editor-primary-active: #1d4ed8;
+  --editor-success: #22c55e;
+  --editor-warning: #f59e0b;
+  --editor-danger: #ef4444;
+  --editor-info: #06b6d4;
+
+  --editor-bg: #f8fafc;
+  --editor-surface: #ffffff;
+  --editor-text: #0f172a;
+  --editor-text-muted: #64748b;
+  --editor-text-light: #94a3b8;
+  --editor-border: #e2e8f0;
+  --editor-border-dark: #cbd5e1;
+  --editor-border-focus: #3b82f6;
+
+  // ---------------------------------------------------------------------------
+  // Spacing Scale (8pt Grid System)
+  // ---------------------------------------------------------------------------
+  // Consistent with main project spacing tokens
+  --editor-space-0: 0;
+  --editor-space-xs: 0.5rem;      // 8px
+  --editor-space-sm: 0.75rem;     // 12px
+  --editor-space-md: 1rem;        // 16px
+  --editor-space-lg: 1.5rem;      // 24px
+  --editor-space-xl: 2rem;        // 32px
+  --editor-space-2xl: 3rem;       // 48px
+  --editor-space-3xl: 4rem;       // 64px
+
+  // ---------------------------------------------------------------------------
+  // Typography Scale
+  // ---------------------------------------------------------------------------
+  --editor-font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+                      'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+                      'Helvetica Neue', sans-serif;
+  --editor-font-mono: 'Monaco', 'Courier New', monospace;
+
+  --editor-font-size-xs: 0.75rem;    // 12px
+  --editor-font-size-sm: 0.875rem;   // 14px
+  --editor-font-size-md: 1rem;       // 16px
+  --editor-font-size-lg: 1.125rem;   // 18px
+  --editor-font-size-xl: 1.25rem;    // 20px
+  --editor-font-size-2xl: 1.5rem;    // 24px
+  --editor-font-size-3xl: 2rem;      // 32px
+
+  --editor-font-weight-normal: 400;
+  --editor-font-weight-medium: 500;
+  --editor-font-weight-semibold: 600;
+  --editor-font-weight-bold: 700;
+
+  --editor-line-height-tight: 1.25;
+  --editor-line-height-normal: 1.5;
+  --editor-line-height-relaxed: 1.75;
+
+  // ---------------------------------------------------------------------------
+  // Border Radius Scale
+  // ---------------------------------------------------------------------------
+  --editor-radius-sm: 0.25rem;       // 4px
+  --editor-radius-md: 0.375rem;      // 6px
+  --editor-radius-lg: 0.5rem;        // 8px
+  --editor-radius-xl: 0.75rem;       // 12px
+  --editor-radius-2xl: 1rem;         // 16px
+  --editor-radius-full: 9999px;      // Pill shape
+
+  // ---------------------------------------------------------------------------
+  // Shadow Tokens (Elevation)
+  // ---------------------------------------------------------------------------
+  --editor-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --editor-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+                      0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --editor-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+                      0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --editor-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+                      0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --editor-shadow-focus: 0 0 0 3px rgba(59, 130, 246, 0.5);
+
+  // ---------------------------------------------------------------------------
+  // Animation/Transition Tokens
+  // ---------------------------------------------------------------------------
+  // Following project's duration scale
+  --editor-transition-fast: 150ms ease-in-out;
+  --editor-transition-normal: 250ms ease-in-out;
+  --editor-transition-slow: 350ms ease-in-out;
+
+  --editor-duration-instant: 0.1s;
+  --editor-duration-fast: 0.15s;
+  --editor-duration-normal: 0.25s;
+  --editor-duration-slow: 0.35s;
+
+  // ---------------------------------------------------------------------------
+  // Z-Index Scale (Stacking Order)
+  // ---------------------------------------------------------------------------
+  --editor-z-base: 1;
+  --editor-z-dropdown: 1000;
+  --editor-z-sticky: 1020;
+  --editor-z-fixed: 1030;
+  --editor-z-modal-backdrop: 1040;
+  --editor-z-modal: 1050;
+  --editor-z-popover: 1060;
+  --editor-z-tooltip: 1070;
+  --editor-z-toast: 1080;
+
+  // ---------------------------------------------------------------------------
+  // WCAG Contrast Tokens (Accessibility)
+  // ---------------------------------------------------------------------------
+  --editor-wcag-aa: #22c55e;         // Green for AA compliance
+  --editor-wcag-aaa: #10b981;        // Darker green for AAA
+  --editor-wcag-fail: #ef4444;       // Red for failed contrast
+  --editor-wcag-warning: #f59e0b;    // Orange for AA Large only
+
+  // ---------------------------------------------------------------------------
+  // Slider/Input Control Tokens
+  // ---------------------------------------------------------------------------
+  --editor-slider-track-height: 8px;
+  --editor-slider-thumb-size: 20px;
+  --editor-slider-thumb-border: 2px solid #ffffff;
+  --editor-slider-thumb-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+  --editor-input-height: 40px;
+  --editor-input-padding: var(--editor-space-sm) var(--editor-space-md);
+  --editor-input-border-width: 1px;
+
+  // ---------------------------------------------------------------------------
+  // Layout Tokens (Editor Specific)
+  // ---------------------------------------------------------------------------
+  --editor-max-width: 1200px;
+  --editor-sidebar-width: 320px;
+  --editor-header-height: 80px;
+  --editor-footer-height: 60px;
+
+  // Color picker dimensions
+  --picker-preview-size: 100px;
+  --palette-swatch-size: 60px;
+}
+
+// =============================================================================
+// Dark Mode Overrides
+// =============================================================================
+// Dark theme tokens for editor interface
+// [data-theme="dark"] is set by the main site's theme toggle
+// =============================================================================
+
+[data-theme="dark"] {
+  // Color adjustments for dark mode
+  --editor-bg: #0f172a;
+  --editor-surface: #1e293b;
+  --editor-text: #f1f5f9;
+  --editor-text-muted: #94a3b8;
+  --editor-text-light: #64748b;
+  --editor-border: #334155;
+  --editor-border-dark: #475569;
+
+  // Adjusted shadows for dark mode (lighter, more subtle)
+  --editor-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --editor-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4),
+                      0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  --editor-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5),
+                      0 4px 6px -2px rgba(0, 0, 0, 0.3);
+  --editor-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6),
+                      0 10px 10px -5px rgba(0, 0, 0, 0.4);
+}

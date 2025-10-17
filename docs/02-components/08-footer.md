@@ -37,7 +37,7 @@ Edit `_config.yml`:
 
 ```yaml
 footer:
-  copyright: William M. Orr
+  copyright: Jordan v. levinson
   year: 2025
 ```
 

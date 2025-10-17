@@ -1,0 +1,92 @@
+// =============================================================================
+// 2D Color Selector Component (BEM Structure)
+// =============================================================================
+// Canvas-based circular hue-chroma wheel for visual color selection
+// BEM Block: .color-selector-2d
+// Phase 7 Enhancement: Modern OKLCH color picker
+// =============================================================================
+
+// -----------------------------------------------------------------------------
+// Color Selector 2D Block
+// -----------------------------------------------------------------------------
+.color-selector-2d {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: var(--editor-space-lg) 0;
+
+  // ---------------------------------------------------------------------------
+  // Canvas Element
+  // ---------------------------------------------------------------------------
+  &__canvas {
+    display: block;
+    border-radius: var(--editor-radius-full);
+    cursor: crosshair;
+    box-shadow: var(--editor-shadow-md);
+    transition: box-shadow var(--editor-transition-normal);
+
+    &:hover {
+      box-shadow: var(--editor-shadow-lg);
+    }
+
+    &:active {
+      cursor: grabbing;
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // Selection Marker
+  // ---------------------------------------------------------------------------
+  &__marker {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border: 3px solid white;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    box-shadow:
+      0 0 0 1px rgba(0, 0, 0, 0.2),
+      0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: all var(--editor-transition-fast);
+    z-index: 10;
+
+    &[hidden] {
+      display: none;
+    }
+
+    // Pulse animation when first shown
+    animation: markerPulse 0.3s ease-out;
+  }
+}
+
+// =============================================================================
+// Animations
+// =============================================================================
+@keyframes markerPulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+// =============================================================================
+// Responsive Design
+// =============================================================================
+@media (max-width: 768px) {
+  .color-selector-2d {
+    &__canvas {
+      // Slightly smaller on mobile
+      max-width: 180px;
+      max-height: 180px;
+    }
+  }
+}

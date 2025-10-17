@@ -1,0 +1,121 @@
+// =============================================================================
+// Color Card Component
+// =============================================================================
+// Displays brand color as clickable card with metadata
+// Uses BEM methodology and tokenized design system
+// =============================================================================
+
+.color-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 0;
+  background: var(--editor-surface);
+  border: 2px solid var(--editor-border);
+  border-radius: var(--editor-radius-lg);
+  cursor: pointer;
+  transition: all var(--editor-transition-fast);
+  overflow: hidden;
+  width: 100%;
+
+  &:hover {
+    border-color: var(--editor-primary);
+    box-shadow: var(--editor-shadow-md);
+    transform: translateY(-2px);
+  }
+
+  &--active {
+    border-color: var(--editor-primary);
+    border-width: 3px;
+    box-shadow: var(--editor-shadow-lg);
+
+    .color-card__info {
+      background: linear-gradient(
+        to bottom,
+        rgba(59, 130, 246, 0.1),
+        transparent
+      );
+    }
+  }
+
+  /**
+   * Color preview area
+   */
+  &__preview {
+    width: 100%;
+    height: 120px;
+    border-bottom: 2px solid var(--editor-border);
+  }
+
+  /**
+   * Info section
+   */
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--editor-space-sm);
+    padding: var(--editor-space-lg);
+  }
+
+  /**
+   * Label
+   */
+  &__label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: var(--editor-font-weight-semibold);
+    font-size: var(--editor-font-size-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--editor-text);
+  }
+
+  /**
+   * Active badge
+   */
+  &__badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.5rem;
+    background: var(--editor-primary);
+    color: white;
+    border-radius: var(--editor-radius-sm);
+    font-size: var(--editor-font-size-xs);
+    font-weight: var(--editor-font-weight-bold);
+  }
+
+  /**
+   * Hex value
+   */
+  &__hex {
+    font-family: var(--editor-font-mono);
+    font-size: var(--editor-font-size-lg);
+    font-weight: var(--editor-font-weight-bold);
+    color: var(--editor-text);
+  }
+
+  /**
+   * OKLCH values
+   */
+  &__oklch {
+    display: flex;
+    gap: var(--editor-space-md);
+    font-size: var(--editor-font-size-xs);
+    color: var(--editor-text-muted);
+
+    .oklch-value {
+      font-family: var(--editor-font-mono);
+    }
+  }
+}
+
+/**
+ * Color cards container (side-by-side layout)
+ */
+.color-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--editor-space-lg);
+  margin-top: var(--editor-space-md);
+}

@@ -212,7 +212,7 @@ This project uses BEM (Block Element Modifier) naming convention for all CSS cla
 **HTML:**
 ```html
 <nav class="nav" id="mainNav">
-  <a href="#top" class="nav__brand">William M. Orr</a>
+  <a href="#top" class="nav__brand">Jordan v. levinson</a>
   <ul class="nav__menu">
     <li class="nav__item">
       <a href="#about" class="nav__link nav__link--scroll">About</a>

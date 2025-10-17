@@ -8,165 +8,64 @@ permalink: /onboard/index.html
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Onboard - Jekyll Configuration Dashboard</title>
-  <link rel="stylesheet" href="assets/dashboard.css">
+  <link rel="stylesheet" href="/onboard/css/editor.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎨</text></svg>">
 </head>
 <body>
   <div class="dashboard">
     <header class="dashboard__header">
       <h1>🎨 Onboard Dashboard</h1>
-      <p>Local development configuration viewer</p>
-      <span class="dashboard__badge dashboard__badge--success">Read-Only Mode</span>
-      <span class="dashboard__badge dashboard__badge--info">Phase 6</span>
+      <p>Interactive theme editor with OKLCH color system</p>
+      <div class="dashboard__badges">
+        <span class="dashboard__badge dashboard__badge--warning">Editor Mode</span>
+      </div>
+      <div class="dashboard__warning">
+        <span class="warning-icon">⚠️</span>
+        <span class="warning-text">This dashboard only works on localhost. Production builds automatically exclude this directory.</span>
+      </div>
     </header>
 
     <nav class="dashboard__nav">
-      <button class="dashboard__nav-item dashboard__nav-item--active" data-section="theme">
-        <span class="nav-icon">🎨</span>
-        <span class="nav-label">Theme</span>
-      </button>
-      <button class="dashboard__nav-item" data-section="content">
-        <span class="nav-icon">📝</span>
-        <span class="nav-label">Content</span>
-      </button>
-      <button class="dashboard__nav-item" data-section="structure">
-        <span class="nav-icon">🏗️</span>
-        <span class="nav-label">Structure</span>
-      </button>
-      <button class="dashboard__nav-item" data-section="preview">
-        <span class="nav-icon">👁️</span>
-        <span class="nav-label">Preview</span>
-      </button>
+      <div class="dashboard__nav-container">
+        <div class="dashboard__nav-tabs">
+          <button class="dashboard__nav-item dashboard__nav-item--active" data-section="theme">
+            <span class="nav-icon">🎨</span>
+            <span class="nav-label">Theme</span>
+          </button>
+          <button class="dashboard__nav-item" data-section="content">
+            <span class="nav-icon">📝</span>
+            <span class="nav-label">Content</span>
+          </button>
+          <button class="dashboard__nav-item" data-section="structure">
+            <span class="nav-icon">🏗️</span>
+            <span class="nav-label">Structure</span>
+          </button>
+          <button class="dashboard__nav-item" data-section="preview">
+            <span class="nav-icon">👁️</span>
+            <span class="nav-label">Preview</span>
+          </button>
+        </div>
+        <span id="unsaved-indicator" class="dashboard__nav-badge dashboard__nav-badge--warning" hidden>
+          ⚠️ Unsaved Changes
+        </span>
+      </div>
     </nav>
 
     <main class="dashboard__content">
-      <!-- Theme Section -->
+      <!-- Theme Editor Section (Phase 7) -->
       <section id="section-theme" class="dashboard__section">
-        <h2 class="section__heading">Theme Configuration</h2>
-
-        <div class="config-grid">
-          <div class="config-group">
-            <label class="config-label">Primary Brand Color</label>
-            <div class="color-display" id="current-primary">
-              <span class="color-swatch" data-color="primary"></span>
-              <div class="color-info">
-                <span class="color-name">Loading...</span>
-                <span class="color-hex">#------</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="config-group">
-            <label class="config-label">Secondary Brand Color</label>
-            <div class="color-display" id="current-secondary">
-              <span class="color-swatch" data-color="secondary"></span>
-              <div class="color-info">
-                <span class="color-name">Loading...</span>
-                <span class="color-hex">#------</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="config-group">
-            <label class="config-label">Neutral Palette</label>
-            <div class="config-value" id="current-neutral">
-              <span class="value-text">Loading...</span>
-            </div>
-          </div>
-
-          <div class="config-group">
-            <label class="config-label">Theme Mode</label>
-            <div class="config-value" id="current-mode">
-              <span class="value-text">Loading...</span>
-              <span class="value-badge">Default</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="palette-preview">
-          <h3 class="subsection__heading">
-            <span>Current Palette</span>
-            <span class="palette-name" id="palette-title">Primary</span>
-          </h3>
-          <div class="palette-shades" id="palette-display">
-            <!-- Generated dynamically -->
-            <div class="palette-loading">Loading color palette...</div>
-          </div>
-        </div>
-
-        <div class="theme-stats">
-          <h3 class="subsection__heading">Theme Statistics</h3>
-          <div class="stats-grid">
-            <div class="stat-card">
-              <span class="stat-value" id="stat-components">-</span>
-              <span class="stat-label">Components</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-value" id="stat-tokens">-</span>
-              <span class="stat-label">Design Tokens</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-value" id="stat-colors">-</span>
-              <span class="stat-label">Color Shades</span>
-            </div>
-          </div>
-        </div>
+        <div id="theme-editor-container" data-theme-editor></div>
       </section>
 
-      <!-- Content Section -->
+      <!-- Content Section (Phase 8 Editor) -->
       <section id="section-content" class="dashboard__section" hidden>
-        <h2 class="section__heading">Content Configuration</h2>
+        <h2 class="section__heading">Content Editor</h2>
+        <p class="section__description">
+          Edit hero, services, and portfolio sections directly. Changes save to _config.yml.
+        </p>
 
-        <div class="content-overview">
-          <div class="config-group">
-            <label class="config-label">Site Title</label>
-            <div class="config-value">
-              <span class="value-text" id="site-title">Loading...</span>
-            </div>
-          </div>
-
-          <div class="config-group">
-            <label class="config-label">Site Author</label>
-            <div class="config-value">
-              <span class="value-text" id="site-author">Loading...</span>
-            </div>
-          </div>
-
-          <div class="config-group">
-            <label class="config-label">Hero Heading</label>
-            <div class="config-value">
-              <span class="value-text" id="hero-heading">Loading...</span>
-            </div>
-          </div>
-
-          <div class="config-group">
-            <label class="config-label">Hero Description</label>
-            <div class="config-value config-value--multiline">
-              <span class="value-text" id="hero-description">Loading...</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="content-stats">
-          <h3 class="subsection__heading">Content Statistics</h3>
-          <div class="stats-grid stats-grid--wide">
-            <div class="stat-card stat-card--large">
-              <span class="stat-icon">🛠️</span>
-              <span class="stat-value" id="services-count">-</span>
-              <span class="stat-label">Services</span>
-            </div>
-            <div class="stat-card stat-card--large">
-              <span class="stat-icon">💼</span>
-              <span class="stat-value" id="portfolio-count">-</span>
-              <span class="stat-label">Portfolio Items</span>
-            </div>
-            <div class="stat-card stat-card--large">
-              <span class="stat-icon">🔗</span>
-              <span class="stat-value" id="social-count">-</span>
-              <span class="stat-label">Social Links</span>
-            </div>
-          </div>
-        </div>
+        <!-- Content Editor Container -->
+        <div id="content-editor-container" data-content-editor></div>
       </section>
 
       <!-- Structure Section -->
@@ -198,7 +97,8 @@ permalink: /onboard/index.html
               <div class="phase-badge phase-badge--complete">✅ Phase 3: CSS Modernization</div>
               <div class="phase-badge phase-badge--complete">✅ Phase 4: BEM Migration</div>
               <div class="phase-badge phase-badge--complete">✅ Phase 5: Quality Assurance</div>
-              <div class="phase-badge phase-badge--active">⚡ Phase 6: Advanced Features</div>
+              <div class="phase-badge phase-badge--complete">✅ Phase 6: Advanced Features</div>
+              <div class="phase-badge phase-badge--active">⚡ Phase 7: TypeScript Theme Editor</div>
             </div>
           </div>
         </div>
@@ -258,7 +158,7 @@ permalink: /onboard/index.html
         </div>
 
         <div class="preview-container">
-          <iframe id="site-preview" src="http://localhost:4000" frameborder="0" title="Site preview"></iframe>
+          <iframe id="site-preview" data-preview-target src="http://localhost:4000" frameborder="0" title="Site preview"></iframe>
         </div>
 
         <div class="preview-info">
@@ -269,20 +169,14 @@ permalink: /onboard/index.html
     </main>
 
     <footer class="dashboard__footer">
-      <div class="footer-content">
-        <div class="footer-warning">
-          <span class="warning-icon">⚠️</span>
-          <span class="warning-text">This dashboard only works on localhost. Production builds automatically exclude this directory.</span>
-        </div>
-        <div class="footer-info">
-          <span>Modern Jekyll · Phase 6: Advanced Features</span>
-          <span class="footer-separator">·</span>
-          <span>Read-Only Configuration Viewer</span>
-        </div>
+      <div class="footer-info">
+        <span>Modern Jekyll · Phase 7: TypeScript Theme Editor</span>
+        <span class="footer-separator">·</span>
+        <span>OKLCH Color System with Live Preview</span>
       </div>
     </footer>
   </div>
 
-  <script src="assets/dashboard.js"></script>
+  <script type="module" src="assets/dist/editor.bundle.js"></script>
 </body>
 </html>

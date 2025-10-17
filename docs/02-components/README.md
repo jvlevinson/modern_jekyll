@@ -237,5 +237,5 @@ pnpm test
 ---
 
 **Document Status**: ✅ Complete
-**Maintainer**: William M. Orr
+**Maintainer**: Jordan v. levinson
 **Last Review**: October 1, 2025
