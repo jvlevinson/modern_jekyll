@@ -1,9 +1,10 @@
 // =============================================================================
-// Sections Layout
+// Sections Layout (BEM Structure)
 // =============================================================================
 // Extracted from monolithic _base.scss
 // General section styling and call-to-action section
-// Following September 2025 best practices
+// Following BEM naming convention and October 2025 best practices
+// Migrated to BEM in Phase 4
 // =============================================================================
 
 // -----------------------------------------------------------------------------
@@ -27,38 +28,15 @@
 }
 
 // -----------------------------------------------------------------------------
-// BEM Component Structure (Future Enhancement)
+// CTA Component (BEM Structure)
 // -----------------------------------------------------------------------------
-// When refactoring templates in future iterations, consider migrating to:
-//
-// .section {
-//     padding: var(--space-2xl) 0;
-// }
-//
-// .section--no-padding {
-//     padding: 0;
-// }
-//
-// .section__heading {
-//     margin-top: 0;
-//     text-align: center;
-// }
-//
-// .section__subheading {
-//     color: var(--color-text-muted);
-// }
-//
-// .cta {
-//     // Call-to-action section container
-// }
-//
-// .cta__heading {
-//     margin: 0 auto var(--space-md);
-// }
-//
-// .cta__button-group {
-//     display: flex;
-//     gap: var(--space-sm);
-//     justify-content: center;
-// }
-// -----------------------------------------------------------------------------
+.cta {
+    // Container handled by Bootstrap grid
+
+    &__description {
+        color: var(--color-text-faded);
+        font-size: var(--font-size-lg);
+        line-height: var(--line-height-base);
+        margin-bottom: var(--space-lg);
+    }
+}

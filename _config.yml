@@ -44,31 +44,27 @@ services:
     - icon: fa-diamond
       title: IT Strategy & Leadership
       description: Over a decade of experience aligning IT strategy with sustainable business growth, managing multimillion-dollar budgets, and directing cross-functional teams.
-      delay: 0
     - icon: fa-paper-plane
       title: Network & VoIP Standardization
       description: Led U.S., Canada, and Puerto Rico infrastructure conversions to Cisco-based systems and SIP VoIP, delivering $10M in telecom savings.
-      delay: .1s
     - icon: fa-newspaper
       title: Capital Construction & Acquisitions
       description: Managed 2,500+ IT standardization projects, 100+ acquisitions, and enterprise construction initiatives including cost analysis, supplier negotiations, and ISP provisioning.
-      delay: .2s
     - icon: fa-heart
       title: Team Development
       description: Built and mentored high-performing IT teams, ensuring on-time delivery, process improvements, and standardized support for thousands of locations.
-      delay: .3s
 
 # Portfolio Section
 portfolio_heading: My Work
 portfolio_items:
   - image: img/portfolio/1.jpg
     category: Enterprise IT
-    name: SCI – Senior IT Manager / Interim Director
+    name: SCI - Senior IT Manager / Interim Director
     link: "#"
     flip_description: Led enterprise IT strategy for a Fortune 500 company, managing multimillion-dollar budgets, infrastructure modernization, and cross-functional teams across multiple locations.
   - image: img/portfolio/2.jpg
     category: IT Field Ops
-    name: SCI – IT Manager & Field Ops Manager
+    name: SCI - IT Manager & Field Ops Manager
     link: "#"
     flip_description: Directed field operations for 2,500+ locations, overseeing on-site IT support, standardization projects, and ensuring operational excellence across the organization.
   - image: img/portfolio/3.jpg
@@ -88,7 +84,7 @@ portfolio_items:
     flip_description: Negotiated enterprise telecom contracts and ISP agreements, delivering $10M in cost savings while improving service quality and expanding network capabilities.
   - image: img/portfolio/6.jpg
     category: Field Services Leadership
-    name: Meriplex – Field Services Manager & Project Manager
+    name: Meriplex - Field Services Manager & Project Manager
     link: "#"
     flip_description: Managed MSP field services team delivering enterprise IT support, project implementations, and technical consulting for clients across multiple industries.
 

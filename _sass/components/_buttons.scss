@@ -1,9 +1,9 @@
 // =============================================================================
-// Buttons Component
+// Buttons Component (BEM Structure)
 // =============================================================================
 // Extracted button styles from monolithic _base.scss
-// Following BEM naming convention and September 2025 best practices
-// Bootstrap 5 compatible button variants
+// Following BEM naming convention and October 2025 best practices
+// Migrated to BEM in Phase 4
 // =============================================================================
 
 @use '../abstracts' as *;
@@ -11,84 +11,144 @@
 // -----------------------------------------------------------------------------
 // Button Base Styles
 // -----------------------------------------------------------------------------
-// Override Bootstrap button defaults with custom styling
+// Base button element styles
+// Modifiers provide variants (--primary, --outline) and sizes (--xl)
 // -----------------------------------------------------------------------------
 .btn {
-    @include sans-serif-font;
-    border-radius: 300px;
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: var(--font-size-base);
     font-weight: var(--font-weight-bold);
     text-transform: uppercase;
-    @include transition-all;
-}
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 2px solid transparent;
+    border-radius: var(--radius-pill);
+    padding: var(--space-sm) var(--space-lg);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    text-decoration: none;
 
-// -----------------------------------------------------------------------------
-// Button Variants (Week 9: Migrated to CSS Custom Properties)
-// -----------------------------------------------------------------------------
-// Primary button - white text on primary background
-// Used for main CTAs (hero, call-to-action sections)
-// Now uses semantic tokens from design-tokens.html for user-customizable colors
-// -----------------------------------------------------------------------------
-.btn-primary {
-    background-color: var(--color-primary);
-    color: var(--color-text-inverse);
-    border: 2px solid var(--color-primary);
-
-    &:hover,
     &:focus {
-        // Fallback to SCSS color function for browsers without :has() support
-        background-color: var(--color-primary-hover);
-        border-color: var(--color-primary-hover);
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;
+    }
+
+    // -----------------------------------------------------------------------------
+    // Primary Button Modifier
+    // -----------------------------------------------------------------------------
+    // Main CTA button - white text on primary background
+    // Used in hero, call-to-action, resume sections
+    // -----------------------------------------------------------------------------
+    &--primary {
+        background-color: var(--color-primary);
         color: var(--color-text-inverse);
+        border-color: var(--color-primary);
+
+        &:hover,
+        &:focus {
+            background-color: var(--color-primary-hover);
+            border-color: var(--color-primary-hover);
+            color: var(--color-text-inverse);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        &:active,
+        &.active {
+            background-color: var(--color-primary-active);
+            border-color: var(--color-primary-active);
+            color: var(--color-text-inverse);
+            transform: translateY(0);
+            box-shadow: var(--shadow-sm);
+        }
     }
 
-    &:active,
-    &.active {
-        background-color: var(--color-primary-active);
-        border-color: var(--color-primary-active);
-        color: var(--color-text-inverse);
-    }
-}
-
-// -----------------------------------------------------------------------------
-// Default/Outline button - dark text on white background
-// Used for secondary actions (e.g., "Learn More" in about section)
-// -----------------------------------------------------------------------------
-.btn-default,
-.btn-outline-secondary {
-    background-color: transparent;
-    color: var(--color-text);
-    border: 2px solid var(--color-text-inverse);
-
-    &:hover,
-    &:focus {
-        background-color: var(--color-text-inverse);
+    // -----------------------------------------------------------------------------
+    // Outline Button Modifier
+    // -----------------------------------------------------------------------------
+    // Secondary action button - transparent with border
+    // Used for secondary CTAs
+    // -----------------------------------------------------------------------------
+    &--outline {
+        background-color: transparent;
+        color: var(--color-text);
         border-color: var(--color-text-inverse);
-        color: var(--color-primary);
+
+        &:hover,
+        &:focus {
+            background-color: var(--color-text-inverse);
+            border-color: var(--color-text-inverse);
+            color: var(--color-primary);
+        }
+
+        &:active,
+        &.active {
+            background-color: var(--color-text-inverse);
+            border-color: var(--color-text-inverse);
+            color: var(--color-primary-active);
+        }
     }
 
-    &:active,
-    &.active {
-        background-color: var(--color-text-inverse);
-        border-color: var(--color-text-inverse);
-        color: var(--color-primary-active);
+    // -----------------------------------------------------------------------------
+    // Size Modifiers
+    // -----------------------------------------------------------------------------
+    &--xl {
+        padding: var(--space-md) var(--space-lg);
+        font-size: var(--font-size-base);
+    }
+
+    // -----------------------------------------------------------------------------
+    // Behavior Modifiers
+    // -----------------------------------------------------------------------------
+    &--scroll {
+        // For smooth scroll links
+        scroll-behavior: smooth;
     }
 }
 
 // -----------------------------------------------------------------------------
-// Button Sizes
+// Dark Mode Enhanced Hover States (WCAG AA Compliance)
 // -----------------------------------------------------------------------------
-// Extra large button size for hero sections
+// High contrast hover states for dark backgrounds
+// Using color-mix() for perceptually uniform color transitions
 // -----------------------------------------------------------------------------
-.btn-xl {
-    padding: var(--space-md) var(--space-lg);
-    font-size: var(--font-size-base);
-}
+[data-theme="dark"] {
+    .btn--primary {
+        // Base state: ensure white text on primary background
+        color: #ffffff;
 
-// -----------------------------------------------------------------------------
-// BEM Component Structure (Future Enhancement)
-// -----------------------------------------------------------------------------
-// When refactoring templates in Week 6, consider migrating to:
-// .btn--primary { ... }
-// .btn--secondary { ... }
-// .btn--xl { ... }
-// -----------------------------------------------------------------------------
+        &:hover,
+        &:focus {
+            background-color: var(--btn-hover-primary-bg);
+            border-color: var(--btn-hover-primary-bg);
+            color: var(--btn-hover-primary-text);
+            box-shadow: 0 0 20px color-mix(in oklch, var(--color-primary) 40%, transparent 60%);
+        }
+
+        &:active,
+        &.active {
+            background-color: var(--color-primary-200);
+            border-color: var(--color-primary-200);
+            color: var(--color-neutral-900);
+        }
+    }
+
+    .btn--outline {
+        &:hover,
+        &:focus {
+            background-color: var(--btn-hover-outline-bg);
+            border-color: var(--btn-hover-outline-bg);
+            color: var(--btn-hover-outline-text);
+        }
+
+        &:active,
+        &.active {
+            background-color: var(--color-primary-100);
+            border-color: var(--color-primary-100);
+            color: var(--color-neutral-900);
+        }
+    }
+}

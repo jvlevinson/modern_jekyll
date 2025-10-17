@@ -5,8 +5,6 @@
 // Vendor prefixes removed (handled by autoprefixer in production)
 // =============================================================================
 
-@use 'sass:color';
-
 // -----------------------------------------------------------------------------
 // Transitions
 // -----------------------------------------------------------------------------
@@ -31,58 +29,6 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-}
-
-// -----------------------------------------------------------------------------
-// Button Variant
-// -----------------------------------------------------------------------------
-// Generate button styles with different color combinations
-// @param {Color} $color - Text color
-// @param {Color} $background - Background color
-// @param {Color} $border - Border color
-// -----------------------------------------------------------------------------
-@mixin button-variant($color, $background, $border) {
-    color: $color;
-    background-color: $background;
-    border-color: $border;
-    @include transition-all;
-
-    &:hover,
-    &:focus,
-    &.focus,
-    &:active,
-    &.active {
-        color: $color;
-        background-color: color.adjust($background, $lightness: -5%);
-        border-color: color.adjust($border, $lightness: -7%);
-    }
-
-    &:active,
-    &.active {
-        background-image: none;
-    }
-
-    &.disabled,
-    &[disabled],
-    &:disabled,
-    fieldset[disabled] & {
-        &,
-        &:hover,
-        &:focus,
-        &.focus,
-        &:active,
-        &.active {
-            background-color: $background;
-            border-color: $border;
-            opacity: 0.65;
-            cursor: not-allowed;
-        }
-    }
-
-    .badge {
-        color: $background;
-        background-color: $color;
-    }
 }
 
 // -----------------------------------------------------------------------------

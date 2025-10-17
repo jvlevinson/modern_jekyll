@@ -73,11 +73,118 @@
   --font-weight-bold: 700;
 
   // ---------------------------------------------------------------------------
-  // Transitions
+  // Animation Duration Scale (theme-agnostic)
   // ---------------------------------------------------------------------------
-  --transition-fast: 0.2s ease;
-  --transition-normal: 0.35s ease;
-  --transition-slow: 0.5s ease;
+  // Guidelines:
+  // - instant (0.1s): Micro-interactions (hover highlights, ripples)
+  // - fast (0.2s): Quick transitions (color changes, opacity)
+  // - normal (0.35s): Standard transitions (most UI elements)
+  // - slow (0.5s): Deliberate transitions (modals, slides)
+  // - slower (0.75s): Attention-drawing (important state changes)
+  // - slowest (1s): Dramatic effects (page transitions)
+  // - extra-slow (1.5s): Repeating animations (pulses, loading)
+  // - 2s: Specific long animations (bounce indicators)
+  --duration-instant: 0.1s;
+  --duration-fast: 0.2s;
+  --duration-normal: 0.35s;
+  --duration-slow: 0.5s;
+  --duration-slower: 0.75s;
+  --duration-slowest: 1s;
+  --duration-extra-slow: 1.5s;
+  --duration-2s: 2s;
+
+  // ---------------------------------------------------------------------------
+  // Animation Delay Scale (for staggered effects)
+  // ---------------------------------------------------------------------------
+  // Use for staggered animations (service boxes, portfolio grid)
+  // Increment by 0.1s for smooth cascade effect
+  --delay-0: 0s;
+  --delay-1: 0.1s;
+  --delay-2: 0.2s;
+  --delay-3: 0.3s;
+  --delay-4: 0.4s;
+  --delay-5: 0.5s;
+  --delay-7: 0.7s;
+  --delay-8: 0.8s;
+
+  // ---------------------------------------------------------------------------
+  // Easing Functions (theme-agnostic)
+  // ---------------------------------------------------------------------------
+  --ease-linear: linear;
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  // ---------------------------------------------------------------------------
+  // Combined Transitions (theme-agnostic)
+  // ---------------------------------------------------------------------------
+  --transition-instant: var(--duration-instant) var(--ease-out);
+  --transition-fast: var(--duration-fast) var(--ease-out);
+  --transition-normal: var(--duration-normal) var(--ease-in-out);
+  --transition-slow: var(--duration-slow) var(--ease-in-out);
+
+  // ---------------------------------------------------------------------------
+  // Border Radius Scale (theme-agnostic)
+  // ---------------------------------------------------------------------------
+  // Use Cases:
+  // - none (0): Sharp edges
+  // - xs (2px): Minimal rounding for badges
+  // - sm (3px): Small elements (tooltips, inputs)
+  // - md (5px): Standard cards, buttons
+  // - lg (10px): Large cards, modals
+  // - xl (15px): Hero elements
+  // - 2xl (20px): Maximum standard rounding
+  // - pill (300px): Pill-shaped buttons
+  // - circle (50%): Perfect circles (avatars)
+  --radius-none: 0;
+  --radius-xs: 2px;
+  --radius-sm: 3px;
+  --radius-md: 5px;
+  --radius-lg: 10px;
+  --radius-xl: 15px;
+  --radius-2xl: 20px;
+  --radius-pill: 300px;
+  --radius-circle: 50%;
+
+  // ---------------------------------------------------------------------------
+  // Z-Index Scale (theme-agnostic)
+  // ---------------------------------------------------------------------------
+  --z-base: 1;
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+
+  // ---------------------------------------------------------------------------
+  // Opacity Scale (theme-agnostic)
+  // ---------------------------------------------------------------------------
+  // Standard increments for consistent transparency
+  // Common uses: overlays (50-70), disabled states (65), hover effects (90)
+  --opacity-0: 0;
+  --opacity-5: 0.05;
+  --opacity-10: 0.1;
+  --opacity-20: 0.2;
+  --opacity-30: 0.3;
+  --opacity-40: 0.4;
+  --opacity-50: 0.5;
+  --opacity-60: 0.6;
+  --opacity-65: 0.65;
+  --opacity-70: 0.7;
+  --opacity-80: 0.8;
+  --opacity-90: 0.9;
+  --opacity-95: 0.95;
+  --opacity-100: 1;
+
+  // ---------------------------------------------------------------------------
+  // Component-Specific Tokens
+  // ---------------------------------------------------------------------------
+  // Micro-spacing for selection component (doesn't fit 8pt grid)
+  --selection-padding-y: 2px;
+  --selection-padding-x: 6px;
 
   // ---------------------------------------------------------------------------
   // Shadows (light theme)
@@ -92,45 +199,12 @@
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.5);
   --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
   --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.6);
-
-  // ---------------------------------------------------------------------------
-  // Border Radius
-  // ---------------------------------------------------------------------------
-  --radius-sm: 3px;
-  --radius-md: 5px;
-  --radius-lg: 10px;
-  --radius-pill: 300px;
-
-  // ---------------------------------------------------------------------------
-  // Z-Index Scale
-  // ---------------------------------------------------------------------------
-  --z-base: 1;
-  --z-dropdown: 1000;
-  --z-sticky: 1020;
-  --z-fixed: 1030;
-  --z-modal-backdrop: 1040;
-  --z-modal: 1050;
-  --z-popover: 1060;
-  --z-tooltip: 1070;
 }
 
 // =============================================================================
-// SCSS Variables for Color Functions
+// End of CSS Custom Properties
 // =============================================================================
-// These SCSS variables are used ONLY in SCSS color functions (color.adjust, etc.)
-// where CSS custom properties don't work.
-//
-// IMPORTANT: When user changes theme in _config.yml, these fallback values
-// may not match the runtime colors. For most use cases, components should
-// reference CSS custom properties directly (var(--color-primary)).
-//
-// These are synchronized with the default orange palette (500 shade)
+// All design tokens are now defined as CSS custom properties above.
+// SCSS variables are no longer needed as we've migrated to color-mix() for
+// dynamic color manipulation at runtime instead of SCSS compile-time functions.
 // =============================================================================
-
-$theme-primary: #f97316;    // orange-500 (updated from old #F05F40)
-$theme-dark: #0f172a;       // slate-900 (updated from old #222)
-
-// Extract from CSS custom properties for use in SCSS calculations
-$color-primary: #f97316;    // orange-500
-$color-dark: #0f172a;       // slate-900
-$color-light: #fff;

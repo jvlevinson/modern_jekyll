@@ -21,13 +21,37 @@ header {
     min-height: auto;
     @include background-cover;
     background-position: center;
-    background-image: url('../img/header.jpg');
     text-align: center;
     color: var(--color-light);
 
     // Desktop layout - full viewport height
     @media (min-width: 768px) {
-        min-height: 100%;
+        min-height: 100vh;
+    }
+
+    // Header overlay for improved text contrast
+    // Light theme: no overlay
+    // Dark theme: dark blue overlay with backdrop blur
+    .header__overlay {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
+        background-color: transparent;
+    }
+}
+
+// Dark theme: dark blue faded overlay with blur
+// Plus lighter slate gray for hero title for better contrast
+[data-theme="dark"] {
+    header .header__overlay {
+        background-color: rgba(15, 23, 42, 0.5);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+
+    .header-content-inner h1 {
+        color: var(--color-neutral-300);
     }
 }
 
@@ -35,9 +59,11 @@ header {
 // Header Content Wrapper
 // -----------------------------------------------------------------------------
 // Contains inner content, vertically centered on desktop
+// z-index: 2 ensures content appears above overlay (z-index: 1)
 // -----------------------------------------------------------------------------
 .header-content {
     position: relative;
+    z-index: 2;
     text-align: center;
     padding: var(--space-2xl) var(--space-md) var(--space-2xl);
     width: 100%;

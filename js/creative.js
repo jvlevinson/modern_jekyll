@@ -38,7 +38,8 @@
     // Smooth Scroll for Navigation Links
     // =============================================================================
     function initSmoothScroll() {
-        const scrollLinks = document.querySelectorAll('a.page-scroll');
+        // Support both old (.page-scroll) and new BEM (.btn--scroll, .nav__link--scroll) classes
+        const scrollLinks = document.querySelectorAll('a.page-scroll, a.btn--scroll, a.nav__link--scroll');
 
         scrollLinks.forEach(link => {
             link.addEventListener('click', function(e) {
@@ -67,10 +68,14 @@
         const scrollSpyElement = document.body;
         if (scrollSpyElement) {
             // Bootstrap 5 ScrollSpy initialization
-            const scrollSpy = new bootstrap.ScrollSpy(scrollSpyElement, {
-                target: '.navbar',
-                offset: 51
-            });
+            // Support both old (.navbar) and new BEM (.nav) classes
+            const navElement = document.querySelector('.nav') || document.querySelector('.navbar');
+            if (navElement) {
+                const scrollSpy = new bootstrap.ScrollSpy(scrollSpyElement, {
+                    target: navElement,
+                    offset: 51
+                });
+            }
         }
     }
 
@@ -78,8 +83,9 @@
     // Mobile Menu Auto-Close
     // =============================================================================
     function initMobileMenuClose() {
-        const navLinks = document.querySelectorAll('.navbar-collapse ul li a');
-        const navbarToggler = document.querySelector('.navbar-toggler');
+        // Support both old and new BEM classes
+        const navLinks = document.querySelectorAll('.navbar-collapse ul li a, .nav__menu li a');
+        const navbarToggler = document.querySelector('.navbar-toggler, .nav__toggle');
         const navbarCollapse = document.querySelector('.navbar-collapse');
 
         navLinks.forEach(link => {
@@ -87,9 +93,11 @@
                 // Check if navbar toggler is visible (mobile view)
                 if (navbarToggler && window.getComputedStyle(navbarToggler).display !== 'none') {
                     // Use Bootstrap 5 Collapse API
-                    const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
-                    if (bsCollapse) {
-                        bsCollapse.hide();
+                    if (navbarCollapse) {
+                        const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+                        if (bsCollapse) {
+                            bsCollapse.hide();
+                        }
                     }
                 }
             });
@@ -122,14 +130,18 @@
     // Sticky Navbar (Replaces jQuery affix)
     // =============================================================================
     function initStickyNav() {
-        const mainNav = document.getElementById('mainNav');
+        // Support both ID selector and BEM class selector
+        const mainNav = document.getElementById('mainNav') || document.querySelector('.nav');
 
         if (mainNav) {
             window.addEventListener('scroll', function() {
                 if (window.scrollY > 100) {
+                    // Add both old and new class names for compatibility
                     mainNav.classList.add('navbar-shrink');
+                    mainNav.classList.add('nav--shrink');
                 } else {
                     mainNav.classList.remove('navbar-shrink');
+                    mainNav.classList.remove('nav--shrink');
                 }
             });
         }
@@ -148,12 +160,15 @@
     // Portfolio Flip Functionality
     // =============================================================================
     function initPortfolioFlip() {
-        const flipContainers = document.querySelectorAll('.portfolio-flip-container');
+        // Support both old and new BEM classes during migration
+        const flipContainers = document.querySelectorAll('.portfolio-flip-container, .portfolio-box--flippable');
 
         flipContainers.forEach(container => {
             container.addEventListener('click', function(e) {
                 e.preventDefault();
+                // Toggle both old and new class names for compatibility
                 this.classList.toggle('flipped');
+                this.classList.toggle('portfolio-box--flipped');
             });
         });
     }
