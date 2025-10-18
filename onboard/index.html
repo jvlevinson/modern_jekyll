@@ -14,45 +14,80 @@ permalink: /onboard/index.html
 </head>
 <body>
   <div class="dashboard">
-    <header class="dashboard__header">
-      <h1>🎨 Onboard Dashboard</h1>
-      <p>Interactive theme editor with OKLCH color system</p>
-      <div class="dashboard__badges">
-        <span class="dashboard__badge dashboard__badge--warning">Editor Mode</span>
+    <!-- Sidebar Navigation -->
+    <aside class="dashboard__sidebar" data-sidebar>
+      <div class="dashboard__sidebar-header">
+        <span class="dashboard__sidebar-brand">🎨 Onboard</span>
+        <button class="dashboard__sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">
+          <i class="fas fa-bars"></i>
+        </button>
       </div>
-      <div class="dashboard__warning">
-        <span class="warning-icon">⚠️</span>
-        <span class="warning-text">This dashboard only works on localhost. Production builds automatically exclude this directory.</span>
-      </div>
-    </header>
 
-    <nav class="dashboard__nav">
-      <div class="dashboard__nav-container">
-        <div class="dashboard__nav-tabs">
-          <button class="dashboard__nav-item dashboard__nav-item--active" data-section="theme">
-            <span class="nav-icon">🎨</span>
-            <span class="nav-label">Theme</span>
-          </button>
-          <button class="dashboard__nav-item" data-section="content">
-            <span class="nav-icon">📝</span>
-            <span class="nav-label">Content</span>
-          </button>
-          <button class="dashboard__nav-item" data-section="structure">
-            <span class="nav-icon">🏗️</span>
-            <span class="nav-label">Structure</span>
-          </button>
-          <button class="dashboard__nav-item" data-section="preview">
-            <span class="nav-icon">👁️</span>
-            <span class="nav-label">Preview</span>
-          </button>
+      <nav class="dashboard__sidebar-nav">
+        <a href="/" class="dashboard__sidebar-item dashboard__sidebar-item--home">
+          <span class="sidebar-item__icon"><i class="fas fa-home"></i></span>
+          <span class="sidebar-item__label">Back to Site</span>
+        </a>
+
+        <div class="dashboard__sidebar-divider"></div>
+
+        <button class="dashboard__sidebar-item dashboard__sidebar-item--active" data-section="theme">
+          <span class="sidebar-item__icon">🎨</span>
+          <span class="sidebar-item__label">Theme</span>
+        </button>
+        <button class="dashboard__sidebar-item" data-section="content">
+          <span class="sidebar-item__icon">📝</span>
+          <span class="sidebar-item__label">Content</span>
+        </button>
+        <button class="dashboard__sidebar-item" data-section="structure">
+          <span class="sidebar-item__icon">🏗️</span>
+          <span class="sidebar-item__label">Structure</span>
+        </button>
+        <button class="dashboard__sidebar-item" data-section="preview">
+          <span class="sidebar-item__icon">👁️</span>
+          <span class="sidebar-item__label">Preview</span>
+        </button>
+      </nav>
+
+      <!-- Theme Toggle at Bottom -->
+      <div class="dashboard__sidebar-footer">
+        <button class="dashboard__theme-toggle" data-theme-toggle aria-label="Toggle theme">
+          <span class="theme-toggle__icon theme-toggle__icon--light">
+            <i class="fas fa-sun"></i>
+          </span>
+          <span class="theme-toggle__icon theme-toggle__icon--dark">
+            <i class="fas fa-moon"></i>
+          </span>
+          <span class="theme-toggle__label">Theme</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <div class="dashboard__main">
+      <header class="dashboard__header">
+        <div class="dashboard__header-main">
+          <div class="dashboard__header-text">
+            <h1 class="dashboard__title">🎨 Onboard Dashboard</h1>
+            <p class="dashboard__subtitle">Interactive theme editor with OKLCH color system</p>
+          </div>
+          <div class="dashboard__header-status">
+            <span class="dashboard__badge dashboard__badge--warning">Editor Mode</span>
+            <span class="dashboard__badge dashboard__badge--info">Phase 7</span>
+            <span id="unsaved-indicator" class="dashboard__badge dashboard__badge--warning" hidden>
+              ⚠️ Unsaved
+            </span>
+          </div>
         </div>
-        <span id="unsaved-indicator" class="dashboard__nav-badge dashboard__nav-badge--warning" hidden>
-          ⚠️ Unsaved Changes
-        </span>
-      </div>
-    </nav>
+      </header>
 
-    <main class="dashboard__content">
+      <!-- Compact Notification -->
+      <div class="dashboard__notification">
+        <i class="fas fa-info-circle"></i>
+        <span>This dashboard only works on localhost. Production builds automatically exclude this directory.</span>
+      </div>
+
+      <main class="dashboard__content">
       <!-- Theme Editor Section (Phase 7) -->
       <section id="section-theme" class="dashboard__section">
         <div id="theme-editor-container" data-theme-editor></div>
@@ -167,15 +202,16 @@ permalink: /onboard/index.html
           <p>Start server: <code>bundle exec jekyll serve</code></p>
         </div>
       </section>
-    </main>
+      </main>
 
-    <footer class="dashboard__footer">
-      <div class="footer-info">
-        <span>Modern Jekyll · Phase 7: TypeScript Theme Editor</span>
-        <span class="footer-separator">·</span>
-        <span>OKLCH Color System with Live Preview</span>
-      </div>
-    </footer>
+      <footer class="dashboard__footer">
+        <div class="footer-info">
+          <span>Modern Jekyll · Phase 7: TypeScript Theme Editor</span>
+          <span class="footer-separator">·</span>
+          <span>OKLCH Color System with Live Preview</span>
+        </div>
+      </footer>
+    </div>
   </div>
 
   <script type="module" src="assets/dist/editor.bundle.js"></script>

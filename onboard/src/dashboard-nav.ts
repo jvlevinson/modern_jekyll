@@ -1,23 +1,53 @@
 // =============================================================================
 // Dashboard Navigation
 // =============================================================================
-// Handles tab switching between Theme, Content, Structure, and Preview sections
-// Phase 7: TypeScript Theme Editor
+// Handles sidebar navigation, tab switching, and sidebar collapse
+// Phase 7: TypeScript Theme Editor - Sidebar Layout
 // =============================================================================
 
 import { on } from './core/event-bus.js';
 import { EventName } from './types/events.types.js';
 import { saveActiveTab } from './core/storage-manager.js';
 
+const SIDEBAR_STATE_KEY = 'onboard-sidebar-collapsed';
+const THEME_KEY = 'onboard-theme-preference';
+
 /**
  * Initialize dashboard navigation
- * Sets up event listeners for tab switching
+ * Sets up event listeners for sidebar toggle and tab switching
  */
 export function initDashboardNav(): void {
   const navButtons = document.querySelectorAll('[data-section]');
   const sections = document.querySelectorAll('.dashboard__section');
   const unsavedIndicator = document.getElementById('unsaved-indicator');
+  const sidebar = document.querySelector('[data-sidebar]') as HTMLElement;
+  const sidebarToggle = document.querySelector('[data-sidebar-toggle]') as HTMLButtonElement;
+  const themeToggle = document.querySelector('[data-theme-toggle]') as HTMLButtonElement;
 
+  // Initialize sidebar state from localStorage
+  initSidebarState(sidebar);
+
+  // Initialize theme from localStorage
+  initTheme();
+
+  // Sidebar toggle button
+  if (sidebarToggle && sidebar) {
+    sidebarToggle.addEventListener('click', () => {
+      const isCollapsed = sidebar.classList.toggle('dashboard__sidebar--collapsed');
+      localStorage.setItem(SIDEBAR_STATE_KEY, isCollapsed ? 'true' : 'false');
+    });
+  }
+
+  // Theme toggle button
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const html = document.documentElement;
+      const isDark = html.classList.toggle('dark');
+      localStorage.setItem(THEME_KEY, isDark ? 'dark' : 'light');
+    });
+  }
+
+  // Tab/Section switching
   navButtons.forEach((button) => {
     button.addEventListener('click', () => {
       const targetSection = button.getAttribute('data-section');
@@ -27,9 +57,9 @@ export function initDashboardNav(): void {
       // Save active tab to localStorage
       saveActiveTab(targetSection);
 
-      // Update active nav button
-      navButtons.forEach((btn) => btn.classList.remove('dashboard__nav-item--active'));
-      button.classList.add('dashboard__nav-item--active');
+      // Update active sidebar button
+      navButtons.forEach((btn) => btn.classList.remove('dashboard__sidebar-item--active'));
+      button.classList.add('dashboard__sidebar-item--active');
 
       // Show target section, hide others
       sections.forEach((section) => {
@@ -101,5 +131,43 @@ export function initDashboardNav(): void {
           break;
       }
     });
+  }
+}
+
+/**
+ * Initialize sidebar collapsed state from localStorage
+ */
+function initSidebarState(sidebar: HTMLElement | null): void {
+  if (!sidebar) return;
+
+  const savedState = localStorage.getItem(SIDEBAR_STATE_KEY);
+
+  // On mobile, always start collapsed (CSS handles this)
+  const isMobile = window.innerWidth <= 768;
+
+  if (isMobile) {
+    sidebar.classList.add('dashboard__sidebar--collapsed');
+  } else if (savedState === 'true') {
+    sidebar.classList.add('dashboard__sidebar--collapsed');
+  }
+}
+
+/**
+ * Initialize theme from localStorage or system preference
+ */
+function initTheme(): void {
+  const html = document.documentElement;
+  const savedTheme = localStorage.getItem(THEME_KEY);
+
+  if (savedTheme === 'dark') {
+    html.classList.add('dark');
+  } else if (savedTheme === 'light') {
+    html.classList.remove('dark');
+  } else {
+    // Default to system preference
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (prefersDark) {
+      html.classList.add('dark');
+    }
   }
 }

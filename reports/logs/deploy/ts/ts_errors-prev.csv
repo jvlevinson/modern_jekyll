@@ -1,7 +1,1 @@
-TS2339,code,2,delta
-errors,error_total,2,0
-href,property,1,0
-onboard/src/utils/debug-overlay.ts,file,2,0
-rel,property,1,0
-resourceType,resourceType,0,0
-value,error_type,count,error_type,count,0
+error_type,count,value

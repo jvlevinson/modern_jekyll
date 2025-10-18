@@ -191,6 +191,33 @@ export function updateSelector2DLightness(
 }
 
 /**
+ * Update 2D selector marker position to match a color
+ *
+ * @param container - Selector container
+ * @param color - OKLCH color to display
+ */
+export function setSelector2DColor(
+  container: HTMLElement,
+  color: OklchColor
+): void {
+  const canvas = container.querySelector('[data-canvas]') as HTMLCanvasElement;
+  const marker = container.querySelector('[data-marker]') as HTMLElement;
+
+  if (!canvas || !marker) return;
+
+  const state: Partial<ColorSelectorState> = {
+    canvas,
+    config: {
+      size: canvas.width,
+      lightness: color.l,
+      onColorChange: () => {} // Not used for position update
+    }
+  };
+
+  updateMarkerPosition(state as ColorSelectorState, marker, color);
+}
+
+/**
  * Render color wheel on canvas
  * Circular gradient: hue (360°) × chroma (radial distance)
  */

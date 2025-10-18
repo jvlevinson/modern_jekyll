@@ -23,7 +23,7 @@
 // Onboard Editor Modules
 // -----------------------------------------------------------------------------
 // All editor-specific styles (tokens + components)
-@use '../../_sass/onboard';
+@use '../../_sass/onboard/_index.scss';
 
 // Content Editor Styles (Phase 8)
 // Use modern @use syntax with wildcard namespace to include all styles
@@ -50,15 +50,15 @@
   display: block;
   position: relative;
 
-  // Keep font & color inheritance from editor tokens
-  font-family: var(--editor-font-sans);
-  color: var(--editor-text);
-  line-height: var(--editor-line-height-normal);
+  // Keep font & color inheritance from shadcn tokens
+  font-family: var(--font-sans);
+  color: var(--foreground);
+  line-height: var(--leading-normal);
 
   // Apply editor background
-  background: var(--editor-bg);
+  background: var(--background);
   min-height: 600px;
-  border-radius: var(--editor-radius-xl);
+  border-radius: var(--radius-xl);
 
   // Ensure all children inherit properly
   * {
@@ -78,7 +78,7 @@
 
   &::after {
     content: 'Loading theme editor...';
-    color: var(--editor-text-muted);
-    font-family: var(--editor-font-sans);
+    color: var(--muted-foreground);
+    font-family: var(--font-sans);
   }
 }

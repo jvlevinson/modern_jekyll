@@ -2,7 +2,7 @@
 // Dashboard Layout Component
 // =============================================================================
 // Main dashboard shell: header, navigation, content areas, footer
-// Uses editor tokens from abstracts/_tokens.scss
+// Uses editor tokens from abstracts/_tokens-shadcn.scss
 // BEM methodology with .dashboard__ namespace
 // Phase 7+: Unified token system
 // =============================================================================
@@ -32,14 +32,373 @@ code {
 
 .dashboard {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 // -----------------------------------------------------------------------------
-// Dashboard Header
+// Sidebar Navigation
+// -----------------------------------------------------------------------------
+.dashboard__sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 240px;
+  background: var(--card);
+  border-right: 2px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  transition: width var(--duration-250) var(--ease-in-out);
+  flex-shrink: 0;
+  z-index: var(--z-fixed);
+  overflow-y: auto;
+}
+
+.dashboard__sidebar--collapsed {
+  width: 60px;
+
+  .sidebar-item__label {
+    display: none;
+  }
+
+  .dashboard__sidebar-brand {
+    display: none;
+  }
+
+  .dashboard__sidebar-item {
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+    gap: 0;
+  }
+
+  .sidebar-item__icon {
+    margin: 0;
+  }
+}
+
+.dashboard__sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-6);
+  border-bottom: 2px solid var(--border);
+  background: var(--primary);
+  color: white;
+  min-height: 70px;
+}
+
+.dashboard__sidebar-brand {
+  font-size: 1.125rem;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dashboard__sidebar-toggle {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: var(--space-2);
+  border-radius: var(--radius);
+  transition: background var(--duration-150) var(--ease-in-out);
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.dashboard__sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-4) 0;
+}
+
+.dashboard__sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-6);
+  border: none;
+  background: transparent;
+  border-left: 3px solid transparent;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--muted-foreground);
+  transition: all var(--duration-150) var(--ease-in-out);
+  text-align: left;
+  width: 100%;
+  text-decoration: none;
+
+  &:hover {
+    background: var(--background);
+    color: var(--foreground);
+  }
+
+  &--active {
+    background: var(--background);
+    color: var(--primary);
+    border-left-color: var(--primary);
+    font-weight: 600;
+  }
+
+  &--home {
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    margin: 0 var(--space-4) var(--space-2) var(--space-4);
+    width: calc(100% - var(--space-8));
+    border-left: 2px solid var(--border);
+
+    &:hover {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+  }
+}
+
+.dashboard__sidebar-divider {
+  height: 2px;
+  background: var(--border);
+  margin: var(--space-4) var(--space-6);
+}
+
+.sidebar-item__icon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  width: 24px;
+  text-align: center;
+}
+
+.sidebar-item__label {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// -----------------------------------------------------------------------------
+// Sidebar Footer (Theme Toggle)
+// -----------------------------------------------------------------------------
+.dashboard__sidebar-footer {
+  margin-top: auto;
+  padding: var(--space-4);
+  border-top: 2px solid var(--border);
+}
+
+.dashboard__theme-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-6);
+  border: none;
+  background: transparent;
+  color: var(--muted-foreground);
+  cursor: pointer;
+  border-radius: var(--radius);
+  transition: all var(--duration-150) var(--ease-in-out);
+  font-size: 1rem;
+
+  &:hover {
+    background: var(--background);
+    color: var(--foreground);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.theme-toggle__icon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  width: 24px;
+  text-align: center;
+}
+
+.theme-toggle__label {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+
+// Show sun in dark mode, moon in light mode
+.dark .theme-toggle__icon--light {
+  display: block;
+}
+
+.dark .theme-toggle__icon--dark {
+  display: none;
+}
+
+:root:not(.dark) .theme-toggle__icon--light {
+  display: none;
+}
+
+:root:not(.dark) .theme-toggle__icon--dark {
+  display: block;
+}
+
+// Collapsed sidebar adjustments for theme toggle
+.dashboard__sidebar--collapsed {
+  .theme-toggle__label {
+    display: none;
+  }
+
+  .dashboard__theme-toggle {
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+    gap: 0;
+  }
+
+  .dashboard__sidebar-item--home {
+    width: auto;
+    margin: 0 var(--space-2) var(--space-2) var(--space-2);
+    padding: var(--space-4);
+    justify-content: center;
+  }
+
+  .dashboard__sidebar-divider {
+    margin: var(--space-4) var(--space-4);
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Main Content Wrapper
+// -----------------------------------------------------------------------------
+.dashboard__main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow-y: auto;
+  margin-left: 240px;
+  transition: margin-left var(--duration-250) var(--ease-in-out);
+}
+
+// Adjust margin when sidebar is collapsed
+.dashboard__sidebar--collapsed ~ .dashboard__main {
+  margin-left: 60px;
+}
+
+// -----------------------------------------------------------------------------
+// Dashboard Header (Restructured)
 // -----------------------------------------------------------------------------
 .dashboard__header {
+  background: var(--card);
+  border-bottom: 2px solid var(--border);
+  padding: var(--space-6) var(--space-8);
+}
+
+.dashboard__header-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-6);
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.dashboard__header-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.dashboard__title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin: 0 0 var(--space-2) 0;
+  color: var(--foreground);
+}
+
+.dashboard__subtitle {
+  font-size: 1rem;
+  color: var(--muted-foreground);
+  margin: 0;
+}
+
+.dashboard__header-status {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+// Compact Notification Bar
+.dashboard__notification {
+  background: rgba(245, 158, 11, 0.1);
+  border-left: 3px solid var(--warning);
+  padding: var(--space-3) var(--space-8);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+
+  i {
+    color: var(--warning);
+    font-size: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: var(--space-3) var(--space-4);
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Welcome Section
+// -----------------------------------------------------------------------------
+.dashboard__welcome {
+  background: var(--card);
+  border-bottom: 2px solid var(--border);
+  padding: var(--space-6) var(--space-8);
+}
+
+.dashboard__welcome-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 var(--space-4) 0;
+  color: var(--foreground);
+}
+
+.dashboard__welcome-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.dashboard__welcome-warning {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-6);
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  color: var(--foreground);
+}
+
+// Old header styles (keeping for reference - can be removed)
+.dashboard__header--old {
   background: linear-gradient(135deg, var(--primary) 0%, var(--primary) 100%);
   color: white;
   padding: var(--space-8);
@@ -107,111 +466,25 @@ code {
   font-size: 1.25rem;
 }
 
-// -----------------------------------------------------------------------------
-// Dashboard Navigation
-// -----------------------------------------------------------------------------
-.dashboard__nav {
-  background: var(--card);
-  border-bottom: 2px solid var(--border);
-  padding: 0;
-  box-shadow: var(--shadow-sm);
-}
-
-.dashboard__nav-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-6);
-  padding: 0 var(--space-6);
-  width: 100%;
-  min-width: 0;
-}
-
-.dashboard__nav-tabs {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  flex: 1 1 auto;
-  min-width: 0;
-}
-
-.dashboard__nav-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-  padding: var(--space-3) var(--space-4);
-  border-radius: 2rem;
-  font-size: 0.875rem;
-  font-weight: 600;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-
-.dashboard__nav-badge--warning {
-  background: var(--warning);
-  color: white;
-}
-
-.dashboard__nav-item {
-  flex: 0 1 auto;
-  min-width: 100px;
-  max-width: 200px;
-  padding: var(--space-4) var(--space-6);
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--muted-foreground);
-  transition: all var(--duration-150) var(--ease-in-out);
-  border-bottom: 3px solid transparent;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-3);
-  white-space: nowrap;
-  text-decoration: none;
-}
-
-.dashboard__nav-item:hover {
-  background: var(--background);
-  color: var(--foreground);
-}
-
-.dashboard__nav-item--active {
-  background: var(--background);
-  color: var(--primary);
-  border-bottom-color: var(--primary);
-  font-weight: 600;
-}
-
-.nav-icon {
-  font-size: 1.125rem;
-  flex-shrink: 0;
-}
-
-.nav-label {
-  flex: 1;
-}
+// Old navigation styles (removed - now using sidebar)
+// Navigation is now in .dashboard__sidebar section above
 
 // -----------------------------------------------------------------------------
 // Dashboard Main Content
 // -----------------------------------------------------------------------------
 .dashboard__content {
   flex: 1;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: var(--space-8);
   width: 100%;
+  padding: var(--space-4) var(--space-8);
 }
 
 .dashboard__section {
-  background: var(--card);
-  padding: var(--space-8);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
-  border: 1px solid var(--border);
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  max-width: 100%; // Allow full width
 }
 
 .section__heading {
@@ -672,26 +945,47 @@ code {
 // -----------------------------------------------------------------------------
 // Responsive Design
 // -----------------------------------------------------------------------------
+
+// Mobile - Sidebar collapses to icon-only
 @media (max-width: 768px) {
-  .dashboard__header h1 {
-    font-size: 2rem;
+  .dashboard__sidebar {
+    width: 60px;
+
+    .sidebar-item__label {
+      display: none;
+    }
+
+    .dashboard__sidebar-brand {
+      display: none;
+    }
+  }
+
+  .dashboard__header {
+    padding: var(--space-4) var(--space-6);
+  }
+
+  .dashboard__title {
+    font-size: 1.5rem;
+  }
+
+  .dashboard__subtitle {
+    font-size: 0.875rem;
+  }
+
+  .dashboard__welcome {
+    padding: var(--space-4) var(--space-6);
+  }
+
+  .dashboard__welcome-title {
+    font-size: 1.25rem;
   }
 
   .dashboard__content {
-    padding: var(--space-4);
+    padding: var(--space-3) var(--space-6);
   }
 
   .dashboard__section {
-    padding: var(--space-4);
-  }
-
-  .dashboard__nav-tabs {
-    flex-wrap: wrap;
-  }
-
-  .dashboard__nav-item {
-    flex: 1 1 auto;
-    min-width: 80px;
+    padding: 0;
   }
 
   .config-grid,
@@ -709,6 +1003,24 @@ code {
   }
 }
 
+// Tablet - Sidebar remains full width
+@media (min-width: 769px) and (max-width: 1024px) {
+  .dashboard__content {
+    padding: var(--space-4) var(--space-8);
+  }
+
+  .dashboard__section {
+    padding: 0;
+  }
+}
+
+// Desktop - Full sidebar with manual toggle
+@media (min-width: 1025px) {
+  .dashboard__sidebar {
+    // Full width by default, collapsible via toggle button
+  }
+}
+
 // -----------------------------------------------------------------------------
 // Content Editor Integration
 // -----------------------------------------------------------------------------
@@ -717,4 +1029,26 @@ code {
   display: flex;
   flex-direction: column;
   gap: var(--space-6);
+  max-width: 100%; // Full width forms
+}
+
+// Widen form inputs for better usability
+input[type="text"],
+input[type="email"],
+input[type="url"],
+textarea,
+select {
+  max-width: 100%; // Full width instead of constrained
+  width: 100%;
+}
+
+// Theme editor form widths
+.theme-editor {
+  max-width: 100%; // Full width theme editor
+}
+
+// Config groups should not be constrained
+.config-group,
+.theme-setting-group {
+  max-width: 100%; // Remove constraints
 }

@@ -13,7 +13,7 @@ import { generatePalette } from '../utils/palette-generator.js';
 import { checkContrast } from '../utils/contrast-checker.js';
 import { EventName } from '../types/events.types.js';
 import { emit } from '../core/event-bus.js';
-import { createColorSelector2DHTML, initColorSelector2D, updateSelector2DLightness } from './color-selector-2d.js';
+import { createColorSelector2DHTML, initColorSelector2D, updateSelector2DLightness, setSelector2DColor } from './color-selector-2d.js';
 import { oklchToHex, hexToOklch, isValidHex } from '../utils/hex-converter.js';
 
 /**
@@ -442,13 +442,30 @@ export function setColorPickerValue(element: HTMLElement, color: OklchColor): vo
   const lightnessInput = element.querySelector('[data-lightness]') as HTMLInputElement;
   const chromaInput = element.querySelector('[data-chroma]') as HTMLInputElement;
   const hueInput = element.querySelector('[data-hue]') as HTMLInputElement;
+  const selectorContainer = element.querySelector('[data-selector-2d]') as HTMLElement;
 
-  if (lightnessInput) lightnessInput.value = String(color.l);
-  if (chromaInput) chromaInput.value = String(color.c);
-  if (hueInput) hueInput.value = String(color.h);
+  // Update slider values and dispatch events to trigger state updates
+  // Using explicit if-blocks to ensure events dispatch if inputs exist
+  if (lightnessInput) {
+    lightnessInput.value = String(color.l);
+    lightnessInput.dispatchEvent(new Event('input', { bubbles: true }));
+  }
 
-  // Trigger input event to update UI
-  lightnessInput?.dispatchEvent(new Event('input', { bubbles: true }));
+  if (chromaInput) {
+    chromaInput.value = String(color.c);
+    chromaInput.dispatchEvent(new Event('input', { bubbles: true }));
+  }
+
+  if (hueInput) {
+    hueInput.value = String(color.h);
+    hueInput.dispatchEvent(new Event('input', { bubbles: true }));
+  }
+
+  // Update 2D selector to reflect new color
+  // Note: lightness handler already updates wheel, we just need to position marker
+  if (selectorContainer) {
+    setSelector2DColor(selectorContainer, color);
+  }
 }
 
 /**

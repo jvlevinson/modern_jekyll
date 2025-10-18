@@ -21,7 +21,8 @@ import { on, emit } from '../core/event-bus.js';
 import { EventName } from '../types/events.types.js';
 import {
   createColorPickerHTML,
-  initColorPicker
+  initColorPicker,
+  setColorPickerValue
 } from '../components/color-picker.js';
 import { renderColorCard, initColorCard } from '../components/color-card.js';
 import { renderColorGradient } from '../components/color-gradient.js';
@@ -106,13 +107,24 @@ function renderEditor(container: HTMLElement, theme: ThemeConfig, state: EditorS
     <div class="theme-editor">
       <header class="theme-editor__header">
         <h2 class="theme-editor__title">Theme Editor</h2>
+        <div class="theme-editor__editing-label">
+          Editing: <span class="color-key-label">${capitalizeFirst(state.activeColor)} Color</span>
+        </div>
       </header>
 
-      <div class="theme-editor__content">
-        <!-- Brand Colors Section -->
-        <section class="theme-section">
-          <header class="theme-section__header">
-            <h3 class="theme-section__title">Brand Colors</h3>
+      <div class="theme-editor__grid">
+        <!-- LEFT COLUMN: Sidebar (40%) -->
+        <aside class="theme-editor__sidebar">
+          <!-- Brand Colors Section -->
+          <section class="theme-section theme-section--compact">
+            <header class="theme-section__header theme-section__header--compact">
+              <h3 class="theme-section__title">Brand Colors</h3>
+            </header>
+
+            <div class="color-cards-container" data-color-cards>
+              ${renderColorCard(primaryColor, 'primary', state.activeColor === 'primary')}
+              ${state.isSecondaryEnabled ? renderColorCard(secondaryColor, 'secondary', state.activeColor === 'secondary') : ''}
+            </div>
 
             <label class="toggle-switch">
               <input
@@ -123,87 +135,93 @@ function renderEditor(container: HTMLElement, theme: ThemeConfig, state: EditorS
               <span class="toggle-switch__slider"></span>
               <span class="toggle-switch__label">Enable Secondary Color</span>
             </label>
-          </header>
+          </section>
 
-          <div class="color-cards-container" data-color-cards>
-            ${renderColorCard(primaryColor, 'primary', state.activeColor === 'primary')}
-            ${state.isSecondaryEnabled ? renderColorCard(secondaryColor, 'secondary', state.activeColor === 'secondary') : ''}
-          </div>
-        </section>
+          <!-- Theme Settings Section -->
+          <section class="theme-section theme-section--compact">
+            <header class="theme-section__header theme-section__header--compact">
+              <h3 class="theme-section__title">Theme Settings</h3>
+            </header>
 
-        <!-- Color Picker Section (Shared) -->
-        <section class="theme-section">
-          <header class="theme-section__header">
-            <h3 class="theme-section__title">
-              Editing: <span class="color-key-label">${capitalizeFirst(state.activeColor)} Color</span>
-            </h3>
-          </header>
-
-          <div data-color-picker-container></div>
-        </section>
-
-        <!-- Visualizations Section -->
-        <section class="theme-section theme-section--visualizations">
-          <header class="theme-section__header">
-            <h3 class="theme-section__title">Color Analysis</h3>
-          </header>
-
-          <div class="visualizations-grid">
-            ${renderColorGradient(currentColor)}
-            ${renderShadeMatrix(currentColor)}
-            ${renderColorHarmonies(currentColor)}
-            ${renderColorPresets()}
-          </div>
-        </section>
-
-        <!-- Theme Settings Section -->
-        <section class="theme-section theme-section--collapsible" data-section="theme-settings">
-          <h3 class="theme-section__title" data-toggle>
-            <span class="theme-section__icon">⚙️</span>
-            <span>Theme Settings</span>
-            <span class="theme-section__arrow">▼</span>
-          </h3>
-
-          <div class="theme-section__content" data-content>
-            <!-- Theme Mode -->
+            <!-- Theme Mode Cards -->
             <div class="theme-setting-group">
               <label class="theme-setting__label">Theme Mode</label>
-              <div class="theme-setting__options">
-                ${['auto', 'light', 'dark'].map(mode => `
-                  <label class="theme-radio">
+              <p class="theme-setting__description">Choose how your theme adapts to system preferences</p>
+
+              <div class="theme-mode-grid">
+                ${[
+                  { value: 'auto', icon: '<i class="fas fa-magic"></i>', label: 'Auto' },
+                  { value: 'light', icon: '<i class="fas fa-sun"></i>', label: 'Light' },
+                  { value: 'dark', icon: '<i class="fas fa-moon"></i>', label: 'Dark' }
+                ].map(mode => `
+                  <label class="theme-mode-card ${theme.mode === mode.value ? 'theme-mode-card--active' : ''}">
                     <input
                       type="radio"
                       name="theme-mode"
-                      value="${mode}"
-                      ${theme.mode === mode ? 'checked' : ''}
+                      value="${mode.value}"
+                      ${theme.mode === mode.value ? 'checked' : ''}
                       data-mode-radio
                     />
-                    <span>${capitalizeFirst(mode)}</span>
+                    <span class="theme-mode-card__icon">${mode.icon}</span>
+                    <span class="theme-mode-card__label">${mode.label}</span>
                   </label>
                 `).join('')}
               </div>
             </div>
 
-            <!-- Neutral Palette -->
+            <!-- Neutral Palette Cards -->
             <div class="theme-setting-group">
               <label class="theme-setting__label">Neutral Palette</label>
-              <div class="theme-setting__options">
-                ${['slate', 'gray', 'zinc', 'neutral', 'stone'].map(neutral => `
-                  <label class="theme-radio">
+              <p class="theme-setting__description">Select the neutral color family for your theme</p>
+
+              <div class="neutral-palette-grid">
+                ${[
+                  { value: 'slate', color: '#64748b', label: 'Slate' },
+                  { value: 'gray', color: '#6b7280', label: 'Gray' },
+                  { value: 'zinc', color: '#71717a', label: 'Zinc' },
+                  { value: 'neutral', color: '#737373', label: 'Neutral' },
+                  { value: 'stone', color: '#78716c', label: 'Stone' }
+                ].map(neutral => `
+                  <label class="neutral-palette-card ${theme.neutral === neutral.value ? 'neutral-palette-card--active' : ''}">
                     <input
                       type="radio"
                       name="neutral-palette"
-                      value="${neutral}"
-                      ${theme.neutral === neutral ? 'checked' : ''}
+                      value="${neutral.value}"
+                      ${theme.neutral === neutral.value ? 'checked' : ''}
                       data-neutral-radio
                     />
-                    <span>${capitalizeFirst(neutral)}</span>
+                    <span class="neutral-card__swatch" style="background-color: ${neutral.color};" data-neutral="${neutral.value}"></span>
+                    <span class="neutral-card__label">${neutral.label}</span>
                   </label>
                 `).join('')}
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </aside>
+
+        <!-- RIGHT COLUMN: Main Area (flexible) -->
+        <main class="theme-editor__main">
+          <!-- Color Picker Section with Quick Panel -->
+          <section class="theme-section">
+            <div class="color-picker-with-panel">
+              <div class="color-picker-with-panel__main" data-color-picker-container></div>
+              <div class="color-picker-with-panel__sidebar">
+                ${renderColorPresets()}
+                <div class="sidebar-harmonies">
+                  ${renderColorHarmonies(currentColor)}
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Visualizations Section -->
+          <section class="theme-section">
+            <div class="visualizations-grid">
+              ${renderColorGradient(currentColor)}
+              ${renderShadeMatrix(currentColor)}
+            </div>
+          </section>
+        </main>
       </div>
 
       <footer class="theme-editor__footer">
@@ -219,7 +237,7 @@ function renderEditor(container: HTMLElement, theme: ThemeConfig, state: EditorS
           data-save-btn
           disabled
         >
-          💾 Save Changes
+          💾 Save All Settings
         </button>
       </footer>
     </div>
@@ -293,9 +311,6 @@ function setupEventListeners(container: HTMLElement, state: EditorState): void {
   const modeRadios = container.querySelectorAll('[data-mode-radio]');
   const neutralRadios = container.querySelectorAll('[data-neutral-radio]');
   const secondaryToggle = container.querySelector('[data-secondary-toggle]') as HTMLInputElement;
-
-  // Setup collapsible sections
-  setupCollapsibleSections(container);
 
   // Save button
   if (saveBtn) {
@@ -389,9 +404,16 @@ function setupEventListeners(container: HTMLElement, state: EditorState): void {
   });
 
   // Listen for preset selection
-  on(EventName.COLOR_PRESET_SELECT, ({ preset, targetColor }) => {
-    const key = targetColor === 'primary' ? 'brand_primary' : 'brand_secondary';
-    updateConfig(key, preset.color);
+  on(EventName.COLOR_PRESET_SELECT, ({ preset }) => {
+    // Update color picker UI - this will trigger onChange which calls updateConfig()
+    // No need to call updateConfig() here to avoid double updates
+    const pickerContainer = container.querySelector('[data-color-picker-container]') as HTMLElement;
+    if (pickerContainer) {
+      const pickerEl = pickerContainer.querySelector('[data-picker]') as HTMLElement;
+      if (pickerEl) {
+        setColorPickerValue(pickerEl, preset.color);
+      }
+    }
   });
 
   // Listen to config dirty state changes
@@ -455,42 +477,5 @@ function showErrorMessage(container: HTMLElement, message: string): void {
   container.appendChild(toast);
 
   setTimeout(() => toast.remove(), 5000);
-}
-
-/**
- * Setup collapsible sections
- */
-function setupCollapsibleSections(container: HTMLElement): void {
-  const sections = container.querySelectorAll('[data-section]');
-
-  sections.forEach(section => {
-    const toggle = section.querySelector('[data-toggle]') as HTMLElement;
-    const content = section.querySelector('[data-content]') as HTMLElement;
-    const arrow = section.querySelector('.theme-editor__section-arrow') as HTMLElement;
-
-    if (!toggle || !content) return;
-
-    // Start with sections expanded
-    section.classList.add('is-expanded');
-
-    toggle.addEventListener('click', () => {
-      const isExpanded = section.classList.contains('is-expanded');
-
-      if (isExpanded) {
-        // Collapse
-        section.classList.remove('is-expanded');
-        section.classList.add('is-collapsed');
-        if (arrow) arrow.textContent = '▶';
-      } else {
-        // Expand
-        section.classList.remove('is-collapsed');
-        section.classList.add('is-expanded');
-        if (arrow) arrow.textContent = '▼';
-      }
-    });
-
-    // Add hover effect
-    toggle.style.cursor = 'pointer';
-  });
 }
 
